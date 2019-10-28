@@ -10,7 +10,7 @@ pageDescription: >-
 pageKeywords: >-
   mutability, mutable, immutability, immutable, immutable objects, javascript,
   mutable objects, mutable objects in javascript
-tags: javascript
+tags: '[javascript]'
 cover: ''
 ---
 ### What is Immutability
