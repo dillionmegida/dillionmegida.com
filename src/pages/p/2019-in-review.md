@@ -63,3 +63,5 @@ These were just the major highlights. This year was the best so far. I met aweso
 These things motivate me to do more. You can too! I've learnt that you always have to start from somewhere. From somewhere, to greater places.
 
 2020? You're going to be better 💥
+
+Merry Christmas and a Happy New Year to you 🎄
