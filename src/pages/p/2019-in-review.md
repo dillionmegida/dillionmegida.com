@@ -22,7 +22,7 @@ I attended 2 meetups in total. I've been invited for many meetups last year but 
 These were meetups where people shared amazing and inspiring ideas. I also got to make new friends.
 
 ### 2. I started writing technical articles
-I wrote my first technical article on **June 26** on the [DEV platform](https://dev.to) - [Making Sticky Column With Grid Area](https://dev.to/dillionmegida/making-sticky-column-with-grid-area-5eph). This year, I wrote **12** articles on my blog, **2** (with 1 in progress) on [Soshace](https://blog.soshace.com/author/dillionmegida/), **three** on [Codesource](https://codesource.io/author/dillion/) and few other places.
+I wrote my first technical article on **June 26** on the [DEV platform](https://dev.to) - [Making Sticky Column With Grid Area](https://dev.to/dillionmegida/making-sticky-column-with-grid-area-5eph). This year, I wrote **12** articles on my blog, **2** (with 1 in progress) on [Soshace](https://blog.soshace.com/author/dillionmegida/), **4** on [Codesource](https://codesource.io/author/dillion/) and few other places (and will probably write more before the year runs out).
 
 Writing? Articles?
 > "This would be an impossible task for me. What do I even know? Will people even read it?" - so I asked myself.
