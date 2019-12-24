@@ -6,7 +6,7 @@ pageDescription: "Get to understand the lifecycle of React components and how to
 pageKeywords: "css layouts, layouts, layouts in css, css, css stylesheet, css properties, layout property, css display, css flex, css flex-wrap, css flex-direction, css justify-content, css align-items, align-items, justify-content, css styles."
 tags: ["react"]
 ---
-Do you know the lifecycle of components in React? Do you have problems understanding any of the lifecycle methods? If yes, then, this article is for you.
+Do you know the lifecycle of components or have problems understanding any of the lifecycle methods? Then, this article is for you.
 
 Here, I explain the lifecycle of components in React and how to control (or manipulate) the life of components with some lifecycle methods.
 ## Component Lifecyle
@@ -150,7 +150,7 @@ With this method, we can get the previous state or props (snapshot) of a compone
     }
 ...
 ```
-_Remember to remove the `shouldComponentUpdate` method or change the code to true, if not, I'll component would never be updated_
+_Remember to remove the `shouldComponentUpdate` method or change the code to true, if not, our component would never be updated_
 
 The first argument is the previous props and the second is the previous state. When the state changes, we get an alert showing the previous color. **Note that:** This would not work without a method which changes the state when called as we have above.
 
