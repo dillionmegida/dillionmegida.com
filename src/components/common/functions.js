@@ -1,6 +1,6 @@
-// Using markdowns in gatsby for my posts, I'd have to use this format (month - day - year),
-// This function would format it to my desired type.
-// I believe there'd be a better solution for this provided by Gatsby but before then, this is my solution
+// This function converts dates like 2001-01-13 to 13th January, 2001
+// I guess there's a better way to do it in GatsbyJS, but I haven't figured out yet.
+
 const formatBlogDate = date => {
     let dateArr = date.split('');
     
