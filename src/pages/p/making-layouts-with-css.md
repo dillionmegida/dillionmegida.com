@@ -1,6 +1,6 @@
 ---
 title: "Making Layouts With CSS"
-date: "09-03-2019"
+date: "2019-09-03"
 readTime: "5 mins"
 pageDescription: "CSS has the ability to control how elements are displayed in a browser. Layouts of elements in a webpage gives attractive presentation and logic means to that page."
 pageKeywords: "css layouts, layouts, layouts in css, css, css stylesheet, css properties, layout property, css display, css position, css float, css box model, css styles."

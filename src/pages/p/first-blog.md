@@ -1,6 +1,6 @@
 ---
 title: "Dillion Megida's First Blog"
-date: "06-18-2019"
+date: "2019-06-18"
 readTime: "2 mins"
 pageDescription: "The first blog on my website"
 pageKeywords: "Dillion First Blog"

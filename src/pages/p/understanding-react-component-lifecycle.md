@@ -1,6 +1,6 @@
 ---
 title: "Understanding React Component Lifecycle"
-date: "12-22-2019"
+date: "2019-12-22"
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1577046834/images/blogs_cover/react-lifecycle_nr0ifw.jpg"
 pageDescription: "Get to understand the lifecycle of React components and how to manipulate a component's life with the lifecycle methods."
 pageKeywords: "css layouts, layouts, layouts in css, css, css stylesheet, css properties, layout property, css display, css flex, css flex-wrap, css flex-direction, css justify-content, css align-items, align-items, justify-content, css styles."

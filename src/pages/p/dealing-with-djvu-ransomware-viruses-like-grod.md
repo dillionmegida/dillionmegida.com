@@ -1,6 +1,6 @@
 ---
 title: Dealing with DJVU ransomware viruses like .grod and .peet
-date: 11-18-2019
+date: 2019-11-18
 readTime: 3 mins
 pageDescription: >-
   DJVU ransomware is a virus which encrypts files stored in a user's computer

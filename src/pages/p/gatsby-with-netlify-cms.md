@@ -1,6 +1,6 @@
 ---
 title: Gatsby with Netlify CMS
-date: 10-03-2019
+date: 2019-10-03
 readTime: 3 mins
 cover: https://res.cloudinary.com/dillionmegida/image/upload/v1570399382/images/blogs_cover/gatsby-with-cms.jpg
 pageDescription: Managing contents in Gatsby site with Netlify Content Management System (CMS)

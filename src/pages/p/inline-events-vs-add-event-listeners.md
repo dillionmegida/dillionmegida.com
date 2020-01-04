@@ -1,6 +1,6 @@
 ---
 title: "Inline Event Handlers vs addEventListener()"
-date: "09-17-2019"
+date: "2019-09-17"
 readTime: "3 mins"
 pageDescription: "Events in Javascript aids in iteraction for webpages and the users. Events include clicks, double clicks, and so on for which functions can be specified. Such functions are invoked when the event occurs."
 pageKeywords: "javascript, javascript events, inline events, addeventlistener, click event, onclick event, functions, javascript functions."

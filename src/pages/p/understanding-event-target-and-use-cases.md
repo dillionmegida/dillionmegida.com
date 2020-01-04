@@ -1,6 +1,6 @@
 ---
 title: Understanding event.target and Use Cases
-date: 10-15-2019
+date: 2019-10-15
 readTime: 3 mins
 pageDescription: >-
   Target is a property of an event which is a reference to the element upon which the event was fired. This property aids us in easily accessing the properties of that given element.

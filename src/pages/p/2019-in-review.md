@@ -1,6 +1,6 @@
 ---
 title: "2019 In Review"
-date: "12-24-2019"
+date: "2019-12-24"
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1577047793/images/blogs_cover/2018-in-review_tbroak.jpg"
 pageDescription: "2019 was an awesome year for me. Looking at the things I was able to explore and achieve, I'm motived to more. 2020 is sure going to be better"
 pageKeywords: "2019 in review, year in review, review year, achievements"
