@@ -5,9 +5,9 @@ const formatBlogDate = date => {
     let dateArr = date.split('');
     
     // Slice the array to break the date
-    let monthArr = dateArr.slice(0, 2);
-    let dayArr = dateArr.slice(3, 5);
-    let yearArr = dateArr.slice(6);
+    let yearArr = dateArr.slice(0, 4);
+    let monthArr = dateArr.slice(5, 7);
+    let dayArr = dateArr.slice(8);
 
     // parse the dates to integers and also get the last digit of the day for day suffixes
     let month = parseInt(monthArr.join(''));
@@ -86,7 +86,7 @@ const formatBlogDate = date => {
         default:
             break;
     }
-    
+
     let fullDate = `${monthName} ${day}${daySuffix}, ${year}`;
     return fullDate;
 }
