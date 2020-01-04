@@ -1,7 +1,7 @@
 ---
 title: "Introducing #2Articles1Week Challenge"
 date: "2020-01-04"
-cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1577047793/images/blogs_cover/2018-in-review_tbroak.jpg"
+cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1578146259/images/blogs_cover/2articles_hgh7no.jpg"
 pageDescription: "2019 was an awesome year for me. Looking at the things I was able to explore and achieve, I'm motived to more. 2020 is sure going to be better"
 pageKeywords: "2articles1week, #2articles1week, 2articles, 2 articles, 1 week, 1week, 2 articles per week, articles challenge, writing challenge"
 tags: ["general"]
@@ -17,7 +17,11 @@ Personally, my goal for this year was to engage more in technical writing than I
 
 "Why not write at least 2 articles per week?"
 
-I decided to invite the community. I threw it out to everyone on twitter and I got encouraging feedbacks on people willing to join.
+I decided to invite the community. I threw it out to everyone on twitter and I got encouraging feedbacks on people willing to join. Here's the tweet.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">2 (short or long) articles per week 🤔<br>This should be an awesome challenge for 2020.<br><br>Would be doing this as long as I can this year.<br><br>Who&#39;s in with me? 👋<a href="https://twitter.com/hashtag/2Articles1Week?src=hash&amp;ref_src=twsrc%5Etfw">#2Articles1Week</a><a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/webdev?src=hash&amp;ref_src=twsrc%5Etfw">#webdev</a></p>&mdash; Dillion Megida 🚀🤶 (@iamdillion) <a href="https://twitter.com/iamdillion/status/1213021849065529345?ref_src=twsrc%5Etfw">January 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+[Check out the tweet](https://twitter.com/iamdillion/status/1213021849065529345)
 
 ## Straight to the challenge
 ### Purpose
@@ -75,4 +79,6 @@ There are several mediums for this. I'll list a few but you could get more.
 ### Conclusion
 Well, I guess the challenge has be explained enough. If you need more clarifications, kindly reach me on twitter - [@iamdillion](https://twitter.com/iamdillion)
 
-**#2Articles1Week** is officially launched.
+**#2Articles1Week** is officially launched 🚀
+
+[Commit to the challenge!](https://twitter.com/intent/tweet?text=I'm publicly committing to the %232Articles1Week Challenge - https://dillionmegida.com/p/introducing-weekly-articles-challenge. Come join me ☺️)
