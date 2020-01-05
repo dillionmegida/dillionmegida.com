@@ -1,5 +1,5 @@
 ---
-title: "Introducing #2Articles1Week Challenge"
+title: "Introducing Weekly Articles Challenge"
 date: "2020-01-04"
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1578146259/images/blogs_cover/2articles_hgh7no.jpg"
 pageDescription: "#2Articles1Week is a challenge whereby minimum of articles are written in a week. The articles written are shared on twitter. The purpose is to commit to a learning strategy."
