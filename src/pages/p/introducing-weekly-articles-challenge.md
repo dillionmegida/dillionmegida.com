@@ -1,8 +1,8 @@
 ---
-title: "Introducing #2Articles1Week Challenge"
+title: "Introducing Weekly Articles Challenge"
 date: "2020-01-04"
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1578146259/images/blogs_cover/2articles_hgh7no.jpg"
-pageDescription: "2019 was an awesome year for me. Looking at the things I was able to explore and achieve, I'm motived to more. 2020 is sure going to be better"
+pageDescription: "#2Articles1Week is a challenge whereby minimum of articles are written in a week. The articles written are shared on twitter. The purpose is to commit to a learning strategy."
 pageKeywords: "2articles1week, #2articles1week, 2articles, 2 articles, 1 week, 1week, 2 articles per week, articles challenge, writing challenge"
 tags: ["general"]
 ---
@@ -81,4 +81,6 @@ Well, I guess the challenge has be explained enough. If you need more clarificat
 
 **#2Articles1Week** is officially launched 🚀
 
-[Commit to the challenge!](https://twitter.com/intent/tweet?text=I'm publicly committing to the %232Articles1Week Challenge - https://dillionmegida.com/p/introducing-weekly-articles-challenge. Come join me ☺️)
+<a href="https://twitter.com/intent/tweet?text=I am publicly committing to the %232Articles1Week Challenge - https://dillionmegida.com/p/introducing-weekly-articles-challenge. Come join me ☺️" title="Commit to the challenge">
+Commit to the Challenge Now!
+</a>
