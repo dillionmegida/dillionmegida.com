@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 export default (props) => (
     <div className='App'>
     	<Helmet>
+			<html lang="en" />
     		<title>
     			{props.PageTitle}
     		</title>
