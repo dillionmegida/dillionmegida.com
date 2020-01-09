@@ -19,13 +19,11 @@ export default (props) => (
 			
 			<link rel='icon' href='https://res.cloudinary.com/dillionmegida/image/upload/v1570493725/images/website/favicon.png' />
 
-			{/* <meta property="og:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" /> */}
-
-
-			{/* TwiiterBlogImage is the card image for og and twitter cards specified from each pages. For blogs, it either chooses the favicon image or the blog cover. For other pages, it is simply my profile picture */ }
-			<meta property="og:image" content={props.TwitterBlogImage} />
+			<meta property="og:image" content={props.ImageCard} />
 			<meta property="og:url" content="https://dillionmegida.com" />
 			<meta property="og:type" content="article" />
+			<meta property="og:title" content={props.PageTitle} />
+			<meta property="og:description" content={props.PageDescription} />
 
 			{/* This selects the summary card by default but if the LargeTwitterCard props is specified, it users the bigger card
 			I implemented bigger cards for articles with covers */}
@@ -37,10 +35,9 @@ export default (props) => (
 			}
 			
 			<meta name="twitter:site" content="@iamdillion" />
-			<meta name="twitter:title" content={props.TwitterCardTtitle} /> {/* edit */}
-			<meta name="twitter:description" content={props.TwitterCardDescription} /> {/* edit */}
-			{/* <meta name="twitter:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" /> */}
-			<meta name="twitter:image" content={props.TwitterBlogImage} />
+			<meta name="twitter:title" content={props.PageTitle} /> {/* edit */}
+			<meta name="twitter:description" content={props.PageDescription} /> {/* edit */}
+			<meta name="twitter:image" content={props.ImageCard} />
 			<meta name="twitter:creator" content="iamdillion" />
 
 			<meta name="referrer" content="origin-when-crossorigin" />

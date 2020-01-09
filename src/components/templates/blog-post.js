@@ -16,7 +16,7 @@ export default ({ data }) => {
         PageLink={post.fields.slug}
         PageDescription={post.frontmatter.pageDescription}
         PageKeywords={post.frontmatter.pageKeywords}
-        TwitterBlogImage={post.frontmatter.cover ? post.frontmatter.cover : 'https://res.cloudinary.com/dillionmegida/image/upload/v1567646950/images/website/favicon2-card.png'}
+        ImageCard={post.frontmatter.cover ? post.frontmatter.cover : 'https://res.cloudinary.com/dillionmegida/image/upload/v1567646950/images/website/favicon2-card.png'}
         LargeTwitterCard = {post.frontmatter.cover ? true : false}
 
         //The copyright only shows on the blog page and on each blog for mobile
