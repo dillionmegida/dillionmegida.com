@@ -54,13 +54,13 @@ export default ({ data }) => {
 
           {/* Sharing the article with media APIs */}
           <p style={{fontSize: '25px', fontWeight: 'bold', margin: '0'}}>Share this article</p>
-            <ShareArticle />
+            <ShareArticle
+              url = {post.fields.slug}
+              title = {post.frontmatter.title}
+            />
           <hr/>
 
-          <Newsletter 
-            url = {post.fields.slug}
-            title = {post.frontmatter.title}
-          />
+          <Newsletter />
 
           <Disqus Url={post.fileAbsolutePath} PostId={post.id} PostTitle={post.frontmatter.title}/>
 
