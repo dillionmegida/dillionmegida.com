@@ -1,0 +1,13 @@
+.ShareBtn {
+    background: none;
+    border: none;
+    background-color: var(--mainColor1);
+    color: var(--mainColor2);
+    padding: 5px;
+    cursor: pointer;
+    margin: 15px 0; 
+}
+
+.ShareBtn:hover, .ShareBtn:focus {
+    box-shadow: 5px 5px 0 #aaa;
+}

@@ -4,6 +4,7 @@ import Layout from '../../containers/Layout/Layout';
 import Newsletter from '../common/Newsletter';
 import Disqus from './disqus';
 import { formatBlogDate } from '../common/functions';
+import ShareArticle from '../ShareArticle/ShareArticle';
 
 import Styles from '../../styles/BlogTemplate.module.css';
 
@@ -53,14 +54,13 @@ export default ({ data }) => {
 
           {/* Sharing the article with media APIs */}
           <p style={{fontSize: '25px', fontWeight: 'bold', margin: '0'}}>Share this article</p>
-          <p style={{fontSize: '30px', margin: '0'}}>
-            <a href={`https://twitter.com/intent/tweet?text=${post.frontmatter.title} by @iamdillion - https://dillionmegida.com${post.fields.slug}`} >
-              <i style={{color: '#1DA1F2'}} className='fa fa-twitter'></i>
-            </a>
-            </p>
+            <ShareArticle />
           <hr/>
 
-          <Newsletter />
+          <Newsletter 
+            url = {post.fields.slug}
+            title = {post.frontmatter.title}
+          />
 
           <Disqus Url={post.fileAbsolutePath} PostId={post.id} PostTitle={post.frontmatter.title}/>
 
