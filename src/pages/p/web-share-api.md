@@ -103,3 +103,5 @@ You can do more than showing messages in the console. An example is displaying a
 This is amazing right? 🙂 
 
 If you aren't adopting it on your website already, I guess you've seen reasons why you should.
+
+If your browser supports this API, you'd see a share button of which you can test the API by clicking on it. If your browser doesn't support it, you'd see the traditional share methods I have implemented on my site.

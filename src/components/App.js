@@ -20,7 +20,7 @@ export default (props) => (
 			<link rel='icon' href='https://res.cloudinary.com/dillionmegida/image/upload/v1570493725/images/website/favicon.png' />
 
 			<meta property="og:image" content={props.ImageCard} />
-			<meta property="og:url" content="https://dillionmegida.com" />
+			<meta property="og:url" content={`https://dillionmegida.com${props.PageLink}`} />
 			<meta property="og:type" content="article" />
 			<meta property="og:title" content={props.PageTitle} />
 			<meta property="og:description" content={props.PageDescription} />
