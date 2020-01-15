@@ -12,11 +12,11 @@ const nativeShare = (url, title) => {
     navigator.share({
         title,
         url,
-        text: `${title} on @iamdillion`
+        text: `${title} by @iamdillion`
     }).then(() => {
         console.log("Successful shared article.")
     }).catch(err => (
-        console.log("Couldn't share articel because ", err)
+        console.log("Couldn't share article because ", err)
     ))
 }
 
