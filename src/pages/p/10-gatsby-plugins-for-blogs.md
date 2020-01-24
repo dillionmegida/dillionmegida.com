@@ -7,7 +7,6 @@ pageKeywords: "gatsby, gatsby plugins, gatsby-plugin-google-analytics, gatsby-re
 tags: ["gatsby"]
 ---
 ## Table of Contents
-<div class='TOC'>
 
 - [Intro](#intro)
 - [gatsby-plugin-google-analytics](#google-analytics)
@@ -21,8 +20,6 @@ tags: ["gatsby"]
 - [gatsby-plugin-netlify-cms](#netlify-cms)
 - [gatsby-remark-embedder](#embedder)
 - [Conclusion](#conclusion)
-
-</div>
 
 <h3>
     <a class='offset_link' id='intro' name='intro'></a>
