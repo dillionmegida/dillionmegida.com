@@ -123,7 +123,7 @@ let interpolation = (vals, ...exp) => {
 
 Since the first and second arguments return an array, we can loop through the values and concatenate them. We had to check if it is not undefined because the length of the values array may be more than the expressions array.
 
-In other words, when you write **`My name is ${name}`**, what we get at the background is either **interpolation\`My name is ${name}\`** or **interpolation(\`name is ${name}\`)**
+In other words, when you write **\`My name is ${name}\`**, what we get at the background is either **interpolation\`My name is ${name}\`** or **interpolation(\`name is ${name}\`)**
 
 I'm not saying this is the exact function working in the background but it does the same thing.
 
