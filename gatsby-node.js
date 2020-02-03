@@ -1,6 +1,7 @@
 const path = require(`path`)
 const _ = require("lodash");
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const createPaginatedPages = require('gatsby-paginate');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -18,14 +19,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark (sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
             fields {
               slug
             }
+            timeToRead
             frontmatter {
               tags
+              title
+              date
+              pageDescription
             }
           }
         }
@@ -53,6 +58,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         slug: node.fields.slug,
       },
     })
+  })
+
+  createPaginatedPages({
+    edges: result.data.allMarkdownRemark.edges,
+    createPage: createPage,
+    pageTemplate: './src/components/templates/posts.js',
+    pageLength: 10, // This is optional and defaults to 10 if not used
+    pathPrefix: '', // This is optional and defaults to an empty string if not used
+    context: {}, // This is optional and defaults to an empty object if not used
   })
 
   result.data.tagsGroup.group.forEach(tag => {

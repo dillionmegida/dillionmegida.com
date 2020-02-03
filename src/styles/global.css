@@ -200,6 +200,36 @@
     color: var(--mainColor1) !important;
   }
 
+  .Pagination {
+    margin: 20px 0;
+    font-size: 20px;
+    height: 20px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .Pagination {
+      font-size: 15px;
+    }
+  }
+
+  .Pagination a {
+    color: var(--lightBlue);
+    text-decoration: underline;
+  }
+
+  .Pagination a.previous {
+    float: left;
+  }
+
+  .Pagination a.next {
+    float: right;
+  }
+  
+  .Pagination a:hover,
+  .Pagination a:focus {
+    text-decoration: none ;
+  }
+
   @media (max-width: 900px) {
     .TopSection {
       visibility: visible;
