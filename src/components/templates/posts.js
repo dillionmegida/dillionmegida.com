@@ -40,7 +40,6 @@ let Blog = (props) => (
 
 
     export default ({pageContext}) => {
-    const { pageCount }  = pageContext
     const { index: pageIndex } = pageContext
     const isFirst = pageContext.index === 1
     const isLast = pageContext.last

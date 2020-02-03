@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StaticQuery, graphql } from 'gatsby';
-import { Blog } from '../../components/Blogs';
+import { Blog } from '../../components/templates/posts';
 
 export default class Search extends React.Component {
 

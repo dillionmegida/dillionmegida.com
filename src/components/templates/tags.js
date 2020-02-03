@@ -2,7 +2,7 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import { Blog } from '../Blogs';
+import { Blog } from './posts';
 
 import Layout from '../../containers/Layout/Layout';
 
