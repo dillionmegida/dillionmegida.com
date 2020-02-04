@@ -4,7 +4,7 @@ date: "2020-02-04"
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1580783303/images/blogs_cover/async-js_hpna31.jpg"
 pageDescription: "Asynchronous operations are operations occurring at the same time. Javascript is single-threaded but in this article, we'd see how Javascript is able to handle asynchronous operations."
 pageKeywords: "async, asynchronous, asynchronous javascript, javascript, async javascript, async js"
-tags: ["javascript, async"]
+tags: ["javascript", "async"]
 ---
 
 The term **asynchronous** refers to multiple things occurring at the same time.
