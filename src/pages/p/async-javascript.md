@@ -7,7 +7,7 @@ pageKeywords: "async, asynchronous, asynchronous javascript, javascript, async j
 tags: ["javascript", "async"]
 ---
 
-The term **asynchronous** refers to multiple things occurring at the same time.
+The term **asynchronous code** refers to non-sequential execution of codes.
 
 Javascript is a single-threaded language, meaning that only one process can be run at a time. However, Javascript has few methods of handling multiple processes (asynchronous processes) at the same time. In this article, we'd look at how this is possible.
 
