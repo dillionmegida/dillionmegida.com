@@ -73,7 +73,7 @@ This feature allows codes with unpredictable time to complete to be performed ou
 
 Async operations like promise-based codes are placed in the [event queue](https://developer.mozilla.org/en/docs/Web/JavaScript/EventLoop). Codes in the event queue are ran immediately after the main thread. This is necessary to avoid hindering other codes from running (probably because of delay or errors). When the operations in the queue are completed, they are executed.
 
-Learn more about promises in this article - [https://thewebfor5.com/p/javascript/javascript-promises](Promises)
+Learn more about promises in this article - [Promises](https://thewebfor5.com/p/javascript/javascript-promises)
 
 ### 3. Async / Await
 
