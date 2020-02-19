@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "gatsby": "^2.13.42",
+    "gatsby-plugin-blog-cover": "1.0.1",
     "gatsby-plugin-disqus": "^1.1.2",
     "gatsby-plugin-google-analytics": "^2.1.17",
     "gatsby-plugin-gtag": "^1.0.11",
