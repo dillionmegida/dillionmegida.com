@@ -16,8 +16,8 @@ export default ({ data }) => {
         PageLink={post.fields.slug}
         PageDescription={post.frontmatter.pageDescription}
         PageKeywords={post.frontmatter.pageKeywords}
-        ImageCard={post.frontmatter.cover ? post.frontmatter.cover : 'https://res.cloudinary.com/dillionmegida/image/upload/v1567646950/images/website/favicon2-card.png'}
-        LargeTwitterCard = {post.frontmatter.cover ? true : false}
+        ImageCard={post.frontmatter.cover ? post.frontmatter.cover : require(`../../${post.fields.generatedCoverSlug}`)}
+        LargeTwitterCard = {true}
 
         //The copyright only shows on the blog page and on each blog for mobile
         // ...But it always shows for large screens
@@ -75,6 +75,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       fields {
         slug
+        generatedCoverSlug
       }
       html
       timeToRead

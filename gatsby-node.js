@@ -2,6 +2,7 @@ const path = require(`path`)
 const _ = require("lodash");
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const createPaginatedPages = require('gatsby-paginate');
+const createImage = require('gatsby-plugin-blog-cover');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -12,6 +13,19 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     })
+
+    const { title } = node.frontmatter;
+		const generatedCoverSlug = createImage({
+			title,
+			imgPath: './src/post-images',
+			domain: "https://dillionmegida.com"
+		})
+		createNodeField({
+			node,
+			name: 'generatedCoverSlug',
+			value: generatedCoverSlug
+    })
+    
   }
 }
 
