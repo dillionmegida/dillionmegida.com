@@ -20,11 +20,11 @@ const ProjectList = [
     
 ];
 
-let Porfolio = () => (
+let About = () => (
     <Layout
         PageTitle='About Me - Dillion Megida'
         PageLink='/about'
-        PageDescription='Dillion is a Frontend Developer, a Tecnical Writer and a Graphics Designer. He founded Deeesigns Studios which deals in Web Development and Graphics Designing.'
+        PageDescription='Dillion is a Frontend Developer, a Tecnical Writer and a Graphics Designer.'
         PageKeywords='Dillion Megida, Dillion, Megida, web accessibility, DevCommunity, Front-end Developer, Technical Writer, Freelancer, Web Developer, Web Designer, Software Developer, Nigerian, Developer'
         TwitterCardTtitle='DILLION MEGIDA'
     >
@@ -37,10 +37,11 @@ let Porfolio = () => (
 	                I write mostly about front-end web development topics on my blog here, <a href='https://blog.soshace.com/author/dillionmegida/' title='Soshace Blog'>Soshace</a> and <a href='https://dev.to/dillionmegida' title='DEV Blog'>Dev.to</a>. I'm also the Founder of <a href="https://thewebfor5.com" title="The Web For Five Homepage">TheWebFor5</a>.<br/><br/>
                     Proficient in HTML, CSS, JS, ReactJS and GatsbyJS.<br/><br/>
 	                Efficient use of Adobe Photoshop and Adobe Illustrator for graphics designing. These include photo editing, logo designing and advertisement cards. <br/><br/>
-	                Average use of Adobe After Effects and Adobe Premiere Pro for video editing and motion graphics.<br/><br/>
-	                {/* Founder, <b>Deeesigns Studios</b>, which deals in Web Development and Graphics Designing.
+	                Average use of Adobe After Effects and Adobe Premiere Pro for video editing and motion graphics.
                     <br/>
-                    <br/> */}
+	                Founder, <a href='https://twitter.com/deeesignsstudio'>Deeesigns Studios</a>, which deals in Graphics Designing.
+                    <br/>
+                    <br/>
                     <a className={Styles.Resume} href='/resume.pdf' title='My Resume' target='_blank'>
                         Resume
                     </a>
@@ -111,4 +112,4 @@ let Porfolio = () => (
     </Layout>
 );
 
-export default Porfolio;
+export default About;
