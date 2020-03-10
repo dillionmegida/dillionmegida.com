@@ -1,0 +1,87 @@
+/* baloons gotten from JeffreyTaylor - codepen - https://codepen.io/JeffreyTaylor/pen/jzohC */
+.balloonSection {
+    animation: balloon 7s 100ms ease-in-out;
+    position: fixed;
+    height: 100vh;
+    /* overflow: hidden; */
+    margin-top: 100vh;
+    opacity: 0;
+    transition: margin 600ms;
+}
+@keyframes balloon {
+    from {
+        margin: 100vh 0 0 0;
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    to {
+        margin: -1000px 0 0 0;
+        opacity: 0;
+    }
+}
+.balloonSection > div {
+    display: inline-block;
+    width: 120px;
+    height: 145px;
+    background: hsl(215, 50%, 65%);
+    border-radius: 80%;
+    box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
+    margin: 20px 30px;
+    transition: transform 0.5s ease;
+    z-index: 10;
+    transform-origin: bottom center;
+    animation: balloons infinite 3s 2s ease-in-out;
+}
+
+@keyframes balloons {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-4deg);
+    }
+    50% {
+        transform: translateY(-25px) rotate(4deg);
+    }
+}
+
+.balloonSection > div:before {
+    content: "▲";
+    font-size: 20px;
+    color: hsl(215, 30%, 50%);
+    display: block;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+    z-index: -100;
+}
+
+.balloon2 {
+    background: hsl(59, 50%, 58%) !important;
+    animation-duration: 4.5s !important;
+}
+
+.balloon2:before {
+    color: hsl(59, 30%, 52%) !important; 
+}
+
+.balloon3 {
+    background: hsl(23, 55%, 57%) !important;
+    animation-duration: 5s !important;
+}
+
+.balloon3:before {
+    color: hsl(23, 44%, 46%) !important;
+}
+
+
+/* .balloon:after {
+   display:inline-block; top:153px;
+    position:absolute;
+    height:250px;
+    width:1px;
+    margin:0 auto;
+    content:"";
+    background:rgba(0,0,0,0.2); 
+  } */

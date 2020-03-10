@@ -2,6 +2,7 @@ import React from 'react';
 import Dp from '../components//common/Dp';
 import Layout from '../containers/Layout/Layout';
 import Styles from '../styles/About.module.css';
+import balloon from '../styles/balloons.module.css';
 import { Link } from 'gatsby';
 
 const ProjectList = [
@@ -28,6 +29,26 @@ let About = () => (
         PageKeywords='Dillion Megida, Dillion, Megida, web accessibility, DevCommunity, Front-end Developer, Technical Writer, Freelancer, Web Developer, Web Designer, Software Developer, Nigerian, Developer'
         TwitterCardTtitle='DILLION MEGIDA'
     >
+        {/* Ballons for birthday --- 16th March */}
+        {new Date().getDate() === 16 && new Date().getMonth() + 1 === 3 && (
+            <div className={balloon.balloonSection}>
+                <div className={balloon.balloon1}></div>
+                <div className={balloon.balloon2}></div>
+                <div className={balloon.balloon3}></div>
+                <div className={balloon.balloon1}></div>
+                <div className={balloon.balloon2}></div>
+                <div className={balloon.balloon3}></div>
+                <div className={balloon.balloon1}></div>
+                <div className={balloon.balloon2}></div>
+                <div className={balloon.balloon3}></div>
+                <div className={balloon.balloon1}></div>
+                <div className={balloon.balloon2}></div>
+                <div className={balloon.balloon3}></div>
+                <div className={balloon.balloon1}></div>
+                <div className={balloon.balloon2}></div>
+                <div className={balloon.balloon3}></div>
+            </div>
+        )}
         <h1 style={{ textAlign: 'center' }}>About Me</h1>
         <section className={Styles.AboutSection}>
             <section className={Styles.Bio}>
