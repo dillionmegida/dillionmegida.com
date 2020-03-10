@@ -16,7 +16,7 @@ export default ({ data }) => {
         PageLink={post.fields.slug}
         PageDescription={post.frontmatter.pageDescription}
         PageKeywords={post.frontmatter.pageKeywords}
-        ImageCard={post.frontmatter.cover ? post.frontmatter.cover : require(`../../${post.fields.generatedCoverSlug}`)}
+        ImageCard={post.frontmatter.cover}
         LargeTwitterCard = {true}
 
         //The copyright only shows on the blog page and on each blog for mobile
@@ -75,7 +75,6 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       fields {
         slug
-        generatedCoverSlug
       }
       html
       timeToRead

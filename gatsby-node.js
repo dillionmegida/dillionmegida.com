@@ -12,22 +12,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       name: `slug`,
       value: slug,
-    })
-
-    const { title } = node.frontmatter;
-		const generatedCoverSlug = createImage({
-			title,
-			imgPath: './src/post-images',
-      domain: "https://dillionmegida.com",
-      bgColor: "#130327",
-      titleColor: "#c1d950"
-		})
-		createNodeField({
-			node,
-			name: 'generatedCoverSlug',
-			value: generatedCoverSlug
-    })
-    
+    })    
   }
 }
 
