@@ -258,6 +258,18 @@ In the `connection` variable, enter your `username` (for MongoDB cloud), your `p
     Calling APIs on the frontend
 </h2>
 
+All APIs would be made to `localhost:5000` locally just as we set up in server.js. When deployed to heroku, the server would use the port provided by the server (`process.env.PORT`).
+
+To make things easier, React allows us to specify a proxy which requests would be sent to.
+
+Open `package.json` and just before the last curly brace, and add the following:
+
+```json
+"proxy": "http://localhost:5000"
+```
+
+This way, we can directly send requests to `api/users`, and when our site is deployed and built, the default port of our application would be used with the same api.
+
 Open `App.js` for React and add the following
 
 ```js
@@ -270,7 +282,7 @@ const App = function() {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     useEffect(() => {
-        axios.get('localhost:5000/api/users')
+        axios.get('/api/users')
             .then(users => setUsers(users))
             .catch(err => console.log(err))
     }, [])
@@ -284,7 +296,7 @@ const App = function() {
             alert('Please fill the email field');
             return;
         }
-        axios.post('localhost:5000/api/users', {
+        axios.post('/api/users', {
             username: username,
             email: email
         })
