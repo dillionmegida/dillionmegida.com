@@ -32,7 +32,7 @@ class Layout extends Component {
                 PageLink={this.props.PageLink}
                 PageDescription={this.props.PageDescription}
                 PageKeywords={this.props.PageKeywords}
-                ImageCard={this.props.ImageCard ? this.props.ImageCard : 'https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg'}
+                ImageCard={this.props.ImageCard ? this.props.ImageCard : 'https://res.cloudinary.com/dillionmegida/image/upload/v1584753510/images/website/deee_iufaho.jpg'}
                 LargeTwitterCard = {this.props.LargeTwitterCard}
             >
                 <header className='TopSection'>
@@ -42,8 +42,7 @@ class Layout extends Component {
                     >
                         <Dp imgDivClass={Styles.ImgDivSmall}/>
                     </Link>
-                    {/* <h3>Dillion Megida <span role='img' aria-label='Rocket Emoji'>&#128640;</span></h3> */}
-                    <h3>Dillion Megida <span role='img' aria-label='Rocket Emoji'>&#127876;</span></h3>
+                    <h3>Dillion Megida <span role='img' aria-label='Rocket Emoji'>&#128640;</span></h3>
                     <button onClick={this.openNavDrawer} className='Hamburger'>
                         <div></div>
                         <div></div>

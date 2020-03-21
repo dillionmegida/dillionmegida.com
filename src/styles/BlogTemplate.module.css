@@ -28,6 +28,13 @@
     line-height: 30px;
     font-size: 20px;
 }
+.BlogContent div[class='toc'] ul {
+    padding: 0 0 0 15px;
+}
+.BlogContent div[class='toc'] ul li {
+    font-size: 17px;
+    line-height: 30px;
+}
 
 .BlogContent a[class='offset_link'] {
     position: relative;
