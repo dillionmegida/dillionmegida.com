@@ -1,0 +1,69 @@
+.AboutSection {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 18px;
+    padding: 0;
+    background-color: var(--mainColor2);
+}
+.AboutSection h1 {
+    font-size: 30px;
+}
+
+.AboutSection a:not(.Resume):not(.Contact) {
+    color: var(--mainColor1);
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.Resume {
+    color: var(--mainColor1);
+    padding: 2px;
+    font-size: 20px;
+    outline: 1px solid var(--mainColor1);
+    text-decoration: none;
+    padding: 5px;
+}
+.Resume:hover,
+.Resume:focus {
+    background-color: var(--mainColor1);
+    color: white;
+}
+.AboutSection .Bio {
+    max-width: 500px;
+    padding: 20px;
+}
+.ImgDiv {
+    max-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
+    margin: 50px 0 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 80px 20px;
+    animation: ImgAnim 5s linear infinite alternate;
+}
+.ImgDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes ImgAnim {
+    25% {
+        border-radius: 20px 80px;
+    }
+    50% {
+        border-radius: 80px 20px;
+    }
+    75% {
+        border-radius: 20px 80px;
+    }
+    100% {
+        border-radius: 80px 20px;
+    }
+}
+.Dp {
+    text-align: center;
+}

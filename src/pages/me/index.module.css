@@ -1,0 +1,50 @@
+.Html {
+    scroll-behavior: smooth;
+}
+
+.LandingImage {
+    height: 100vh;
+    background-color: #130327;
+    /* background-image: url('/img/bg.png'); */
+}
+
+.Intro {
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: calc(100vh - 90px);
+    padding: 0 50px 20px;
+}
+.Intro p:first-child {
+    font-size: 45px;
+    width: 60%;
+}
+.Intro p:nth-child(2) {
+    font-size: 25px;
+}
+.Intro p:first-child {
+    font-size: 45px;
+    width: 60%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .Intro p:first-child {
+        width: 80%;
+        font-size: 30px;
+    }
+    .Intro p:nth-child(2) {
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Intro p:first-child {
+        width: 100%;
+        font-size: 25px;
+    }
+    .Intro p:nth-child(2) {
+        font-size: 17px;
+    }
+}

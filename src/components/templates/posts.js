@@ -51,8 +51,6 @@ let Blog = (props) => (
             PageTitle='Dillion Megida &#128640; - Technical Writer and Front End Developer'
             PageLink='/'
             PageDescription="Dillion is a front end developer, a technical writer and a graphics designer."
-            PageKeywords='branding, design, dillion megida, dillion, megida, web developer, web development, frontend'
-            TwitterCardTtitle='Dillion Megida'
 
             //The copyright only shows on the blog page and on each blog for mobile
             // ...But it always shows for large screens

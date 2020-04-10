@@ -1,0 +1,69 @@
+.PortfolioSection {
+    width: 100%;
+    /* background-color: var(--mainColor2); */
+    padding: 50px 0 30px;
+}
+.PortfolioSection h2 {
+    text-align: center;
+}
+.PortfolioSection > a {
+    text-align: center;
+    display: block;
+    margin: 20px 0 50px;
+    color: var(--lightBlue);
+}
+.PortfolioSection .Gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+}
+.PortfolioSection .Gallery > div {
+    margin: 20px;
+    width: 45%;
+    height: 400px;
+    background-color: purple;
+}
+.PortfolioSection .Gallery > div .Options {
+    position: absolute;
+    width: 45%;
+    margin-top: -250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.PortfolioSection .Gallery > div span {
+    display: block;
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.PortfolioSection .Gallery > div a {
+    display: block;
+    padding: 5px 10px;
+    border: 2px solid var(--lightBlue);
+    background-color: #333;
+    border-radius: 3px;
+    color: white;
+}
+.PortfolioSection .Gallery .PrevImg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.PortfolioSection .Gallery .PrevImg img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+    .PortfolioSection .Gallery > div,
+    .PortfolioSection .Gallery > div .Options {
+        position: relative;
+        width: 100%;
+        height:250px;
+    }
+}

@@ -1,0 +1,35 @@
+.ContactSection {
+    width:  100%;
+    padding: 20px 0 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--mainColor1);
+    color: white;
+}
+.ContactSection > p {
+	font-size: 17px;
+}
+.ContactSection .Contacts {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 20px;
+    margin: 10px;
+}
+.Contacts > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ContactSection .Contacts a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--mainColor2);
+    padding: 5px 10px;
+}
+.ContactSection .Contacts a:hover,
+.ContactSection .Contacts a:focus {
+    outline: 1px solid var(--mainColor2);
+}
+.ContactSection .Newsletter {
+    background-color: white;
+}

@@ -3,8 +3,8 @@ import Styles from '../../styles/Copyright.module.css';
 let Copyright = props => {
     return(
         <Fragment>
-            <p style={{color: props.color}}>
-                <span style={{display: 'flex', justifyContent: 'space-between', width: '100px', fontSize: '20px', margin: '30px auto 0'}}>
+            <p style={{color: props.color, margin: 0, padding: '10px 0'}}>
+                <span style={{display: 'flex', justifyContent: 'space-between', width: '100px', fontSize: '20px'}}>
                     <a className={Styles.sm} style={{color: props.color}} href='https://twitter.com/iamdillion' title='Twitter Profile'>
                         <i className='fa fa-twitter'></i>
                     </a>

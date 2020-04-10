@@ -11,6 +11,7 @@
     min-height: 100vh;
     padding: 0 10px;
     color: white;
+    text-align: center;
 }
 .ImgDiv, .ImgDivSmall {
   border-radius: 50%;

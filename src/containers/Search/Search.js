@@ -33,7 +33,7 @@ export default class Search extends React.Component {
         })
         this.setState({
             filteredArr: filteredArr
-        }, () => console.log(this.state.filteredArr))
+        })
     }
 
     render() {

@@ -11,8 +11,7 @@
 @media (max-width: 900px) {
     .Mainright {
       width: 100%;
-      margin-top: 70px;
-      padding: 0 30px;
+      padding: 70px 30px 0;
       margin-left: 0;
     }
 }
