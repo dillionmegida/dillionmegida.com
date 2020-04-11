@@ -10,7 +10,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-sitemap`,
             options: {
-                exclude: ["/tags/*", "/search"],
+                exclude: ["/tags/*", "/search", "/designs/*"],
             },
         },
 
@@ -23,13 +23,6 @@ module.exports = {
             options: {
                 name: `src`,
                 path: `${__dirname}/src/`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: 'web-design',
-                path: `${__dirname}/data/web-designs`,
             },
         },
 

@@ -1,26 +1,29 @@
 import React from "react"
+import Styles from "./index.module.css"
 
 import Header from "../../../components/me/Header"
 import { graphql } from "gatsby"
 import Helmet from "../../../components/Helmet"
+import DesignTemplate from "../../../components/me/portfolio/template"
 
-export default ({ data: { allWebDesigns } }) => {
+export default ({ data }) => {
+    const allDesigns = data.allMarkdownRemark.edges
     return (
         <>
             <Helmet
-                PageTitle='My Portfolio'
+                PageTitle="My Portfolio"
                 PageDescription="Works that I've done and websites I've designed"
-                PageLink='/me/portfolio'
+                PageLink="/me/portfolio"
             />
             <Header />
-            <main>
-                <pre>
-                    {allWebDesigns.edges.map(
-                        ({ node: { childMarkdownRemark: md } }) => (
-                            <h1>{md.frontmatter.title}</h1>
-                        )
-                    )}
-                </pre>
+            <main className={Styles.Main}>
+                {allDesigns.map(({ node: { frontmatter: design } }, d) => (
+                    <DesignTemplate
+                        title={design.title}
+                        cover={design.cover}
+                        link={design.link}
+                    />
+                ))}
             </main>
         </>
     )
@@ -28,15 +31,15 @@ export default ({ data: { allWebDesigns } }) => {
 
 export const query = graphql`
     query {
-        allWebDesigns: allFile(
-            filter: { sourceInstanceName: { eq: "web-design" } }
+        allMarkdownRemark(
+            filter: { fields: { slug: { regex: "/^(/designs/)/" } } }
         ) {
             edges {
                 node {
-                    childMarkdownRemark {
-                        frontmatter {
-                            title
-                        }
+                    frontmatter {
+                        title
+                        link
+                        cover
                     }
                 }
             }

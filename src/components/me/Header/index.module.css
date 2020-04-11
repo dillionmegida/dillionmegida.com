@@ -1,6 +1,6 @@
 .Header {
     background-color: var(--mainColor1);
-    padding: 10px 60px;
+    padding: 10px 45px;
     height: 90px;
     display: flex;
     justify-content: space-between;
@@ -12,6 +12,9 @@
     color: var(--mainColor2);
     font-size: 16px;
     margin: 0 20px;
+}
+.Header nav a.Active {
+    color: var(--lightBlue);
 }
 
 .Header nav a:hover {

@@ -14,7 +14,7 @@ const Header = props => {
             <Link onClick={() => setDrawerStatus(false)} to="/me#about">
                 About
             </Link>
-            <Link onClick={() => setDrawerStatus(false)} to="me/portfolio">
+            <Link activeClassName={Styles.Active} onClick={() => setDrawerStatus(false)} to="me/portfolio">
                 Portfolio
             </Link>
             <Link onClick={() => setDrawerStatus(false)} to="/me#contact">
@@ -37,12 +37,12 @@ const Header = props => {
                 className={Styles.ShowDrawer}
                 onClick={() => setDrawerStatus(true)}
             >
-                <i className="fa fa-bars"></i>S
+                <i className="fa fa-bars"></i>
             </button>
             {showDrawer && (
                 <div className={Styles.Drawer}>
                     <button onClick={() => setDrawerStatus(false)}>
-                        <i className="fa fa-times"></i>X
+                        <i className="fa fa-times"></i>
                     </button>
                     <nav>
                         <Links />

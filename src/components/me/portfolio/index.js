@@ -2,19 +2,20 @@ import React from "react"
 import Styles from "./index.module.css"
 
 import { Link, graphql, useStaticQuery } from "gatsby"
+import Template from "./template"
 
 export default () => {
     const data = useStaticQuery(graphql`
         query {
-            allWebDesigns: allFile(
-                filter: { sourceInstanceName: { eq: "web-design" } }
+            allMarkdownRemark(
+                filter: { fields: { slug: { regex: "/^(/designs/)/" } } }
             ) {
                 edges {
                     node {
-                        childMarkdownRemark {
-                            frontmatter {
-                                title
-                            }
+                        frontmatter {
+                            title
+                            link
+                            cover
                         }
                     }
                 }
@@ -22,7 +23,7 @@ export default () => {
         }
     `)
 
-    const designs = data.allWebDesigns.edges
+    const designs = data.allMarkdownRemark.edges
 
     return (
         <>
@@ -31,30 +32,14 @@ export default () => {
                     <h2>Portfolio</h2>
                     <div className={Styles.Gallery}>
                         {designs.map(
-                            (
-                                {
-                                    node: {
-                                        childMarkdownRemark: {
-                                            frontmatter: design,
-                                        },
-                                    },
-                                },
-                                i
-                            ) =>
+                            ({ node: { frontmatter: design } }, i) =>
                                 // get only the first two projects
                                 i < 2 && (
-                                    <div key={i}>
-                                        <div className={Styles.PrevImg}>
-                                            <img
-                                                alt="Project preview"
-                                                src="/img/bg.png"
-                                            />
-                                        </div>
-                                        <div className={Styles.Options}>
-                                            <span>{design.title}</span>
-                                            <Link to="/">View site</Link>
-                                        </div>
-                                    </div>
+                                    <Template
+                                        title={design.title}
+                                        cover={design.cover}
+                                        link={design.link}
+                                    />
                                 )
                         )}
                     </div>

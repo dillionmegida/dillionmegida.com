@@ -4,7 +4,7 @@ let Copyright = props => {
     return(
         <Fragment>
             <p style={{color: props.color, margin: 0, padding: '10px 0'}}>
-                <span style={{display: 'flex', justifyContent: 'space-between', width: '100px', fontSize: '20px'}}>
+                <span style={{display: 'flex', margin: '0 auto', justifyContent: 'space-between', width: '100px', fontSize: '20px'}}>
                     <a className={Styles.sm} style={{color: props.color}} href='https://twitter.com/iamdillion' title='Twitter Profile'>
                         <i className='fa fa-twitter'></i>
                     </a>
