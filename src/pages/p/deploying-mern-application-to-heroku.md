@@ -11,17 +11,17 @@ cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1584753157/images
 
 ## Table of contents
 
-- [Introduction to MERN](#introduction)
-- [Let's Start Building](#building-process)
-  - [Building React App](#building-react)
-  - [Creating backend](#creating-backend)
-      - [Connect MongoDB Atlas Database](#connect-database)
-- [Deploying to Heroku](#deploy-heroku)
-  - [Create heroku app](#deploy-heroku-create)
-  - [Configure package.json](#deploy-heroku-package-json)
-- [Calling APIs on frontend](#calling-apis)
-- [Wrap up](#wrap-up)
-</div>
+-   [Introduction to MERN](#introduction)
+-   [Let's Start Building](#building-process)
+    -   [Building React App](#building-react)
+    -   [Creating backend](#creating-backend)
+        -   [Connect MongoDB Atlas Database](#connect-database)
+-   [Deploying to Heroku](#deploy-heroku)
+    -   [Create heroku app](#deploy-heroku-create)
+    -   [Configure package.json](#deploy-heroku-package-json)
+-   [Calling APIs on frontend](#calling-apis)
+-   [Wrap up](#wrap-up)
+    </div>
 
 <h2>
     <a class='offset_link' name='introduction'></a>
@@ -38,7 +38,7 @@ For this article, we'd be using MongoDB Atlas which is a global cloud database s
 
 We'd be building a simple react project, which makes post requests to an api to add a user and can also make get requests to get all users.
 
-*You can skip to any step with the table of contents listed above.*
+_You can skip to any step with the table of contents listed above._
 
 <h2>
     <a class='offset_link' name='building-process'></a>
@@ -193,7 +193,7 @@ router.post('/', (req, res) => {
             "message": "Error creating account"
         }))
 })
-module.exports = router 
+module.exports = router
 ```
 
 In the above, we create a get and post request handler which fetches all users and posts users. Fetching and adding user to the database is aided by the `User` model created. Let's create the model
@@ -244,11 +244,17 @@ One thing worth noting is **whitelisting your connection IP address**. If this s
 The cluser is a small server which would manage our collections (similar to tables in SQL databases). To connect your backend to the cluster, create a file `database.js` which as we can see is required in `server.js`, then enter the following:
 
 ```js
-const mongoose = require('mongoose');
-const connection = "mongodb+srv://username:<password>@<cluster>/<database>?retryWrites=true&w=majority";
-mongoose.connect(connection,{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+const mongoose = require("mongoose")
+const connection =
+    "mongodb+srv://username:<password>@<cluster>/<database>?retryWrites=true&w=majority"
+mongoose
+    .connect(connection, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+    })
     .then(() => console.log("Database Connected Successfully"))
-    .catch(err => console.log(err));
+    .catch(err => console.log(err))
 ```
 
 In the `connection` variable, enter your `username` (for MongoDB cloud), your `password` (cluster password), your `cluster` (address for your cluster) and the `database` (name of your database). All these can be easily discovered if you followed the documentation
@@ -273,62 +279,70 @@ This way, we can directly send requests to `api/users`, and when our site is dep
 Open `App.js` for React and add the following
 
 ```js
-import React, {useState, useEffect} from 'react'
-import axios from 'axios';
------
 const App = function() {
-    const [users, setUsers] = useState(null);
-
-    const [username, setUsername] = useState('')
-    const [email, setEmail] = useState('')
+    const [users, setUsers] = useState(null)
+    const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
     useEffect(() => {
-        axios.get('/api/users')
+        axios
+            .get("/api/users")
             .then(users => setUsers(users))
             .catch(err => console.log(err))
     }, [])
-
     function submitForm() {
-        if(username === '') {
-            alert('Please fill the username field');
-            return;
+        if (username === "") {
+            alert("Please fill the username field")
+            return
         }
-        if(email === '') {
-            alert('Please fill the email field');
-            return;
+        if (email === "") {
+            alert("Please fill the email field")
+            return
         }
-        axios.post('/api/users', {
-            username: username,
-            email: email
-        })
-        .then(function() => {
-            alert('Account created successfully')}
-            window.location.reload()
-        )
-        .catch(function() => alert('Could not creat account. Please try again'))
+        axios
+            .post("/api/users", {
+                username: username,
+                email: email,
+            })
+            .then(function() {
+                alert("Account created successfully")
+                window.location.reload()
+            })
+            .catch(function() {
+                alert("Could not creat account. Please try again")
+            })
     }
     return (
         <>
             <h1>My Project</h1>
             {users === null ? (
                 <p>Loading...</p>
+            ) : users.length === 0 ? (
+                <p>No user available</p>
             ) : (
-                users.length === 0 ? (
-                    <p>No user available</p>
-                ) : (
+                <>
                     <h2>Available Users</h2>
                     <ol>
-                        users.map((user, index) => (
+                        {users.map((user, index) => (
                             <li key={index}>
                                 Name: {user.name} - Email: {user.email}
                             </li>
-                        ))
+                        ))}
                     </ol>
-                )
+                </>
             )}
+
             <form onSubmit={submitForm}>
-                <input type='text' placeholder='Enter your username'/>
-                <input type='text' placeholder='Enter your email address'/>
-                <input type='submit'>
+                <input
+                    onChange={e => setUsername(e.target.value)}
+                    type="text"
+                    placeholder="Enter your username"
+                />
+                <input
+                    onChange={e => setEmail(e.target.value)}
+                    type="text"
+                    placeholder="Enter your email address"
+                />
+                <input type="submit" />
             </form>
         </>
     )
@@ -412,7 +426,7 @@ After few seconds, you site is ready. If there are any errors, you can check you
 
 Now you can preview your site on the url heroku sent when `heroku create` was ran.
 
------
+---
 
 That's all there is to this article. Glad you read it this far.
 
