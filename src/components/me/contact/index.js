@@ -1,6 +1,5 @@
 import React from "react"
 import Styles from "./index.module.css"
-import Newsletter from "../../../components/common/Newsletter"
 
 export default () => {
     return (
@@ -51,9 +50,6 @@ export default () => {
                     </a>
                     </span>
                 </div>
-            </div>
-            <div className={Styles.Newsletter}>
-                <Newsletter />
             </div>
         </section>
     )
