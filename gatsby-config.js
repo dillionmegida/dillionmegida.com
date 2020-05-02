@@ -3,6 +3,8 @@ module.exports = {
         siteUrl: `https://dillionmegida.com`,
     },
     plugins: [
+        `gatsby-plugin-sass`,
+
         // For NetlifyCMS
         `gatsby-plugin-netlify-cms`,
 
@@ -34,7 +36,8 @@ module.exports = {
             },
         },
 
-        // For transforming markdowns
+        // For transforming markdown contents
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-transformer-remark`,
             options: {
@@ -43,6 +46,13 @@ module.exports = {
                 pedantic: true,
                 gfm: true,
                 plugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 800,
+                        },
+                    },
+                    `gatsby-remark-liquid-tags`,
                     {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
