@@ -1,5 +1,5 @@
 import React from "react"
-import Styles from "./index.module.css"
+import Styles from "./index.module.scss"
 
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Template from "./template"
@@ -16,6 +16,7 @@ export default () => {
                             title
                             link
                             cover
+                            desktop
                         }
                     }
                 }
@@ -36,9 +37,11 @@ export default () => {
                                 // get only the first two projects
                                 i < 2 && (
                                     <Template
+                                        key={i}
                                         title={design.title}
                                         cover={design.cover}
                                         link={design.link}
+                                        desktop={design.desktop}
                                     />
                                 )
                         )}

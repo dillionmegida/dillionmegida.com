@@ -58,7 +58,7 @@ let Blog = (props) => (
         >  
             <div className='SearchSection'>
                 <Link to='/search' title='Search articles'>
-                    <i className='fa fa-search'></i> <span>Search Articles</span>
+                    <i className='fa fa-search'></i>    
                 </Link>
             </div>
             <section className='Blogs'>

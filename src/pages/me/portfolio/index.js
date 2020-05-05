@@ -1,5 +1,5 @@
 import React from "react"
-import Styles from "./index.module.css"
+import Styles from "./index.module.scss"
 
 import Header from "../../../components/me/Header"
 import { graphql } from "gatsby"
@@ -17,13 +17,17 @@ export default ({ data }) => {
             />
             <Header />
             <main className={Styles.Main}>
-                {allDesigns.map(({ node: { frontmatter: design } }, d) => (
-                    <DesignTemplate
-                        title={design.title}
-                        cover={design.cover}
-                        link={design.link}
-                    />
-                ))}
+                <section className={Styles.Projects}>
+                    {allDesigns.map(({ node: { frontmatter: design } }, i) => (
+                        <DesignTemplate
+                            key={i}
+                            title={design.title}
+                            cover={design.cover}
+                            link={design.link}
+                            desktop={design.desktop}
+                        />
+                    ))}
+                </section>
             </main>
         </>
     )
@@ -40,6 +44,7 @@ export const query = graphql`
                         title
                         link
                         cover
+                        desktop
                     }
                 }
             }

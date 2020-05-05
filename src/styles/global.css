@@ -155,15 +155,6 @@ a {
     margin: 30px;
 }
 
-.SearchSection span {
-    display: none;
-}
-
-.SearchSection a:hover span,
-.SearchSection a:focus span {
-    display: inline-block;
-}
-
 .Search {
     width: 100%;
     margin: 100px auto 20px;
