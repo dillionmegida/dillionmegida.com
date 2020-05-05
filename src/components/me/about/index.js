@@ -7,8 +7,7 @@ export default () => {
             <section className={Styles.Bio}>
                 <h1>About Me</h1>
                 <p>
-                    I'm passionate about Web Accessibility and JAMstack
-                    applications.
+                    I'm passionate about Web Accessibility.
                     <br />
                     <br />I write mostly about front-end web development topics
                     on my blog here,{" "}
@@ -31,7 +30,7 @@ export default () => {
                     </a>
                     .<br />
                     <br />
-                    Proficient in HTML, CSS, JS, ReactJS and GatsbyJS.
+                    Proficient in HTML, CSS, JS, ReactJS, NodeJS and GatsbyJS.
                     <br />
                     <br />
                     Efficient use of Adobe Photoshop and Adobe Illustrator for
