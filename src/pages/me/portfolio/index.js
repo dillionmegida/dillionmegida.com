@@ -4,7 +4,7 @@ import Styles from "./index.module.scss"
 import Header from "../../../components/Header"
 import { graphql } from "gatsby"
 import Helmet from "../../../components/Helmet"
-import DesignTemplate from "../../../components/me/portfolio/template"
+import DesignTemplate from "../../../components/Me/ProjectTemplate"
 
 export default ({ data }) => {
     const allDesigns = data.allMarkdownRemark.edges

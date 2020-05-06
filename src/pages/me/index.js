@@ -2,8 +2,8 @@ import React from "react"
 import Styles from "./index.module.css"
 
 import Header from "../../components/Header"
-import AboutMe from "../../components/me/about"
-import Portfolio from "../../components/me/portfolio"
+import AboutMe from "../../components/Me/About"
+import Portfolio from "../../components/Me/Portfolio"
 import Footer from "../../components/Footer"
 import Helmet from "../../components/Helmet"
 
