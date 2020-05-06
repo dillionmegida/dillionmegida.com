@@ -1,7 +1,7 @@
 ---
-title: "JavaScript is Not Actually JavaScript"
+title: "Some Javascript features are actually Browser APIs"
 date: "2020-05-03"
-cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1588457651/images/blogs_cover/20200502_224725_0000_kagsaq.png"
+cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1588807955/images/blogs_cover/Browser_APIs_zkypcc.png"
 pageDescription: "JavaScript uses browser APIs to perform some operations on the web. Without these APIs, Javascript cannot do what many people think it can. In these article, we'll learn how Javascript works."
 pageKeywords: "fetch api, browswer apis, apis, dom api, setTimeOut"
 tags: ["javascript"]
