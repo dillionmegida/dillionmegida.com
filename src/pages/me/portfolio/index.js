@@ -1,7 +1,7 @@
 import React from "react"
 import Styles from "./index.module.scss"
 
-import Header from "../../../components/me/Header"
+import Header from "../../../components/Header"
 import { graphql } from "gatsby"
 import Helmet from "../../../components/Helmet"
 import DesignTemplate from "../../../components/me/portfolio/template"

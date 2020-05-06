@@ -1,7 +1,7 @@
 import React from "react"
 import Styles from "./index.module.css"
 
-import Template from "../../../components/templates/website-design"
+import Template from "../../../components/Me/ProjectTemplate"
 
 export default () => {
     return (

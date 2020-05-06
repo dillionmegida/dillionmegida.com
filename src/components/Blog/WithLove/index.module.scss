@@ -1,0 +1,18 @@
+.p {
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 25px;
+
+    & .Emoji {
+        font-size: 20px;
+        color: red;
+    }
+
+    a {
+        color: var(--lightBlue);
+        font-weight: bold;
+    }
+}

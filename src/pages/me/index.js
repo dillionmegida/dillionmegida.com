@@ -1,10 +1,10 @@
 import React from "react"
 import Styles from "./index.module.css"
 
-import Header from "../../components/me/Header"
+import Header from "../../components/Header"
 import AboutMe from "../../components/me/about"
 import Portfolio from "../../components/me/portfolio"
-import Contact from "../../components/me/contact"
+import Footer from "../../components/Footer"
 import Helmet from "../../components/Helmet"
 
 export default () => {
@@ -29,7 +29,7 @@ export default () => {
             <main>
                 <AboutMe />
                 <Portfolio />
-                <Contact />
+                <Footer />
             </main>
         </>
     )

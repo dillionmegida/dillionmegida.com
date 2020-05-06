@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.fields.slug,
-            component: path.resolve(`./src/components/templates/blog-post.js`),
+            component: path.resolve(`./src/components/Blog/PostFull/index.js`),
             context: {
                 // Data passed to context is available
                 // in page queries as GraphQL variables.
@@ -67,7 +67,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPaginatedPages({
         edges: result.data.allMarkdownRemark.edges,
         createPage: createPage,
-        pageTemplate: "./src/components/templates/posts.js",
+        // pageTemplate: "./src/components/templates/posts.js",
+        pageTemplate: "./src/components/Blog/index.js",
         pageLength: 10, // This is optional and defaults to 10 if not used
         pathPrefix: "", // This is optional and defaults to an empty string if not used
         context: {}, // This is optional and defaults to an empty object if not used
@@ -76,7 +77,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     result.data.tagsGroup.group.forEach(tag => {
         createPage({
             path: `tags/${_.kebabCase(tag.fieldValue)}/`,
-            component: path.resolve(`./src/components/templates/tags.js`),
+            component: path.resolve(`./src/components/Blog/Tags/index.js`),
             context: {
                 tag: tag.fieldValue,
             },
