@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Layout from '../../Layout/';
+import Layout from '../BlogLayout/';
 import Newsletter from '../../Newsletter';
 import Disqus from '../disqus';
 import { formatBlogDate } from '../../../utils';

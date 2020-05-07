@@ -1,4 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
+import Styles from './index.module.scss';
+
 import Helmet from "../Helmet"
 import Header from "../Header"
 import Footer from "../Footer"
@@ -19,7 +21,7 @@ const Layout = props => {
                 LargeTwitterCard={props.LargeTwitterCard}
             />
             <Header />
-            {props.children}
+            <div className={Styles.Children}>{props.children}</div>
             <Footer />
         </>
     )
