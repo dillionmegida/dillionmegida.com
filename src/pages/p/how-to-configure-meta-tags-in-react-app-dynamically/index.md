@@ -1,10 +1,10 @@
 ---
-title: "How to Configure meta-tags in React Apps Dynamically with a NodeJS Server"
+title: "How to Configure meta tags in React Apps Dynamically with a NodeJS Server"
 date: "2020-05-07"
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1588811287/images/blogs_cover/meta-tags_pasddl.png"
-pageDescription: "Here are 10 Gatsby plugins which makes creating contents easy and effective. Some of them are difficult to configure manually but these plugins have been created to make their implementation easy."
-pageKeywords: "gatsby, gatsby plugins, gatsby-plugin-google-analytics, gatsby-remark-images, gatsby-remark-prismjs, gatsby-plugin-disqus, gatsby-plugin-manifest, gatsby-plugin-sitemap, gatsby-plugin-dark-mode, gatsby-plugin-feed, gatsby-plugin-netlify-cms, gatsby-remark-embedder, plugins for gatsby blog"
-tags: ["gatsby"]
+pageDescription: "react-helmet can be used to update meta tags automatically but this requires the browser to run the codes in the component. In this article, we'll learn how to update meta tags beforehand from the server"
+pageKeywords: "nodejs, meta tags, seo, reactjs, react, express, nodejs server, update meta tags"
+tags: ["nodejs", "seo", "react"]
 ---
 
 Many people confuse `react-helmet` to be the solution for Search Engine Optimization (SEO) improvement in respect to meta tags configuration. This is not true. In this article, we'll learn how `react-helmet` works and how to dynamically update meta tags (using a NodeJS server) for SEO purposes.
@@ -41,7 +41,7 @@ A standard React application has an `index.html` file in the public directory wh
 </html>
 ```
 
-This is the head tag configuration which all pages (as configured with [react-router-dom](https://npmjs.com/packages/react-router-dom) or any client-side routing package) would have. What I mean is, '/about' and '/contact' routes would have a `title` tag with 'React App'
+This is the head tag configuration that all pages (as configured with [react-router-dom](https://npmjs.com/package/react-router-dom) or any client-side routing package) would have. What I mean is, '/about' and '/contact' routes would have a `title` tag with 'React App'
 
 ### When to use
 
@@ -102,23 +102,29 @@ console.log(a)
 3. Load the default HTML (with meta tags, and title = 'React App').
 4. Execute the JavaScript codes of which the meta tags are updated via `react-helmet`.
 
+![Illustration of how react helmet works](./how-react-helmet-works.png)
+
 ### `react-helmet` is not the perfect solution
 
-As I stated few lines back, `react-helmet` consist of JavaScript codes which are executed by the browser. What this means is that if those functions are not evoked, every page would still have a `title` of 'React App'.
+As I stated in few lines back, `react-helmet` consist of JavaScript codes which are executed by the browser. What this means is that if those functions are not evoked, every page would still have a `title` of 'React App'.
 
 With all these said, you'll understand now that when you host your react application on any server, the meta tags are still the default. It only changes when a browser requests for the resources on a page, and the `react-helmet` functions used there are executed.
 
 **SEO bot crawlers do not execute JavaScript functions**.
 
+![How SEO bot crawlers work](./how-crawlers-work.png)
+
 If any crawler crawls through a page on your React application, they'd index that page by the default meta tags (the `title` being 'React App'). So your client sees 'Contact Us' on the browser but the crawler sees 'React App'.
 
 You may not care about SEO, but another reason why you'd need to ensure correct tags is for example, services like twitter page summary which displays an image, title and description declared for your page. When you make a tweet with a URL, twitter attempts to get a preview of that URL. This means, it would make a request to the server holding the resources of that page. Twitter wouldn't help you run any JavaScript, hence, what would be returned back from the server would be 'React App' for `title`.
 
-**Note that** in some React frameworks like GatsbyJS, `react-helmet` is used to appropriately modify the meta tags for each page, but ReactJS on its own cannot ensure this, until it is ran in a browser.
+**Note that** in some React frameworks like GatsbyJS (that I know of), `react-helmet` works with [`gatsby-plugin-react-helmet`](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/) to appropriately modify meta tags during their server-side rendering process. Asides frameworks like such, remember that `react-helmet` cannot work on its own until the functions are executed by the browser.
 
 ## A better solution
 
 The solution is to dynamically configure the meta tags from the server before responding to the client (browser). This is just one out of other solutions (e.g hydration) available.
+
+![Illustrating dynamic configuration of meta tags from the server](./dynamic-meta-configuration-from-server.png)
 
 In the next section, we'd look at how to achieve this.
 
@@ -162,14 +168,14 @@ From the above example:
 
 With these, the default tags would be returned in the response for every page. To configure the meta tags of each page, we'd need to attend to them differently.
 
-An easy way to do this is to put template strings in public/index.html file (which results in build/index.html). Then, we'll target those templates and replace them accordingly in respect to the page requested.
+An easy way to do this is to put a template string in public/index.html file (which results in build/index.html). Then, we'll target that string and replace it accordingly with respect to the page requested.
 
 For example:
 
 ```html
 <html>
     <head>
-        <title>__PAGE_TITLE__</title>
+        __PAGE_META__
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
@@ -179,7 +185,7 @@ For example:
 </html>
 ```
 
-Next, we'd read the index.html file, replace \_\_PAGE\_TITLE\_\_ with the title we want and send the updated file.
+Next, we'd read the index.html file, replace \_\_PAGE\_META\_\_ with the meta tags we want and send the updated content.
 
 In the server.js file, we'd add the following:
 
@@ -194,7 +200,9 @@ const pathToIndex = path.join(__dirname, 'build/index.html');
 app.get('/', (req, res) => {
     const raw = fs.readFileSync(pathToIndex);
     const pageTitle = 'Homepage - Welcome to my page'
-    const updated = raw.replace('__PAGE_TITLE__', pageTitle);
+    const updated = raw.replace('__PAGE_META__', (
+        `<title>${pageTitle}</title>`
+    ));
     res.send(updated);
 })
 // highlight-end
@@ -209,7 +217,7 @@ app.listen(port, () => {
 })
 ```
 
-`fs` gets the content of index.html _synchronously_, replaces the template string with our desired title, and sends the updated version as a response. You can do the same for other meta tags like \_\_PAGE\_DESCRIPTION\_\_, \_\_PAGE_KEYWORDS__ and so on.
+`fs` gets the content of index.html _synchronously_, replaces the template string with our desired meta, and sends the updated version as a response. You can do the same for other meta tags like '\<meta name='description' content=${pageDescription}>' and so on.
 
 Since the codes are ran by your server, you can also get dynamic values. For example, a product or user which you'd use `/:id` to get its details. You can perform the operations necessary to get its details before replacing the index.html file and sending back to the browser.
 
