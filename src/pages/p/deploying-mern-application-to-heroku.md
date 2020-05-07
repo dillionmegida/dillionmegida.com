@@ -7,26 +7,22 @@ tags: ["mern", "heroku"]
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1584753157/images/blogs_cover/1_qgxaya.png"
 ---
 
-<div class='toc'>
-
 ## Table of contents
 
--   [Introduction to MERN](#introduction)
--   [Let's Start Building](#building-process)
-    -   [Building React App](#building-react)
-    -   [Creating backend](#creating-backend)
-        -   [Connect MongoDB Atlas Database](#connect-database)
--   [Deploying to Heroku](#deploy-heroku)
-    -   [Create heroku app](#deploy-heroku-create)
-    -   [Configure package.json](#deploy-heroku-package-json)
--   [Calling APIs on frontend](#calling-apis)
--   [Wrap up](#wrap-up)
-    </div>
+- [Introduction to MERN](#introduction-to-mern)
+- [Building Process](#building-process)
+    - [Building React App](#building-react-app)
+    - [Creating the backend](#creating-the-backend)
+        - [Configure backend](#configure-backend)
+        - [Create `User` model](#create-user-model)
+        - [Connect MongoDB Atlas database](#connect-mongodb-atlas-database)
+- [Calling APIs on the frontend](#calling-apis-on-the-frontend)
+- [Deploying to Heroku](#deploying-to-heroku)
+    - [Create Heroku App](#create-heroku-app)
+    - [Configure package.json](#configure-packagejson)
+- [Wrap Up](#wrap-up)
 
-<h2>
-    <a class='offset_link' name='introduction'></a>
-    Introduction to MERN
-</h2>
+## Introduction to MERN
 
 In this article, I'd be building and deploying an application built with the MERN stack to Heroku.
 
@@ -40,17 +36,11 @@ We'd be building a simple react project, which makes post requests to an api to 
 
 _You can skip to any step with the table of contents listed above._
 
-<h2>
-    <a class='offset_link' name='building-process'></a>
-    Building Process
-</h2>
+## Building Process
 
 You may already have a MERN project which is to be deployed to Heroku, but I'd go over a little project just incase you don't
 
-<h3>
-    <a class='offset_link' name='building-react'></a>
-    Building React App
-</h3>
+### Building React App
 
 **Note:** Before we begin with our project, `node` must be installed on your computer. `node` also provides us with `npm` which is used for installing packages.
 
@@ -91,10 +81,7 @@ npm i axios --save
 
 `axios` is a javascript library used to make HTTP requests easily. It would be used to send requests from the frontend (React) to the apis provided by the backend
 
-<h3>
-    <a class='offset_link' name='creating-backend'></a>
-    Creating the backend
-</h3>
+### Creating the backend
 
 The backend manages the apis, handles requests and also connects to the database.
 
@@ -226,10 +213,7 @@ module.exports = mongoose.model("User", userSchema, "users")
 
 In the above, a schema is created for the user which contains the fields of the user. At the end of the file, the model ("User") is exported with the schema and the collection ("users")
 
-<h5>
-    <a class='offset_link' name='connect-database'></a>
-    Connect MongoDB Atlas database
-</h5>
+#### Connect MongoDB Atlas database
 
 According to [the docs](https://www.mongodb.com/cloud/atlas)
 
@@ -259,10 +243,7 @@ mongoose
 
 In the `connection` variable, enter your `username` (for MongoDB cloud), your `password` (cluster password), your `cluster` (address for your cluster) and the `database` (name of your database). All these can be easily discovered if you followed the documentation
 
-<h2>
-    <a class='offset_link' name='calling-apis'></a>
-    Calling APIs on the frontend
-</h2>
+## Calling APIs on the frontend
 
 All APIs would be made to `localhost:5000` locally just as we set up in server.js. When deployed to heroku, the server would use the port provided by the server (`process.env.PORT`).
 
@@ -356,19 +337,13 @@ If you want to learn more about about `useState` and `useEffect`, check out this
 
 With the form available, a post request can be made to post a new user. The state of the inputs are controlled and sent to the api on `localhost:5000` on submission. After wards, the page is refreshed and the new user is displayed.
 
-<h2>
-    <a class='offset_link' name='deploy-heroku'></a>
-    Deploying to Heroku
-</h2>
+## Deploying to Heroku
 
 The most exciting part (I guess 😁)
 
 To deploy your application to heroku, you must have a heroku account. Go to [their page](https://www.heroku.com/) to create an account. Then go through [their documention]() on how to create an heroku app. Also check out [the documentation](https://devcenter.heroku.com/articles/heroku-cli) on Heroku CLI
 
-<h3>
-    <a class='offset_link' name='deploy-heroku-create'></a>
-    Create Heroku App
-</h3>
+### Create Heroku App
 
 First, login to heroku:
 
@@ -386,10 +361,7 @@ heroku create
 
 Tnis would create a heroku application and also give you the url to access the application.
 
-<h3>
-    <a class='offset_link' name='deploy-heroku-package-json'></a>
-    Configure package.json
-</h3>
+### Configure package.json
 
 Heroku uses your package.json file to know which scripts to run and dependencies to install for your project to run successfully.
 
@@ -430,10 +402,7 @@ Now you can preview your site on the url heroku sent when `heroku create` was ra
 
 That's all there is to this article. Glad you read it this far.
 
-<h2>
-    <a class='offset_link' name='wrap-up'></a>
-    Wrap Up
-</h2>
+## Wrap Up
 
 Of course there is more to MERN stack applications.
 
