@@ -30,7 +30,7 @@ export default ({ data }) => {
               <p className={Styles.BlogDate}>{formatBlogDate(post.frontmatter.date)} | {`${post.timeToRead} min${post.timeToRead > 1 ? 's' : ''} read`}</p>
               {
                 post.frontmatter.tags ?
-                <p>
+                <p className={Styles.BlogTags}>
                   {
                     post.frontmatter.tags.map((tag, index) => (
                       <Link key={`${tag}_${index}`} to={`/tags/${tag}`}>

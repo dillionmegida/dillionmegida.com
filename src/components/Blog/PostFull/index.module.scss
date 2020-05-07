@@ -44,6 +44,12 @@
 .BlogInfo {
     border-bottom: 1px solid var(--mainColor1);
 }
+.BlogTags {
+    & a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
 .BlogContent {
     line-height: 30px;
     font-size: 20px;
@@ -51,7 +57,8 @@
     /* Markdown custom styles */
 
     & div[class=gatsby-highlight] {
-        margin: 0.5em 0;
+        // margin: 0.5em 0;
+        margin: 0 -20px;
         overflow: auto;
 
         & pre[class*="language-"] {
