@@ -46,6 +46,7 @@ module.exports = {
                 pedantic: true,
                 gfm: true,
                 plugins: [
+                    `gatsby-remark-autolink-headers`,
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
