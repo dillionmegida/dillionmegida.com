@@ -2,9 +2,10 @@ import React from "react"
 import Styles from "./index.module.scss"
 
 import Header from "../../../components/Header"
+import Footer from '../../../components/Footer';
 import { graphql } from "gatsby"
 import Helmet from "../../../components/Helmet"
-import DesignTemplate from "../../../components/Me/ProjectTemplate"
+import DesignTemplate from "../../../components/Me/Portfolio/template";
 
 export default ({ data }) => {
     const allDesigns = data.allMarkdownRemark.edges
@@ -29,6 +30,7 @@ export default ({ data }) => {
                     ))}
                 </section>
             </main>
+            <Footer />
         </>
     )
 }
