@@ -13,7 +13,11 @@ export default ({ pageContext }) => {
     const nextPage = !isLast && pageContext.index + 1
 
     return (
-        <Layout>
+        <Layout
+            PageTitle="Dillion Megida - Technical Writer and Front End Developer"
+            PageLink="/"
+            PageDescription="Dillion is a Frontend Developer, a Tecnical Writer and a Graphics Designer."
+        >
             <main className={Styles.BlogMain}>
                 <div className={Styles.SearchSection}>
                     <Link to="/search" title="Search articles">
