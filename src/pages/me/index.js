@@ -1,5 +1,5 @@
 import React from "react"
-import Styles from "./index.module.css"
+import Styles from "./index.module.scss"
 
 import Header from "../../components/Header"
 import AboutMe from "../../components/Me/About"

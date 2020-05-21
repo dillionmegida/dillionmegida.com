@@ -31,26 +31,21 @@
     color: var(--lightBlue);
     font-weight: bold;
 }
-.Intro p:nth-child(2) {
+.Intro p.Small {
     font-size: 25px;
 }
 
 @media only screen and (max-width: 1000px) {
-    .Intro p:first-child {
-        width: 80%;
-        font-size: 30px;
-    }
-    .Intro p:nth-child(2) {
-        font-size: 23px;
-    }
+    .Intro {
+        padding: 20px;
+         p.Big {
+        width: 100%;
+        /* font-size: 30px; */
+    }}
 }
 
-@media only screen and (max-width: 600px) {
-    .Intro p:first-child {
-        width: 100%;
-        font-size: 25px;
-    }
-    .Intro p:nth-child(2) {
-        font-size: 17px;
+@media only screen and (max-width: 500px) {
+    .Intro p.Big {
+        font-size: 45px;
     }
 }
