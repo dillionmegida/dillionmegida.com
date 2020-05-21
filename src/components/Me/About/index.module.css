@@ -11,30 +11,43 @@
 .AboutSection h1 {
     font-size: 30px;
 }
+.Bio {
+    max-width: 600px;
+    padding: 20px;
+}
+.Bio p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
 
-.AboutSection a:not(.Resume):not(.Contact) {
-    color: var(--mainColor1);
-    text-decoration: underline;
+.Bio a:not(.Resume) {
+    color: var(--lightBlue);
+    border: 1px solid transparent;
+    border-bottom: 3px solid var(--lightBlue);
     font-weight: bold;
-    padding: 2px;
+    padding: 2px 5px;
+}
+.Bio a:focus {
+    border: 1px solid var(--lightBlue);
+    border-bottom: 3px solid var(--lightBlue);
 }
 
 .Resume {
-    color: var(--mainColor1);
+    margin-top: 20px;
+    width: max-content;
+    display: block;
     padding: 2px;
     font-size: 20px;
-    outline: 1px solid var(--mainColor1);
     text-decoration: none;
-    padding: 5px;
+    padding: 5px 10px;
+    background-color: var(--mainColor1);
+    color: white;
+    border-radius: 4px;
+    border: 2px solid var(--mainColor1);
 }
 .Resume:hover,
 .Resume:focus {
-    background-color: var(--mainColor1);
-    color: white;
-}
-.AboutSection .Bio {
-    max-width: 500px;
-    padding: 20px;
+    border-color: var(--lightBlue);
 }
 .ImgDiv {
     max-width: 300px;

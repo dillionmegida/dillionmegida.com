@@ -25,7 +25,7 @@ const Header = props => {
 
     return (
         <header className={Styles.Header}>
-            <Link to="/">
+            <Link className={Styles.Me} to="/">
                 <div className={Styles.Img}>
                     <img src="/img/deee.jpeg" alt="Profile" />
                 </div>

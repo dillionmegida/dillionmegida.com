@@ -19,11 +19,13 @@ export default () => {
             <div className={Styles.LandingImage}>
                 <Header />
                 <div className={Styles.Intro}>
-                    <p>
-                        Hi <span role='img' aria-label='wave'>👋</span>, I'm Dillion, a Front-end developer and Technical
+                    <p className={Styles.Big}>
+                        Hi <span role='img' aria-label='wave'>👋</span>, I'm <span>Dillion Megida</span>
+                    </p>
+                    <p className={Styles.Small}>
+                        I'm a Frontend developer and Technical
                         writer based in Nigeria.
                     </p>
-                    <p>I also do Graphic and UI Designs <span role='img' aria-label='glitter'>✨</span></p>
                 </div>
             </div>
             <main>

@@ -7,10 +7,13 @@ export default () => {
             <section className={Styles.Bio}>
                 <h1>About Me</h1>
                 <p>
-                    I'm passionate about Web Accessibility.
+                    I'm passionate about Web Accessibility. I love creating
+                    usable tools around the web.
                     <br />
-                    <br />I write mostly about front-end web development topics
-                    on my blog here,{" "}
+                    <br />
+                    I'm also a technical writer with a passion for simplifying
+                    topics around the web. I write mostly about web
+                    development topics on my blog here,{" "}
                     <a
                         href="https://blog.soshace.com/author/dillionmegida/"
                         title="Soshace Blog"
@@ -28,10 +31,7 @@ export default () => {
                     >
                         TheWebFor5
                     </a>
-                    .<br />
-                    <br />
-                    Proficient in HTML, CSS, JS, ReactJS, NodeJS and GatsbyJS.
-                    <br />
+                    {/* <br />
                     <br />
                     Efficient use of Adobe Photoshop and Adobe Illustrator for
                     graphics designing. These include photo editing, logo
@@ -45,8 +45,7 @@ export default () => {
                         Deeesigns Studios
                     </a>
                     , which deals in Graphics Designing.
-                    <br />
-                    <br />
+                    <br /> */}
                     <a
                         className={Styles.Resume}
                         href="/resume.pdf"
@@ -59,7 +58,7 @@ export default () => {
             </section>
             <section className={Styles.Dp}>
                 <div className={Styles.ImgDiv}>
-                    <img alt='Profile' src="/img/deee.jpeg" />
+                    <img alt="Profile" src="/img/deee.jpeg" />
                 </div>
                 <p>
                     DILLION MEGIDA{" "}

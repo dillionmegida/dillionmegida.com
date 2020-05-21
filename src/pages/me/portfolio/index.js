@@ -19,13 +19,13 @@ export default ({ data }) => {
             <Header />
             <main className={Styles.Main}>
                 <section className={Styles.Projects}>
-                    {allDesigns.map(({ node: { frontmatter: design } }, i) => (
+                    {allDesigns.map(({ node: { frontmatter: project } }, i) => (
                         <DesignTemplate
                             key={i}
-                            title={design.title}
-                            cover={design.cover}
-                            link={design.link}
-                            desktop={design.desktop}
+                            title={project.title}
+                            cover={project.cover}
+                            link={project.link}
+                            desktop={project.desktop}
                         />
                     ))}
                 </section>
@@ -38,7 +38,7 @@ export default ({ data }) => {
 export const query = graphql`
     query {
         allMarkdownRemark(
-            filter: { fields: { slug: { regex: "/^(/designs/)/" } } }
+            filter: { fields: { slug: { regex: "/^(/projects/)/" } } }
         ) {
             edges {
                 node {

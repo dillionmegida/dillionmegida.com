@@ -13,8 +13,7 @@ export default () => {
                         className={Styles.Contact}
                         href="mailto:dillionmegida@gmail.com"
                     >
-                        <i className="fa fa-envelope"></i>{" "}
-                        dillionmegida@gmail.com
+                        <i className="fa fa-envelope"></i>
                     </a>
 
                     </span>

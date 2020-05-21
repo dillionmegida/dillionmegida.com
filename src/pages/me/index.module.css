@@ -5,7 +5,10 @@
 .LandingImage {
     height: 100vh;
     background-color: #130327;
-    /* background-image: url('/img/bg.png'); */
+    background-image: url('/img/landing-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
 }
 
 .Intro {
@@ -17,16 +20,19 @@
     height: calc(100vh - 90px);
     padding: 0 50px 20px;
 }
-.Intro p:first-child {
-    font-size: 45px;
+.Intro p {
+    margin: 10px;
+}
+.Intro p.Big {
+    font-size: 65px;
     width: 60%;
+}
+.Intro p.Big span {
+    color: var(--lightBlue);
+    font-weight: bold;
 }
 .Intro p:nth-child(2) {
     font-size: 25px;
-}
-.Intro p:first-child {
-    font-size: 45px;
-    width: 60%;
 }
 
 @media only screen and (max-width: 1000px) {
