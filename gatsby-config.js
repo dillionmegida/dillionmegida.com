@@ -12,7 +12,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-sitemap`,
             options: {
-                exclude: ["/tags/*", "/search", "/designs/*"],
+                exclude: ["/tags/*", "/search", "/projects/*"],
             },
         },
 

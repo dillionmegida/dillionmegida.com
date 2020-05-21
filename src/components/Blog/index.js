@@ -21,7 +21,7 @@ export default ({ pageContext }) => {
             <main className={Styles.BlogMain}>
                 <div className={Styles.SearchSection}>
                     <Link to="/search" title="Search articles">
-                        <i className="fa fa-search"></i>
+                        <i className="fa fa-search"></i> Search articles
                     </Link>
                 </div>
                 <section>

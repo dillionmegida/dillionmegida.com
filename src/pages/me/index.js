@@ -3,7 +3,7 @@ import Styles from "./index.module.css"
 
 import Header from "../../components/Header"
 import AboutMe from "../../components/Me/About"
-import Portfolio from "../../components/Me/Portfolio"
+import Projects from "../../components/Me/Projects"
 import Footer from "../../components/Footer"
 import Helmet from "../../components/Helmet"
 
@@ -30,7 +30,7 @@ export default () => {
             </div>
             <main>
                 <AboutMe />
-                <Portfolio />
+                <Projects />
                 <Footer />
             </main>
         </>

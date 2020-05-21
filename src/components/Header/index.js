@@ -14,8 +14,8 @@ const Header = props => {
             <Link activeClassName={Styles.Active} onClick={() => setDrawerStatus(false)} to="/me">
                 About
             </Link>
-            <Link activeClassName={Styles.Active} onClick={() => setDrawerStatus(false)} to="me/portfolio">
-                Portfolio
+            <Link activeClassName={Styles.Active} onClick={() => setDrawerStatus(false)} to="/me#projects">
+                Projects
             </Link>
             <Link onClick={() => setDrawerStatus(false)} to="/me#contact">
                 Contact
