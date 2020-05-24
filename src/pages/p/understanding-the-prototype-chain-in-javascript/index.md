@@ -5,6 +5,18 @@ cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1589585860/images
 pageDescription: "JavaScript is a prototype-based object-oriented language where objects act as prototypes ontop which other objects are built. This allows objects to inherit properties from other objects without creating their own copies"
 pageKeywords: "prototype, prototype inheritance, prototype chain, class, new, this"
 tags: ["javascript", "objects"]
+questions: [
+    {
+        name: "What makes arrow functions different from normal functions in respect to the `this` variable",
+        options: ["Arrow functions create a `this` variable when declared which points to the this varible that existed before it", "Arrow functions do not create their own this variable when declared"],
+        answer: 1
+    },
+    {
+        name: "What is the benefit of prototypes?",
+        options: ["They allow objects to be created easily with shared properties or methods stored in one location", "They allow objects to be created easily with the appropriate properties and methods attached to the object"],
+        answer: 0
+    }
+]
 ---
 
 JavaScript is a prototype-based object-oriented language. Although, you'd see the `class` keyword (in modern Javascript) but it works as prototypes at the background. I explained how the `class` keyword works [in this article on `this`](../this-demystified).
