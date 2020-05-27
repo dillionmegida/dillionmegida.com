@@ -61,8 +61,15 @@ export default ({ data }) => {
                     </div>
                 </article>
 
-                <h2>Exercise questions</h2>
-                <QuestionForm questions={post.frontmatter.questions} color='var(--mainColor1)' />
+                {post.frontmatter.questions && (
+                    <>
+                        <h2>Exercise questions</h2>
+                        <QuestionForm
+                            questions={post.frontmatter.questions}
+                            color="var(--mainColor1)"
+                        />
+                    </>
+                )}
 
                 {/* Sharing the article with media APIs */}
                 <p
