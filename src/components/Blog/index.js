@@ -30,9 +30,7 @@ export default ({ pageContext }) => {
                             key={node.id}
                             href={node.fields.slug}
                             title={node.frontmatter.title}
-                            readTime={`${node.timeToRead} min${
-                                node.timeToRead > 1 ? "s" : ""
-                            }`}
+                            readTime={node.timeToRead}
                             date={node.frontmatter.date}
                             tags={node.frontmatter.tags}
                             content={
