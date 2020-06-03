@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Antic);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 html.smoothScroll {
     scroll-behavior: smooth;
@@ -30,7 +30,7 @@ html.smoothScroll {
 
 body {
     margin: 0;
-    font-family: "Antic", "Helvetica";
+    font-family: "Nunito", "Helvetica";
 }
 * {
     box-sizing: border-box;
