@@ -13,7 +13,7 @@ export default () => {
             <Helmet
                 PageTitle="About me - Dillion Megida"
                 PageLink="/me"
-                PageDescription="Dillion is a Frontend Developer, a Tecnical Writer and a Graphics Designer."
+                PageDescription="Dillion is a Frontend Engineer, a Tecnical Writer and a Graphics Designer."
                 smoothScroll
             />
             <div className={Styles.LandingImage}>
@@ -23,8 +23,8 @@ export default () => {
                         Hi <span role='img' aria-label='wave'>👋</span>, I'm <span>Dillion Megida</span>
                     </p>
                     <p className={Styles.Small}>
-                        I'm a Frontend developer and Technical
-                        writer based in Nigeria.
+                        I'm a Frontend Engineer and Technical
+                        Writer based in Nigeria.
                     </p>
                 </div>
             </div>

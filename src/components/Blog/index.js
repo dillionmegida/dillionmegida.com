@@ -14,9 +14,9 @@ export default ({ pageContext }) => {
 
     return (
         <Layout
-            PageTitle="Dillion Megida - Technical Writer and Front End Developer"
+            PageTitle="Dillion Megida - Frontend Engineer and Technical Writer"
             PageLink="/"
-            PageDescription="Dillion is a Frontend Developer, a Tecnical Writer and a Graphics Designer."
+            PageDescription="Dillion is a Frontend Engineer and a Tecnical Writer learning, teaching and buiding web applications with JavaScript."
         >
             <main className={Styles.BlogMain}>
                 <div className={Styles.SearchSection}>

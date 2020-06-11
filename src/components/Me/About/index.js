@@ -7,13 +7,18 @@ export default () => {
             <section className={Styles.Bio}>
                 <h1>About Me</h1>
                 <p>
-                    I'm passionate about Web Accessibility. I love creating
-                    usable tools around the web.
+                    Passionate about Web Accessibility and Web Technologies.
+                    Skilled in transforming UI/UX designs to readable codes.
+                    I develop web applications and tools with JavaScript.
                     <br />
                     <br />
-                    I'm also a technical writer with a passion for simplifying
-                    topics around the web. I write mostly about web
+                    Passionate Technical writer who loves simplifying topics
+                    around the web. I write mostly about web
                     development topics on my blog here,{" "}
+                    <a href="https://www.freecodecamp.org/news/author/dillionmegida/" title="FreeCodeCamp Profile">
+                        FreeCodeCamp
+                    </a>
+                    ,{" "}
                     <a
                         href="https://blog.soshace.com/author/dillionmegida/"
                         title="Soshace Blog"
@@ -24,13 +29,15 @@ export default () => {
                     <a href="https://dev.to/dillionmegida" title="DEV Blog">
                         Dev.to
                     </a>
-                    . I'm also the Founder of{" "}
+                    .<br /><br/>
+                    Founder,{" "}
                     <a
                         href="https://thewebfor5.com"
                         title="The Web For Five Homepage"
                     >
                         TheWebFor5
                     </a>
+                    .
                     {/* <br />
                     <br />
                     Efficient use of Adobe Photoshop and Adobe Illustrator for
@@ -46,15 +53,20 @@ export default () => {
                     </a>
                     , which deals in Graphics Designing.
                     <br /> */}
-                    <a
-                        className={Styles.Resume}
-                        href="/resume.pdf"
-                        title="My Resume"
-                        target="_blank"
-                    >
-                        Resume
-                    </a>
+                    <br />
+                    <p>
+                        <b>Skills:</b> JavaScript, SASS, React, Gatsby, Angular,
+                        Node.js
+                    </p>
                 </p>
+                <a
+                    className={Styles.Resume}
+                    href="https://drive.google.com/file/d/1-8Kad9uT65zPoxKU5cMZc9ju5pJKK7iD/view?usp=sharing"
+                    title="My Resume"
+                    target="_blank"
+                >
+                    Resume
+                </a>
             </section>
             <section className={Styles.Dp}>
                 <div className={Styles.ImgDiv}>

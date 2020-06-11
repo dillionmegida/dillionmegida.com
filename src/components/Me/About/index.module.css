@@ -23,13 +23,13 @@
 .Bio a:not(.Resume) {
     color: var(--lightBlue);
     border: 1px solid transparent;
-    border-bottom: 3px solid var(--lightBlue);
     font-weight: bold;
-    padding: 2px 5px;
+    text-decoration: underline;
 }
 .Bio a:focus {
-    border: 1px solid var(--lightBlue);
-    border-bottom: 3px solid var(--lightBlue);
+    outline-offset: 2px;
+    outline: 2px solid var(--lightBlue);
+    text-decoration: none;
 }
 
 .Resume {

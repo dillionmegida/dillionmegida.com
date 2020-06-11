@@ -37,7 +37,7 @@ const AppHelmet = ({
             <meta name="description" content={d.PageDescription} /> {/* edit */}
             <meta
                 name="keywords"
-                content={`Dillion Megida, Dillion, Megida, web accessibility, DevCommunity, Front-end Developer, Technical Writer, Freelancer, Web Developer, Web Designer, Software Developer, Nigerian, Developer, portfolio, developer portfolio, ${
+                content={`Dillion Megida, Dillion, Megida, web accessibility, DevCommunity, Front-end Developer, Technical Writer, Freelancer, Web Developer, Frontend Engineer Web Designer, Software Developer, Nigerian, Developer, portfolio, developer portfolio, ${
                     d.PageKeywords ? d.PageKeywords : ""
                 }`}
             />{" "}
