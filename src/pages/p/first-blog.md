@@ -5,6 +5,7 @@ readTime: "2 mins"
 pageDescription: "The first blog on my website"
 pageKeywords: "Dillion First Blog"
 tags: ["general"]
+monetize: false
 ---
 
 My name is <b>Dillion Megida</b>.

@@ -5,6 +5,7 @@ cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1578146259/images
 pageDescription: "#2Articles1Week is a challenge whereby minimum of articles are written in a week. The articles written are shared on twitter. The purpose is to commit to a learning strategy."
 pageKeywords: "2articles1week, #2articles1week, 2articles, 2 articles, 1 week, 1week, 2 articles per week, articles challenge, writing challenge"
 tags: ["general"]
+monetize: false
 ---
 It's a new year and the time is just appropriate enough to determine how you'd want your year to run. One of your goals for this year may be to learn a lot in tech and you'd probably be looking towards reading books, articles, watching tutorials and many other means.
 

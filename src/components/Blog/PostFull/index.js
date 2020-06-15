@@ -7,11 +7,13 @@ import { formatBlogDate } from "../../../utils"
 import ShareArticle from "../ShareArticle/ShareArticle"
 import QuestionForm from "question-form"
 import "question-form/dist/index.css"
+import Helmet from "react-helmet"
 
 import Styles from "./index.module.scss"
 
 export default ({ data }) => {
     const post = data.markdownRemark
+    const notMonetized = post.frontmatter.monetize === false ? true : false
     return (
         <Layout
             PageTitle={`${post.frontmatter.title} - Dillion's Blog`}
@@ -24,6 +26,17 @@ export default ({ data }) => {
             // ...But it always shows for large screens
             ShowMobileCopyright
         >
+            {notMonetized ? (
+                <></>
+            ) : (
+                <Helmet>
+                    <meta
+                        name="monetization"
+                        content="$ilp.uphold.com/89fH6XniNm9R"
+                    />
+                </Helmet>
+            )}
+
             <main className={Styles.BlogPost}>
                 <article>
                     <div className={Styles.BlogInfo}>
@@ -115,6 +128,7 @@ export const query = graphql`
                 pageKeywords
                 cover
                 tags
+                monetize
                 questions {
                     name
                     options

@@ -5,6 +5,7 @@ pageDescription: "Guess who is using angular now...me! In this post, I share my 
 pageKeywords: "angular, typescript"
 tags: ["angular", "typescript"]
 cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1591226517/images/blogs_cover/angular-first-experience_tyisjp.png'
+monetize: false
 ---
 
 At the time of this post, I've been learning angular for a week now (precisely 28th of May). I'm not writing this like I know the framework well enough already, but I want to share my first experience with it, what I find interesting with it, and what makes me feel, it's easy to learn.
