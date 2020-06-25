@@ -3,13 +3,13 @@ title: "Render Props, Why and How To Use"
 date: "2020-06-25"
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1593049986/images/blogs_cover/render-props_jgwexm.png"
 pageDescription: "Render Props is an amazing concept used in React to share code and functionality between components. In this article, we'll learn why and how to use it"
-pageKeywords: "react, render props, higher order functions, components"
+pageKeywords: "react, render props, higher-order components, components"
 tags: ["react"]
 ---
 
 Render Props is an amazing concept used in React to share code and functionality between components.
 
-With this technique, we have a component which houses some codes and functionalities which other components can partake. The bigger component uses the render prop of the smaller component as a medium to pass some data to the smaller component as well as determine what would be displayed on the UI.
+With this technique, we have a component that houses some codes and functionalities which other components can partake. The bigger component uses the render prop of the smaller component as a medium to pass some data to the smaller component as well as determine what would be displayed on the UI.
 
 `render` is the name used for such props, but it could be named anything, including `coffee`. The purpose of the prop is to determine what would be rendered on the UI by the bigger component, so any prop (which has to be a function) that does this work is called a render prop.
 
@@ -18,7 +18,7 @@ Before looking at how to use this awesome feature, let's look at why we'd even n
 ## Why Render Props
 
 The most common way of sharing functionalities between two or more components is to create a basic component
-which receive different types of props to determine what would be displayed. An example of such component is:
+that receives different types of props to determine what would be displayed. An example of such component is:
 
 ```jsx
 import React, { useState } from 'react'
@@ -43,7 +43,7 @@ const Component = (props) => {
 export default Component
 ```
 
-This component is very easy to use. Any component that uses this will have to provide a `header`, `paragraph` and `increaseCounter` prop to change the count state. These determines what would be displayed on the UI.
+This component is very easy to use. Any component that uses this will have to provide a `header`, `paragraph` and `increaseCounter` prop to change the count state. These determine what would be displayed on the UI.
 
 Now imagine we wanted a smaller component to use this component, but with a different header level. We'd need another prop like so:
 
@@ -76,7 +76,7 @@ The ideal usage of render props occurs when there are multiple components to sha
 
 Let's look at a scenario for render props.
 
-It is very common in React applications (or any application) to fetch data from an external service, for example a server. To achieve this, you may have various `useEffect`s and `useState`s (using React Hooks) across different components which would be used to get the data and update the state of data during mount.
+It is very common in React applications (or any application) to fetch data from an external service, for example, a server. To achieve this, you may have various `useEffect`s and `useState`s (using [React Hooks](https://reactjs.org/docs/hooks-intro.html)) across different components which would be used to get the data and update the state of data during mount.
 
 Looking at this scenario, we can see that ComponentA may fetch all users and display their pictures while ComponentB may fetch a user's details and display the details. ComponentA and ComponentB obviously have different UIs but they do the same thing:
 
@@ -86,7 +86,7 @@ Looking at this scenario, we can see that ComponentA may fetch all users and dis
 
 The state would contain the data gotten and additionally, we could have an `isLoading` state (a common practice).
 
-Render props is ideal for such cases. Let's head over to how to use it.
+Render props are ideal for such cases. Let's head over to how to use it.
 
 ## How to use Render Props
 
@@ -113,9 +113,9 @@ const FetchComponent = (props) => {
 export default FetchComponent
 ```
 
-This is the basic structure of the bigger component. We manage some state (`data` and `isLoading`), perform some functionalities with the state and render what the consumer component decides to be rendered using the render prop (in our case `coffee`, name not descriptive, but just so you understand that the prop could be called anything).
+This is the basic structure of the bigger component. We manage some state (`data` and `isLoading`), perform some functionalities with the state and render what the consumer component decides to be rendered using the render prop (in our case `coffee`, though name not descriptive, but just so you understand that the prop could be called anything).
 
-As you'd notice, this component returns the result (the returned value) of the render prop function which is called with the state argument. This means, the consumer component has access to the state.
+As you'd notice, this component returns the result (the returned value) of the render prop function which is called with the state argument. This means the consumer component has access to the state.
 
 Our structure now doesn't solve our problem yet. We need to make a fetch request. But to which endpoint? We could receive that as props. Let's modify the component more.
 
@@ -147,7 +147,7 @@ const FetchComponent = (props) => {
 export default FetchComponent
 ```
 
-That's it for the main component. Using useEffect, we make a fetch request to the end point provided by the consumer component. `fetchData` is an assumed function which makes a fetch request. It depends on the method you want to achieve that - could be [axios](). It would also be asynchronous so you would have to handle it with `promise` or `async/await`. I didn't bother about that for simplicity of the article.
+That's it for the main component. Using useEffect, we make a fetch request to the endpoint provided by the consumer component. `fetchData` is an assumed function that makes a fetch request. It depends on the method you want to achieve that - could be [axios](https://www.npmjs.com/package/axios). It would also be asynchronous so you would have to handle it with `promise` or `async/await`. I didn't bother about that for the simplicity of the article.
 
 When the data is gotten, the state is updated and of course, the consumer component is re-rendered.
 
@@ -211,7 +211,7 @@ const UserProfile = () =>
 export default UsersComponent
 ```
 
-From these components, you'd notice how the `coffee` props works and returns what would be displayed on the UI.
+From these components, you'd notice how the `coffee` prop works. It returns what would be displayed on the UI.
 
 ### Tip
 
@@ -246,16 +246,16 @@ Whichever you love, use it.
 
 ## Things to Note
 
--   `UsersComponent` and `UserProfile` didn't have to look the same. They could use their own instance of state however they wanted.
+-   `UsersComponent` and `UserProfile` didn't have to look the same. They could use their instance of state however they wanted.
 -   `FetchComponent` did not care what other components look like. It's majorly concerned with the logic.
 -   `FetchComponent` is very usable with the very little number of props required.
 
 ## Wrap up
 
-There are many other scenarios to consider, but this is one which I've found render props really helpful.
+There are many other scenarios to consider, but this is one which I've found render props helpful.
 
-As I stated earlier, render props shouldn't be the first thing to consider. There's nothing wrong with sharing props to achieve component structure. Think of render props when you are about to share (or already sharing) similar functionalities accross a number of components.
+As I stated earlier, render props shouldn't be the first thing to consider. There's nothing wrong with sharing props to achieve component structure. Think of render props when you are about to share (or already sharing) similar functionalities across several components.
 
-Check out [Higher Order Functions](), a similar technique to render props.
+Check out [Higher Order Components](https://reactjs.org/docs/higher-order-components.html), a similar technique to render props.
 
 Thanks for reading : )
