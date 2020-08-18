@@ -8,15 +8,25 @@ export default () => {
                 <h1>About Me</h1>
                 <p>
                     Passionate about Web Accessibility and Web Technologies.
-                    Skilled in transforming UI/UX designs to readable codes.
-                    I develop web applications and tools with JavaScript.
+                    Skilled in transforming UI/UX designs to readable codes. I
+                    develop web applications and tools with JavaScript.
                     <br />
                     <br />
                     Passionate Technical writer who loves simplifying topics
-                    around the web. I write mostly about web
-                    development topics on my blog here,{" "}
-                    <a href="https://www.freecodecamp.org/news/author/dillionmegida/" title="FreeCodeCamp Profile">
+                    around the web. I write mostly about web development topics
+                    on my blog here,{" "}
+                    <a
+                        href="https://www.freecodecamp.org/news/author/dillionmegida/"
+                        title="FreeCodeCamp Profile"
+                    >
                         FreeCodeCamp
+                    </a>
+                    ,{" "}
+                    <a
+                        href="https://blog.logrocket.com/author/dillion-megida/"
+                        title="LogRocket Profile"
+                    >
+                        LogRocket
                     </a>
                     ,{" "}
                     <a
@@ -29,7 +39,8 @@ export default () => {
                     <a href="https://dev.to/dillionmegida" title="DEV Blog">
                         Dev.to
                     </a>
-                    .<br /><br/>
+                    .<br />
+                    <br />
                     Founder,{" "}
                     <a
                         href="https://thewebfor5.com"
