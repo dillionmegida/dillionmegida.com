@@ -47,6 +47,7 @@ module.exports = {
                 gfm: true,
                 plugins: [
                     `gatsby-remark-autolink-headers`,
+                    `gatsby-remark-text-highlighter`,
                     {
                         resolve: `gatsby-remark-images`,
                         options: {

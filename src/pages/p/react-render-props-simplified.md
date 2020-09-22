@@ -7,7 +7,7 @@ pageKeywords: "react, render props, higher-order components, components"
 tags: ["react"]
 ---
 
-Render Props is an amazing concept used in React to share code and functionality between components.
+Render Props is an amazing concept used in React to -# share code and functionality #- between components.
 
 With this technique, we have a component that houses some codes and functionalities which other components can partake. The bigger component uses the render prop of the smaller component as a medium to pass some data to the smaller component as well as determine what would be displayed on the UI.
 
