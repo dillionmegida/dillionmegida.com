@@ -54,13 +54,13 @@ const Projects = () => {
                         >
                             Find more projects on GitHub ➤
                         </a>
-                        <a
+                        {/* <a
                             rel="noopener noreferrer"
                             target="_blank"
                             href="https://dillion.netlify.com"
                         >
                             Find some of my web designs here ➤
-                        </a>
+                        </a> */}
                     </div>
                 </section>
             )}
