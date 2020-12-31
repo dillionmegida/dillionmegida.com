@@ -68,7 +68,7 @@ In all, God is great. As much as I was hopeful for the year, I sincerely feel li
 
 ## 2021
 
-I'm building my relationship with God, learning more of French, would try to this working out thing (amen!), be intentional about my happiness and my growth, learn a lot, write a lot and build stuffs.
+I'm building my relationship with God, learning more of French, would try this working out thing (amen!), be intentional about my happiness and my growth, learn a lot, write a lot and build stuffs.
 
 Also, I'd be doing more with my team on SkulMart.
 
