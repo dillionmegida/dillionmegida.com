@@ -2,7 +2,7 @@
 title: "2020 In Review"
 date: "2020-12-31"
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1609374682/images/blogs_cover/thisdot-team.png"
-pageDescription: "2020 turned out better than 2019 I guess. Had some career and person wins."
+pageDescription: "2020 turned out better than 2019! Had quite some career and personal wins."
 pageKeywords: "2020 in review"
 tags: ["general", "life"]
 monetize: false
