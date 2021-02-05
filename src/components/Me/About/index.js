@@ -1,7 +1,7 @@
 import React from "react"
 import Styles from "./index.module.css"
 
-export default () => {
+export default function About() {
     return (
         <section name="about" className={Styles.AboutSection}>
             <section className={Styles.Bio}>
@@ -34,6 +34,13 @@ export default () => {
                         title="Soshace Blog"
                     >
                         Soshace
+                    </a>
+                    ,{" "}
+                    <a
+                        href="https://learn.vonage.com/authors/dillion-megida/"
+                        title="Vonage Profile"
+                    >
+                        Vonage
                     </a>{" "}
                     and{" "}
                     <a href="https://dev.to/dillionmegida" title="DEV Blog">
