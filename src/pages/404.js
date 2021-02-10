@@ -11,16 +11,17 @@ let ErrorPage = () => (
     >
         <section style={{
             width: '100%',
-            height: '60%',
+            height: '500px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column'
         }}>
             <h1 style={{
-                fontSize: '40px'
+                fontSize: '40px',
+                textAlign: 'center'
             }}>
-                Page Not Found : (
+                Page Not Found 🤧
             </h1>
             <Link
                 to='/'
