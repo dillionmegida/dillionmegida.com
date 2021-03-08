@@ -11,7 +11,7 @@ Gatsby is a React framework also called a Static Site Generation tool which can 
 
 In this article, we'll walk through a tutorial showing how to build a source plugin for Hashnode posts.
 
-The function of the plugin is to pull the posts of a user from Hashnode using the [Hashnode API](https://api.hashnode.com/). It's a GraphQL-supported API.
+The function of the plugin is to pull the posts of a user from Hashnode using the [Hashnode API](https://api.hashnode.com/) (a GraphQL-supported API) and create GraphQL nodes from them. These nodes can then be queried with GraphQL within our application.
 
 **Note that**, there's already a plugin called [gatsby-source-hashnode](https://www.npmjs.com/package/gatsby-source-hashnode) in the NPM library. The end product of this tutorial may function the same way, but this article aims to show you **how** to build such plugins. You can apply this knowledge to any other content-based platform.
 
@@ -37,7 +37,7 @@ Fortunately, Gatsby allows us to create [local plugins](https://www.gatsbyjs.com
 Two things to note:
 
 -   Plugins are only used by Gatsby when your pages are generated (during `gatsby develop` and `gatsby build` process). Plugins do not run when your page has been built. This means if you make any change to your plugin while your pages have been built, you would have to restart the server to see the new changes
--   One caveat with plugins is that Gatsby caches plugins. This means for subsequent changes to our plugin's implementation, you may have to clean the cache and re-start the server to see the changes reflected.
+-   One caveat with plugins is that Gatsby caches them. This means, for subsequent changes to our plugin's implementation, you may have to clear the cache and re-start the server to see the changes reflected.
 
 ### Create source plugin folder
 
@@ -59,15 +59,15 @@ While invoking the `sourceNodes` function, Gatsby passes some arguments. The fir
 
 We're only interested in three items from the first argument  which are:
 
--   [`actions`](https://www.gatsbyjs.com/docs/reference/config-files/actions/): an object containing several methods from Gatsby. For our plugin, we're only interested in the `createNode` method which we'll use to create the GraphQL node for our plugin. We'll use these nodes for our GraphQL queries
+-   [`actions`](https://www.gatsbyjs.com/docs/reference/config-files/actions/): an object containing several methods from Gatsby. For our plugin, we're only interested in the [`createNode`](https://www.gatsbyjs.com/docs/reference/config-files/actions/#createNode) method which we'll use to create the GraphQL nodes for the Hashnode posts. We'll use these nodes for our GraphQL queries
 -   [`createNodeId`](https://www.gatsbyjs.com/docs/reference/config-files/node-api-helpers/#createNodeId): a method used to generate a unique id for every node created from `createNode`
 -   [`createContentDigest`](https://www.gatsbyjs.com/docs/reference/config-files/node-api-helpers/#createContentDigest): a method used to create a [checksum](https://en.wikipedia.org/wiki/Checksum) digest from data. Gatsby uses the checksum digest to identify data (from Gatsby APIs in our case) that has been changed.
 
-The `sourceNodes` method will contain the implementation that fetches some Gatsby posts, which we can fix anywhere on our website.
+The `sourceNodes` method will contain the implementation that fetches some Gatsby posts, and create nodes from them.
 
 ### The implementation
 
-First, let's play with the API a little. Head over to [the API Playground](https://api.hashnode.com/) and enter the following query:
+First, let's play with the API a little. Head over to [the Hashnode API Playground](https://api.hashnode.com/) and enter the following query:
 
 ```graphql
 {
@@ -322,8 +322,8 @@ From the above, we get all the posts of the user and loop through them to create
 
 -   an `id` property, assigned a unique id using the `createNodeId` helper function and passing the `_id` of the post gotten from Hashnode as an argument
 -   a `parent` property which is used to extend other nodes
--   a `children` which olds ids of child nodes
--   an `internal` property that holds important fields for Gatsby. In it which have:
+-   a `children` property which holds ids of child nodes
+-   an `internal` property that holds important fields for Gatsby. In it we have:
     -   `type`: the node type that this node belongs to. In our case, this belongs to the `HashnodePost` type
     -   [`mediaType`](https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#mediatype): exposes this node to transformer plugins for further processing. In our case, the object gotten from the API is more like JSON.
     -   [`content`](https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#content): holding the raw content which transformer plugins can also process
