@@ -28,7 +28,7 @@ gatsby build
 Check [http://localhost:9000]() in your browser to see the built site.
 
 ### Author
-[Dillion Megida](https://dillionmegida.com/about)
+[Dillion Megida](https://dillionmegida.com/me)
 
 ### License
 This project is open source and available under the [MIT License](https://github.com/dillionmegida/dillionmegida.com/blob/master/LICENSE).
