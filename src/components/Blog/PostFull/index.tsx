@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../BlogLayout"
-import Newsletter from "components/Newsletter"
+import Newsletter from "../../Newsletter"
 import Disqus from "../disqus"
 import { formatBlogDate } from "../../../utils"
 import ShareArticle from "../ShareArticle"
@@ -9,8 +9,8 @@ import QuestionForm from "question-form"
 import "question-form/dist/index.css"
 
 import Styles from "./index.module.scss"
-import { GqlPostFull } from "interfaces/Post"
-import Helmet from 'components/Helmet'
+import { GqlPostFull } from "../../../interfaces/Post"
+import Helmet from "../../Helmet"
 
 type Props = {
   data: {
