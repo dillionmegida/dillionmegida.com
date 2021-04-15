@@ -32,13 +32,15 @@
     "gatsby-remark-text-highlighter": "^1.0.0",
     "gatsby-source-filesystem": "^2.3.1",
     "gatsby-transformer-remark": "^2.8.4",
+    "gatsby-transformer-yaml": "^3.3.0",
     "netlify-cms-app": "^2.12.12",
     "node-sass": "^4.14.1",
     "prismjs": "^1.21.0",
     "question-form": "^1.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "styled-components": "^5.2.3"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.1",
