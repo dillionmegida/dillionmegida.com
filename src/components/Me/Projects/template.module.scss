@@ -1,39 +1,39 @@
 .Project {
-    max-width: 500px;
-    margin: 20px;   
-    & .Image {
-        height: 200px;
-        & img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
+  max-width: 500px;
+  margin: 20px;
+  & .Image {
+    height: 200px;
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
-    & .Details {
-        background-color: #eee;
-        border-bottom: 4px solid var(--lightBlue);
-        padding: 10px;
-        & span {
-            display: block;
-        }
-        & .Name {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        & .About {
-            height: 50px;
-        }
-        & a {
-            background-color: var(--lightBlue);
-            color: black;
-            display: block;
-            padding: 5px 10px;
-            width: max-content;
-            border-radius: 3px;
-            &:hover {
-                background-color: var(--mainColor1);
-                color: white;
-            }
-        }
+  }
+  & .Details {
+    background-color: #eee;
+    border-bottom: 4px solid var(--lightBlue);
+    padding: 10px;
+    & span {
+      display: block;
     }
+    & .Name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    & .About {
+      height: 50px;
+    }
+    & a {
+      background-color: var(--lightBlue);
+      color: black;
+      display: block;
+      padding: 5px 10px;
+      width: max-content;
+      border-radius: 3px;
+      &:hover {
+        background-color: var(--mainColor1);
+        color: white;
+      }
+    }
+  }
 }

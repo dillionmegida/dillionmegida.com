@@ -5,34 +5,43 @@ cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1589585860/images
 pageDescription: "JavaScript is a prototype-based object-oriented language where objects act as prototypes ontop which other objects are built. This allows objects to inherit properties from other objects without creating their own copies"
 pageKeywords: "prototype, prototype inheritance, prototype chain, class, new, this"
 tags: ["javascript", "objects"]
-questions: [
+questions:
+  [
     {
-        name: "What makes arrow functions different from normal functions in respect to the `this` variable",
-        options: ["Arrow functions create a `this` variable when declared which points to the this varible that existed before it", "Arrow functions do not create their own this variable when declared"],
-        answer: 1
+      name: "What makes arrow functions different from normal functions in respect to the `this` variable",
+      options:
+        [
+          "Arrow functions create a `this` variable when declared which points to the this varible that existed before it",
+          "Arrow functions do not create their own this variable when declared",
+        ],
+      answer: 1,
     },
     {
-        name: "What is the benefit of prototypes?",
-        options: ["They allow objects to be created easily with shared properties or methods stored in one location", "They allow objects to be created easily with the appropriate properties and methods attached to the object"],
-        answer: 0
-    }
-]
+      name: "What is the benefit of prototypes?",
+      options:
+        [
+          "They allow objects to be created easily with shared properties or methods stored in one location",
+          "They allow objects to be created easily with the appropriate properties and methods attached to the object",
+        ],
+      answer: 0,
+    },
+  ]
 ---
 
 JavaScript is a prototype-based object-oriented language. Although, you'd see the `class` keyword (in modern Javascript) but it works as prototypes at the background. I explained how the `class` keyword works [in this article on `this`](../this-demystified).
 
 In this article, we'll look at the prototype nature of JavaScript, as well as the Prototype chain in objects.
 
------
+---
 
 Examine the following code:
 
 ```js
 const animals = {
-    name: "animal",
-    type: "object"
+  name: "animal",
+  type: "object",
 }
-animals.hasOwnProperty('name');
+animals.hasOwnProperty("name")
 // true
 ```
 
@@ -56,7 +65,7 @@ JavaScript works on the basis of prototypes. At the declaration of every functio
 
 ```js
 function hello() {
-    console.log("hello")
+  console.log("hello")
 }
 console.dir(hello)
 ```
@@ -77,7 +86,7 @@ To explain this further, let's look at `constructor functions`, which is one way
 
 ```js
 function Hello() {
-    console.log("hello")
+  console.log("hello")
 }
 const anotherVersion = new Hello()
 anotherVersion.type = "new"
@@ -94,10 +103,10 @@ The result shows us now that `anotherVersion` is a new object built from `Hello`
 
 ```js
 function Obj(name) {
-    this.name = name
-    this.printName = function() {
-        console.log(this.name)
-    }
+  this.name = name
+  this.printName = function () {
+    console.log(this.name)
+  }
 }
 const javascript = new Obj("javascript")
 const php = new Obj("php")
@@ -117,13 +126,13 @@ Remember above that `hello` had two properties: `prototype` and `__proto__`. `pr
 
 ```js
 function Obj(name) {
-    this.name = name
-    this.printName = function() {
-        console.log(this.name)
-    }
+  this.name = name
+  this.printName = function () {
+    console.log(this.name)
+  }
 }
 const javascript = new Obj("javascript")
-console.log(javascript);
+console.log(javascript)
 ```
 
 Result:
@@ -140,16 +149,16 @@ What if the `prototype` property had other properties asides `constructor` and `
 
 ```js
 function Obj(name) {
-    this.name = name
-    this.printName = function() {
-        console.log(this.name)
-    }
+  this.name = name
+  this.printName = function () {
+    console.log(this.name)
+  }
 }
 const javascript = new Obj("javascript")
-Obj.prototype.printType = function() {
-    console.log(this.type)
+Obj.prototype.printType = function () {
+  console.log(this.type)
 }
-console.log(javascript);
+console.log(javascript)
 ```
 
 Result:
@@ -161,7 +170,7 @@ As seen in the image above, the `__proto__` property now has a `printType` metho
 ```js
 javascript.printType()
 // undefined, because type does not exist
-javascript.type = 'language'
+javascript.type = "language"
 javascript.printType()
 // language
 ```
@@ -190,10 +199,10 @@ Back to the first code block:
 
 ```js
 const animals = {
-    name: "animal",
-    type: "object"
+  name: "animal",
+  type: "object",
 }
-animals.hasOwnProperty('name');
+animals.hasOwnProperty("name")
 // true
 ```
 

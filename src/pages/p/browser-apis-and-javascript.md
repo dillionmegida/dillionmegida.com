@@ -22,7 +22,7 @@ JavaScript is a dynamic programming language which was majorly used on **the web
 **The browser!** The browser powers most of the features exhibited by JavaScript. A quick example to justify this statement is:
 
 ```js
-console.log(document);
+console.log(document)
 ```
 
 Have you ever tried executing something similar to the above on a NodeJS server?

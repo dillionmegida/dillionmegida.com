@@ -1,33 +1,33 @@
 .SearchMain {
-    max-width: 700px;
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-    min-height: 400px;
-    
-    & h1 {
-        opacity: .8;
-        font-size: 30px;
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  min-height: 400px;
 
-        @media (max-width: 500px) {
-            font-size: 20px;
-        }
+  & h1 {
+    opacity: 0.8;
+    font-size: 30px;
+
+    @media (max-width: 500px) {
+      font-size: 20px;
     }
+  }
 }
 
 .Search {
-    width: 100%;
-    margin: 20px auto;
+  width: 100%;
+  margin: 20px auto;
 
-    & input {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid var(--mainColor1);
-    }
+  & input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--mainColor1);
+  }
 }
 
 .ResultCount {
-    color: #333;
-    font-size: 15px;
+  color: #333;
+  font-size: 15px;
 }

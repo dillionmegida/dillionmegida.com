@@ -24,8 +24,8 @@ Let's have a `server.js` file with the following codes:
 ```js
 const express = require("express")
 const app = express()
-app.listen(8000, function() {
-    console.log("Server started!")
+app.listen(8000, function () {
+  console.log("Server started!")
 })
 ```
 
@@ -35,7 +35,7 @@ Next, handle some requests with express:
 
 ```js
 function sendMessage(request, response) {
-    res.send("Welcome to this page!")
+  res.send("Welcome to this page!")
 }
 app.get("/", sendMessage)
 ```
@@ -46,14 +46,14 @@ Are you familiar with this: `(req, res, next)`? This is where middleware comes i
 
 ```js
 function sendMessage1(request, response, next) {
-    response.sendName = function() {
-        response.send("I am express")
-    }
-    console.log("I am the first function!")
+  response.sendName = function () {
+    response.send("I am express")
+  }
+  console.log("I am the first function!")
 }
 function sendMessage2(request, response) {
-    response.sendMyName()
-    console.log("I am the second function!")
+  response.sendMyName()
+  console.log("I am the second function!")
 }
 app.get("/", sendMessage1)
 app.get("/", sendMessage2)
@@ -71,15 +71,15 @@ NodeJS passes a third argument (callback) to the function which when called, all
 
 ```js
 function sendMessage1(request, response, next) {
-    response.sendName = function() {
-        response.send("I am express")
-    }
-    console.log("I am the first function!")
-    next()
+  response.sendName = function () {
+    response.send("I am express")
+  }
+  console.log("I am the first function!")
+  next()
 }
 function sendMessage2(request, response) {
-    response.sendName()
-    console.log("I am the second function!")
+  response.sendName()
+  console.log("I am the second function!")
 }
 app.get("/", sendMessage1)
 app.get("/", sendMessage2)
@@ -101,11 +101,11 @@ One popular usage of middlewares is to pass them between the route and callback 
 
 ```js
 function printName(request, response, next) {
-    console.log("I am a middleware!")
-    next()
+  console.log("I am a middleware!")
+  next()
 }
 function sendMessage(request, response) {
-    response.send("Hello there!")
+  response.send("Hello there!")
 }
 app.get("/", printName, sendMessage)
 ```
@@ -116,13 +116,13 @@ So sequentially, "I am a middleware!" is logged to the console and "Hello there!
 
 ```js
 function printName(request, response, next) {
-    console.log("I am a middleware!")
-    response.send("Hello from middleware!")
-    next()
+  console.log("I am a middleware!")
+  response.send("Hello from middleware!")
+  next()
 }
 function sendMessage(request, response) {
-    console.log("I am a callback")
-    response.send("Hello there!")
+  console.log("I am a callback")
+  response.send("Hello there!")
 }
 app.get("/", printName, sendMessage)
 ```
@@ -135,16 +135,16 @@ NodeJS passes the request and response object to the next function, and if that 
 
 ```js
 function printName(request, response, next) {
-    console.log("I am a middleware!")
-    next()
+  console.log("I am a middleware!")
+  next()
 }
 function printAge(request, response, next) {
-    console.log("I am also a middleware")
-    next()
+  console.log("I am also a middleware")
+  next()
 }
 function sendMessage(request, response) {
-    console.log("I am a callback")
-    response.send("Hello there!")
+  console.log("I am a callback")
+  response.send("Hello there!")
 }
 app.get("/", printName, printAge, sendMessage)
 ```

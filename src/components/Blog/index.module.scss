@@ -1,59 +1,58 @@
-
 .BlogMain {
-    width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-    max-width: 700px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 700px;
 }
 
 .Pagination {
-    margin: 20px 0;
-    font-size: 20px;
-    height: 20px;
+  margin: 20px 0;
+  font-size: 20px;
+  height: 20px;
 }
 
 .SearchSection {
-    width: 100%;
-    height: 50px;
+  width: 100%;
+  height: 50px;
 }
 
 .SearchSection a {
-    color: var(--mainColor1);
-    border: 1px solid var(--mainColor1);
-    padding: 5px;
-    float: right;
-    margin: 30px 0;
+  color: var(--mainColor1);
+  border: 1px solid var(--mainColor1);
+  padding: 5px;
+  float: right;
+  margin: 30px 0;
 }
 
 @media only screen and (max-width: 400px) {
-    .Pagination {
-        font-size: 15px;
-    }
+  .Pagination {
+    font-size: 15px;
+  }
 }
 
 .Pagination a {
-    color: var(--lightBlue);
-    text-decoration: underline;
+  color: var(--lightBlue);
+  text-decoration: underline;
 }
 
 .Pagination a.previous {
-    float: left;
+  float: left;
 }
 
 .Pagination a.next {
-    float: right;
+  float: right;
 }
 
 .Pagination a:hover,
 .Pagination a:focus {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
-    .TopSection {
-        visibility: visible;
-    }
-    .mobile-copyright {
-        display: block;
-    }
+  .TopSection {
+    visibility: visible;
+  }
+  .mobile-copyright {
+    display: block;
+  }
 }

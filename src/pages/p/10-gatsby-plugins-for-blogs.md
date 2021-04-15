@@ -6,6 +6,7 @@ pageDescription: "Here are 10 Gatsby plugins which makes creating contents easy 
 pageKeywords: "gatsby, gatsby plugins, gatsby-plugin-google-analytics, gatsby-remark-images, gatsby-remark-prismjs, gatsby-plugin-disqus, gatsby-plugin-manifest, gatsby-plugin-sitemap, gatsby-plugin-dark-mode, gatsby-plugin-feed, gatsby-plugin-netlify-cms, gatsby-remark-embedder, plugins for gatsby blog"
 tags: ["gatsby"]
 ---
+
 ## Table of Contents
 
 - [Intro](#intro)
@@ -49,25 +50,28 @@ Read more - [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-rema
 ### gatsby-remark-prismjs
 
 This plugin adds syntax highlighting to code blocks (of several languages) in markdowns using [PrismJS](http://prismjs.com/). For example, the following HTML and JS code blocks:
+
 ```html
 <html>
-    <head>
-        <title>10 Gatsby Plugins To Use On Your Gatsby Blog</title>
-    </head>
+  <head>
+    <title>10 Gatsby Plugins To Use On Your Gatsby Blog</title>
+  </head>
 </html>
 ```
+
 ```javascript
 console.log("10 Gatsby Plugins To Use On Your Gatsby Blog")
 ```
+
 Read more - [gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/).
 
 ### gatsby-plugin-disqus
 
 Added to the fact that you can see the number of views on your posts, you would also like to enable engagements from users on your posts. For example, comments from users.
 
-[Disqus](https://disqus.com) is a service which enables this. With the free tier, you are able to get  engagements from users. Setting up disqus manually on your site could be difficult or time taking.
+[Disqus](https://disqus.com) is a service which enables this. With the free tier, you are able to get engagements from users. Setting up disqus manually on your site could be difficult or time taking.
 
-This plugin however, makes setting up Disqus on your blog easy.  Read more - [gatsby-plugin-disqus](https://www.gatsbyjs.org/packages/gatsby-plugin-disqus/)
+This plugin however, makes setting up Disqus on your blog easy. Read more - [gatsby-plugin-disqus](https://www.gatsbyjs.org/packages/gatsby-plugin-disqus/)
 
 ### gatsby-plugin-manifest
 
@@ -83,7 +87,7 @@ This plugin also works with [gatsby-plugin-offline](https://www.gatsbyjs.org/pac
 
 This plugin creates a sitemap for your Gatsby plug. What is a sitemap? A sitemap makes it easy for google to find all pages within your site. Remember that google ranks web pages too, not just websites.
 
-Read more -  [gatsby-plugin-sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/)
+Read more - [gatsby-plugin-sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/)
 
 ### gatsby-plugin-dark-mode
 

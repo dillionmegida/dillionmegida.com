@@ -8,15 +8,19 @@ tags: ["general", "gatsby"]
 ---
 
 Welcome to my Blog &#128519;
+
 ### Quick Intro...
+
 I am Dillion Megida, a frontend developer, technical writer and graphics designer.
 <br/>
 I write on web development, mostly frontend. I try my best in explaining to the best of my knowledge - giving examples, sharing resources - in any topic I am writing about. I also write on <a href='https://dev.to/dillionmegida' title='Dev.to - Dillion Megida'>Dev.to - Dillion Megida</a> and <a href='https://dillion.hashnode.dev' title='Hashnode - Dillion Megida'>Dillion Hashnode Blog</a>.
 
 ### My Blog - dillionmegida.com
+
 I launched this blog during June, 2019 and wrote had my first article written, <a href='/first-blog' title='My first Blog'>Dillion Megida - First Blog</a> on the 18th of the same month where I shared a bit about my journey into Web Development and Graphics Designing.
 
 ### The Conversion
+
 I had all files written in PHP.
 <br>
 I tried implementing `Model-View-Controller (MVC)` structure. There was no `Model` though, as I wasn't working with any database.<br/>
@@ -30,6 +34,7 @@ My website was going fine until I wanted to write another article. It was almost
 This is the major reason my blog has been idle for a while. I worked towards a solution so that I could start writing more articles.
 
 #### My Implementation
+
 I had a `blog-template.php` file.<br/>
 
 ```php
@@ -38,7 +43,7 @@ I had a `blog-template.php` file.<br/>
 $title = 'Dillion Megida - '.$blogTitle;
 require_once 'public/common/headTag.php';
 
-?>                  
+?>
 ...
 <h2><?= $blogTitle ?></h2>
 <p><?= $date ?></p>
@@ -49,14 +54,17 @@ require_once 'public/common/headTag.php';
 ...
 ?>
 ```
+
 These are important parts of my file. So, on each blog, I simply state the variables - `$blogTitle`, `$date`, `$content`.
 <br/>
 The `$blogTitle` is used for the title of the page, and the `<h2>` tag of the blog.<br/>
 The `$date` is used for date of blog.<br/>
 The `$content` is used to get the contents of the blog.
+
 > ##### Please note that styles were stated on this page
 
 On each blog, say, `first-blog.php`, I would have
+
 ```php
 <?php
 
@@ -77,6 +85,7 @@ require 'public/common/blog-template.php';
 
 ?>
 ```
+
 This was pretty much it. <br/>
 Noticed how I added code-snippets? This was possible after importing the source code of `prism.js syntax highlight` in my head tag.
 <br/>

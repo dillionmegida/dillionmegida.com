@@ -1,51 +1,52 @@
 .Html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .LandingImage {
-    height: 100vh;
-    background-color: #130327;
-    background-image: url('/img/landing-image.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
+  height: 100vh;
+  background-color: #130327;
+  background-image: url("/img/landing-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
 .Intro {
-    color: white;
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    height: calc(100vh - 90px);
-    padding: 0 50px 20px;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: calc(100vh - 90px);
+  padding: 0 50px 20px;
 }
 .Intro p {
-    margin: 10px;
+  margin: 10px;
 }
 .Intro p.Big {
-    font-size: 65px;
-    width: 60%;
+  font-size: 65px;
+  width: 60%;
 }
 .Intro p.Big span {
-    color: var(--lightBlue);
-    font-weight: bold;
+  color: var(--lightBlue);
+  font-weight: bold;
 }
 .Intro p.Small {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 @media only screen and (max-width: 1000px) {
-    .Intro {
-        padding: 20px;
-         p.Big {
-        width: 100%;
-        /* font-size: 30px; */
-    }}
+  .Intro {
+    padding: 20px;
+    p.Big {
+      width: 100%;
+      /* font-size: 30px; */
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .Intro p.Big {
-        font-size: 45px;
-    }
+  .Intro p.Big {
+    font-size: 45px;
+  }
 }

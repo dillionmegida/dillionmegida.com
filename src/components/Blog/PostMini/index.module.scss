@@ -1,65 +1,65 @@
 .PostTemplate {
-    padding: 5px 10px;
-    border-bottom: 1px solid var(--mainColor1);
-    margin-bottom: 30px;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--mainColor1);
+  margin-bottom: 30px;
 
-    &:hover {
-        border-radius: 20px;
-
-        & h2 {
-            color: var(--mainColor1);
-        }
-    }
+  &:hover {
+    border-radius: 20px;
 
     & h2 {
-        color: var(--lightBlue);
-        margin-bottom: 0;
-        font-weight: bold;
+      color: var(--mainColor1);
     }
+  }
 
-    & .Date {
-        color: var(--mainColor1);
-        opacity: .5;
-        font-weight: 600;
-    }
+  & h2 {
+    color: var(--lightBlue);
+    margin-bottom: 0;
+    font-weight: bold;
+  }
 
-    & .Excerpt {
-        line-height: 25px;
-    }
+  & .Date {
+    color: var(--mainColor1);
+    opacity: 0.5;
+    font-weight: 600;
+  }
 
-    & p {
-        color: var(--mainColor1);
-    }
+  & .Excerpt {
+    line-height: 25px;
+  }
+
+  & p {
+    color: var(--mainColor1);
+  }
 }
 
 .TagsSection {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    & .Tag {
-        border: 1px solid rgb(82, 80, 80);
-        color: rgb(85, 84, 84);
-        border-radius: 5px;
-        padding: 5px;
-        margin: 0 5px;
-    }
+  & .Tag {
+    border: 1px solid rgb(82, 80, 80);
+    color: rgb(85, 84, 84);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 5px;
+  }
 }
 
 .TagHeader {
-    color: var(--mainColor1);
-    text-decoration: underline;
-    margin: 20px 10px 0;
+  color: var(--mainColor1);
+  text-decoration: underline;
+  margin: 20px 10px 0;
 }
 
 .SearchSection {
-    width: 100%;
-    height: 50px;
+  width: 100%;
+  height: 50px;
 }
 
 .SearchSection a {
-    color: var(--mainColor1);
-    border: 1px solid var(--mainColor1);
-    padding: 5px;
-    float: right;
-    margin: 30px;
+  color: var(--mainColor1);
+  border: 1px solid var(--mainColor1);
+  padding: 5px;
+  float: right;
+  margin: 30px;
 }

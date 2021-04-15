@@ -21,24 +21,20 @@ The most common way of sharing functionalities between two or more components is
 that receives different types of props to determine what would be displayed. An example of such component is:
 
 ```jsx
-import React, { useState } from 'react'
-// 
+import React, { useState } from "react"
+//
 const Component = (props) => {
-    const {header, paragraph, increaseCounter} = props
-    const [counter, setCounter] = useState(0)
-    const handleInc = setCounter(prevState => prevState + 1)
-    return (
-        <div>
-            <h1>{header}</h1>
-            <p>{paragraph}</p>
-            <button
-                onClick={handleInc}
-            >
-                INC
-            </button>
-            <p>Current count: ${count}</p>
-        </div>
-    )
+  const { header, paragraph, increaseCounter } = props
+  const [counter, setCounter] = useState(0)
+  const handleInc = setCounter((prevState) => prevState + 1)
+  return (
+    <div>
+      <h1>{header}</h1>
+      <p>{paragraph}</p>
+      <button onClick={handleInc}>INC</button>
+      <p>Current count: ${count}</p>
+    </div>
+  )
 }
 export default Component
 ```
@@ -246,9 +242,9 @@ Whichever you love, use it.
 
 ## Things to Note
 
--   `UsersComponent` and `UserProfile` didn't have to look the same. They could use their instance of state however they wanted.
--   `FetchComponent` did not care what other components look like. It's majorly concerned with the logic.
--   `FetchComponent` is very usable with the very little number of props required.
+- `UsersComponent` and `UserProfile` didn't have to look the same. They could use their instance of state however they wanted.
+- `FetchComponent` did not care what other components look like. It's majorly concerned with the logic.
+- `FetchComponent` is very usable with the very little number of props required.
 
 ## Wrap up
 

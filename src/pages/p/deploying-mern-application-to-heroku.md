@@ -11,15 +11,15 @@ cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1584753157/images
 
 - [Introduction to MERN](#introduction-to-mern)
 - [Building Process](#building-process)
-    - [Building React App](#building-react-app)
-    - [Creating the backend](#creating-the-backend)
-        - [Configure backend](#configure-backend)
-        - [Create `User` model](#create-user-model)
-        - [Connect MongoDB Atlas database](#connect-mongodb-atlas-database)
+  - [Building React App](#building-react-app)
+  - [Creating the backend](#creating-the-backend)
+    - [Configure backend](#configure-backend)
+    - [Create `User` model](#create-user-model)
+    - [Connect MongoDB Atlas database](#connect-mongodb-atlas-database)
 - [Calling APIs on the frontend](#calling-apis-on-the-frontend)
 - [Deploying to Heroku](#deploying-to-heroku)
-    - [Create Heroku App](#create-heroku-app)
-    - [Configure package.json](#configure-packagejson)
+  - [Create Heroku App](#create-heroku-app)
+  - [Configure package.json](#configure-packagejson)
 - [Wrap Up](#wrap-up)
 
 ## Introduction to MERN
@@ -230,15 +230,15 @@ The cluser is a small server which would manage our collections (similar to tabl
 ```js
 const mongoose = require("mongoose")
 const connection =
-    "mongodb+srv://username:<password>@<cluster>/<database>?retryWrites=true&w=majority"
+  "mongodb+srv://username:<password>@<cluster>/<database>?retryWrites=true&w=majority"
 mongoose
-    .connect(connection, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false,
-    })
-    .then(() => console.log("Database Connected Successfully"))
-    .catch(err => console.log(err))
+  .connect(connection, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
+  .then(() => console.log("Database Connected Successfully"))
+  .catch((err) => console.log(err))
 ```
 
 In the `connection` variable, enter your `username` (for MongoDB cloud), your `password` (cluster password), your `cluster` (address for your cluster) and the `database` (name of your database). All these can be easily discovered if you followed the documentation
@@ -260,73 +260,73 @@ This way, we can directly send requests to `api/users`, and when our site is dep
 Open `App.js` for React and add the following
 
 ```js
-const App = function() {
-    const [users, setUsers] = useState(null)
-    const [username, setUsername] = useState("")
-    const [email, setEmail] = useState("")
-    useEffect(() => {
-        axios
-            .get("/api/users")
-            .then(users => setUsers(users))
-            .catch(err => console.log(err))
-    }, [])
-    function submitForm() {
-        if (username === "") {
-            alert("Please fill the username field")
-            return
-        }
-        if (email === "") {
-            alert("Please fill the email field")
-            return
-        }
-        axios
-            .post("/api/users", {
-                username: username,
-                email: email,
-            })
-            .then(function() {
-                alert("Account created successfully")
-                window.location.reload()
-            })
-            .catch(function() {
-                alert("Could not creat account. Please try again")
-            })
+const App = function () {
+  const [users, setUsers] = useState(null)
+  const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("")
+  useEffect(() => {
+    axios
+      .get("/api/users")
+      .then((users) => setUsers(users))
+      .catch((err) => console.log(err))
+  }, [])
+  function submitForm() {
+    if (username === "") {
+      alert("Please fill the username field")
+      return
     }
-    return (
+    if (email === "") {
+      alert("Please fill the email field")
+      return
+    }
+    axios
+      .post("/api/users", {
+        username: username,
+        email: email,
+      })
+      .then(function () {
+        alert("Account created successfully")
+        window.location.reload()
+      })
+      .catch(function () {
+        alert("Could not creat account. Please try again")
+      })
+  }
+  return (
+    <>
+      <h1>My Project</h1>
+      {users === null ? (
+        <p>Loading...</p>
+      ) : users.length === 0 ? (
+        <p>No user available</p>
+      ) : (
         <>
-            <h1>My Project</h1>
-            {users === null ? (
-                <p>Loading...</p>
-            ) : users.length === 0 ? (
-                <p>No user available</p>
-            ) : (
-                <>
-                    <h2>Available Users</h2>
-                    <ol>
-                        {users.map((user, index) => (
-                            <li key={index}>
-                                Name: {user.name} - Email: {user.email}
-                            </li>
-                        ))}
-                    </ol>
-                </>
-            )}
-
-            <form onSubmit={submitForm}>
-                <input
-                    onChange={e => setUsername(e.target.value)}
-                    type="text"
-                    placeholder="Enter your username"
-                />
-                <input
-                    onChange={e => setEmail(e.target.value)}
-                    type="text"
-                    placeholder="Enter your email address"
-                />
-                <input type="submit" />
-            </form>
+          <h2>Available Users</h2>
+          <ol>
+            {users.map((user, index) => (
+              <li key={index}>
+                Name: {user.name} - Email: {user.email}
+              </li>
+            ))}
+          </ol>
         </>
-    )
+      )}
+
+      <form onSubmit={submitForm}>
+        <input
+          onChange={(e) => setUsername(e.target.value)}
+          type="text"
+          placeholder="Enter your username"
+        />
+        <input
+          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+          placeholder="Enter your email address"
+        />
+        <input type="submit" />
+      </form>
+    </>
+  )
 }
 export default App
 ```

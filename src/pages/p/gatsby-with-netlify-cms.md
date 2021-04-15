@@ -4,9 +4,10 @@ date: 2019-10-03
 readTime: 3 mins
 cover: https://res.cloudinary.com/dillionmegida/image/upload/v1570399382/images/blogs_cover/gatsby-with-cms.jpg
 pageDescription: Managing contents in Gatsby site with Netlify Content Management System (CMS)
-pageKeywords: 'gatsby, cms, netlify, netlify cms, gatsby blog, gatsby netlify'
+pageKeywords: "gatsby, cms, netlify, netlify cms, gatsby blog, gatsby netlify"
 tags: ["gatsby", "netlify"]
 ---
+
 In this article, I'd be explaining how to manage contents (which are published continuously) with Netlify CMS.
 
 I'd assume that you have a Gatsby site already running. Also, I'd be more particular about blogs since they a better example for a regular publishing site. However, there are greater powers of Gatsby and Netlify CMS.
@@ -23,9 +24,9 @@ From [netlifycms.org/docs](https://www.netlifycms.org/docs/intro/)
 
 When I started running this website, I'd have to pass through the following process to publish an article;
 
-* Write the article in a markdown file of which [gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/) working with [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) and [createPages API](https://www.gatsbyjs.org/tutorial/part-seven/) would automatically create a HTML page for the file.
-* Push the file to my Github repository when the article is ready
-* Access my Ubuntu system on digitalocean, pull files from repository and serve from there.
+- Write the article in a markdown file of which [gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/) working with [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) and [createPages API](https://www.gatsbyjs.org/tutorial/part-seven/) would automatically create a HTML page for the file.
+- Push the file to my Github repository when the article is ready
+- Access my Ubuntu system on digitalocean, pull files from repository and serve from there.
 
 Peradventure any typo, I would edit the file, push and pull again.
 
@@ -44,19 +45,19 @@ Now, my focus is centered on the CMS rather than my former procedures. Pretty mu
 You wouldn't want to manage contents that you rarely update or change because it wouldn't seem necessary, though, you still could.
 Like I stated earlier, I'd be using a blog for example.
 
-* Want to build a Gatsby site having a blog of yours from scratch? [Check out this Gatsby tutorial](https://www.gatsbyjs.org/tutorial/) or
-* Use this [Gatsby starter blog template](https://github.com/gatsbyjs/gatsby-starter-blog)
+- Want to build a Gatsby site having a blog of yours from scratch? [Check out this Gatsby tutorial](https://www.gatsbyjs.org/tutorial/) or
+- Use this [Gatsby starter blog template](https://github.com/gatsbyjs/gatsby-starter-blog)
 
 At this point, I want to believe that your site is running locally and also you have a repository for your files.
 
 ### Steps
 
-* Install Netlify CMS package and setup Gatsby configurations
-* CMS configuration file
-* Create Netlify Application
-* Setup configurations
-* ...you are good to go.
-* Resources
+- Install Netlify CMS package and setup Gatsby configurations
+- CMS configuration file
+- Create Netlify Application
+- Setup configurations
+- ...you are good to go.
+- Resources
 
 #### Install Netlify CMS package and setup Gatsby Configurations
 
@@ -67,9 +68,7 @@ npm install --save netlify-cms-app gatsby-plugin-netlify-cms
 These helps us create the CMS page for managing our contents depending on the configurations setup for it. You'd also need to edit `gatsby-config.js`
 
 ```js
-plugins: [
-    `gatsby-plugin-netlify-cms`
-]
+plugins: [`gatsby-plugin-netlify-cms`]
 ```
 
 #### CMS configuration file
@@ -78,31 +77,31 @@ The CMS would need a configuration file to work on - `config.yml`. This file wou
 
 ```yml
 backend:
-    name: github
-    repo: your-username/the-repo
+  name: github
+  repo: your-username/the-repo
 media_folder: "static/img/uploads"
 public_folder: "img/uploads"
 collections:
-    - name: "blogs"
-      label: "Blogs"
-      description: "Blog Posts"
-      folder: "src/pages/post"
-      create: true
-      fields:
-    - { name: title, label: Title }
-    - { name: date, label: Date, widget: date }
-    - { name: body, label: Body, widget: markdown }
+  - name: "blogs"
+    label: "Blogs"
+    description: "Blog Posts"
+    folder: "src/pages/post"
+    create: true
+    fields:
+  - { name: title, label: Title }
+  - { name: date, label: Date, widget: date }
+  - { name: body, label: Body, widget: markdown }
 publish_mode: editorial_workflow
 ```
 
-* The **backend** option specifies how to access the content for your site, including authentication.
-* The **media_folder** specified tells the CMS where to upload your images or videos to.
-* The **public folder** is pretty much where the published are accessed.
-* **Collections** determine our contents.
-As seen above, we want to control blog contents.
-A folder is specified which we would get and also load our contents from. It may be different in your repository but the target is the location of your posts.
-The fields mentioned are those you'd like to fill in when writing post. They are just like the frontmatter and body you create when writing markdown files.
-* The **publish_mode** allows you specify controls for the different phases of publishing contents.
+- The **backend** option specifies how to access the content for your site, including authentication.
+- The **media_folder** specified tells the CMS where to upload your images or videos to.
+- The **public folder** is pretty much where the published are accessed.
+- **Collections** determine our contents.
+  As seen above, we want to control blog contents.
+  A folder is specified which we would get and also load our contents from. It may be different in your repository but the target is the location of your posts.
+  The fields mentioned are those you'd like to fill in when writing post. They are just like the frontmatter and body you create when writing markdown files.
+- The **publish_mode** allows you specify controls for the different phases of publishing contents.
 
 At this point, you can run `gatsby develop` to see for yourself.
 
@@ -128,12 +127,13 @@ Automatically, Netlify would begin deploying the site (upon the change detected 
 
 Fascinating right? 😎
 
-* You could create more collections which are contents you'd like to manage.
-* You can also use a custom domain instead of the Netlify given site - [Check Netlify's doc on how-to](https://www.netlify.com/docs/custom-domains/)
+- You could create more collections which are contents you'd like to manage.
+- You can also use a custom domain instead of the Netlify given site - [Check Netlify's doc on how-to](https://www.netlify.com/docs/custom-domains/)
 
 I do hope you have been able to learn a thing or two from this article
 
 ### Resources
+
 - [Sourcing from Netlify CMS - Gatsbyjs](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/)
 - [Making a Gatsby blog with Netlify CMS | GatsbyJS](https://www.gatsbyjs.org/tutorial/blog-netlify-cms-tutorial/)
 

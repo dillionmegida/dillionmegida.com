@@ -1,5 +1,5 @@
-import React from 'react';
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
+import React from "react"
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 const PostTemplate = (props) => {
   let disqusConfig = {
@@ -10,7 +10,7 @@ const PostTemplate = (props) => {
   return (
     <>
       <h1>{props.postTitle}</h1>
-      <CommentCount config={disqusConfig} placeholder={'...'} />
+      <CommentCount config={disqusConfig} placeholder={"..."} />
       <Disqus config={disqusConfig} />
     </>
   )

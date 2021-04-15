@@ -23,8 +23,8 @@ We need to have a Gatsby project we can test the plugin on as we build it. If yo
 
 To create a new project:
 
--   install the `gatsby` cli tool globally using `npm i -g gatsby-cli` so we can use it locally
--   install the [gatsby-starter-default](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-default) template using `gatsby new web-app https://github.com/gatsbyjs/gatsby-starter-default` on your terminal
+- install the `gatsby` cli tool globally using `npm i -g gatsby-cli` so we can use it locally
+- install the [gatsby-starter-default](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-default) template using `gatsby new web-app https://github.com/gatsbyjs/gatsby-starter-default` on your terminal
 
 `web-app` is the project's folder's name, so you can use something else if you want.
 
@@ -36,8 +36,8 @@ Fortunately, Gatsby allows us to create [local plugins](https://www.gatsbyjs.com
 
 Two things to note:
 
--   Plugins are only used by Gatsby when your pages are generated (during `gatsby develop` and `gatsby build` process). Plugins do not run when your page has been built. This means if you make any change to your plugin while your pages have been built, you would have to restart the server to see the new changes
--   One caveat with plugins is that Gatsby caches them. This means, for subsequent changes to our plugin's implementation, you may have to clear the cache and re-start the server to see the changes reflected.
+- Plugins are only used by Gatsby when your pages are generated (during `gatsby develop` and `gatsby build` process). Plugins do not run when your page has been built. This means if you make any change to your plugin while your pages have been built, you would have to restart the server to see the new changes
+- One caveat with plugins is that Gatsby caches them. This means, for subsequent changes to our plugin's implementation, you may have to clear the cache and re-start the server to see the changes reflected.
 
 ### Create source plugin folder
 
@@ -57,11 +57,11 @@ exports.sourceNodes = (obj1, obj2) => {}
 
 While invoking the `sourceNodes` function, Gatsby passes some arguments. The first and second arguments are objects. We'll look at the second argument later in the article.
 
-We're only interested in three items from the first argument  which are:
+We're only interested in three items from the first argument which are:
 
--   [`actions`](https://www.gatsbyjs.com/docs/reference/config-files/actions/): an object containing several methods from Gatsby. For our plugin, we're only interested in the [`createNode`](https://www.gatsbyjs.com/docs/reference/config-files/actions/#createNode) method which we'll use to create the GraphQL nodes for the Hashnode posts. We'll use these nodes for our GraphQL queries
--   [`createNodeId`](https://www.gatsbyjs.com/docs/reference/config-files/node-api-helpers/#createNodeId): a method used to generate a unique id for every node created from `createNode`
--   [`createContentDigest`](https://www.gatsbyjs.com/docs/reference/config-files/node-api-helpers/#createContentDigest): a method used to create a [checksum](https://en.wikipedia.org/wiki/Checksum) digest from data. Gatsby uses the checksum digest to identify data (from Gatsby APIs in our case) that has been changed.
+- [`actions`](https://www.gatsbyjs.com/docs/reference/config-files/actions/): an object containing several methods from Gatsby. For our plugin, we're only interested in the [`createNode`](https://www.gatsbyjs.com/docs/reference/config-files/actions/#createNode) method which we'll use to create the GraphQL nodes for the Hashnode posts. We'll use these nodes for our GraphQL queries
+- [`createNodeId`](https://www.gatsbyjs.com/docs/reference/config-files/node-api-helpers/#createNodeId): a method used to generate a unique id for every node created from `createNode`
+- [`createContentDigest`](https://www.gatsbyjs.com/docs/reference/config-files/node-api-helpers/#createContentDigest): a method used to create a [checksum](https://en.wikipedia.org/wiki/Checksum) digest from data. Gatsby uses the checksum digest to identify data (from Gatsby APIs in our case) that has been changed.
 
 The `sourceNodes` method will contain the implementation that fetches some Gatsby posts, and create nodes from them.
 
@@ -71,17 +71,17 @@ First, let's play with the API a little. Head over to [the Hashnode API Playgrou
 
 ```graphql
 {
-    user(username: "dillion") {
-        publication {
-            posts {
-                _id
-                title
-                brief
-                slug
-                dateAdded
-            }
-        }
+  user(username: "dillion") {
+    publication {
+      posts {
+        _id
+        title
+        brief
+        slug
+        dateAdded
+      }
     }
+  }
 }
 ```
 
@@ -95,9 +95,9 @@ For this tutorial, we'll only use the `_id`, `title`, `brief`, `slug`, and `date
 
 For our implementation, here are three things we need to do:
 
--   fetch all posts of a user from the API
--   loop through each post and create a node for it
--   create a graphql query in the main project that fetches all posts and displays them on the UI.
+- fetch all posts of a user from the API
+- loop through each post and create a node for it
+- create a graphql query in the main project that fetches all posts and displays them on the UI.
 
 The API supports graphql, hence, we cannot use `fetch`. We'd be using [graphql-request](https://www.npmjs.com/package/graphql-request), a library that supports GraphqlQL-based APIs.
 
@@ -114,28 +114,28 @@ The first initializes the directory like a package, and the second command insta
 const { request, gql } = require("graphql-request")
 
 exports.sourceNodes = async (obj1, obj2) => {
-    const query = gql`
-        query {
-            user(username: "dillion") {
-                publication {
-                    posts {
-                        _id
-                        title
-                        brief
-                        slug
-                        dateAdded
-                    }
-                }
-            }
+  const query = gql`
+    query {
+      user(username: "dillion") {
+        publication {
+          posts {
+            _id
+            title
+            brief
+            slug
+            dateAdded
+          }
         }
-    `
+      }
+    }
+  `
 
-    const response = await request("https://api.hashnode.com/", query)
-    console.log(response.user.publication.posts)
+  const response = await request("https://api.hashnode.com/", query)
+  console.log(response.user.publication.posts)
 }
 ```
 
-*Note that* this is an asynchronous function. If it's not defined as asynchronous, Gatsby will not wait for the function to resolve before moving further with the build process.
+_Note that_ this is an asynchronous function. If it's not defined as asynchronous, Gatsby will not wait for the function to resolve before moving further with the build process.
 
 From our query, we expect the following structure for the result:
 
@@ -209,39 +209,39 @@ Then, update the `gatsby-node.js` file in `gatsby-source-hashnode` to this:
 const { request, gql } = require("graphql-request")
 
 exports.sourceNodes = async (obj1, obj2) => {
-    //highlight-line
-    // highlight-start
-    const { username } = obj2 // highlight-line
+  //highlight-line
+  // highlight-start
+  const { username } = obj2 // highlight-line
 
-    const variables = {
-        username,
-    }
+  const variables = {
+    username,
+  }
 
-    // highlight-end
+  // highlight-end
 
-    // pass the variable into the query
-    const query = gql`
-        query($username: String!) {
-            user(username: $username) {
-                publication {
-                    posts {
-                        _id
-                        title
-                        brief
-                        slug
-                        dateAdded
-                    }
-                }
-            }
+  // pass the variable into the query
+  const query = gql`
+    query($username: String!) {
+      user(username: $username) {
+        publication {
+          posts {
+            _id
+            title
+            brief
+            slug
+            dateAdded
+          }
         }
-    `
+      }
+    }
+  `
 
-    const response = await request(
-        "https://api.hashnode.com/",
-        query,
-        variables // highlight-line
-    )
-    console.log(response.user.publication.posts)
+  const response = await request(
+    "https://api.hashnode.com/",
+    query,
+    variables // highlight-line
+  )
+  console.log(response.user.publication.posts)
 }
 ```
 
@@ -257,78 +257,74 @@ Update the plugin's `gatsby-node.js` to this:
 const { request, gql } = require("graphql-request")
 
 exports.sourceNodes = async (obj1, obj2) => {
-    const { actions, createNodeId, createContentDigest } = obj1 // highlight-line
-    const { createNode } = actions // highlight-line
-    const { username } = obj2
+  const { actions, createNodeId, createContentDigest } = obj1 // highlight-line
+  const { createNode } = actions // highlight-line
+  const { username } = obj2
 
-    const variables = {
-        username,
-    }
+  const variables = {
+    username,
+  }
 
-    // pass the variable into the query
-    const query = gql`
-        query($username: String!) {
-            user(username: $username) {
-                publication {
-                    posts {
-                        _id
-                        title
-                        brief
-                        slug
-                        dateAdded
-                    }
-                }
-            }
+  // pass the variable into the query
+  const query = gql`
+    query($username: String!) {
+      user(username: $username) {
+        publication {
+          posts {
+            _id
+            title
+            brief
+            slug
+            dateAdded
+          }
         }
-    `
-
-    const response = await request(
-        "https://api.hashnode.com/",
-        query,
-        variables
-    )
-
-    // highlight-start
-    const {
-        user: {
-            publication: { posts },
-        },
-    } = response
-
-    for (let i = 0; i < posts.length; i++) {
-        const post = posts[i]
-        const node = {
-            id: createNodeId(post._id),
-            parent: null,
-            children: [],
-            internal: {
-                type: `HashnodePost`,
-                mediaType: `application/json`, // https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#mediatype
-                content: JSON.stringify(post), // https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#content
-                contentDigest: createContentDigest(post),
-            },
-            ...post,
-        }
-        createNode(node)
+      }
     }
+  `
 
-    return
+  const response = await request("https://api.hashnode.com/", query, variables)
 
-    // highlight-end
+  // highlight-start
+  const {
+    user: {
+      publication: { posts },
+    },
+  } = response
+
+  for (let i = 0; i < posts.length; i++) {
+    const post = posts[i]
+    const node = {
+      id: createNodeId(post._id),
+      parent: null,
+      children: [],
+      internal: {
+        type: `HashnodePost`,
+        mediaType: `application/json`, // https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#mediatype
+        content: JSON.stringify(post), // https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#content
+        contentDigest: createContentDigest(post),
+      },
+      ...post,
+    }
+    createNode(node)
+  }
+
+  return
+
+  // highlight-end
 }
 ```
 
 From the above, we get all the posts of the user and loop through them to create a node for each. We create a `node` object with:
 
--   an `id` property, assigned a unique id using the `createNodeId` helper function and passing the `_id` of the post gotten from Hashnode as an argument
--   a `parent` property which is used to extend other nodes
--   a `children` property which holds ids of child nodes
--   an `internal` property that holds important fields for Gatsby. In it we have:
-    -   `type`: the node type that this node belongs to. In our case, this belongs to the `HashnodePost` type
-    -   [`mediaType`](https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#mediatype): exposes this node to transformer plugins for further processing. In our case, the object gotten from the API is more like JSON.
-    -   [`content`](https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#content): holding the raw content which transformer plugins can also process
-    -   `contentDigest`: as stated above, for holding the checksum generated of the post object.
--   `...post`: spreads the post properties gotten from the API which according to our query includes `_id`, `title`, `brief`, `slug` and `dateAdded`
+- an `id` property, assigned a unique id using the `createNodeId` helper function and passing the `_id` of the post gotten from Hashnode as an argument
+- a `parent` property which is used to extend other nodes
+- a `children` property which holds ids of child nodes
+- an `internal` property that holds important fields for Gatsby. In it we have:
+  - `type`: the node type that this node belongs to. In our case, this belongs to the `HashnodePost` type
+  - [`mediaType`](https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#mediatype): exposes this node to transformer plugins for further processing. In our case, the object gotten from the API is more like JSON.
+  - [`content`](https://www.gatsbyjs.com/docs/reference/graphql-data-layer/node-interface/#content): holding the raw content which transformer plugins can also process
+  - `contentDigest`: as stated above, for holding the checksum generated of the post object.
+- `...post`: spreads the post properties gotten from the API which according to our query includes `_id`, `title`, `brief`, `slug` and `dateAdded`
 
 On every loop, we create the node using `createNode`. To see the nodes created, run `gatsby develop` and head over to `localhost:8000/___graphql` (three underscores) where we can query all our types.
 
@@ -340,14 +336,14 @@ On the left, you'll find `allHashnodePost` and `hashnodePost`. The former is use
 
 ```graphql
 query {
-    allHashnodePost {
-        edges {
-            node {
-                id
-                title
-            }
-        }
+  allHashnodePost {
+    edges {
+      node {
+        id
+        title
+      }
     }
+  }
 }
 ```
 
@@ -365,58 +361,56 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
-    const allPosts = data.allPosts.edges.map(({ node }) => node)
+  const allPosts = data.allPosts.edges.map(({ node }) => node)
 
-    return (
-        <Layout>
-            <SEO title="Home" />
-            <h1>Hi people</h1>
-            <p>Here are my Hashnode posts</p>
-            {allPosts.map(p => (
-                <div
-                    style={{
-                        marginBottom: "40px",
-                        borderBottom: "1px solid black",
-                        paddingBottom: "20px",
-                    }}
-                    key={p.id}
-                >
-                    <span>
-                        Title:{" "}
-                        <a href={`https://dillion.hashnode.dev/${p.slug}`}>
-                            {p.title}
-                        </a>
-                    </span>
-                    <br />
-                    <br />
-                    <span>
-                        Date: <b>{p.dateAdded}</b>
-                    </span>
-                    <br />
-                    <br />
-                    <span>Brief: {p.brief}</span>
-                </div>
-            ))}
-        </Layout>
-    )
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <h1>Hi people</h1>
+      <p>Here are my Hashnode posts</p>
+      {allPosts.map((p) => (
+        <div
+          style={{
+            marginBottom: "40px",
+            borderBottom: "1px solid black",
+            paddingBottom: "20px",
+          }}
+          key={p.id}
+        >
+          <span>
+            Title:{" "}
+            <a href={`https://dillion.hashnode.dev/${p.slug}`}>{p.title}</a>
+          </span>
+          <br />
+          <br />
+          <span>
+            Date: <b>{p.dateAdded}</b>
+          </span>
+          <br />
+          <br />
+          <span>Brief: {p.brief}</span>
+        </div>
+      ))}
+    </Layout>
+  )
 }
 
 export default IndexPage
 
 export const query = graphql`
-    query {
-        allPosts: allHashnodePost {
-            edges {
-                node {
-                    id
-                    title
-                    dateAdded(formatString: "DD MMMM, YYYY")
-                    brief
-                    slug
-                }
-            }
+  query {
+    allPosts: allHashnodePost {
+      edges {
+        node {
+          id
+          title
+          dateAdded(formatString: "DD MMMM, YYYY")
+          brief
+          slug
         }
+      }
     }
+  }
 `
 ```
 

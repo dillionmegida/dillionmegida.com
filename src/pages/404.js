@@ -1,45 +1,48 @@
-import React from 'react';
-import Layout from '../components/Layout/';
-import { Link } from 'gatsby';
+import React from "react"
+import Layout from "../components/Layout/"
+import { Link } from "gatsby"
 
 let ErrorPage = () => (
-    <Layout
-        PageTitle='Page Not Found : ('
-        PageLink='404'
-        PageDescription='Page Not Found.'
-        PageKeywords=''
+  <Layout
+    PageTitle="Page Not Found : ("
+    PageLink="404"
+    PageDescription="Page Not Found."
+    PageKeywords=""
+  >
+    <section
+      style={{
+        width: "100%",
+        height: "500px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
     >
-        <section style={{
-            width: '100%',
-            height: '500px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'column'
-        }}>
-            <h1 style={{
-                fontSize: '40px',
-                textAlign: 'center'
-            }}>
-                Page Not Found 🤧
-            </h1>
-            <Link
-                to='/'
-                title="Dillion Megida's Blog"
-            >
-                <section style={{
-                    display: 'block',
-                    backgroundColor: 'var(--mainColor1)',
-                    color: 'white',
-                    padding: '10px',
-                    borderRadius: '10px',
-                    borderBottom: '5px solid var(--mainColor2)'
-                }}>
-                    Go To Homepage
-                </section>
-            </Link>
+      <h1
+        style={{
+          fontSize: "40px",
+          textAlign: "center",
+        }}
+      >
+        Page Not Found 🤧
+      </h1>
+      <Link to="/" title="Dillion Megida's Blog">
+        <section
+          style={{
+            display: "block",
+            backgroundColor: "var(--mainColor1)",
+            color: "white",
+            padding: "10px",
+            borderRadius: "10px",
+            borderBottom: "5px solid var(--mainColor2)",
+          }}
+        >
+          Go To Homepage
         </section>
-    </Layout>
-);
+      </Link>
+    </section>
+  </Layout>
+)
 
-export default ErrorPage;
+export default ErrorPage

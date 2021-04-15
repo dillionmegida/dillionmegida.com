@@ -12,10 +12,10 @@ Many people confuse `react-helmet` to be the solution for Search Engine Optimiza
 ## Table of Contents
 
 - [The place of `react-helmet`](#the-place-of-react-helmet)
-    - [When to use](#when-to-use)
-    - [How to use](#how-to-use)
-    - [Where to use](#where-to-use)
-    - [`react-helmet` is not the perfect solution](#react-helmet-is-not-the-perfect-solution)
+  - [When to use](#when-to-use)
+  - [How to use](#how-to-use)
+  - [Where to use](#where-to-use)
+  - [`react-helmet` is not the perfect solution](#react-helmet-is-not-the-perfect-solution)
 - [A better solution](#a-better-solution)
 - [How to configure meta tags from a server](#how-to-configure-meta-tags-from-a-server)
 - [Wrap up](#wrap-up)
@@ -30,14 +30,14 @@ A standard React application has an `index.html` file in the public directory wh
 
 ```html
 <html>
-    <head>
-        <title>React App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-    </body>
+  <head>
+    <title>React App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>
 ```
 
@@ -84,13 +84,13 @@ With the example above, the meta tags would be updated whenever this component i
 
 ### Where to use
 
-`react-helmet` can be used anywhere. At any instance of it, the meta tags would be updated accordingly.  For instance, if the `Contact` component above is used in a `Nav` component for example, and the `Nav` is used in a `Home` component which is a page, then the title of that page would be 'Contact Us'.
+`react-helmet` can be used anywhere. At any instance of it, the meta tags would be updated accordingly. For instance, if the `Contact` component above is used in a `Nav` component for example, and the `Nav` is used in a `Home` component which is a page, then the title of that page would be 'Contact Us'.
 
 When you use two `react-helmet` components, the last declared component would be used. Remember that the component is just JavaScript with functions that are evoked. So this will make sense to you:
 
 ```js
-let a = 1; // first instance of react-helmet
-a = 2; // second instance
+let a = 1 // first instance of react-helmet
+a = 2 // second instance
 console.log(a)
 // 2
 ```
@@ -174,46 +174,44 @@ For example:
 
 ```html
 <html>
-    <head>
-        __PAGE_META__
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-    </body>
+  <head>
+    __PAGE_META__
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>
 ```
 
-Next, we'd read the index.html file, replace \_\_PAGE\_META\_\_ with the meta tags we want and send the updated content.
+Next, we'd read the index.html file, replace \_\_PAGE_META\_\_ with the meta tags we want and send the updated content.
 
 In the server.js file, we'd add the following:
 
 ```js
-const path = require('path');
-const express = require("express");
-const app = express();
-const fs = require('fs'); // highlight-line
+const path = require("path")
+const express = require("express")
+const app = express()
+const fs = require("fs") // highlight-line
 //
 // highlight-start
-const pathToIndex = path.join(__dirname, 'build/index.html');
-app.get('/', (req, res) => {
-    const raw = fs.readFileSync(pathToIndex);
-    const pageTitle = 'Homepage - Welcome to my page'
-    const updated = raw.replace('__PAGE_META__', (
-        `<title>${pageTitle}</title>`
-    ));
-    res.send(updated);
+const pathToIndex = path.join(__dirname, "build/index.html")
+app.get("/", (req, res) => {
+  const raw = fs.readFileSync(pathToIndex)
+  const pageTitle = "Homepage - Welcome to my page"
+  const updated = raw.replace("__PAGE_META__", `<title>${pageTitle}</title>`)
+  res.send(updated)
 })
 // highlight-end
 //
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "build")))
 app.get("*", (req, res) =>
-	res.sendFile(path.join(__dirname, "build/index.html"))
-);
-const port = process.env.PORT || 5000;
+  res.sendFile(path.join(__dirname, "build/index.html"))
+)
+const port = process.env.PORT || 5000
 app.listen(port, () => {
-	console.log(`Server started on port ${port}`);
+  console.log(`Server started on port ${port}`)
 })
 ```
 

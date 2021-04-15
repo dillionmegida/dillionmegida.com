@@ -1,36 +1,36 @@
 .ProjectSection {
-    width: 100%;
-    padding: 50px 0 30px;
-    & h2 {
-        text-align: center;
+  width: 100%;
+  padding: 50px 0 30px;
+  & h2 {
+    text-align: center;
+  }
+  & .FindMore {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 20px;
+    & a {
+      color: var(--lightBlue);
+      text-decoration: underline;
+      display: block;
+      margin-bottom: 10px;
     }
-    & .FindMore {
-        text-align: center;
-        font-size: 1.2rem;
-        margin-top: 20px;
-        padding: 20px;
-        & a {
-            color: var(--lightBlue);
-            text-decoration: underline;
-            display: block;
-            margin-bottom: 10px;
-        }
-    }
+  }
 }
 .ProjectSection .Gallery {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 
-    @media (max-width: 800px) {
-        flex-wrap: wrap;
-        & > * {
-            width: 80%;
-        }
-    }
-
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
     & > * {
-        width: 90%;
+      width: 80%;
     }
+  }
+
+  & > * {
+    width: 90%;
+  }
 }

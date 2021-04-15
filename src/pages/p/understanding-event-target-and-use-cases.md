@@ -4,11 +4,12 @@ date: 2019-10-15
 readTime: 3 mins
 pageDescription: >-
   Target is a property of an event which is a reference to the element upon which the event was fired. This property aids us in easily accessing the properties of that given element.
-pageKeywords: 'javascript, event, event.target, target, events, javascript events'
+pageKeywords: "javascript, event, event.target, target, events, javascript events"
 cover: >-
   https://res.cloudinary.com/dillionmegida/image/upload/v1571097103/images/blogs_cover/understanding-event.target_o5l0cq.jpg
 tags: ["javascript"]
 ---
+
 Before explaining the target property itself, let's get to understand the Event Interface in Javascript
 
 # Javascript Event Interface
@@ -38,10 +39,12 @@ Check out the pen below to understand the difference better.
   See the Pen <a href='https://codepen.io/Dillion/pen/MWWyvLZ'>currentTargetVStarget</a> by Dillion Megida
 </iframe>
 
-Since the target property has given us access to the element, we could then read some of the properties (which are the attributes) and also display them somewhere else. 
+Since the target property has given us access to the element, we could then read some of the properties (which are the attributes) and also display them somewhere else.
 
 ## `event.target` use cases
+
 #### 1. Getting properties
+
 The most common use case is in input elements.
 For example, a `change` event is listened to on an input field. This event is fired once there is a change in the contents of that input (which could be a change in value). The value of the input could then be transformed or displayed somewhere else.
 
@@ -52,8 +55,9 @@ Check out this pen - A simple program that displays the value as it changes.
 </iframe>
 
 Let's analyze the code used.
+
 - The reason I added the event listener to the input instead of the container is that I do not want to listen to every change event on the container. Other change events could occur in it such as `select` tags or `textarea`. Hence, I listened to only change events in the input tag.
- 
+
 - I set variable references to the input tag and the initially empty h1 tag.
 
 - I listened for every change event on the input and applied a function that sets the value of the input to the contents of the h1 tag.
@@ -61,20 +65,22 @@ Let's analyze the code used.
 - I used the `target` property to target the input.
 
 #### 2. Setting properties
+
 You could also use the property to set attributes of an element. For example, the class attribute. Let's say you have a class attribute of 'red' which changes the text color of elements to red, you could have this;
+
 ```html
 <style>
-.red {
+  .red {
     color: red;
-}
+  }
 </style>
-<p id='toBeChanged'>My color can change</p>
+<p id="toBeChanged">My color can change</p>
 <script>
   function changeColorToRed(event) {
-    event.target.className= 'red';
+    event.target.className = "red"
   }
-  let toBeChanged = document.querySelector('toBeChanged');
-  toBeChanged.addEventListener('click', changeColorToRed, false);
+  let toBeChanged = document.querySelector("toBeChanged")
+  toBeChanged.addEventListener("click", changeColorToRed, false)
 </script>
 ```
 
@@ -83,6 +89,7 @@ If you tried this code, you'd notice that when you click on the paragraph, its c
 There are other use cases that could be made out of this property. From the above examples which showed how to get properties and set properties of elements which events were fired on, I believe you'd be able to create more interactive applications.
 
 ## Summary
+
 The `target` property of events allows us to access the element of which the event was fired and its respective attributes. We can further get the properties or even set them.
 
 Thanks for reading : )

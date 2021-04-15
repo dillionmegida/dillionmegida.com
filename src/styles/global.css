@@ -1,45 +1,45 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
 html.smoothScroll {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 :root {
-    --mainColor1: #130327;
-    --midMainColor1: #280750;
-    --mainColor2: #e7f6ba;
-    --mainColor3: #c1d950;
-    --mainColor4: #8be79f;
-    --lightBlue: #319ac1;
+  --mainColor1: #130327;
+  --midMainColor1: #280750;
+  --mainColor2: #e7f6ba;
+  --mainColor3: #c1d950;
+  --mainColor4: #8be79f;
+  --lightBlue: #319ac1;
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
+  width: 7px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--mainColor1);
+  background: var(--mainColor1);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--mainColor2);
-    border-radius: 10px;
+  background: var(--mainColor2);
+  border-radius: 10px;
 }
 
 body {
-    margin: 0;
-    font-family: "Nunito", "Helvetica";
+  margin: 0;
+  font-family: "Nunito", "Helvetica";
 }
 * {
-    box-sizing: border-box;
-    transition: 300ms;
-    outline: 0;
+  box-sizing: border-box;
+  transition: 300ms;
+  outline: 0;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

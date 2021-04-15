@@ -4,7 +4,7 @@ date: "2020-06-04"
 pageDescription: "Guess who is using angular now...me! In this post, I share my first experience with it, why I think it's easy to learn and why I'd like to learn it more"
 pageKeywords: "angular, typescript"
 tags: ["angular", "typescript"]
-cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1591226517/images/blogs_cover/angular-first-experience_tyisjp.png'
+cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1591226517/images/blogs_cover/angular-first-experience_tyisjp.png"
 monetize: false
 ---
 
@@ -12,7 +12,7 @@ At the time of this post, I've been learning angular for a week now (precisely 2
 
 Interested? Read on...
 
------
+---
 
 Before sharing my experience, I'd like to share how React transformed my thinking and how that led to my approach with angular.
 
@@ -45,7 +45,7 @@ Thanks Brad!
 
 Angular looked so complicated at first. Coming from a React background, I unconsciously expected angular to work the same. But I was able to catch fast. At least, the basic.
 
-What I found so stressful (at the same time interesting) is how two to three files at least, would be used to  make up a component. `header.component.ts`, `header.component.html` and `header.component.css` would be used to create a header component. `.ts` manages the logic and data, `.html` works as the template (which uses the data, and triggers methods) and `.css` for styles.
+What I found so stressful (at the same time interesting) is how two to three files at least, would be used to make up a component. `header.component.ts`, `header.component.html` and `header.component.css` would be used to create a header component. `.ts` manages the logic and data, `.html` works as the template (which uses the data, and triggers methods) and `.css` for styles.
 
 In React, the logic, data and the template (and even CSS - [CSS in JS](https://cssinjs.org/)) would be managed in the same `.js` file. I loved the concept of handling data separately and binding it to the template. But (maybe because I'm a React dev), it was a bit stressful.
 

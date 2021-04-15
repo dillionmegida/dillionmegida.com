@@ -3,7 +3,7 @@ title: Getting Started with Technical Writing
 date: 2020-04-04
 cover: https://res.cloudinary.com/dillionmegida/image/upload/v1585955810/images/blogs_cover/david-iskander-iWTamkU5kiI-unsplash_vcpoc4.jpg
 pageDescription: In this article, I outline what technical writing is, the benefits and answers to some questions I've been asked.
-pageKeywords: 'technical writing, writing, javascript, html, web'
+pageKeywords: "technical writing, writing, javascript, html, web"
 tags: ["writing"]
 ---
 
@@ -17,7 +17,7 @@ Yes, I am also an advocate for technical writing. I've received a lot of questio
 
 Shall we? 😏
 
------
+---
 
 I'd start by a little introduction, state some benefits of technical writing, cover some important notes and approaches to technical writing, then I'll answer some questions I've been asked before. This article would be updated as I get newer questions.
 
@@ -113,7 +113,7 @@ There's no complex way of getting into it. What you must have in check is:
 2. Do I have a major field or I would be general (not too advisable) with my contents?
 3. Am I really ready for this?
 
-The last question is really essential. Technical writing requires passion -  to teach and to learn. And just like I stated earlier, it needs commitment.
+The last question is really essential. Technical writing requires passion - to teach and to learn. And just like I stated earlier, it needs commitment.
 
 ### 2. How do you come about content ideas?
 

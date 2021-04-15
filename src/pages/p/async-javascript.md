@@ -13,16 +13,16 @@ Javascript is a single-threaded language, meaning that only one process can be r
 
 Some processes may delay which would hinder the next operation from being executed. So how does Javascript handle this? We'll learn how in this article.
 
------
+---
 
 ## Synchronous Javascript
 
 In this type of Javascript, codes are executed one after the other (sequentially) as written in the source. For example:
 
 ```javascript
-let name = prompt("What is your name?");
-let message = `Welcome ${name}`;
-console.log(message);
+let name = prompt("What is your name?")
+let message = `Welcome ${name}`
+console.log(message)
 ```
 
 The input gotten from the user as a prompt is assigned to a `name` variable. Until the prompt is closed, the next line of code will never be reached.
@@ -79,7 +79,7 @@ Learn more about promises in this article - [Promises](https://thewebfor5.com/p/
 
 ### 3. Async / Await
 
-This method is similar to `promises` but has more readable and understable method of handling asyncrhonous operations. The `await` keyword is only used inside `async` functions. 
+This method is similar to `promises` but has more readable and understable method of handling asyncrhonous operations. The `await` keyword is only used inside `async` functions.
 
 Learn more about Async/Await in this article - [Understanding async-await in Javascript](https://hackernoon.com/understanding-async-await-in-javascript-1d81bb079b2c)
 

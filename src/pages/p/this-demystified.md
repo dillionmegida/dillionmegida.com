@@ -9,7 +9,7 @@ cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1585344783/images
 
 `this` is a popular misunderstood concept in Javascript as during usage, you cannot determine most of the time what it references. In this article, I hope to clear every confusion surrounding it.
 
------
+---
 
 `this` is an inherently (automatically) created variable at the creation of every function.
 
@@ -20,7 +20,7 @@ A quick guess at what `this` is, is the object calling the function which the `t
 The `window` object is the default reference of `this` except defined otherwise. Check it out by running the following:
 
 ```js
-console.log(this);
+console.log(this)
 ```
 
 When your type into any .js file and begin executing codes, a global function is ran, which is assumed to be `global()` or `main()`. This function is placed on the call stack followed by all other functions involved in the program. When all the codes are executed, the global function leaves the stack.
@@ -29,7 +29,7 @@ For example, the code block above would be interpreted (though, not exactly) as 
 
 ```js
 function global() {
-    console.log(this);
+  console.log(this)
 }
 window.global()
 ```
@@ -41,14 +41,14 @@ The object executing the function `global()` is `window`. Hence, `this` at that 
 Let's create our own object with a method (function).
 
 ```js
-console.log(this);
+console.log(this)
 const obj = {
-    name: 'Object',
-    print: function(){
-        console.log(this)
-    }
+  name: "Object",
+  print: function () {
+    console.log(this)
+  },
 }
-obj.print();
+obj.print()
 ```
 
 The expected outputs for the two console.log would be the contents of `window` and `obj`. It's `obj` because it is the object calling `print()`.
@@ -57,14 +57,14 @@ The above would be interpreted as:
 
 ```js
 function global() {
-    console.log(this);
-    const obj = {
-        name: 'Object',
-        print: function(){
-            console.log(this)
-        }
-    }
-    obj.print();
+  console.log(this)
+  const obj = {
+    name: "Object",
+    print: function () {
+      console.log(this)
+    },
+  }
+  obj.print()
 }
 window.global()
 ```
@@ -73,39 +73,39 @@ Guess what `this` in `print` would refer to here:
 
 ```js
 const obj = {
-    name: 'Object',
-    print: function(){
-        console.log(this)
-    }
+  name: "Object",
+  print: function () {
+    console.log(this)
+  },
 }
-const printer = obj.print;
-printer();
+const printer = obj.print
+printer()
 ```
 
 If you guessed `obj`, you are wrong. Remember as stated earlier, `this` is determined by the object calling the function. As seen above, it being called directly, can be interpreted as `window.printer()`.
 
-## What if there was no object calling the function *directly*?
+## What if there was no object calling the function _directly_?
 
 This question can be interpreted as the following:
 
 ```js
-console.log(this);
+console.log(this)
 const obj = {
-    name: 'Object',
-    print: function(){
-        console.log(this)
-        function print2() {
-            console.log(this)
-        }
-        print2()
+  name: "Object",
+  print: function () {
+    console.log(this)
+    function print2() {
+      console.log(this)
     }
+    print2()
+  },
 }
-obj.print();
+obj.print()
 ```
 
 The three outputs would be the contents of `window`, `obj` and `window`. Surpised, yeah?
 
-Well, the object `obj` called the function `print()` but didn't *directly* call the function `print2()`. Hence, `print2()` used the default, `window`
+Well, the object `obj` called the function `print()` but didn't _directly_ call the function `print2()`. Hence, `print2()` used the default, `window`
 
 What you probably expected was that the `this` would be retained as `obj` from the beginning of `print()` to the end, but that's not the case.
 
@@ -121,16 +121,16 @@ There are three methods of handling `this` all through the functions declared in
 
 ```js
 let obj = {
-    name: 'Object',
-    print: function(){
-        const that = this;
-        function print2() {
-            console.log(that)
-        }
-        print2()
+  name: "Object",
+  print: function () {
+    const that = this
+    function print2() {
+      console.log(that)
     }
+    print2()
+  },
 }
-obj.print();
+obj.print()
 ```
 
 Now, the variable `that` will point to `this` which refers to the object `obj`.
@@ -143,15 +143,15 @@ These methods are used in changing the scope of `this`. They work in different w
 
 ```js
 let obj = {
-    name: 'Object',
-    print: function(){
-        function print2() {
-            console.log(this)
-        }
-        print2.call(this)
+  name: "Object",
+  print: function () {
+    function print2() {
+      console.log(this)
     }
+    print2.call(this)
+  },
 }
-obj.print();
+obj.print()
 ```
 
 As seen above, `this` in `print2()` refers to the `window` object but `this` in `print()` refers to the object `obj`. `print2()` is called in the same scope as `obj`'s `this`. Using the `call` method of the `print2()` function, means, "Use the `this` of `print` for `print2()`". Hence, `print2()` uses `obj` as `this`.
@@ -166,15 +166,15 @@ There's more to arrow functions than the ease of creating functions (`() => ()`)
 
 ```js
 let obj = {
-    name: 'Object',
-    print: function(){
-        const print2 = () => {
-            console.log(this)
-        }
-        print2()
+  name: "Object",
+  print: function () {
+    const print2 = () => {
+      console.log(this)
     }
+    print2()
+  },
 }
-obj.print();
+obj.print()
 ```
 
 If you tried this, you'll notice that `this` now references the object `obj` as the arrow function didn't create it's own.
@@ -185,16 +185,16 @@ Let's try that.
 
 ```js
 let obj = {
-    name: 'Object',
-    print: () => {
-        console.log(this)
-        const print2 = () => {
-            console.log(this)
-        }
-        print2()
+  name: "Object",
+  print: () => {
+    console.log(this)
+    const print2 = () => {
+      console.log(this)
     }
+    print2()
+  },
 }
-obj.print();
+obj.print()
 ```
 
 The two expected outputs are `window` and `window`. Why? `print` being an arrow function didn't create it's own `this`, same thing with `print2`, so they used what `this` was before they were declared, which at both points was `window`.
