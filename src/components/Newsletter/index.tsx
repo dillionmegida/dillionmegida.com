@@ -7,7 +7,7 @@ export default () => (
       src="https://dillionmegida.substack.com/embed"
       width="480"
       height="320"
-      frameborder="0"
+      frameBorder="0"
       scrolling="no"
     />
   </div>

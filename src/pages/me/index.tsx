@@ -11,9 +11,9 @@ export default () => {
   return (
     <>
       <Helmet
-        PageTitle="About me - Dillion Megida"
-        PageLink="/me"
-        PageDescription="Dillion is a Frontend Engineer, a Tecnical Writer and a Graphics Designer."
+        pageTitle="About me - Dillion Megida"
+        pageLink="/me"
+        pageDesc="Dillion is a Frontend Engineer, a Tecnical Writer and a Graphics Designer."
         smoothScroll
       />
       <div className={Styles.LandingImage}>

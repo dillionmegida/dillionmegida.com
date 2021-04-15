@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import Styles from "./index.module.css"
+import Styles from "./index.module.scss"
 
 import { Link } from "gatsby"
 
-const Header = (props) => {
+const Header = () => {
   const [showDrawer, setDrawerStatus] = useState(false)
 
   const Links = () => (

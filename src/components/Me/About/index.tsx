@@ -1,9 +1,9 @@
 import React from "react"
-import Styles from "./index.module.css"
+import Styles from "./index.module.scss"
 
 export default function About() {
   return (
-    <section name="about" className={Styles.AboutSection}>
+    <section id="about" className={Styles.AboutSection}>
       <section className={Styles.Bio}>
         <h1>About Me</h1>
         <p>

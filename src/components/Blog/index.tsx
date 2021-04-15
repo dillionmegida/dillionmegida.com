@@ -4,20 +4,31 @@ import Styles from "./index.module.scss"
 import { Link } from "gatsby"
 import Post from "./PostMini"
 import Layout from "./BlogLayout"
+import { GqlPostFull } from "../../interfaces/Post"
+import Helmet from "../Helmet"
 
-export default ({ pageContext }) => {
+type Props = {
+  pageContext: {
+    index: number
+    last: boolean
+    group: { node: GqlPostFull }[]
+  }
+}
+
+export default ({ pageContext }: Props) => {
   const { index: pageIndex } = pageContext
   const isFirst = pageContext.index === 1
   const isLast = pageContext.last
-  const prevPage = !isFirst && pageIndex - 1 === 1 ? "/" : pageIndex - 1
-  const nextPage = !isLast && pageContext.index + 1
+  const prevPage = !isFirst && pageIndex - 1 === 1 ? "/" : `/${pageIndex - 1}`
+  const nextPage = !isLast ? `/${pageContext.index + 1}`: ""
 
   return (
-    <Layout
-      PageTitle="Dillion Megida - Frontend Engineer and Technical Writer"
-      PageLink="/"
-      PageDescription="Dillion is a Frontend Engineer and a Tecnical Writer learning, teaching and buiding web applications with JavaScript."
-    >
+    <Layout>
+      <Helmet
+        pageTitle="Dillion Megida - Frontend Engineer and Technical Writer"
+        pageLink="/"
+        pageDesc="Dillion is a Frontend Engineer and a Tecnical Writer learning, teaching and buiding web applications with JavaScript."
+      />
       <main className={Styles.BlogMain}>
         <div className={Styles.SearchSection}>
           <Link to="/search" title="Search articles">
@@ -44,12 +55,12 @@ export default ({ pageContext }) => {
         {/* Pagination */}
         <div className={Styles.Pagination}>
           {!isFirst && (
-            <Link className={Styles.previous} to={`/${prevPage}`} rel="prev">
+            <Link className={Styles.previous} to={prevPage} rel="prev">
               ← Previous Page
             </Link>
           )}
           {!isLast && (
-            <Link className={Styles.next} to={`/${nextPage}`} rel="next">
+            <Link className={Styles.next} to={nextPage} rel="next">
               Next Page →
             </Link>
           )}

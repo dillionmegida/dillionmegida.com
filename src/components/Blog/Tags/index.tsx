@@ -5,7 +5,30 @@ import { graphql } from "gatsby"
 import Post from "../PostMini"
 import Layout from "../BlogLayout"
 
-const Tags = ({ pageContext, data }) => {
+type Props = {
+  pageContext: {
+    tag: string
+  }
+  data: {
+    allMarkdownRemark: {
+      totalCount: number
+      edges: {
+        node: {
+          id: string
+          fields: { slug: string }
+          frontmatter: {
+            title: string
+            date: Date
+          }
+          readTime: number
+          excerpt: string
+        }
+      }[]
+    }
+  }
+}
+
+const Tags = ({ pageContext, data }: Props) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `#${tag} - ${totalCount} post${totalCount === 1 ? "" : "s"}`
@@ -19,14 +42,14 @@ const Tags = ({ pageContext, data }) => {
       TwitterCardTtitle="Dillion Megida"
       //The copyright only shows on the blog page and on each blog for mobile
       // ...But it always shows for large screens
-      ShowMobileCopyright
     >
       <main className={Styles.TagMain}>
         <h2 className="TagHeader">{tagHeader}</h2>
         <section className="Blogs">
           {edges.map(({ node }) => {
+            const { readTime } = node
             const { slug } = node.fields
-            const { title, date, readTime } = node.frontmatter
+            const { title, date } = node.frontmatter
             return (
               <article key={node.id} className="Blog">
                 <Post

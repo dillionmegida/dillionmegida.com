@@ -2,15 +2,21 @@ import React from "react"
 import { Link } from "gatsby"
 import Styles from "./index.module.scss"
 
-const navLink = (props) => {
+type Props = {
+  href: string
+  title: string
+  nav: string
+}
+
+const navLink = ({ href, title, nav }: Props) => {
   return (
     <Link
       className={Styles.Link}
-      to={`/${props.href}`}
+      to={`/${href}`}
       activeClassName={Styles.ActiveLink}
-      title={props.title}
+      title={title}
     >
-      {props.nav.toUpperCase()}
+      {nav.toUpperCase()}
     </Link>
   )
 }

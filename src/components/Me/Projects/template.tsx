@@ -1,7 +1,14 @@
 import React from "react"
 import Styles from "./template.module.scss"
 
-const Template = ({ name, cover, about, link }) => {
+type Props = {
+  name: string
+  cover: string
+  about: string
+  link: string
+}
+
+const Template = ({ name, cover, about, link }: Props) => {
   return (
     <div className={Styles.Project}>
       <div className={Styles.Image}>

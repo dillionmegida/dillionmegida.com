@@ -1,15 +1,21 @@
 import React from "react"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
-const PostTemplate = (props) => {
+type Props = {
+  url: string
+  postId: string
+  postTitle: string
+}
+
+const PostTemplate = ({ url, postId, postTitle }: Props) => {
   let disqusConfig = {
-    url: props.Url,
-    identifier: props.PostId,
-    title: props.PostTitle,
+    url: url,
+    identifier: postId,
+    title: postTitle,
   }
   return (
     <>
-      <h1>{props.postTitle}</h1>
+      <h1>{postTitle}</h1>
       <CommentCount config={disqusConfig} placeholder={"..."} />
       <Disqus config={disqusConfig} />
     </>

@@ -1,38 +1,40 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../BlogLayout/"
-import Newsletter from "../../Newsletter"
+import Layout from "../BlogLayout"
+import Newsletter from "components/Newsletter"
 import Disqus from "../disqus"
 import { formatBlogDate } from "../../../utils"
-import ShareArticle from "../ShareArticle/ShareArticle"
+import ShareArticle from "../ShareArticle"
 import QuestionForm from "question-form"
 import "question-form/dist/index.css"
-import Helmet from "react-helmet"
 
 import Styles from "./index.module.scss"
+import { GqlPostFull } from "interfaces/Post"
+import Helmet from 'components/Helmet'
 
-export default ({ data }) => {
+type Props = {
+  data: {
+    markdownRemark: GqlPostFull
+  }
+}
+
+export default ({ data }: Props) => {
   const post = data.markdownRemark
   const notMonetized = post.frontmatter.monetize === false ? true : false
   return (
-    <Layout
-      PageTitle={`${post.frontmatter.title} - Dillion's Blog`}
-      PageLink={post.fields.slug}
-      PageDescription={post.frontmatter.pageDescription}
-      PageKeywords={post.frontmatter.pageKeywords}
-      ImageCard={post.frontmatter.cover}
-      LargeTwitterCard={true}
-      //The copyright only shows on the blog page and on each blog for mobile
-      // ...But it always shows for large screens
-      ShowMobileCopyright
-    >
-      {notMonetized ? (
-        <></>
-      ) : (
-        <Helmet>
+    <Layout>
+      <Helmet
+        pageTitle={`${post.frontmatter.title} - Dillion's Blog`}
+        pageLink={post.fields.slug}
+        pageDesc={post.frontmatter.pageDescription}
+        pageKeywords={post.frontmatter.pageKeywords}
+        imageCard={post.frontmatter.cover}
+        largeTwitterCard={true}
+      >
+        {notMonetized && (
           <meta name="monetization" content="$ilp.uphold.com/89fH6XniNm9R" />
-        </Helmet>
-      )}
+        )}
+      </Helmet>
 
       <main className={Styles.BlogPost}>
         <article>
@@ -85,11 +87,13 @@ export default ({ data }) => {
 
         <Newsletter />
 
-        <Disqus
-          Url={post.fileAbsolutePath}
-          PostId={post.id}
-          PostTitle={post.frontmatter.title}
-        />
+        {post.fileAbsolutePath && (
+          <Disqus
+            url={post.fileAbsolutePath}
+            postId={post.id}
+            postTitle={post.frontmatter.title}
+          />
+        )}
       </main>
     </Layout>
   )

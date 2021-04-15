@@ -1,8 +1,19 @@
 import React from "react"
 import Styles from "./index.module.scss"
 
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Template from "./template"
+
+type Project = {
+  node: {
+    frontmatter: {
+      name: string
+      link: string
+      cover: string
+      about: string
+    }
+  }
+}
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -29,10 +40,10 @@ const Projects = () => {
   return (
     <>
       {projects.length > 0 && (
-        <section name="projects" className={Styles.ProjectSection}>
+        <section id="projects" className={Styles.ProjectSection}>
           <h2>Top Projects</h2>
           <div className={Styles.Gallery}>
-            {projects.map(
+            {(projects as Project[]).map(
               ({ node: { frontmatter: project } }, i) =>
                 // get only the first two projects
                 i < 2 && (

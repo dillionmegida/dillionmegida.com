@@ -1,14 +1,15 @@
 import React from "react"
-import Layout from "../components/Layout/"
+import Layout from "../components/Layout"
 import { Link } from "gatsby"
+import Helmet from "../components/Helmet"
 
 let ErrorPage = () => (
-  <Layout
-    PageTitle="Page Not Found : ("
-    PageLink="404"
-    PageDescription="Page Not Found."
-    PageKeywords=""
-  >
+  <Layout>
+    <Helmet
+      pageTitle="Page Not Found : ("
+      pageLink="404"
+      pageDesc="Page Not Found."
+    />
     <section
       style={{
         width: "100%",

@@ -3,11 +3,18 @@ import Styles from "./index.module.scss"
 
 import { StaticQuery, graphql } from "gatsby"
 import Post from "../PostMini"
+import { GqlPost, Post as IPost } from "../../../interfaces/Post"
+
+type GqlPostModified = {
+  node: GqlPost
+}
 
 const Search = () => {
-  const [filteredArticles, setFilteredArticles] = useState([])
+  const [filteredArticles, setFilteredArticles] = useState<GqlPostModified[]>(
+    []
+  )
 
-  const handleInput = (wholeArr, event) => {
+  const handleInput = (wholeArr: { edges: GqlPostModified[] }, event: any) => {
     const query = event.target.value.toLowerCase()
 
     // check if the query is blank because the every post will pass the filter test for an empty input
@@ -16,13 +23,16 @@ const Search = () => {
       return
     }
     const posts = wholeArr.edges
-    const filteredArr = posts.filter((post) => {
+    const filteredArr = posts.filter(post => {
       const { pageDescription, title, tags } = post.node.frontmatter
 
       return (
         pageDescription.toLowerCase().includes(query) ||
         title.toLowerCase().includes(query) ||
-        tags.join("").toLowerCase().includes(query)
+        tags
+          ?.join("")
+          .toLowerCase()
+          .includes(query)
       )
     })
     setFilteredArticles(filteredArr)
@@ -55,7 +65,7 @@ const Search = () => {
           }
         }
       `}
-      render={(data) => {
+      render={data => {
         const { allPosts } = data
 
         const filtered = filteredArticles
@@ -67,7 +77,7 @@ const Search = () => {
               <input
                 type="text"
                 placeholder="Search articles..."
-                onChange={(event) => {
+                onChange={event => {
                   handleInput(allPosts, event)
                 }}
               />

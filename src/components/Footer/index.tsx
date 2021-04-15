@@ -1,9 +1,9 @@
 import React from "react"
-import Styles from "./index.module.css"
+import Styles from "./index.module.scss"
 
 export default () => {
   return (
-    <footer name="contact" className={Styles.ContactSection}>
+    <footer id="contact" className={Styles.ContactSection}>
       <h2>Contact Me</h2>
       <p>via the following:</p>
       <div className={Styles.Contacts}>

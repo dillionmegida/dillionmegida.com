@@ -3,8 +3,8 @@ const checkGlobal = () => typeof window !== `undefined`
 
 // This function converts dates like 2001-01-13 to 13th January, 2001
 // I guess there's a better way to do it in GatsbyJS, but I haven't figured out yet.
-const formatBlogDate = (date) => {
-  let dateArr = date.split("")
+const formatBlogDate = (date: Date) => {
+  let dateArr = String(date).split("")
 
   // Slice the array to break the date
   let yearArr = dateArr.slice(0, 4)

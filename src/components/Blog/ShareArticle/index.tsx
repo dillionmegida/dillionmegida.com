@@ -1,12 +1,12 @@
 import React from "react"
-import Styles from "./ShareArticle.module.css"
+import Styles from "./ShareArticle.module.scss"
 
 import { checkGlobal } from "../../../utils"
 import { Share } from "../../UI/Icons"
 
 const checkNativeShare = () => checkGlobal() && navigator.share
 
-const nativeShare = (url, title) => {
+const nativeShare = (url: string, title: string) => {
   navigator
     .share({
       title,
@@ -19,9 +19,13 @@ const nativeShare = (url, title) => {
     .catch((err) => console.log("Couldn't share article because ", err))
 }
 
-const NativeShare = (props) => {
-  const url = props.url
-  const title = props.title
+type Props = {
+url: string;
+title: string;
+}
+
+const NativeShare = ({url, title}: Props) => {
+
   return (
     <React.Fragment>
       {checkNativeShare() !== undefined ? (

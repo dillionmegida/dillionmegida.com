@@ -4,10 +4,14 @@ import Newsletter from "../../Newsletter"
 import Layout from "../../Layout"
 import WithLove from "../WithLove"
 
-const BlogLayout = (props) => {
+type Props = {
+  children: React.ReactNode
+}
+
+const BlogLayout = ({ children }: Props) => {
   return (
-    <Layout {...props}>
-      {props.children}
+    <Layout>
+      {children}
       <WithLove />
       <Newsletter />
     </Layout>
