@@ -4,9 +4,7 @@
     "module": "commonjs",
     "jsx": "preserve",
     "strict": true,
-    "esModuleInterop": true,
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
-    "baseUrl": "./src",
+    "esModuleInterop": true
   },
   "exclude": ["node_modules", "public", ".cache"]
 }
