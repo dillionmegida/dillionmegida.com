@@ -85,8 +85,6 @@ export default ({ data }: Props) => {
         <ShareArticle url={post.fields.slug} title={post.frontmatter.title} />
         <hr />
 
-        <Newsletter />
-
         {post.fileAbsolutePath && (
           <Disqus
             url={post.fileAbsolutePath}
