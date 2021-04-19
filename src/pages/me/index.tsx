@@ -27,7 +27,7 @@ export default () => {
             , I'm <span>Dillion Megida</span>
           </p>
           <p className={Styles.Small}>
-            I'm a Frontend Engineer and Technical Writer based in Nigeria.
+            I'm a Software Engineer 👨🏽‍💻 and Content Creator ✨ based in Nigeria.
           </p>
         </div>
       </div>

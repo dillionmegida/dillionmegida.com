@@ -1,89 +1,74 @@
 import React from "react"
+import constants from "../../../constants"
+import { NewTabLink, AnchorLink } from "../../Link"
 import Styles from "./index.module.scss"
 
 export default function About() {
+  const {
+    CURRENT_WORK_NAME = null,
+    CURRENT_WORK_LINK = null,
+    publications,
+    social,
+    RESUME,
+    MY_PICTURE,
+  } = constants
+
+  const pubsLength = publications.length
+
   return (
     <section id="about" className={Styles.AboutSection}>
       <section className={Styles.Bio}>
         <h1>About Me</h1>
         <p>
-          Passionate about Web Accessibility and Web Technologies. Skilled in
-          transforming UI/UX designs to readable codes. I develop web
-          applications and tools with JavaScript.
+          I am a Software Engineer
+          {CURRENT_WORK_NAME && CURRENT_WORK_LINK ? (
+            <>
+              {" "}
+              at{" "}
+              <NewTabLink link={CURRENT_WORK_LINK}>
+                {CURRENT_WORK_NAME}
+              </NewTabLink>
+            </>
+          ) : null}{" "}
+          with great focus on the Frontend. I love building accessible
+          applications on the web. I also love learning and teaching
+          tech--coding, practices, tools--via technical articles, videos, and
+          every means possible.
+          <br />
+          <br />I write mostly about web development topics and JavaScript on my
+          blog here,{" "}
+          {publications.map((p, i) =>
+            i === pubsLength - 1 ? (
+              <>
+                {" "}
+                and <a href={p.link}>{p.label}</a>
+              </>
+            ) : (
+              <>
+                , <a href={p.link}>{p.label}</a>
+              </>
+            )
+          )}{" "}
+          <br />
+          <br />I also create Tech video content on{" "}
+          <AnchorLink link={social.YOUTUBE}>my YouTube Channel</AnchorLink>
           <br />
           <br />
-          Passionate Technical writer who loves simplifying topics around the
-          web. I write mostly about web development topics on my blog here,{" "}
-          <a
-            href="https://www.freecodecamp.org/news/author/dillionmegida/"
-            title="FreeCodeCamp Profile"
-          >
-            FreeCodeCamp
-          </a>
-          ,{" "}
-          <a
-            href="https://blog.logrocket.com/author/dillion-megida/"
-            title="LogRocket Profile"
-          >
-            LogRocket
-          </a>
-          ,{" "}
-          <a
-            href="https://blog.soshace.com/author/dillionmegida/"
-            title="Soshace Blog"
-          >
-            Soshace
-          </a>
-          ,{" "}
-          <a
-            href="https://learn.vonage.com/authors/dillion-megida/"
-            title="Vonage Profile"
-          >
-            Vonage
-          </a>{" "}
-          and{" "}
-          <a href="https://dev.to/dillionmegida" title="DEV Blog">
-            Dev.to
-          </a>
-          .<br />
-          <br />
-          Founder,{" "}
-          <a href="https://thewebfor5.com" title="The Web For Five Homepage">
-            TheWebFor5
-          </a>
-          .
-          {/* <br />
-                    <br />
-                    Efficient use of Adobe Photoshop and Adobe Illustrator for
-                    graphics designing. These include photo editing, logo
-                    designing and advertisement cards. <br />
-                    <br />
-                    Average use of Adobe After Effects and Adobe Premiere Pro
-                    for video editing and motion graphics.
-                    <br />
-                    Founder,{" "}
-                    <a href="https://twitter.com/deeesignsstudio">
-                        Deeesigns Studios
-                    </a>
-                    , which deals in Graphics Designing.
-                    <br /> */}
+          Co-founder, <a href="http://skulmart.com/">SkulMart</a>
           <br />
           <p>
-            <b>Skills:</b> JavaScript, SASS, React, Gatsby, Angular, Node.js
+            <b>Languages/Tools/Frameworks:</b>
+            <br />
+            JavaScript, SASS, React, Gatsby, Angular, Node.js, NextJS, Cypress
           </p>
         </p>
-        <a
-          className={Styles.Resume}
-          href="https://drive.google.com/file/d/1-8Kad9uT65zPoxKU5cMZc9ju5pJKK7iD/view?usp=sharing"
-          title="My Resume"
-          target="_blank"
-        >
+        <NewTabLink className={Styles.Resume} link={RESUME}>
           Resume
-        </a>
+        </NewTabLink>
       </section>
       <section className={Styles.Dp}>
         <div className={Styles.ImgDiv}>
-          <img alt="Profile" src="/img/deee.jpeg" />
+          <img alt="Profile picture" src={MY_PICTURE} />
         </div>
         <p>
           DILLION MEGIDA{" "}
