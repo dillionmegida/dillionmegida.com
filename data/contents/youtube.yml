@@ -1,0 +1,15 @@
+- platform: youtube
+  name: YouTube
+  type: video
+  content:
+    - item:
+      title: New youtubeer
+      link: https://www.youtube.com/watch?v=mXd6AsU_Dyg&t
+    - item:
+      title: Git submodules - Why and How to use them
+      link: https://www.youtube.com/watch?v=De8Bc1VxcGQ&t=20s
+    - item:
+      title: How to create Custom Tasks in VSCode
+      link: https://www.youtube.com/watch?v=IdhvvlZkS9g&t=4s
+
+      
