@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Styles from "./index.module.scss"
 
 import { Link } from "gatsby"
+import constants from "../../constants"
 
 const Header = () => {
   const [showDrawer, setDrawerStatus] = useState(false)
@@ -39,7 +40,7 @@ const Header = () => {
     <header className={Styles.Header}>
       <Link className={Styles.Me} to="/">
         <div className={Styles.Img}>
-          <img src="/img/deee.jpeg" alt="Profile" />
+          <img src={constants.MY_PICTURE} alt="Profile picture" />
         </div>
       </Link>
       <nav>
