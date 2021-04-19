@@ -51,7 +51,7 @@ export default function About() {
           )}{" "}
           <br />
           <br />I also create Tech video content on{" "}
-          <AnchorLink link={social.YOUTUBE}>my YouTube Channel</AnchorLink>
+          <AnchorLink link={social.YouTube.link}>my YouTube Channel</AnchorLink>
           <br />
           <br />
           Co-founder, <a href="http://skulmart.com/">SkulMart</a>
