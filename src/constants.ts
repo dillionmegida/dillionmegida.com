@@ -23,6 +23,12 @@ export default {
     "E-mail": { link: "mailto:dillionmegida@gmail.com", Icon: Mail },
   },
 
+  pageLinks: {
+    HOME: "/",
+    CONTENTS: "/contents",
+    ME: "/me",
+  },
+
   publications: [
     {
       label: "FreeCodeCamp",

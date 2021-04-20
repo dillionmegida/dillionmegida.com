@@ -19,6 +19,9 @@ module.exports = {
     // React Helmet for populating thehead tag
     `gatsby-plugin-react-helmet`,
 
+    // for parsing YAML files
+    `gatsby-transformer-yaml`,
+
     // For handling file sources
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,8 +30,15 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contents`,
+        path: `${__dirname}/data/contents/`,
+      },
+    },
 
-    // For disque - Interaction with users on posts
+    // For disqus - Interaction with users on posts
     {
       resolve: `gatsby-plugin-disqus`,
       options: {

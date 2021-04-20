@@ -12,25 +12,35 @@ const Header = () => {
       <Link
         activeClassName={Styles.Active}
         onClick={() => setDrawerStatus(false)}
-        to="/"
+        to={constants.pageLinks.HOME}
       >
         Blog
       </Link>
       <Link
         activeClassName={Styles.Active}
         onClick={() => setDrawerStatus(false)}
-        to="/me"
+        to={constants.pageLinks.CONTENTS}
+      >
+        Contents
+      </Link>
+      <Link
+        activeClassName={Styles.Active}
+        onClick={() => setDrawerStatus(false)}
+        to={constants.pageLinks.ME}
       >
         About
       </Link>
       <Link
         activeClassName={Styles.Active}
         onClick={() => setDrawerStatus(false)}
-        to="/me#projects"
+        to={constants.pageLinks.ME + "#projects"}
       >
         Projects
       </Link>
-      <Link onClick={() => setDrawerStatus(false)} to="/me#contact">
+      <Link
+        onClick={() => setDrawerStatus(false)}
+        to={constants.pageLinks.ME + "#contact"}
+      >
         Contact
       </Link>
     </>
