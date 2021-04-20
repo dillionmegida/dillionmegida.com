@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.1",
+    "@types/styled-components": "^5.1.9",
     "prettier": "^1.19.1"
   },
   "repository": {

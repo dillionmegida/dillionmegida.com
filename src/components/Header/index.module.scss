@@ -17,7 +17,7 @@
   padding: 7px 10px;
   border-radius: 3px;
   background-color: var(--midMainColor1);
-  width: 80px;
+  width: 90px;
   text-align: center;
   border: 1px solid transparent;
   border-bottom: 3px solid var(--midMainColor1);
@@ -102,7 +102,7 @@
   margin: 15px 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .Header > nav {
     display: none;
   }

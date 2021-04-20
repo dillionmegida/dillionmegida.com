@@ -1,0 +1,62 @@
+- platform: LogRocket
+  content:
+    - item:
+      title: A deep dive into queues in Node.js
+      link: https://blog.logrocket.com/a-deep-dive-into-queues-in-node-js/
+    - item:
+      title: Self-hosted fonts vs. Google Fonts API
+      link: https://blog.logrocket.com/self-hosted-fonts-vs-google-fonts-api/
+    - item:
+      title: How to build a Markdown plugin for your Gatsby blog
+      link: https://blog.logrocket.com/how-to-build-a-markdown-plugin-for-your-gatsby-blog/
+    - item:
+      title: 5 CSS properties and values that are incompatible
+      link: https://blog.logrocket.com/5-css-properties-and-values-that-are-incompatible/
+    - item:
+      title: Uploading files using Node.js and Multer
+      link: https://blog.logrocket.com/uploading-files-using-multer-and-node-js/
+
+- platform: FreeCodeCamp
+  content:
+    - item:
+      title: How to Change Startup Programs in Windows 7, 8 And 10
+      link: https://www.freecodecamp.org/news/how-to-change-startup-program-in-windows-7-8-and-10/
+    - item:
+      title: Git Checkout Remote Branch Tutorial
+      link: https://www.freecodecamp.org/news/git-checkout-remote-branch-tutorial/
+    - item:
+      title: What is the Correct Content-Type for JSON? Request Header Mime Type Explained
+      link: https://www.freecodecamp.org/news/what-is-the-correct-content-type-for-json-request-header-mime-type-explained/
+    - item:
+      title: JavaScript Void 0 – What Does javascript:void(0); Mean?
+      link: https://www.freecodecamp.org/news/javascript-void-keyword-explained/
+    - item:
+      title: JavaScript String.Replace() Example with RegEx
+      link: https://www.freecodecamp.org/news/javascript-string-replace-example-with-regex/
+    - item:
+      title: JavaScript toString Example – How to Convert a Number into a String in JS and More
+      link: https://www.freecodecamp.org/news/javascript-tostring-example-convert-number-to-string-in-js/
+    - item:
+      title: How to Get Started with TailwindCSS
+      link: https://www.freecodecamp.org/news/get-started-with-tailwindcss/
+    - item:
+      title: How to Create a Reusable Fade-in Animation Component in React With GSAP
+      link: https://www.freecodecamp.org/news/how-to-create-a-reusable-fade-in-animation-component-in-react-with-gsap/
+    - item:
+      title: 6 Tools You Can Use to Check for Vulnerabilities in Node.js
+      link: https://www.freecodecamp.org/news/6-tools-you-can-use-to-check-for-vulnerabilities-in-node-js/
+    - item:
+      title: Grep Command Tutorial – How to Search for a File in Linux and Unix with Recursive Find
+      link: https://www.freecodecamp.org/news/grep-command-tutorial-how-to-search-for-a-file-in-linux-and-unix/
+    - item:
+      title: Symlink Tutorial in Linux – How to Create and Remove a Symbolic Link
+      link: https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/
+    - item:
+      title: How to Deploy a MERN Application to Heroku Using MongoDB Atlas
+      link: https://www.freecodecamp.org/news/deploying-a-mern-application-using-mongodb-atlas-to-heroku/
+    - item:
+      title: Object Oriented Programming in JavaScript – Explained with Examples
+      link: https://www.freecodecamp.org/news/how-javascript-implements-oop/
+    - item:
+      title: How to Change Startup Programs in Windows 7, 8 And 10
+      link: https://www.freecodecamp.org/news/how-to-change-startup-program-in-windows-7-8-and-10/

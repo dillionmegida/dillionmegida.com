@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 import { AllContentsQql } from "../../interfaces/Contents"
 
 type Props = {
-  data: { allContents: AllContentsQql }
+  data: { allVideos: AllContentsQql; allArticles: AllContentsQql }
 }
 
 function Contents({ data }: Props) {
@@ -17,14 +17,26 @@ function Contents({ data }: Props) {
         pageDesc="This is a page for every content I've created and will create in the future."
         pageLink="/contents"
       />
-      <ContentsPage contents={data.allContents} />
+      <ContentsPage videos={data.allVideos} articles={data.allArticles} />
     </Layout>
   )
 }
 
 export const query = graphql`
   query ContentsPageQuery {
-    allContents: allContentsYaml {
+    allVideos: allVideosYaml {
+      edges {
+        node {
+          id
+          platform
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+    allArticles: allArticlesYaml {
       edges {
         node {
           id
