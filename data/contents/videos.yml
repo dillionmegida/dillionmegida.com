@@ -1,4 +1,5 @@
 - platform: YouTube
+  link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
       title: New youtuber
