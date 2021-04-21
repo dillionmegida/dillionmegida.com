@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../BlogLayout"
-import Newsletter from "../../Newsletter"
 import Disqus from "../disqus"
 import { formatBlogDate } from "../../../utils"
 import ShareArticle from "../ShareArticle"
@@ -85,13 +84,11 @@ export default ({ data }: Props) => {
         <ShareArticle url={post.fields.slug} title={post.frontmatter.title} />
         <hr />
 
-        {post.fileAbsolutePath && (
-          <Disqus
-            url={post.fileAbsolutePath}
-            postId={post.id}
-            postTitle={post.frontmatter.title}
-          />
-        )}
+        <Disqus
+          url={post.fields.slug}
+          postId={post.id}
+          postTitle={post.frontmatter.title}
+        />
       </main>
     </Layout>
   )

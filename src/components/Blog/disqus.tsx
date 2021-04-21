@@ -1,5 +1,9 @@
 import React from "react"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+import styled from "styled-components"
+import constants from "../../constants"
+
+const Container = styled.div``
 
 type Props = {
   url: string
@@ -9,16 +13,15 @@ type Props = {
 
 const PostTemplate = ({ url, postId, postTitle }: Props) => {
   let disqusConfig = {
-    url: url,
+    url: constants.SITE_URL + url,
     identifier: postId,
     title: postTitle,
   }
   return (
-    <>
-      <h1>{postTitle}</h1>
+    <Container>
       <CommentCount config={disqusConfig} placeholder={"..."} />
       <Disqus config={disqusConfig} />
-    </>
+    </Container>
   )
 }
 

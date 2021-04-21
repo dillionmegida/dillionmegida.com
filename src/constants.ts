@@ -5,6 +5,8 @@ import Twitter from "./components/Icon/Twitter"
 import YouTube from "./components/Icon/YouTube"
 
 export default {
+  SITE_URL: "dillionmegida.com",
+
   CURRENT_WORK_NAME: "ThisDot",
   CURRENT_WORK_LINK: "https://labs.thisdot.co",
 
