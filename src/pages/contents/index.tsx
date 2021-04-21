@@ -4,9 +4,14 @@ import Helmet from "../../components/Helmet"
 import Layout from "../../components/Layout"
 import { graphql } from "gatsby"
 import { AllContentsQql } from "../../interfaces/Contents"
+import { AllPostsGql, GqlPost } from "../../interfaces/Post"
 
 type Props = {
-  data: { allVideos: AllContentsQql; allArticles: AllContentsQql }
+  data: {
+    allVideos: AllContentsQql
+    allArticles: AllContentsQql
+    allArticlesOnMyWebite: AllPostsGql
+  }
 }
 
 function Contents({ data }: Props) {
@@ -17,7 +22,11 @@ function Contents({ data }: Props) {
         pageDesc="This is a page for every content I've created and will create in the future."
         pageLink="/contents"
       />
-      <ContentsPage videos={data.allVideos} articles={data.allArticles} />
+      <ContentsPage
+        videos={data.allVideos}
+        articles={data.allArticles}
+        allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
+      />
     </Layout>
   )
 }
@@ -28,6 +37,7 @@ export const query = graphql`
       edges {
         node {
           id
+          link
           platform
           content {
             title
@@ -41,9 +51,30 @@ export const query = graphql`
         node {
           id
           platform
+          link
           content {
             title
             link
+          }
+        }
+      }
+    }
+    allArticlesOnMyWebite: allMarkdownRemark(
+      filter: { fields: { slug: { regex: "/^(/p/)/" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          timeToRead
+          frontmatter {
+            tags
+            title
+            date
+            pageDescription
           }
         }
       }

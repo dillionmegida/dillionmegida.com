@@ -1,4 +1,5 @@
 - platform: YouTube
+  link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
       title: New youtuber
@@ -9,5 +10,8 @@
     - item:
       title: How to create Custom Tasks in VSCode
       link: https://www.youtube.com/watch?v=IdhvvlZkS9g
+    - item:
+      title: How react-helmet is not a solution for improving the SEO of websites
+      link: https://www.youtube.com/watch?v=j_nxKlnuOu0
 
       
