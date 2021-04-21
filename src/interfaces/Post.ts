@@ -11,6 +11,12 @@ export interface GqlPost {
   }
 }
 
+export interface AllPostsGql {
+  edges: {
+    node: GqlPost
+  }[]
+}
+
 export interface Post {
   readTime: number
   date: Date

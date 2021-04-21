@@ -1,7 +1,11 @@
 import React from "react"
 import { AllContentsQql } from "../../src/interfaces/Contents"
 import styled from "styled-components"
-import { NewTabLink } from "../../src/components/Link"
+import { AnchorLink, NewTabLink } from "../../src/components/Link"
+import Masonry from "react-masonry-css"
+import { AllPostsGql } from "../../src/interfaces/Post"
+import { Link } from "gatsby"
+import useMedia from "use-media"
 
 const Main = styled.main`
   width: 100%;
@@ -31,29 +35,34 @@ const Main = styled.main`
   }
 
   .main-content {
-    padding: 20px;
+    padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
   }
 
   .contents-container {
-    display: grid;
-    margin: 20px auto;
-    --columns: 3;
-    grid-template-columns: repeat(var(--columns), 1fr);
-    grid-gap: 20px;
-
-    @media (max-width: 800px) {
-        --columns: 2;
+    margin-top: 30px;
+    .my-masonry-grid {
+      display: flex;
+      margin-left: -30px;
+      width: auto;
+    }
+    .my-masonry-grid_column {
+      padding-left: 30px;
+      background-clip: padding-box;
     }
 
-    @media (max-width: 650px) {
-        --columns: 1;
+    .my-masonry-grid_column .content-block {
+      margin-bottom: 50px;
     }
 
     .content-block {
       h2 {
         margin: 0 0 10px;
+        a {
+          text-decoration: underline;
+          color: var(--midMainColor1);
+        }
       }
       &__items {
       }
@@ -61,30 +70,36 @@ const Main = styled.main`
         a {
           color: var(--mainColor);
           text-decoration: underline;
-          margin-bottom: 7px;
+          margin-bottom: 10px;
           display: block;
         }
       }
     }
-  }
-
-  .note {
-    text-align: center;
-    margin-top: 50px;
   }
 `
 
 type Props = {
   videos: AllContentsQql
   articles: AllContentsQql
+  allArticlesOnThisWebsite: AllPostsGql
 }
 
-export default function ContentsPage({ videos, articles }: Props) {
+export default function ContentsPage({
+  videos,
+  articles,
+  allArticlesOnThisWebsite,
+}: Props) {
   let contentsLength = 0
 
   videos.edges.forEach(({ node }) => (contentsLength += node.content.length))
 
   articles.edges.forEach(({ node }) => (contentsLength += node.content.length))
+
+  allArticlesOnThisWebsite.edges.forEach(() => (contentsLength += 1))
+
+  const isWiderThan800 = useMedia({ minWidth: 1000 })
+
+  const isWiderThan600 = useMedia({ minWidth: 600 })
 
   return (
     <Main>
@@ -96,22 +111,50 @@ export default function ContentsPage({ videos, articles }: Props) {
       </div>
       <div className="main-content">
         <div className="contents-container">
-          {videos.edges.concat(articles.edges).map(({ node }) => {
-            return (
-              <div className="content-block">
-                <h2>{node.platform}</h2>
-                <div className="content-block__items">
-                  {node.content.reverse().map(({ title, link }) => (
-                    <div className="content-block__item">
-                      <NewTabLink link={link}>{title}</NewTabLink>
-                    </div>
-                  ))}
+          <Masonry
+            breakpointCols={isWiderThan800 ? 3 : isWiderThan600 ? 2 : 1}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+            {articles.edges.concat(videos.edges).map(({ node }) => {
+              return (
+                <div key={node.platform} className="content-block">
+                  <h2>
+                    <NewTabLink link={node.link}>{node.platform}</NewTabLink>
+                  </h2>
+                  <div className="content-block__items">
+                    {node.content.reverse().map(({ title, link }) => (
+                      <div key={title} className="content-block__item">
+                        <NewTabLink link={link}>{title}</NewTabLink>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+              )
+            })}
+            <div className="content-block">
+              <h2>
+                <Link to="/">dillionmegida.com</Link>
+              </h2>
+              <div className="content-block__items">
+                {allArticlesOnThisWebsite.edges.map(
+                  ({
+                    node: {
+                      frontmatter: { title },
+                      fields: { slug },
+                    },
+                  }) => {
+                    return (
+                      <div className="content-block__item">
+                        <AnchorLink link={slug}>{title}</AnchorLink>
+                      </div>
+                    )
+                  }
+                )}
               </div>
-            )
-          })}
+            </div>
+          </Masonry>
         </div>
-        <div className="note">This page is a Work in Progress...</div>
       </div>
     </Main>
   )
