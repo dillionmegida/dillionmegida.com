@@ -116,6 +116,8 @@ With all these said, you'll understand now that when you host your react applica
 
 If any crawler crawls through a page on your React application, they'd index that page by the default meta tags (the `title` being 'React App'). So your client sees 'Contact Us' on the browser but the crawler sees 'React App'.
 
+Here's more information in this video: [How react-helmet is not a solution for improving the SEO of websites](https://www.youtube.com/watch?v=j_nxKlnuOu0)
+
 You may not care about SEO, but another reason why you'd need to ensure correct tags is for example, services like twitter page summary which displays an image, title and description declared for your page. When you make a tweet with a URL, twitter attempts to get a preview of that URL. This means, it would make a request to the server holding the resources of that page. Twitter wouldn't help you run any JavaScript, hence, what would be returned back from the server would be 'React App' for `title`.
 
 **Note that** in some React frameworks like GatsbyJS (that I know of), `react-helmet` works with [`gatsby-plugin-react-helmet`](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/) to appropriately modify meta tags during their server-side rendering process. Asides frameworks like such, remember that `react-helmet` cannot work on its own until the functions are executed by the browser.
