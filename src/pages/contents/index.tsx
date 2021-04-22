@@ -8,8 +8,13 @@ import { AllPostsGql, GqlPost } from "../../interfaces/Post"
 
 type Props = {
   data: {
-    allVideos: AllContentsQql
-    allArticles: AllContentsQql
+    youtube: AllContentsQql
+    devto: AllContentsQql
+    edpresso: AllContentsQql
+    logrocket: AllContentsQql
+    soshace: AllContentsQql
+    vonage: AllContentsQql
+    fcc: AllContentsQql
     allArticlesOnMyWebite: AllPostsGql
   }
 }
@@ -23,8 +28,13 @@ function Contents({ data }: Props) {
         pageLink="/contents"
       />
       <ContentsPage
-        videos={data.allVideos}
-        articles={data.allArticles}
+        youtube={data.youtube}
+        devto={data.devto}
+        edpresso={data.edpresso}
+        logrocket={data.logrocket}
+        soshace={data.soshace}
+        vonage={data.vonage}
+        fcc={data.fcc}
         allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
       />
     </Layout>
@@ -33,7 +43,7 @@ function Contents({ data }: Props) {
 
 export const query = graphql`
   query ContentsPageQuery {
-    allVideos: allVideosYaml {
+    youtube: allYoutubeYaml {
       edges {
         node {
           id
@@ -46,7 +56,8 @@ export const query = graphql`
         }
       }
     }
-    allArticles: allArticlesYaml {
+
+    vonage: allVonageYaml {
       edges {
         node {
           id
@@ -59,6 +70,91 @@ export const query = graphql`
         }
       }
     }
+
+    thisdot: allThisdotYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+
+    soshace: allSoshaceYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+
+    logrocket: allLogrocketYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+
+    fcc: allFccYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+
+    edpresso: allEdpressoYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+
+    devto: allDevtoYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+
     allArticlesOnMyWebite: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/^(/p/)/" } } }
       sort: { fields: [frontmatter___date], order: DESC }

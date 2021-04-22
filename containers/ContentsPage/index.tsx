@@ -6,6 +6,7 @@ import Masonry from "react-masonry-css"
 import { AllPostsGql } from "../../src/interfaces/Post"
 import { Link } from "gatsby"
 import useMedia from "use-media"
+import ContentBlock from "./ContentBlock"
 
 const Main = styled.main`
   width: 100%;
@@ -52,48 +53,44 @@ const Main = styled.main`
       background-clip: padding-box;
     }
 
-    .my-masonry-grid_column .content-block {
+    .my-masonry-grid_column > div {
       margin-bottom: 50px;
-    }
-
-    .content-block {
-      h2 {
-        margin: 0 0 10px;
-        a {
-          text-decoration: underline;
-          color: var(--midMainColor1);
-        }
-      }
-      &__items {
-      }
-      &__item {
-        a {
-          color: var(--mainColor);
-          text-decoration: underline;
-          margin-bottom: 10px;
-          display: block;
-        }
-      }
     }
   }
 `
 
 type Props = {
-  videos: AllContentsQql
-  articles: AllContentsQql
+  youtube: AllContentsQql
+  devto: AllContentsQql
+  edpresso: AllContentsQql
+  logrocket: AllContentsQql
+  soshace: AllContentsQql
+  vonage: AllContentsQql
+  fcc: AllContentsQql
   allArticlesOnThisWebsite: AllPostsGql
 }
 
 export default function ContentsPage({
-  videos,
-  articles,
+  youtube,
+  devto,
+  edpresso,
+  logrocket,
+  soshace,
+  vonage,
+  fcc,
   allArticlesOnThisWebsite,
 }: Props) {
+  const { FEATURED_CONTENT_LINK } = process.env
+
+  const contents = [logrocket, youtube, devto, edpresso, soshace, vonage, fcc]
+
   let contentsLength = 0
 
-  videos.edges.forEach(({ node }) => (contentsLength += node.content.length))
+  function updateContentsLength(content: AllContentsQql) {
+    content.edges.forEach(({ node }) => (contentsLength += node.content.length))
+  }
 
-  articles.edges.forEach(({ node }) => (contentsLength += node.content.length))
+  contents.forEach(c => updateContentsLength(c))
 
   allArticlesOnThisWebsite.edges.forEach(() => (contentsLength += 1))
 
@@ -116,43 +113,30 @@ export default function ContentsPage({
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {articles.edges.concat(videos.edges).map(({ node }) => {
-              return (
-                <div key={node.platform} className="content-block">
-                  <h2>
-                    <NewTabLink link={node.link}>{node.platform}</NewTabLink>
-                  </h2>
-                  <div className="content-block__items">
-                    {node.content.reverse().map(({ title, link }) => (
-                      <div key={title} className="content-block__item">
-                        <NewTabLink link={link}>{title}</NewTabLink>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )
-            })}
-            <div className="content-block">
-              <h2>
-                <Link to="/">dillionmegida.com</Link>
-              </h2>
-              <div className="content-block__items">
-                {allArticlesOnThisWebsite.edges.map(
-                  ({
-                    node: {
-                      frontmatter: { title },
-                      fields: { slug },
-                    },
-                  }) => {
-                    return (
-                      <div className="content-block__item">
-                        <AnchorLink link={slug}>{title}</AnchorLink>
-                      </div>
-                    )
-                  }
-                )}
-              </div>
-            </div>
+            {contents.map(c =>
+              c.edges.map(({ node }) => {
+                return (
+                  <ContentBlock
+                    key={node.platform}
+                    heading={{ title: node.platform, link: node.link }}
+                    items={node.content
+                      .reverse()
+                      .map(({ title, link }) => ({ title, link }))}
+                  />
+                )
+              })
+            )}
+            <ContentBlock
+              heading={{ title: "dillionmegida.com", link: "/" }}
+              items={allArticlesOnThisWebsite.edges.map(
+                ({
+                  node: {
+                    frontmatter: { title },
+                    fields: { slug },
+                  },
+                }) => ({ title, link: slug })
+              )}
+            />
           </Masonry>
         </div>
       </div>

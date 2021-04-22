@@ -1,0 +1,10 @@
+- platform: EdPresso
+  link: https://www.educative.io/profile/view/5465507647979520
+  content:
+    - item:
+      title: Array destructuring simplified
+      link: https://www.educative.io/edpresso/array-destructuring-simplified
+    - item:
+      title: splice vs. slice in JavaScript
+      link: https://www.educative.io/edpresso/splice-vs-slice-in-javascript
+    

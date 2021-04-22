@@ -1,0 +1,18 @@
+- platform: LogRocket
+  link: https://blog.logrocket.com/author/dillion-megida/
+  content:
+    - item:
+      title: A deep dive into queues in Node.js
+      link: https://blog.logrocket.com/a-deep-dive-into-queues-in-node-js/
+    - item:
+      title: Self-hosted fonts vs. Google Fonts API
+      link: https://blog.logrocket.com/self-hosted-fonts-vs-google-fonts-api/
+    - item:
+      title: How to build a Markdown plugin for your Gatsby blog
+      link: https://blog.logrocket.com/how-to-build-a-markdown-plugin-for-your-gatsby-blog/
+    - item:
+      title: 5 CSS properties and values that are incompatible
+      link: https://blog.logrocket.com/5-css-properties-and-values-that-are-incompatible/
+    - item:
+      title: Uploading files using Node.js and Multer
+      link: https://blog.logrocket.com/uploading-files-using-multer-and-node-js/

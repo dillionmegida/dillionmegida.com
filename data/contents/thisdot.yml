@@ -1,0 +1,12 @@
+- platform: ThisDot
+  link: https://labs.thisdot.co/author/dillion-megida
+  content:
+    - item:
+      title: Getting Started with GatsbyJS
+      link: https://labs.thisdot.co/blog/getting-started-with-gatsbyjs
+    - item:
+      title: Building SEO-Powered Websites With Gatsby
+      link: https://labs.thisdot.co/blog/building-seo-powered-websites-with-gatsby
+    - item:
+      title: Composing React Components with TypeScript
+      link: https://labs.thisdot.co/blog/composing-react-components-with-typescript
