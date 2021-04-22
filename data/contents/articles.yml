@@ -57,6 +57,91 @@
     - item:
       title: An in-depth guide on the CSS position property
       link: https://soshace.com/an-in-depth-guide-on-the-css-position-property/
+
+- platform: Dev.to
+  link: https://dev.to/dillionmegida
+  content:
+    - item:
+      title: Making Sticky Column with grid area
+      link: https://dev.to/dillionmegida/making-sticky-column-with-grid-area-5eph
+    - item:
+      title: Return statement simplified
+      link: https://dev.to/dillionmegida/return-statement-simplified-2l6j
+    - item:
+      title: SEMANTIC HTML - Part 1 of Frontend Development Series
+      link: https://dev.to/dillionmegida/semantic-html-part-1-of-frontend-development-series-nlb
+    - item:
+      title: BASIC SEO - Part 2 of Frontend Development Series
+      link: https://dev.to/dillionmegida/basic-seo-part-2-of-frontend-development-series-2i64
+    - item:
+      title: URLs and Webpack in ReactJS
+      link: https://dev.to/dillionmegida/urls-and-webpack-in-reactjs-3bln
+    - item:
+      title: WEB ACCESSIBILITY FOR BEGINNERS - Part 3 of Frontend Development Series
+      link: https://dev.to/dillionmegida/web-accessibility-for-beginners-part-3-of-frontend-development-series-3kp7
+    - item:
+      title: BASICS OF CSS - Part 4 of Frontend Development Series
+      link: https://dev.to/dillionmegida/basics-of-css-part-4-of-frontend-development-series-3gph
+    - item:
+      title: Javascript for() {} Loop - Simplified
+      link: https://dev.to/dillionmegida/javascript-for-loop-jcn
+    - item:
+      title: JUSTIFY-CONTENT & ALIGN-ITEMS at your first try 😊
+      link: https://dev.to/dillionmegida/justify-content-align-items-at-your-first-try-3ged
+    - item:
+      title: Tips to Practice! & Build Projects!! 🚀
+      link: https://dev.to/dillionmegida/tips-to-practice-practice-build-projects-4jbc
+    - item:
+      title: MAKING LAYOUTS WITH CSS (Pt a) - Part 5 of Frontend Development Series
+      link: https://dev.to/dillionmegida/making-layouts-with-css-pt-a-part-5-of-frontend-development-series-3opd
+    - item:
+      title: MAKING LAYOUTS WITH CSS (Pt b) - Part 5 of Frontend Development Series
+      link: https://dev.to/dillionmegida/making-layouts-with-css-pt-b-part-5-of-frontend-development-series-1icl
+    - item:
+      title: Eye-Opening Conversation With A Frontend Colleague 😯
+      link: https://dev.to/dillionmegida/eye-opening-conversation-with-a-frontend-colleague-57gi
+    - item:
+      title: MAKING LAYOUTS WITH CSS (Pt c) - Part 5 of Frontend Development Series
+      link: https://dev.to/dillionmegida/making-layouts-with-css-pt-c-part-5-of-frontend-development-series-59en
+    - item:
+      title: CSS MEDIA QUERIES - Part 6 of Frontend Development Series
+      link: https://dev.to/dillionmegida/css-media-queries-part-6-of-frontend-development-series-2ep1
+    - item:
+      title: CSS3 - Part 7 of Frontend Development Series
+      link: https://dev.to/dillionmegida/css3-part-7-of-frontend-development-series-4p10
+    - item:
+      title: How I Created My Own Codepen (Online Text Editor)
+      link: https://dev.to/dillionmegida/how-i-created-my-own-codepen-online-text-editor-3541
+    - item:
+      title: New Project - CSS Flex Generator
+      link: https://dev.to/dillionmegida/new-project-css-flex-generator-2a75
+    - item:
+      title: Syntax and Basic Constructs (Pt a) - Part 8 of Frontend Development Series
+      link: https://dev.to/dillionmegida/syntax-and-basic-constructs-65
+    - item:
+      title: Understanding event.target and Use Cases
+      link: https://dev.to/dillionmegida/understanding-event-target-and-use-cases-2hif
+    - item:
+      title: My 100DaysOfCode Experience 😄
+      link: https://dev.to/dillionmegida/my-100daysofcode-experience-4fge
+    - item:
+      title: Syntax and Basic Constructs (Pt b) - Part 8 of Frontend Development Series
+      link: https://dev.to/dillionmegida/syntax-and-basic-constructs-pt-b-part-8-of-frontend-development-series-1ma2
+    - item:
+      title: Javascript reduce() Array Method
+      link: https://dev.to/dillionmegida/javascript-reduce-array-method-2ab5
+    - item:
+      title: Garbage Collection in Javascript
+      link: https://dev.to/dillionmegida/garbage-collection-in-javascript-3659
+    - item:
+      title: Getting Started with CSS Variables
+      link: https://dev.to/dillionmegida/getting-started-with-css-variables-52eb
+    - item:
+      title: String.split() in Javascript
+      link: https://dev.to/dillionmegida/string-split-in-javascript-2a0d
+    - item:
+      title: Announcing gatsby-remark-liquid-tags
+      link: https://dev.to/dillionmegida/announcing-gatsby-remark-liquid-tags-3e40
   
 - platform: Vonage
   link: https://learn.vonage.com/authors/dillion-megida/
@@ -64,6 +149,16 @@
     - item:
       title: Building Github Actions With the Vonage Messages API
       link: https://learn.vonage.com/blog/2021/02/04/building-github-actions-with-the-vonage-messages-api/
+
+- platform: EdPresso
+  link: https://www.educative.io/profile/view/5465507647979520
+  content:
+    - item:
+      title: Array destructuring simplified
+      link: https://www.educative.io/edpresso/array-destructuring-simplified
+    - item:
+      title: splice vs. slice in JavaScript
+      link: https://www.educative.io/edpresso/splice-vs-slice-in-javascript
     
 - platform: FreeCodeCamp
   link: https://www.freecodecamp.org/news/author/dillionmegida/
