@@ -1,0 +1,27 @@
+- platform: Soshace
+  link: https://soshace.com/author/dillionmegida/
+  content:
+    - item:
+      title: The Concept of Scope in JavaScript
+      link: https://soshace.com/the-concept-of-scope-in-javascript/
+    - item:
+      title: Progressive Web Applications and Service Workers
+      link: https://soshace.com/progressive-web-applications-and-service-workers/
+    - item:
+      title: What the Heck is React Hooks?
+      link: https://soshace.com/what-the-heck-is-react-hooks/
+    - item:
+      title: Getting started with Git Hooks using ghooks
+      link: https://soshace.com/getting-started-with-git-hooks-using-ghooks/
+    - item:
+      title: How to Creact a React Component Library – Using a Modal Example
+      link: https://soshace.com/how-to-careate-a-react-ccomponent-library-using-a-modal-example/
+    - item:
+      title: How to Run API Tests Automatically Every Time Your App Is Deployed using Loadmill
+      link: https://soshace.com/how-to-run-api-tests-automatically-every-time-your-app-is-deployed-using-loadmill/
+    - item:
+      title: How to use the redux dev tools to speed up development and debugging
+      link: https://soshace.com/how-to-use-the-redux-dev-tools-to-speed-up-development-and-debugging/
+    - item:
+      title: An in-depth guide on the CSS position property
+      link: https://soshace.com/an-in-depth-guide-on-the-css-position-property/

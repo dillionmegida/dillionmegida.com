@@ -1,0 +1,48 @@
+- platform: FreeCodeCamp
+  link: https://www.freecodecamp.org/news/author/dillionmegida/
+  content:
+    - item:
+      title: How to Change Startup Programs in Windows 7, 8 And 10
+      link: https://www.freecodecamp.org/news/how-to-change-startup-program-in-windows-7-8-and-10/
+    - item:
+      title: Object Oriented Programming in JavaScript – Explained with Examples
+      link: https://www.freecodecamp.org/news/how-javascript-implements-oop/
+    - item:
+      title: How to Deploy a MERN Application to Heroku Using MongoDB Atlas
+      link: https://www.freecodecamp.org/news/deploying-a-mern-application-using-mongodb-atlas-to-heroku/
+    - item:
+      title: Symlink Tutorial in Linux – How to Create and Remove a Symbolic Link
+      link: https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/
+    - item:
+      title: Grep Command Tutorial – How to Search for a File in Linux and Unix with Recursive Find
+      link: https://www.freecodecamp.org/news/grep-command-tutorial-how-to-search-for-a-file-in-linux-and-unix/
+    - item:
+      title: 6 Tools You Can Use to Check for Vulnerabilities in Node.js
+      link: https://www.freecodecamp.org/news/6-tools-you-can-use-to-check-for-vulnerabilities-in-node-js/
+    - item:
+      title: How to Create a Reusable Fade-in Animation Component in React With GSAP
+      link: https://www.freecodecamp.org/news/how-to-create-a-reusable-fade-in-animation-component-in-react-with-gsap/
+    - item:
+      title: How to Get Started with TailwindCSS
+      link: https://www.freecodecamp.org/news/get-started-with-tailwindcss/
+    - item:
+      title: JavaScript toString Example – How to Convert a Number into a String in JS and More
+      link: https://www.freecodecamp.org/news/javascript-tostring-example-convert-number-to-string-in-js/
+    - item:
+      title: JavaScript String.Replace() Example with RegEx
+      link: https://www.freecodecamp.org/news/javascript-string-replace-example-with-regex/
+    - item:
+      title: JavaScript Void 0 – What Does javascript:void(0); Mean?
+      link: https://www.freecodecamp.org/news/javascript-void-keyword-explained/
+    - item:
+      title: What is the Correct Content-Type for JSON? Request Header Mime Type Explained
+      link: https://www.freecodecamp.org/news/what-is-the-correct-content-type-for-json-request-header-mime-type-explained/
+    - item:
+      title: Git Checkout Remote Branch Tutorial
+      link: https://www.freecodecamp.org/news/git-checkout-remote-branch-tutorial/
+    - item:
+      title: HTML Link Code – How to Insert a Link to a Website with HREF
+      link: https://www.freecodecamp.org/news/html-link-code-how-to-insert-a-link-to-a-website-with-href-3/
+    - item:
+      title: What is JavaScript? A Definition of the JS Programming Language
+      link: https://www.freecodecamp.org/news/what-is-javascript-definition-of-js/
