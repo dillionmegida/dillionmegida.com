@@ -1,10 +1,10 @@
 import React from "react"
-import ContentsPage from "../../../containers/ContentsPage"
+import ContentsPage from "../../containers/ContentsPage"
 import Helmet from "../../components/Helmet"
 import Layout from "../../components/Layout"
 import { graphql } from "gatsby"
 import { AllContentsQql } from "../../interfaces/Contents"
-import { AllPostsGql, GqlPost } from "../../interfaces/Post"
+import { AllPostsGql } from "../../interfaces/Post"
 
 type Props = {
   data: {
@@ -23,8 +23,8 @@ function Contents({ data }: Props) {
   return (
     <Layout>
       <Helmet
-        pageTitle="All my contents in one place 😎"
-        pageDesc="This is a page for every content I've created and will create in the future."
+        pageTitle="All my contents in one place ✨"
+        pageDesc="This is a page for every content I've created ranging from articles to videos to podcasts to everything on web development and tech."
         pageLink="/contents"
       />
       <ContentsPage

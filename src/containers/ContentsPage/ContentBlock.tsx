@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { AnchorLink, NewTabLink } from "../../src/components/Link"
-import { ContentGql } from "../../src/interfaces/Contents"
-import { GqlPost } from "../../src/interfaces/Post"
+import { AnchorLink, NewTabLink } from "../../components/Link"
+import { ContentGql } from "../../interfaces/Contents"
+import { GqlPost } from "../../interfaces/Post"
 
 const Container = styled.div`
   h2 {

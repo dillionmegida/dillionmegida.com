@@ -1,12 +1,13 @@
 import React from "react"
-import { AllContentsQql } from "../../src/interfaces/Contents"
+import { AllContentsQql } from "../../interfaces/Contents"
 import styled from "styled-components"
-import { AnchorLink, NewTabLink } from "../../src/components/Link"
+import { AnchorLink, NewTabLink } from "../../components/Link"
 import Masonry from "react-masonry-css"
-import { AllPostsGql } from "../../src/interfaces/Post"
+import { AllPostsGql } from "../../interfaces/Post"
 import { Link } from "gatsby"
 import useMedia from "use-media"
 import ContentBlock from "./ContentBlock"
+import FeaturedContent from "./FeaturedContent"
 
 const Main = styled.main`
   width: 100%;
@@ -82,6 +83,8 @@ export default function ContentsPage({
 }: Props) {
   const { FEATURED_CONTENT_LINK } = process.env
 
+  console.log({...process.env})
+
   const contents = [logrocket, youtube, devto, edpresso, soshace, vonage, fcc]
 
   let contentsLength = 0
@@ -107,6 +110,7 @@ export default function ContentsPage({
         </div>
       </div>
       <div className="main-content">
+          <FeaturedContent />
         <div className="contents-container">
           <Masonry
             breakpointCols={isWiderThan800 ? 3 : isWiderThan600 ? 2 : 1}
