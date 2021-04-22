@@ -81,10 +81,6 @@ export default function ContentsPage({
   fcc,
   allArticlesOnThisWebsite,
 }: Props) {
-  const { FEATURED_CONTENT_LINK } = process.env
-
-  console.log({...process.env})
-
   const contents = [logrocket, youtube, devto, edpresso, soshace, vonage, fcc]
 
   let contentsLength = 0
@@ -110,7 +106,7 @@ export default function ContentsPage({
         </div>
       </div>
       <div className="main-content">
-          <FeaturedContent />
+        {/* <FeaturedContent /> */}
         <div className="contents-container">
           <Masonry
             breakpointCols={isWiderThan800 ? 3 : isWiderThan600 ? 2 : 1}
