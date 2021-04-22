@@ -3,6 +3,8 @@ module.exports = {
     siteUrl: `https://dillionmegida.com`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
+
     `gatsby-plugin-sass`,
 
     // For NetlifyCMS
