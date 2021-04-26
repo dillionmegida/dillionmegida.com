@@ -15,6 +15,8 @@ type Props = {
     soshace: AllContentsQql
     vonage: AllContentsQql
     fcc: AllContentsQql
+    podcast: AllContentsQql
+    kirupa: AllContentsQql
     allArticlesOnMyWebite: AllPostsGql
   }
 }
@@ -35,6 +37,8 @@ function Contents({ data }: Props) {
         soshace={data.soshace}
         vonage={data.vonage}
         fcc={data.fcc}
+        podcast={data.podcast}
+        kirupa={data.kirupa}
         allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
       />
     </Layout>
@@ -147,6 +151,32 @@ export const query = graphql`
           id
           platform
           link
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+
+    podcast: allPodcastYaml {
+      edges {
+        node {
+          id
+          platform
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+
+    kirupa: allKirupaYaml {
+      edges {
+        node {
+          id
+          platform
           content {
             title
             link

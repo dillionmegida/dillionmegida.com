@@ -68,6 +68,8 @@ type Props = {
   soshace: AllContentsQql
   vonage: AllContentsQql
   fcc: AllContentsQql
+  podcast: AllContentsQql
+  kirupa: AllContentsQql
   allArticlesOnThisWebsite: AllPostsGql
 }
 
@@ -79,9 +81,21 @@ export default function ContentsPage({
   soshace,
   vonage,
   fcc,
+  kirupa,
+  podcast,
   allArticlesOnThisWebsite,
 }: Props) {
-  const contents = [logrocket, youtube, devto, edpresso, soshace, vonage, fcc]
+  const contents = [
+    logrocket,
+    youtube,
+    podcast,
+    vonage,
+    kirupa,
+    edpresso,
+    soshace,
+    fcc,
+    devto,
+  ]
 
   let contentsLength = 0
 
@@ -119,9 +133,10 @@ export default function ContentsPage({
                   <ContentBlock
                     key={node.platform}
                     heading={{ title: node.platform, link: node.link }}
-                    items={node.content
-                      .reverse()
-                      .map(({ title, link }) => ({ title, link }))}
+                    items={node.content.map(({ title, link }) => ({
+                      title,
+                      link,
+                    }))}
                   />
                 )
               })

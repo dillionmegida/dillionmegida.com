@@ -1,0 +1,13 @@
+- platform: Kirupa
+  link: null
+  content:
+    - item:
+      title: Cookies vs. localStorage vs. sessionStorage
+      link: https://www.kirupa.com/hodgepodge/cookies_local_session_storage.htm
+    - item:
+      title: Chrome Dev Tools Tricks for Front End Developers
+      link: https://www.kirupa.com/hodgepodge/chrome_dev_tools_for_frontend_developers.htm
+    - item:
+      title: Playing Sounds Using the Audio Element
+      link: https://www.kirupa.com/html5/playing_sound_audio_element.htm
+    
