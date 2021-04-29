@@ -16,6 +16,7 @@ type Props = {
     vonage: AllContentsQql
     fcc: AllContentsQql
     podcast: AllContentsQql
+    talk: AllContentsQql
     kirupa: AllContentsQql
     allArticlesOnMyWebite: AllPostsGql
   }
@@ -38,6 +39,7 @@ function Contents({ data }: Props) {
         vonage={data.vonage}
         fcc={data.fcc}
         podcast={data.podcast}
+        talk={data.talk}
         kirupa={data.kirupa}
         allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
       />
@@ -160,6 +162,19 @@ export const query = graphql`
     }
 
     podcast: allPodcastYaml {
+      edges {
+        node {
+          id
+          platform
+          content {
+            title
+            link
+          }
+        }
+      }
+    }
+
+    talk: allTalkYaml {
       edges {
         node {
           id

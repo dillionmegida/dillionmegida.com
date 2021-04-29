@@ -69,6 +69,7 @@ type Props = {
   vonage: AllContentsQql
   fcc: AllContentsQql
   podcast: AllContentsQql
+  talk: AllContentsQql
   kirupa: AllContentsQql
   allArticlesOnThisWebsite: AllPostsGql
 }
@@ -83,6 +84,7 @@ export default function ContentsPage({
   fcc,
   kirupa,
   podcast,
+  talk,
   allArticlesOnThisWebsite,
 }: Props) {
   const contents = [
@@ -93,6 +95,7 @@ export default function ContentsPage({
     kirupa,
     edpresso,
     soshace,
+    talk,
     fcc,
     devto,
   ]
