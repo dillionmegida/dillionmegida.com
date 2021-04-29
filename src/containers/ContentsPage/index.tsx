@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { AllContentsQql } from "../../interfaces/Contents"
 import styled from "styled-components"
 import { AnchorLink, NewTabLink } from "../../components/Link"
@@ -8,6 +8,7 @@ import { Link } from "gatsby"
 import useMedia from "use-media"
 import ContentBlock from "./ContentBlock"
 import FeaturedContent from "./FeaturedContent"
+import SearchInput from "./SearchInput"
 
 const Main = styled.main`
   width: 100%;
@@ -60,6 +61,8 @@ const Main = styled.main`
   }
 `
 
+const commonTags = ["all", "gatsby", "node", "javascript"]
+
 type Props = {
   youtube: AllContentsQql
   devto: AllContentsQql
@@ -87,7 +90,7 @@ export default function ContentsPage({
   talk,
   allArticlesOnThisWebsite,
 }: Props) {
-  const contents = [
+  const allContents = [
     logrocket,
     youtube,
     podcast,
@@ -99,6 +102,42 @@ export default function ContentsPage({
     fcc,
     devto,
   ]
+
+  const [contents, setContents] = useState(allContents)
+  const [articles, setArticles] = useState(allArticlesOnThisWebsite.edges)
+  const [activeTag, setActiveTag] = useState("all")
+
+  const onQuery = (val: string) => {
+    const valReg = new RegExp(val, "ig")
+    const tagReg = new RegExp(activeTag, "ig")
+    const contents: AllContentsQql[] = []
+
+    allContents.forEach((c, i) => {
+      contents[i] = { edges: [] }
+      c.edges.forEach(({ node }, j) => {
+        contents[i].edges[j] = { node: { ...node, content: [] } }
+
+        node.content.forEach(item => {
+          if (
+            valReg.test(item.title) &&
+            (activeTag === "all" ? true : tagReg.test(item.title))
+          ) {
+            contents[i].edges[j].node.content.push(item)
+          }
+        })
+      })
+    })
+
+    setContents(contents)
+
+    const articles = allArticlesOnThisWebsite.edges.filter(
+      ({ node }) =>
+        valReg.test(node.frontmatter.title) &&
+        (activeTag === "all" ? true : tagReg.test(node.frontmatter.title))
+    )
+
+    setArticles(articles)
+  }
 
   let contentsLength = 0
 
@@ -124,6 +163,17 @@ export default function ContentsPage({
       </div>
       <div className="main-content">
         {/* <FeaturedContent /> */}
+        <SearchInput
+          onClickTag={tag => {
+            if (commonTags.includes(tag)) {
+              setActiveTag(tag)
+              onQuery(tag)
+            }
+          }}
+          activeTag={activeTag}
+          commonTags={commonTags}
+          onQuery={onQuery}
+        />
         <div className="contents-container">
           <Masonry
             breakpointCols={isWiderThan800 ? 3 : isWiderThan600 ? 2 : 1}
@@ -132,6 +182,8 @@ export default function ContentsPage({
           >
             {contents.map(c =>
               c.edges.map(({ node }) => {
+                if (node.content.length < 1) return null
+
                 return (
                   <ContentBlock
                     key={node.platform}
@@ -144,17 +196,19 @@ export default function ContentsPage({
                 )
               })
             )}
-            <ContentBlock
-              heading={{ title: "dillionmegida.com", link: "/" }}
-              items={allArticlesOnThisWebsite.edges.map(
-                ({
-                  node: {
-                    frontmatter: { title },
-                    fields: { slug },
-                  },
-                }) => ({ title, link: slug })
-              )}
-            />
+            {articles.length < 1 ? null : (
+              <ContentBlock
+                heading={{ title: "dillionmegida.com", link: "/" }}
+                items={articles.map(
+                  ({
+                    node: {
+                      frontmatter: { title },
+                      fields: { slug },
+                    },
+                  }) => ({ title, link: slug })
+                )}
+              />
+            )}
           </Masonry>
         </div>
       </div>
