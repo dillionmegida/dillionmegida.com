@@ -1,13 +1,16 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { AllContentsQql } from "../../interfaces/Contents"
 import styled from "styled-components"
-import { AnchorLink, NewTabLink } from "../../components/Link"
 import Masonry from "react-masonry-css"
 import { AllPostsGql } from "../../interfaces/Post"
-import { Link } from "gatsby"
 import useMedia from "use-media"
 import ContentBlock from "./ContentBlock"
 import FeaturedContent from "./FeaturedContent"
+import SearchInput from "./SearchInput"
+import { pluralize } from "../../utils/string"
+import classNames from "classnames"
+import queryString, { stringify } from "query-string"
+import { changeWithoutReloading } from "../../utils/url"
 
 const Main = styled.main`
   width: 100%;
@@ -19,19 +22,32 @@ const Main = styled.main`
 
     &-wrapper {
       max-width: 1200px;
+      width: 100%;
       padding: 20px;
       margin: 0 auto;
       display: flex;
       align-items: center;
 
       h1 {
-        margin-right: 100px;
+        margin-right: 50px;
+        flex: 1;
       }
 
       .count {
         font-size: 20px;
         letter-spacing: 1px;
         font-weight: bold;
+        width: 120px;
+      }
+
+      @media (max-width: 450px) {
+        flex-wrap: wrap;
+
+        h1 {
+          margin-right: 0;
+          width: 100%;
+          flex: none;
+        }
       }
     }
   }
@@ -42,8 +58,22 @@ const Main = styled.main`
     margin: 0 auto;
   }
 
+  .search-input-container {
+    margin: 20px 0 0;
+  }
+
+  .filtered-count {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+
   .contents-container {
-    margin-top: 30px;
+    margin-top: 20px;
     .my-masonry-grid {
       display: flex;
       margin-left: -30px;
@@ -60,6 +90,8 @@ const Main = styled.main`
   }
 `
 
+const commonTags = ["all", "gatsby", "node", "javascript"]
+
 type Props = {
   youtube: AllContentsQql
   devto: AllContentsQql
@@ -72,6 +104,7 @@ type Props = {
   talk: AllContentsQql
   kirupa: AllContentsQql
   allArticlesOnThisWebsite: AllPostsGql
+  params: string
 }
 
 export default function ContentsPage({
@@ -86,8 +119,9 @@ export default function ContentsPage({
   podcast,
   talk,
   allArticlesOnThisWebsite,
+  params,
 }: Props) {
-  const contents = [
+  const allContents = [
     logrocket,
     youtube,
     podcast,
@@ -100,15 +134,90 @@ export default function ContentsPage({
     devto,
   ]
 
-  let contentsLength = 0
+  const [contents, setContents] = useState(allContents)
+  const [articles, setArticles] = useState(allArticlesOnThisWebsite.edges)
+  const [activeQuery, setActiveQuery] = useState("")
+  const [activeTag, setActiveTag] = useState("all")
 
-  function updateContentsLength(content: AllContentsQql) {
-    content.edges.forEach(({ node }) => (contentsLength += node.content.length))
+  const updateParamsUrl = ({
+    tag = activeTag,
+    query = activeQuery,
+  }: {
+    tag?: string
+    query?: string
+  }) => {
+    changeWithoutReloading(
+      null,
+      "",
+      "?tag=" + tag + (query.length > 0 ? "&query=" + query : "")
+    )
   }
 
-  contents.forEach(c => updateContentsLength(c))
+  const { tag = null, query = null } = queryString.parse(params)
 
-  allArticlesOnThisWebsite.edges.forEach(() => (contentsLength += 1))
+  useEffect(() => {
+    if (tag || query) {
+      if (tag) setActiveTag(tag as string)
+      if (query) setActiveQuery(query as string)
+
+      onQuery((query as string) || activeQuery, (tag as string) || activeTag)
+    }
+  }, [])
+
+  const onQuery = (val: string, tag: string = "all") => {
+    const valReg = new RegExp(val, "ig")
+    const tagReg = new RegExp(tag, "ig")
+    const contents: AllContentsQql[] = []
+
+    const isActiveTagAll = tag === "all" || !commonTags.includes(tag)
+
+    allContents.forEach((c, i) => {
+      contents[i] = { edges: [] }
+      c.edges.forEach(({ node }, j) => {
+        contents[i].edges[j] = { node: { ...node, content: [] } }
+
+        node.content.forEach(item => {
+          if (
+            valReg.test(item.title) &&
+            (isActiveTagAll ? true : tagReg.test(item.title))
+          ) {
+            contents[i].edges[j].node.content.push(item)
+          }
+        })
+      })
+    })
+
+    setContents(contents)
+
+    const articles = allArticlesOnThisWebsite.edges.filter(
+      ({ node }) =>
+        valReg.test(node.frontmatter.title) &&
+        (isActiveTagAll ? true : tagReg.test(node.frontmatter.title))
+    )
+
+    setArticles(articles)
+  }
+
+  let totalContentsLength = 0,
+    filteredContentsLength = 0
+
+  function updateTotalContentsLength(content: AllContentsQql) {
+    content.edges.forEach(
+      ({ node }) => (totalContentsLength += node.content.length)
+    )
+  }
+
+  allContents.forEach(c => updateTotalContentsLength(c))
+  allArticlesOnThisWebsite.edges.forEach(() => (totalContentsLength += 1))
+
+  function updateFilteredContentsLength(content: AllContentsQql) {
+    content.edges.forEach(
+      ({ node }) => (filteredContentsLength += node.content.length)
+    )
+  }
+
+  contents.forEach(c => updateFilteredContentsLength(c))
+  articles.forEach(() => (filteredContentsLength += 1))
 
   const isWiderThan800 = useMedia({ minWidth: 1000 })
 
@@ -119,11 +228,35 @@ export default function ContentsPage({
       <div className="heading-bg">
         <div className="heading-bg-wrapper">
           <h1>All my contents in one place ✨</h1>
-          <span className="count">Total: {contentsLength}+</span>
+          <span className="count">Total: {totalContentsLength}+</span>
         </div>
       </div>
       <div className="main-content">
         {/* <FeaturedContent /> */}
+        <div className="search-input-container">
+          <SearchInput
+            onClickTag={tag => {
+              setActiveTag(tag)
+              updateParamsUrl({ tag })
+              onQuery(activeQuery, tag)
+            }}
+            activeTag={activeTag}
+            commonTags={commonTags}
+            onQuery={val => {
+              setActiveQuery(val)
+              updateParamsUrl({ query: val })
+              onQuery(val, activeTag)
+            }}
+            defaultValue={activeQuery}
+          />
+        </div>
+        <span
+          className={classNames("filtered-count", {
+            hidden: activeTag === "all" && activeQuery.length < 1,
+          })}
+        >
+          {filteredContentsLength} {pluralize("result", filteredContentsLength)}
+        </span>
         <div className="contents-container">
           <Masonry
             breakpointCols={isWiderThan800 ? 3 : isWiderThan600 ? 2 : 1}
@@ -132,11 +265,13 @@ export default function ContentsPage({
           >
             {contents.map(c =>
               c.edges.map(({ node }) => {
+                if (node.content.length < 1) return null
+
                 return (
                   <ContentBlock
                     key={node.platform}
                     heading={{ title: node.platform, link: node.link }}
-                    items={node.content.map(({ title, link }) => ({
+                    items={node.content.reverse().map(({ title, link }) => ({
                       title,
                       link,
                     }))}
@@ -144,17 +279,19 @@ export default function ContentsPage({
                 )
               })
             )}
-            <ContentBlock
-              heading={{ title: "dillionmegida.com", link: "/" }}
-              items={allArticlesOnThisWebsite.edges.map(
-                ({
-                  node: {
-                    frontmatter: { title },
-                    fields: { slug },
-                  },
-                }) => ({ title, link: slug })
-              )}
-            />
+            {articles.reverse().length < 1 ? null : (
+              <ContentBlock
+                heading={{ title: "dillionmegida.com", link: "/" }}
+                items={articles.map(
+                  ({
+                    node: {
+                      frontmatter: { title },
+                      fields: { slug },
+                    },
+                  }) => ({ title, link: slug })
+                )}
+              />
+            )}
           </Masonry>
         </div>
       </div>

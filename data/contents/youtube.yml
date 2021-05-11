@@ -16,5 +16,11 @@
     - item:
       title: How to export terminal output into a file
       link: https://www.youtube.com/watch?v=HKvjXHl8MEU
+    - item:
+      title: How to implement Conditional Props using TypeScript in React
+      link: https://youtu.be/fSivGWZ3iSQ
+    - item:
+      title: Git Bisect Simplified - What it is, why and how to use it to debug your applications
+      link: https://youtu.be/ozTQNyGmtfg
 
       

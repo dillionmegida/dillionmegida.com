@@ -1,7 +1,7 @@
 import React from "react"
 import Styles from "./ShareArticle.module.scss"
 
-import { checkGlobal } from "../../../utils"
+import { checkGlobal } from "../../../utils/dates"
 import { Share } from "../../UI/Icons"
 
 const checkNativeShare = () => checkGlobal() && navigator.share

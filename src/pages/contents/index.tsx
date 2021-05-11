@@ -20,9 +20,10 @@ type Props = {
     kirupa: AllContentsQql
     allArticlesOnMyWebite: AllPostsGql
   }
+  location: Location
 }
 
-function Contents({ data }: Props) {
+function Contents({ data, location }: Props) {
   return (
     <Layout>
       <Helmet
@@ -31,6 +32,7 @@ function Contents({ data }: Props) {
         pageLink="/contents"
       />
       <ContentsPage
+      params={location.search}
         youtube={data.youtube}
         devto={data.devto}
         edpresso={data.edpresso}
