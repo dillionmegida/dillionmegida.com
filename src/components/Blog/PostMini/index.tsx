@@ -1,7 +1,7 @@
 import React from "react"
 import Styles from "./index.module.scss"
 
-import { formatBlogDate } from "../../../utils"
+import { formatBlogDate } from "../../../utils/dates"
 import { Link } from "gatsby"
 import {Post as IPost} from "../../../interfaces/Post"
 

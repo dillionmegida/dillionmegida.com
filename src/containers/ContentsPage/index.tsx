@@ -1,14 +1,14 @@
 import React, { useState } from "react"
 import { AllContentsQql } from "../../interfaces/Contents"
 import styled from "styled-components"
-import { AnchorLink, NewTabLink } from "../../components/Link"
 import Masonry from "react-masonry-css"
 import { AllPostsGql } from "../../interfaces/Post"
-import { Link } from "gatsby"
 import useMedia from "use-media"
 import ContentBlock from "./ContentBlock"
 import FeaturedContent from "./FeaturedContent"
 import SearchInput from "./SearchInput"
+import { pluralize } from "../../utils/string"
+import classNames from "classnames"
 
 const Main = styled.main`
   width: 100%;
@@ -20,19 +20,32 @@ const Main = styled.main`
 
     &-wrapper {
       max-width: 1200px;
+      width: 100%;
       padding: 20px;
       margin: 0 auto;
       display: flex;
       align-items: center;
 
       h1 {
-        margin-right: 100px;
+        margin-right: 50px;
+        flex: 1;
       }
 
       .count {
         font-size: 20px;
         letter-spacing: 1px;
         font-weight: bold;
+        width: 120px;
+      }
+
+      @media (max-width: 450px) {
+        flex-wrap: wrap;
+
+        h1 {
+          margin-right: 0;
+          width: 100%;
+          flex: none;
+        }
       }
     }
   }
@@ -43,8 +56,22 @@ const Main = styled.main`
     margin: 0 auto;
   }
 
+  .search-input-container {
+    margin: 20px 0 0;
+  }
+
+  .filtered-count {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+
   .contents-container {
-    margin-top: 30px;
+    margin-top: 20px;
     .my-masonry-grid {
       display: flex;
       margin-left: -30px;
@@ -105,11 +132,14 @@ export default function ContentsPage({
 
   const [contents, setContents] = useState(allContents)
   const [articles, setArticles] = useState(allArticlesOnThisWebsite.edges)
+  const [activeQuery, setActiveQuery] = useState("")
   const [activeTag, setActiveTag] = useState("all")
 
-  const onQuery = (val: string) => {
+  const onQuery = (val: string, tag: string = "") => {
+    setActiveQuery(val)
+
     const valReg = new RegExp(val, "ig")
-    const tagReg = new RegExp(activeTag, "ig")
+    const tagReg = new RegExp(tag, "ig")
     const contents: AllContentsQql[] = []
 
     allContents.forEach((c, i) => {
@@ -120,7 +150,7 @@ export default function ContentsPage({
         node.content.forEach(item => {
           if (
             valReg.test(item.title) &&
-            (activeTag === "all" ? true : tagReg.test(item.title))
+            (tag === "all" ? true : tagReg.test(item.title))
           ) {
             contents[i].edges[j].node.content.push(item)
           }
@@ -133,21 +163,32 @@ export default function ContentsPage({
     const articles = allArticlesOnThisWebsite.edges.filter(
       ({ node }) =>
         valReg.test(node.frontmatter.title) &&
-        (activeTag === "all" ? true : tagReg.test(node.frontmatter.title))
+        (tag === "all" ? true : tagReg.test(node.frontmatter.title))
     )
 
     setArticles(articles)
   }
 
-  let contentsLength = 0
+  let totalContentsLength = 0,
+    filteredContentsLength = 0
 
-  function updateContentsLength(content: AllContentsQql) {
-    content.edges.forEach(({ node }) => (contentsLength += node.content.length))
+  function updateTotalContentsLength(content: AllContentsQql) {
+    content.edges.forEach(
+      ({ node }) => (totalContentsLength += node.content.length)
+    )
   }
 
-  contents.forEach(c => updateContentsLength(c))
+  allContents.forEach(c => updateTotalContentsLength(c))
+  allArticlesOnThisWebsite.edges.forEach(() => (totalContentsLength += 1))
 
-  allArticlesOnThisWebsite.edges.forEach(() => (contentsLength += 1))
+  function updateFilteredContentsLength(content: AllContentsQql) {
+    content.edges.forEach(
+      ({ node }) => (filteredContentsLength += node.content.length)
+    )
+  }
+
+  contents.forEach(c => updateFilteredContentsLength(c))
+  articles.forEach(() => (filteredContentsLength += 1))
 
   const isWiderThan800 = useMedia({ minWidth: 1000 })
 
@@ -158,22 +199,31 @@ export default function ContentsPage({
       <div className="heading-bg">
         <div className="heading-bg-wrapper">
           <h1>All my contents in one place ✨</h1>
-          <span className="count">Total: {contentsLength}+</span>
+          <span className="count">Total: {totalContentsLength}+</span>
         </div>
       </div>
       <div className="main-content">
         {/* <FeaturedContent /> */}
-        <SearchInput
-          onClickTag={tag => {
-            if (commonTags.includes(tag)) {
-              setActiveTag(tag)
-              onQuery(tag)
-            }
-          }}
-          activeTag={activeTag}
-          commonTags={commonTags}
-          onQuery={onQuery}
-        />
+        <div className="search-input-container">
+          <SearchInput
+            onClickTag={tag => {
+              if (commonTags.includes(tag)) {
+                setActiveTag(tag)
+                onQuery(activeQuery, tag)
+              }
+            }}
+            activeTag={activeTag}
+            commonTags={commonTags}
+            onQuery={onQuery}
+          />
+        </div>
+        <span
+          className={classNames("filtered-count", {
+            hidden: activeTag === "all" && activeQuery.length < 1,
+          })}
+        >
+          {filteredContentsLength} {pluralize("result", filteredContentsLength)}
+        </span>
         <div className="contents-container">
           <Masonry
             breakpointCols={isWiderThan800 ? 3 : isWiderThan600 ? 2 : 1}
