@@ -238,7 +238,7 @@ export default function ContentsPage({
                   <ContentBlock
                     key={node.platform}
                     heading={{ title: node.platform, link: node.link }}
-                    items={node.content.map(({ title, link }) => ({
+                    items={node.content.reverse().map(({ title, link }) => ({
                       title,
                       link,
                     }))}
@@ -246,7 +246,7 @@ export default function ContentsPage({
                 )
               })
             )}
-            {articles.length < 1 ? null : (
+            {articles.reverse().length < 1 ? null : (
               <ContentBlock
                 heading={{ title: "dillionmegida.com", link: "/" }}
                 items={articles.map(
