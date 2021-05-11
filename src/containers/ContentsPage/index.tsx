@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { AllContentsQql } from "../../interfaces/Contents"
 import styled from "styled-components"
 import Masonry from "react-masonry-css"
@@ -9,6 +9,8 @@ import FeaturedContent from "./FeaturedContent"
 import SearchInput from "./SearchInput"
 import { pluralize } from "../../utils/string"
 import classNames from "classnames"
+import queryString, { stringify } from "query-string"
+import { changeWithoutReloading } from "../../utils/url"
 
 const Main = styled.main`
   width: 100%;
@@ -102,6 +104,7 @@ type Props = {
   talk: AllContentsQql
   kirupa: AllContentsQql
   allArticlesOnThisWebsite: AllPostsGql
+  params: string
 }
 
 export default function ContentsPage({
@@ -116,6 +119,7 @@ export default function ContentsPage({
   podcast,
   talk,
   allArticlesOnThisWebsite,
+  params,
 }: Props) {
   const allContents = [
     logrocket,
@@ -135,12 +139,37 @@ export default function ContentsPage({
   const [activeQuery, setActiveQuery] = useState("")
   const [activeTag, setActiveTag] = useState("all")
 
-  const onQuery = (val: string, tag: string = "") => {
-    setActiveQuery(val)
+  const updateParamsUrl = ({
+    tag = activeTag,
+    query = activeQuery,
+  }: {
+    tag?: string
+    query?: string
+  }) => {
+    changeWithoutReloading(
+      null,
+      "",
+      "?tag=" + tag + (query.length > 0 ? "&query=" + query : "")
+    )
+  }
 
+  const { tag = null, query = null } = queryString.parse(params)
+
+  useEffect(() => {
+    if (tag || query) {
+      if (tag) setActiveTag(tag as string)
+      if (query) setActiveQuery(query as string)
+
+      onQuery((query as string) || activeQuery, (tag as string) || activeTag)
+    }
+  }, [])
+
+  const onQuery = (val: string, tag: string = "all") => {
     const valReg = new RegExp(val, "ig")
     const tagReg = new RegExp(tag, "ig")
     const contents: AllContentsQql[] = []
+
+    const isActiveTagAll = tag === "all" || !commonTags.includes(tag)
 
     allContents.forEach((c, i) => {
       contents[i] = { edges: [] }
@@ -150,7 +179,7 @@ export default function ContentsPage({
         node.content.forEach(item => {
           if (
             valReg.test(item.title) &&
-            (tag === "all" ? true : tagReg.test(item.title))
+            (isActiveTagAll ? true : tagReg.test(item.title))
           ) {
             contents[i].edges[j].node.content.push(item)
           }
@@ -163,7 +192,7 @@ export default function ContentsPage({
     const articles = allArticlesOnThisWebsite.edges.filter(
       ({ node }) =>
         valReg.test(node.frontmatter.title) &&
-        (tag === "all" ? true : tagReg.test(node.frontmatter.title))
+        (isActiveTagAll ? true : tagReg.test(node.frontmatter.title))
     )
 
     setArticles(articles)
@@ -207,14 +236,18 @@ export default function ContentsPage({
         <div className="search-input-container">
           <SearchInput
             onClickTag={tag => {
-              if (commonTags.includes(tag)) {
-                setActiveTag(tag)
-                onQuery(activeQuery, tag)
-              }
+              setActiveTag(tag)
+              updateParamsUrl({ tag })
+              onQuery(activeQuery, tag)
             }}
             activeTag={activeTag}
             commonTags={commonTags}
-            onQuery={onQuery}
+            onQuery={val => {
+              setActiveQuery(val)
+              updateParamsUrl({ query: val })
+              onQuery(val, activeTag)
+            }}
+            defaultValue={activeQuery}
           />
         </div>
         <span

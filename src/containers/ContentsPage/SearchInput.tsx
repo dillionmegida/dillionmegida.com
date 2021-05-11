@@ -13,7 +13,7 @@ const Container = styled.div`
       color: var(--lightBlue);
       text-decoration: underline;
       cursor: pointer;
-        padding: 5px;
+      padding: 5px;
       border: 1px solid transparent;
       &.active {
         border-color: var(--mainColor1);
@@ -36,6 +36,7 @@ type Props = {
   onClickTag: (val: string) => void
   commonTags: string[]
   activeTag: string
+  defaultValue?: string
 }
 
 export default function SearchInput({
@@ -43,6 +44,7 @@ export default function SearchInput({
   onClickTag,
   commonTags,
   activeTag,
+  defaultValue,
 }: Props) {
   return (
     <Container>
@@ -63,6 +65,7 @@ export default function SearchInput({
           type="text"
           placeholder="Search my contents"
           onChange={e => onQuery(e.target.value)}
+          defaultValue={defaultValue}
         />
       </div>
     </Container>
