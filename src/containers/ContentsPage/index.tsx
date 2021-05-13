@@ -9,7 +9,7 @@ import FeaturedContent from "./FeaturedContent"
 import SearchInput from "./SearchInput"
 import { pluralize } from "../../utils/string"
 import classNames from "classnames"
-import queryString, { stringify } from "query-string"
+import queryString from "query-string"
 import { changeWithoutReloading } from "../../utils/url"
 
 const Main = styled.main`
@@ -90,7 +90,7 @@ const Main = styled.main`
   }
 `
 
-const commonTags = ["all", "gatsby", "node", "javascript"]
+const commonTags = ["all", "gatsby", "node", "javascript", "react"]
 
 type Props = {
   youtube: AllContentsQql
@@ -177,9 +177,13 @@ export default function ContentsPage({
         contents[i].edges[j] = { node: { ...node, content: [] } }
 
         node.content.forEach(item => {
+          const tagStr = item.tags?.join("") as string
+
           if (
-            valReg.test(item.title) &&
-            (isActiveTagAll ? true : tagReg.test(item.title))
+            (valReg.test(item.title) || (item.tags && valReg.test(tagStr))) &&
+            (isActiveTagAll
+              ? true
+              : tagReg.test(item.title) || tagReg.test(tagStr))
           ) {
             contents[i].edges[j].node.content.push(item)
           }
@@ -189,11 +193,17 @@ export default function ContentsPage({
 
     setContents(contents)
 
-    const articles = allArticlesOnThisWebsite.edges.filter(
-      ({ node }) =>
-        valReg.test(node.frontmatter.title) &&
-        (isActiveTagAll ? true : tagReg.test(node.frontmatter.title))
-    )
+    const articles = allArticlesOnThisWebsite.edges.filter(({ node }) => {
+      const {
+        frontmatter: { title, tags },
+      } = node
+      const tagsStr = tags?.join("") as string
+
+      return (
+        (valReg.test(title) || valReg.test(tagsStr)) &&
+        (isActiveTagAll ? true : tagReg.test(title) || tagReg.test(tagsStr))
+      )
+    })
 
     setArticles(articles)
   }
@@ -201,22 +211,21 @@ export default function ContentsPage({
   let totalContentsLength = 0,
     filteredContentsLength = 0
 
-  function updateTotalContentsLength(content: AllContentsQql) {
-    content.edges.forEach(
-      ({ node }) => (totalContentsLength += node.content.length)
+  function updateContentsLength(
+    content: AllContentsQql,
+    type: "total" | "filtered"
+  ) {
+    content.edges.forEach(({ node }) =>
+      type === "total"
+        ? (totalContentsLength += node.content.length)
+        : (filteredContentsLength += node.content.length)
     )
   }
 
-  allContents.forEach(c => updateTotalContentsLength(c))
+  allContents.forEach(c => updateContentsLength(c, "total"))
   allArticlesOnThisWebsite.edges.forEach(() => (totalContentsLength += 1))
 
-  function updateFilteredContentsLength(content: AllContentsQql) {
-    content.edges.forEach(
-      ({ node }) => (filteredContentsLength += node.content.length)
-    )
-  }
-
-  contents.forEach(c => updateFilteredContentsLength(c))
+  contents.forEach(c => updateContentsLength(c, "filtered"))
   articles.forEach(() => (filteredContentsLength += 1))
 
   const isWiderThan800 = useMedia({ minWidth: 1000 })

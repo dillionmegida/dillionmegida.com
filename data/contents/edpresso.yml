@@ -4,7 +4,9 @@
     - item:
       title: Array destructuring simplified
       link: https://www.educative.io/edpresso/array-destructuring-simplified
+      tags: ["javascript"]
     - item:
       title: splice vs. slice in JavaScript
       link: https://www.educative.io/edpresso/splice-vs-slice-in-javascript
+      tags: ["javascript"]
     

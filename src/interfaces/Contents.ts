@@ -4,6 +4,7 @@ export interface ContentGql {
   content: {
     title: string
     link: string
+    tags?: string[]
   }[]
 }
 

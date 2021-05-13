@@ -60,6 +60,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -74,6 +75,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -88,6 +90,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -102,6 +105,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -116,6 +120,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -130,6 +135,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -144,6 +150,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -158,6 +165,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -171,6 +179,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -184,6 +193,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
@@ -197,6 +207,7 @@ export const query = graphql`
           content {
             title
             link
+            tags
           }
         }
       }
