@@ -47,79 +47,78 @@ The frontend will be built with HTML, CSS and Vanilla JS, which contains the fol
 ```html
 <!-- index.html -->
 <html>
-    <head>
-    <link rel='stylesheet' href='./style.css' />
-    </head>
-    <body>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>File Upload</h1>
-        <form id='form'>
+      <h1>File Upload</h1>
+      <form id="form">
         <div class="input-group">
-            <label for='file'>Select image</label>
-            <input id='file' type="file" multiple>
+          <label for="file">Select image</label>
+          <input id="file" type="file" multiple />
         </div>
-        <button class="submit-btn" type='submit'>Upload</button>
-        </form>
-        <div class="uploaded">
+        <button class="submit-btn" type="submit">Upload</button>
+      </form>
+      <div class="uploaded">
         <h2>Uploaded</h2>
-        <img id='uploaded-img' />
-        </div>
+        <img id="uploaded-img" />
+      </div>
     </div>
-    <script src='./script.js'></script>
-    </body>
+    <script src="./script.js"></script>
+  </body>
 </html>
 ```
 
 ```css
-
 /* style.css */
 body {
-    background-color: rgb(6, 26, 27);
+  background-color: rgb(6, 26, 27);
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .container {
-    max-width: 500px;
-    margin: 60px auto;
-    background-color: white;
-    padding: 20px;
-    padding: 30px;
+  max-width: 500px;
+  margin: 60px auto;
+  background-color: white;
+  padding: 20px;
+  padding: 30px;
 }
 .container h1 {
-    text-align: center;
+  text-align: center;
 }
 form {
-    width: 100%;
+  width: 100%;
 }
 form .input-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 form label {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 form input {
-    padding: 12px 20px;
-    width: 100%;
-    border: 1px solid #ccc;
+  padding: 12px 20px;
+  width: 100%;
+  border: 1px solid #ccc;
 }
 .submit-btn {
-    width: 100%;
-    border: none;
-    background: rgb(37, 83, 3);
-    font-size: 18px;
-    color: white;
-    border-radius: 3px;
-    padding: 20px;
-    text-align: center;
+  width: 100%;
+  border: none;
+  background: rgb(37, 83, 3);
+  font-size: 18px;
+  color: white;
+  border-radius: 3px;
+  padding: 20px;
+  text-align: center;
 }
 .uploaded {
-    margin: 20px auto;
-    width: 100%;
-    height: 300px;
-    border: 1px solid #ccc;
-    padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
 }
 ```
 
@@ -133,23 +132,23 @@ Now the JavaScript:
 
 ```js
 // script.js
-const form = document.getElementById("form");
-const uploadedImgElem = document.getElementById("uploaded-img");
+const form = document.getElementById("form")
+const uploadedImgElem = document.getElementById("uploaded-img")
 
-form.addEventListener("submit", submitForm);
+form.addEventListener("submit", submitForm)
 
 function submitForm(e) {
-    e.preventDefault();
-    const fileInput = document.getElementById("file");
-    const file = fileInput.files[0];
-    const formData = new FormData();
-    formData.append("file", file);
-    const response = fetch("http://localhost:5000/upload_files", {
-        method: "post",
-        body: formData,
-    })
-        .then((res) => (uploadedImgElem.src = response.url))
-        .catch((err) => ("Error occured", err));
+  e.preventDefault()
+  const fileInput = document.getElementById("file")
+  const file = fileInput.files[0]
+  const formData = new FormData()
+  formData.append("file", file)
+  const response = fetch("http://localhost:5000/upload_files", {
+    method: "post",
+    body: formData,
+  })
+    .then(res => (uploadedImgElem.src = response.url))
+    .catch(err => ("Error occured", err))
 }
 ```
 
@@ -178,26 +177,26 @@ This creates a `package.json` with the dependencies installed.
 Now create a `server.js` file and enter the following:
 
 ```js
-const express = require("express");
+const express = require("express")
 
-const app = express();
-app.use(express.json());
+const app = express()
+app.use(express.json())
 
-const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
+const multer = require("multer")
+const upload = multer({ dest: "uploads/" })
 
-app.post("/upload_files", upload.single("file"), uploadFile);
+app.post("/upload_files", upload.single("file"), uploadFile)
 
 function uploadFile(req, res) {
-    res.json({ message: "Successfully uploaded files" });
+  res.json({ message: "Successfully uploaded files" })
 }
 
 app.listen(5000, () => {
-    console.log(`Server started...`);
-});
+  console.log(`Server started...`)
+})
 ```
 
-Please refer to my article on [Uploading files using Node](https://blog.logrocket.com/uploading-files-using-multer-and-node-js/).js and Multer which explains how to send multipart form data from frontend to backend.
+Please refer to my article on [Uploading files using NodeJS and Multer](https://blog.logrocket.com/uploading-files-using-multer-and-node-js/) which explains how to send multipart form data from frontend to backend.
 
 With the code above, running `node server.js` in the terminal will start the server on port `5000` and the frontend can then send requests.
 
@@ -235,40 +234,39 @@ In NodeJS, these variables would be exposed to your application in the `process.
 Update your `server.js` file to the following:
 
 ```js
+const express = require("express")
 
-const express = require("express");
+const app = express()
+app.use(express.json())
 
-const app = express();
-app.use(express.json());
+require("dotenv").config()
 
-require('dotenv').config();
-
-const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
-const ImageKit = require("imagekit");
+const multer = require("multer")
+const upload = multer({ dest: "uploads/" })
+const ImageKit = require("imagekit")
 
 const imageKit = new ImageKit({
   publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
   privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
-  urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT
-});
+  urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
+})
 
-app.post("/upload_files", upload.single("file"), uploadFile);
+app.post("/upload_files", upload.single("file"), uploadFile)
 
 function uploadFile(req, res) {
-    res.json({ message: "Successfully uploaded files" });
+  res.json({ message: "Successfully uploaded files" })
 }
 
 app.listen(5000, () => {
-    console.log(`Server started...`);
-});
+  console.log(`Server started...`)
+})
 ```
 
 `imageKit` is the initialization of the SDK which we will use to perform other operations.
 
 Now, let’s upload a file.
 
-With multer, the base64 representation of the file will be appended to the `req` (request) object with the `file` key. That is, `req.file` is the file processed by multer. Also, the filename is added to the `req`  object under `req.filename`. These are the two required request body properties as described In the [ImageKit upload API](https://docs.imagekit.io/api-reference/upload-file-api/server-side-file-upload).
+With multer, the base64 representation of the file will be appended to the `req` (request) object with the `file` key. That is, `req.file` is the file processed by multer. Also, the filename is added to the `req` object under `req.filename`. These are the two required request body properties as described In the [ImageKit upload API](https://docs.imagekit.io/api-reference/upload-file-api/server-side-file-upload).
 
 An additional property to send is `folder`. This ensures that the uploaded image is saved to a particular folder and not at the root.
 
@@ -309,7 +307,7 @@ We’ve seen how the upload works. Quite simple. For our frontend, we may not wa
 
 Now let’s look at how to generate URLs.
 
-Update the `uploadFile`  method to the following:
+Update the `uploadFile` method to the following:
 
 ```js
 ...
@@ -340,7 +338,6 @@ The `url` method also takes in few more optional properties. Here are two notabl
 - `path`: for generating a URL from a path (for the above, we’re appending the transformations to the existing URL.
 
 The transformation array is where the transformation parameters are added to the URL. The [docs here](https://www.npmjs.com/package/imagekit#list-of-supported-transformations) shows the list of supported transformations. Let’s look at few of those properties:
-
 
 - [`height`](https://docs.imagekit.io/features/image-transformations/resize-crop-and-other-transformations#height-h): height of the image
 - [`width`](https://docs.imagekit.io/features/image-transformations/resize-crop-and-other-transformations#width-w): width of the imaeg
