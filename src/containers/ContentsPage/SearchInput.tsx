@@ -61,7 +61,6 @@ export default function SearchInput({
       </div>
       <div className="input-container">
         <input
-          autoFocus
           type="text"
           placeholder="Search my contents"
           onChange={e => onQuery(e.target.value)}
