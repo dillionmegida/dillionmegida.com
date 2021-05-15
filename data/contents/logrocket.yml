@@ -20,3 +20,7 @@
       title: Uploading files using Node.js and Multer
       link: https://blog.logrocket.com/uploading-files-using-multer-and-node-js/
       tags: ["nodejs"]
+    - item:
+      title: Comparing TypeScript and PropTypes in React applications
+      link: https://blog.logrocket.com/comparing-typescript-and-proptypes-in-react-applications/
+      tags: ["typescript", "react"]
