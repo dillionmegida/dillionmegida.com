@@ -1,6 +1,8 @@
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/Layout"
+import { NewTabLink } from "../components/Link"
 import constants from "../constants"
 
 const BioSection = styled.div`
@@ -11,11 +13,11 @@ const BioSection = styled.div`
   background-color: var(--mainColor1);
   padding: 20px 50px;
   position: relative;
-  top: -50px;
+  top: -80px;
 
   & > * {
     position: relative;
-    top: 80px;
+    top: 100px;
   }
 `
 
@@ -31,7 +33,7 @@ const ProfilePicture = styled.div`
 `
 
 const Text = styled.div`
-max-width: 600px;
+  max-width: 600px;
   span {
     display: block;
   }
@@ -49,10 +51,26 @@ max-width: 600px;
   .some-text {
     color: #bcc6d3;
     margin-top: 10px;
+    line-height: 1.5;
+
+    a {
+      text-decoration: underline;
+      color: #bcc6d3;
+    }
+    .resume {
+      font-size: 18px;
+      a {
+        color: var(--mainColor1);
+      }
+    }
   }
 `
 
+const { publications, pageLinks, social, RESUME } = constants
+
 export default function Home() {
+  const pubsLength = publications.length
+
   return (
     <Layout>
       <main>
@@ -66,8 +84,38 @@ export default function Home() {
               Software Engineer 👨🏽‍💻 and Content Creator ✨ based in Nigeria.
             </span>
             <span className="some-text">
-              I'm passionate about simplifying topics around web development and
-              tech using articles and videos.
+              As a Software Engineer, my major focus is on the Frontend. I love
+              building accessible applications on the web. I also love learning
+              and simplifying tech--coding, practices, tools--via technical
+              articles, videos, and every means possible. I write mostly about
+              web development topics and JavaScript on{" "}
+              <Link to={pageLinks.BLOG}>my blog here</Link>
+              {publications.map((p, i) =>
+                i === pubsLength - 1 ? (
+                  <>
+                    {" "}
+                    and <a href={p.link}>{p.label}</a>
+                  </>
+                ) : (
+                  <>
+                    , <a href={p.link}>{p.label}</a>
+                  </>
+                )
+              )}{" "}
+              <br />
+              <br />I also create Tech video content on{" "}
+              <NewTabLink link={social.YouTube.link}>
+                my YouTube Channel
+              </NewTabLink>
+              <br />
+              <br />
+              Co-founder,{" "}
+              <NewTabLink link="http://skulmart.com/">SkulMart</NewTabLink>
+              <br />
+              <br />
+              <span className="resume">
+                <NewTabLink link={RESUME}>Resume</NewTabLink>
+              </span>
             </span>
           </Text>
         </BioSection>
