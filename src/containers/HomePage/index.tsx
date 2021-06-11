@@ -147,11 +147,11 @@ export default function HomePage({ contents }: Props) {
               Software Engineer 👨🏽‍💻 and Content Creator ✨
             </span>
             <span className="some-text">
-              As a Software Engineer, my major focus is on the Frontend. I love
-              building accessible applications on the web. I also love learning
-              and simplifying tech--coding, practices, tools--via technical
-              articles, videos, and every means possible. I write mostly about
-              web development topics and JavaScript on{" "}
+              As a Software Engineer, I focus majorly on the frontend of
+              applications. I love building accessible applications on the web.
+              I also love learning and simplifying tech--coding, practices,
+              tools--via technical articles, videos, and every means possible. I
+              write mostly about web development topics and JavaScript on{" "}
               <Link to={pageLinks.BLOG}>my blog here</Link>
               {publications.map((p, i) =>
                 i === pubsLength - 1 ? (

@@ -6,6 +6,7 @@ import Post from "./PostMini"
 import Layout from "./BlogLayout"
 import { GqlPostFull } from "../../interfaces/Post"
 import Helmet from "../Helmet"
+import constants from "../../constants"
 
 type Props = {
   pageContext: {
@@ -14,6 +15,8 @@ type Props = {
     group: { node: GqlPostFull }[]
   }
 }
+
+const { meta } = constants
 
 export default ({ pageContext }: Props) => {
   const { index: pageIndex } = pageContext
@@ -25,11 +28,7 @@ export default ({ pageContext }: Props) => {
 
   return (
     <Layout>
-      <Helmet
-        pageTitle="Dillion Megida - Frontend Engineer and Technical Writer"
-        pageLink="/"
-        pageDesc="Dillion is a Frontend Engineer and a Tecnical Writer learning, teaching and buiding web applications with JavaScript."
-      />
+      <Helmet pageTitle={meta.TITLE} pageLink="/blog" pageDesc={meta.DESC} />
       <main className={Styles.BlogMain}>
         <div className={Styles.SearchSection}>
           <Link to="/search" title="Search articles">

@@ -1,6 +1,8 @@
 import { graphql } from "gatsby"
 import React from "react"
+import Helmet from "../components/Helmet"
 import Layout from "../components/Layout"
+import constants from "../constants"
 import HomePage from "../containers/HomePage"
 import { AllContentsQql } from "../interfaces/Contents"
 import { AllPostsGql } from "../interfaces/Post"
@@ -21,9 +23,12 @@ type Props = {
   }
 }
 
+const { meta } = constants
+
 export default function Home({ data }: Props) {
   return (
     <Layout>
+      <Helmet pageTitle={meta.TITLE} pageLink="/" pageDesc={meta.DESC} />
       <HomePage contents={data} />
     </Layout>
   )
