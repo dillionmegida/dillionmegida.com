@@ -19,8 +19,9 @@ export default ({ pageContext }: Props) => {
   const { index: pageIndex } = pageContext
   const isFirst = pageContext.index === 1
   const isLast = pageContext.last
-  const prevPage = !isFirst && pageIndex - 1 === 1 ? "/" : `/${pageIndex - 1}`
-  const nextPage = !isLast ? `/${pageContext.index + 1}`: ""
+  const prevPage =
+    !isFirst && pageIndex - 1 === 1 ? "/blog" : `/blog/${pageIndex - 1}`
+  const nextPage = !isLast ? `/blog/${pageContext.index + 1}` : ""
 
   return (
     <Layout>

@@ -17,4 +17,18 @@ collections:
       - { name: tags, label: Blog Tags, widget: list, required: false }
       - { name: cover, label: Blog Cover Link, required: false }
       - { name: body, label: Body, widget: markdown }
+  - name: "contents"
+    label: "Contents"
+    description: "All my contents"
+    files:
+      - label: "Youtube Videos"
+        name: "youtube"
+        file: "data/contents/youtube.yml"
+        format: 'yml'
+        create: true
+        fields:
+          - { name: content.title, label: Title }
+          - { name: content.link, label: Link }
+          - { name: content.tags, label: Content tags, widget: list, required: false }
+
 publish_mode: editorial_workflow

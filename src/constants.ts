@@ -28,7 +28,7 @@ export default {
   pageLinks: {
     HOME: "/",
     CONTENTS: "/contents",
-    ME: "/me",
+    BLOG: '/blog'
   },
 
   publications: [

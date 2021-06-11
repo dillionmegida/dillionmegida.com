@@ -1,0 +1,15 @@
+<img
+  id="img"
+  style="margin-top: 200px; margin-left: 200px"
+  src="dfadfa"
+  alt="A boy and a girl on a table"
+/>
+
+<script>
+  const img = document.getElementById("img")
+  img.onerror = function(event) {
+    event.target.src =
+      "shttp://localhost:8000/static/dda12878461717427243fbba3cd62ef1/62de4/showing-image-alt-text.png"
+    this.onerror = null
+  }
+</script>

@@ -1,40 +1,7 @@
-.Header {
-  background-color: var(--mainColor1);
-  padding: 10px 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .Header .Me:focus .Img {
   border: 3px solid var(--lightBlue);
 }
 
-.Header nav a {
-  display: inline-block;
-  color: var(--mainColor2);
-  font-size: 16px;
-  margin: 0 10px;
-  padding: 7px 10px;
-  border-radius: 3px;
-  background-color: var(--midMainColor1);
-  width: 90px;
-  text-align: center;
-  border: 1px solid transparent;
-  border-bottom: 3px solid var(--midMainColor1);
-}
-.Header nav a:focus {
-  border: 1px solid var(--lightBlue);
-  border-bottom: 3px solid var(--lightBlue);
-}
-.Header nav a.Active {
-  color: var(--lightBlue);
-  border-bottom: 3px solid var(--lightBlue);
-}
-
-.Header nav a:hover {
-  border-bottom: 3px solid var(--lightBlue);
-  color: var(--lightBlue);
-}
 .Header .Img {
   height: 50px;
   width: 50px;

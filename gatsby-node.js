@@ -66,13 +66,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
+  // pagination doc: https://www.gatsbyjs.com/plugins/gatsby-paginate/
   createPaginatedPages({
     edges: result.data.allMarkdownRemark.edges,
     createPage: createPage,
     pageTemplate: path.resolve(__dirname, "./src/components/Blog/index.tsx"),
-    pageLength: 10, // This is optional and defaults to 10 if not used
-    pathPrefix: "", // This is optional and defaults to an empty string if not used
-    context: {}, // This is optional and defaults to an empty object if not used
+    pageLength: 10, 
+    pathPrefix: "blog",
+    context: {},
   })
 
   result.data.tagsGroup.group.forEach((tag) => {
