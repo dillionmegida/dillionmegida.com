@@ -1,10 +1,12 @@
 export interface GqlPost {
+  id: string
   frontmatter: {
     pageDescription: string
     title: string
     tags?: string[]
     date: Date
   }
+  content: string
   timeToRead: number
   fields: {
     slug: string
@@ -13,7 +15,7 @@ export interface GqlPost {
 
 export interface AllPostsGql {
   edges: {
-    node: GqlPost
+    node: GqlPostFull
   }[]
 }
 

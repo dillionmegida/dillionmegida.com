@@ -7,6 +7,12 @@ import YouTube from "./components/Icon/YouTube"
 export default {
   SITE_URL: "dillionmegida.com",
 
+  meta: {
+    TITLE: "Dillion Megida - Software Engineer and Content Creator ✨",
+    DESC:
+      "Dillion is a Software Engineer and Content Creator passionate about learning, building, and simplifying topics around tech via articles and videos",
+  },
+
   CURRENT_WORK_NAME: "ThisDot",
   CURRENT_WORK_LINK: "https://labs.thisdot.co",
 
@@ -28,7 +34,7 @@ export default {
   pageLinks: {
     HOME: "/",
     CONTENTS: "/contents",
-    ME: "/me",
+    BLOG: "/blog",
   },
 
   publications: [

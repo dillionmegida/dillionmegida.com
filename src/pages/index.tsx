@@ -1,10 +1,11 @@
-import React from "react"
-import ContentsPage from "../../containers/ContentsPage"
-import Helmet from "../../components/Helmet"
-import Layout from "../../components/Layout"
 import { graphql } from "gatsby"
-import { AllContentsQql } from "../../interfaces/Contents"
-import { AllPostsGql } from "../../interfaces/Post"
+import React from "react"
+import Helmet from "../components/Helmet"
+import Layout from "../components/Layout"
+import constants from "../constants"
+import HomePage from "../containers/HomePage"
+import { AllContentsQql } from "../interfaces/Contents"
+import { AllPostsGql } from "../interfaces/Post"
 
 type Props = {
   data: {
@@ -20,37 +21,21 @@ type Props = {
     kirupa: AllContentsQql
     allArticlesOnMyWebite: AllPostsGql
   }
-  location: Location
 }
 
-function Contents({ data, location }: Props) {
+const { meta } = constants
+
+export default function Home({ data }: Props) {
   return (
     <Layout>
-      <Helmet
-        pageTitle="All my contents in one place ✨"
-        pageDesc="This is a page for every content I've created ranging from articles to videos to podcasts to everything on web development and tech."
-        pageLink="/contents"
-      />
-      <ContentsPage
-        params={location.search}
-        youtube={data.youtube}
-        devto={data.devto}
-        edpresso={data.edpresso}
-        logrocket={data.logrocket}
-        soshace={data.soshace}
-        vonage={data.vonage}
-        fcc={data.fcc}
-        podcast={data.podcast}
-        talk={data.talk}
-        kirupa={data.kirupa}
-        allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
-      />
+      <Helmet pageTitle={meta.TITLE} pageLink="/" pageDesc={meta.DESC} />
+      <HomePage contents={data} />
     </Layout>
   )
 }
 
 export const query = graphql`
-  query ContentsPageQuery {
+  query ContentsQuery {
     youtube: allYoutubeYaml {
       edges {
         node {
@@ -216,6 +201,7 @@ export const query = graphql`
     allArticlesOnMyWebite: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/^(/p/)/" } } }
       sort: { fields: [frontmatter___date], order: DESC }
+      limit: 4
     ) {
       edges {
         node {
@@ -235,5 +221,3 @@ export const query = graphql`
     }
   }
 `
-
-export default Contents

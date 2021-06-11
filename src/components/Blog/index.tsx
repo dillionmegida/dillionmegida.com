@@ -6,6 +6,7 @@ import Post from "./PostMini"
 import Layout from "./BlogLayout"
 import { GqlPostFull } from "../../interfaces/Post"
 import Helmet from "../Helmet"
+import constants from "../../constants"
 
 type Props = {
   pageContext: {
@@ -15,20 +16,19 @@ type Props = {
   }
 }
 
+const { meta } = constants
+
 export default ({ pageContext }: Props) => {
   const { index: pageIndex } = pageContext
   const isFirst = pageContext.index === 1
   const isLast = pageContext.last
-  const prevPage = !isFirst && pageIndex - 1 === 1 ? "/" : `/${pageIndex - 1}`
-  const nextPage = !isLast ? `/${pageContext.index + 1}`: ""
+  const prevPage =
+    !isFirst && pageIndex - 1 === 1 ? "/blog" : `/blog/${pageIndex - 1}`
+  const nextPage = !isLast ? `/blog/${pageContext.index + 1}` : ""
 
   return (
     <Layout>
-      <Helmet
-        pageTitle="Dillion Megida - Frontend Engineer and Technical Writer"
-        pageLink="/"
-        pageDesc="Dillion is a Frontend Engineer and a Tecnical Writer learning, teaching and buiding web applications with JavaScript."
-      />
+      <Helmet pageTitle={meta.TITLE} pageLink="/blog" pageDesc={meta.DESC} />
       <main className={Styles.BlogMain}>
         <div className={Styles.SearchSection}>
           <Link to="/search" title="Search articles">
