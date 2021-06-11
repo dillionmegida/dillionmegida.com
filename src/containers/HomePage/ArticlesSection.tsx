@@ -5,9 +5,7 @@ import constants from "../../constants"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const Section = styled.section`
-  background-color: white;
-`
+const Section = styled.section``
 
 type Props = {
   articles: AllPostsGql

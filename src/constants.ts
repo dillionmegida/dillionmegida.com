@@ -10,7 +10,7 @@ export default {
   meta: {
     TITLE: "Dillion Megida - Software Engineer and Content Creator ✨",
     DESC:
-      "Dillion is a Software Engineer and Content Creator passionate about learning, building and simplifying topics around tech via aritlces and videos",
+      "Dillion is a Software Engineer and Content Creator passionate about learning, building, and simplifying topics around tech via articles and videos",
   },
 
   CURRENT_WORK_NAME: "ThisDot",

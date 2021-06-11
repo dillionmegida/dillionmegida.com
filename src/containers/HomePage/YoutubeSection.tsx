@@ -7,7 +7,6 @@ import constants from "../../constants"
 import { NewTabLink } from "../../components/Link"
 
 const Section = styled.section`
-  background-color: white;
   .articles {
     display: grid;
     --columns: 2;

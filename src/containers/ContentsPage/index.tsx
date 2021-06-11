@@ -21,7 +21,6 @@ const Main = styled.main`
     background-color: var(--lightBlue);
 
     &-wrapper {
-      max-width: 1200px;
       width: 100%;
       padding: 20px;
       margin: 0 auto;
@@ -50,12 +49,6 @@ const Main = styled.main`
         }
       }
     }
-  }
-
-  .main-content {
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
   }
 
   .search-input-container {
@@ -235,12 +228,14 @@ export default function ContentsPage({
   return (
     <Main>
       <div className="heading-bg">
-        <div className="heading-bg-wrapper">
-          <h1>All my contents in one place ✨</h1>
-          <span className="count">Total: {totalContentsLength}+</span>
+        <div className="container">
+          <div className="heading-bg-wrapper">
+            <h1>All my contents in one place ✨</h1>
+            <span className="count">Total: {totalContentsLength}+</span>
+          </div>
         </div>
       </div>
-      <div className="main-content">
+      <div className="container">
         {/* <FeaturedContent /> */}
         <div className="search-input-container">
           <SearchInput

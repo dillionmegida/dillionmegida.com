@@ -1,15 +1,23 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Styles from "./index.module.scss"
 
 import { StaticQuery, graphql } from "gatsby"
 import Post from "../PostMini"
-import { GqlPost, Post as IPost } from "../../../interfaces/Post"
+import { GqlPost } from "../../../interfaces/Post"
 
 type GqlPostModified = {
   node: GqlPost
 }
 
 const Search = () => {
+  const searchInput = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    if (searchInput.current) {
+      searchInput.current.focus()
+    }
+  }, [])
+
   const [filteredArticles, setFilteredArticles] = useState<GqlPostModified[]>(
     []
   )
@@ -80,6 +88,7 @@ const Search = () => {
                 onChange={event => {
                   handleInput(allPosts, event)
                 }}
+                ref={searchInput}
               />
             </div>
             {filtered.length !== 0 && (
