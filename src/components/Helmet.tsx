@@ -17,7 +17,7 @@ const Helmet = ({
   pageLink,
   pageDesc,
   pageKeywords = "",
-  imageCard = "/img/deee.jpg",
+  imageCard = "https://dillionmegida.com/img/deee.jpg",
   largeTwitterCard = false,
   smoothScroll = false,
   children = null,
