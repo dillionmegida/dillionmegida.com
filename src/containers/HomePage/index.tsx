@@ -6,6 +6,8 @@ import { NewTabLink } from "../../components/Link"
 import { AllContentsQql } from "../../interfaces/Contents"
 import { AllPostsGql } from "../../interfaces/Post"
 import Post from "../../components/Blog/PostMini"
+import ArticlesSection from "./ArticlesSection"
+import YoutubeSection from "./YoutubeSection"
 
 const { publications, pageLinks, social, RESUME } = constants
 const pubsLength = publications.length
@@ -79,31 +81,35 @@ const Text = styled.div`
 `
 
 const BodySection = styled.div`
-  section > h2 {
-    font-size: 25px;
-    position: relative;
-    overflow: hidden;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 17px;
-      left: 100px;
-      border-top: 1px solid var(--mainColor1);
-      width: 100%;
+  section {
+    margin-bottom: 80px;
+    > h2 {
+      font-size: 25px;
+      position: relative;
+      overflow: hidden;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 17px;
+        left: 100px;
+        border-top: 1px solid var(--mainColor1);
+        width: 100%;
+      }
     }
-  }
-  .articles-section {
-    background-color: white;
-    .articles {
+
+    .grid {
       display: grid;
       --columns: 2;
       grid-template-columns: repeat(var(--columns), 1fr);
       grid-column-gap: 40px;
     }
-    .more-articles-link {
+
+    .view-all-link {
       color: var(--mainColor1);
       font-size: 20px;
       text-decoration: underline;
+      display: block;
+      margin-top: 20px;
     }
   }
 `
@@ -125,7 +131,7 @@ type Props = {
 }
 
 export default function HomePage({ contents }: Props) {
-  const { allArticlesOnMyWebite } = contents
+  const { allArticlesOnMyWebite, youtube } = contents
 
   return (
     <Main>
@@ -178,27 +184,8 @@ export default function HomePage({ contents }: Props) {
       </BioSection>
       <BodySection className="body">
         <div className="container">
-          <section className="articles-section">
-            <h2>Articles</h2>
-            <div className="articles">
-              {allArticlesOnMyWebite.edges.map(
-                ({ node: { id, frontmatter, timeToRead, fields, html } }) => (
-                  <Post
-                    key={id}
-                    readTime={timeToRead}
-                    date={frontmatter.date}
-                    href={fields.slug}
-                    title={frontmatter.title}
-                    content={html}
-                    tags={frontmatter.tags}
-                  />
-                )
-              )}
-            </div>
-            <Link className="more-articles-link" to={pageLinks.BLOG}>
-              View all articles
-            </Link>
-          </section>
+          <ArticlesSection articles={allArticlesOnMyWebite} />
+          <YoutubeSection videos={youtube} />
         </div>
       </BodySection>
     </Main>
