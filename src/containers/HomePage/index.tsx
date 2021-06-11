@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 import { NewTabLink } from "../../components/Link"
 import { AllContentsQql } from "../../interfaces/Contents"
 import { AllPostsGql } from "../../interfaces/Post"
-import Post from "../../components/Blog/PostMini"
 import ArticlesSection from "./ArticlesSection"
 import YoutubeSection from "./YoutubeSection"
 import Newsletter from "../../components/Newsletter"
@@ -43,6 +42,7 @@ const ProfilePicture = styled.div`
   max-width: 400px;
   border: 10px solid var(--mainColor1);
   left: -10px;
+  width: 100%;
 
   @media (max-width: 800px) {
     max-width: 250px;
@@ -66,19 +66,19 @@ const Text = styled.div`
     display: block;
   }
   .name {
-    color: #bcc6d3;
+    color: white;
     font-size: 40px;
     font-weight: 800;
     margin: 0;
   }
   .short-bio {
-    color: #bcc6d3;
+    color: white;
     font-size: 20px;
     margin: 20px 0;
     font-weight: 500;
   }
   .some-text {
-    color: #bcc6d3;
+    color: white;
     margin-top: 10px;
     line-height: 1.5;
 
@@ -92,7 +92,7 @@ const Text = styled.div`
         color: var(--mainColor1);
 
         @media (max-width: 650px) {
-          color: #bcc6d3;
+          color: white;
           font-size: 20px;
         }
       }
@@ -111,7 +111,7 @@ const BodySection = styled.div`
         content: "";
         position: absolute;
         top: 17px;
-        left: 100px;
+        left: 110px;
         border-top: 1px solid var(--mainColor1);
         width: 100%;
       }
