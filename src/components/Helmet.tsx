@@ -17,7 +17,7 @@ const Helmet = ({
   pageLink,
   pageDesc,
   pageKeywords = "",
-  imageCard = "https://res.cloudinary.com/dillionmegida/image/upload/v1584753510/images/website/deee_iufaho.jpg",
+  imageCard = "/img/deee.jpg",
   largeTwitterCard = false,
   smoothScroll = false,
   children = null,

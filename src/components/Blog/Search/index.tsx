@@ -10,7 +10,7 @@ type GqlPostModified = {
 }
 
 const Search = () => {
-  const searchInput = useRef<HTMLElement>(null)
+  const searchInput = useRef<any>(null)
 
   useEffect(() => {
     if (searchInput.current) {
