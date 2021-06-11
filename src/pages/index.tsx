@@ -1,140 +1,218 @@
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
-import styled from "styled-components"
 import Layout from "../components/Layout"
-import { NewTabLink } from "../components/Link"
-import constants from "../constants"
+import HomePage from "../containers/HomePage"
+import { AllContentsQql } from "../interfaces/Contents"
+import { AllPostsGql } from "../interfaces/Post"
 
-const Main = styled.main``
+type Props = {
+  data: {
+    youtube: AllContentsQql
+    devto: AllContentsQql
+    edpresso: AllContentsQql
+    logrocket: AllContentsQql
+    soshace: AllContentsQql
+    vonage: AllContentsQql
+    fcc: AllContentsQql
+    podcast: AllContentsQql
+    talk: AllContentsQql
+    kirupa: AllContentsQql
+    allArticlesOnMyWebite: AllPostsGql
+  }
+}
 
-const BioSection = styled.div`
-  width: 100%;
-  background-color: var(--mainColor1);
-  position: relative;
-  top: -80px;
-  padding-bottom: 50px;
+export default function Home({ data }: Props) {
+  return (
+    <Layout>
+      <HomePage contents={data} />
+    </Layout>
+  )
+}
 
-  .container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 30px;
-
-    & > * {
-      position: relative;
-      top: 110px;
+export const query = graphql`
+  query ContentsQuery {
+    youtube: allYoutubeYaml {
+      edges {
+        node {
+          id
+          link
+          platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
     }
-  }
-`
 
-const ProfilePicture = styled.div`
-  max-width: 400px;
-  border: 10px solid var(--mainColor1);
-  left: -10px;
-
-  img {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-  }
-`
-
-const Text = styled.div`
-  max-width: 600px;
-  span {
-    display: block;
-  }
-  .name {
-    color: #bcc6d3;
-    font-size: 40px;
-    font-weight: 800;
-  }
-  .short-bio {
-    color: #bcc6d3;
-    font-size: 20px;
-    margin-top: 5px;
-    font-weight: 500;
-  }
-  .some-text {
-    color: #bcc6d3;
-    margin-top: 10px;
-    line-height: 1.5;
-
-    a {
-      text-decoration: underline;
-      color: #bcc6d3;
+    vonage: allVonageYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
     }
-    .resume {
-      font-size: 18px;
-      a {
-        color: var(--mainColor1);
+
+    thisdot: allThisdotYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    soshace: allSoshaceYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    logrocket: allLogrocketYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    fcc: allFccYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    edpresso: allEdpressoYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    devto: allDevtoYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    podcast: allPodcastYaml {
+      edges {
+        node {
+          id
+          platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    talk: allTalkYaml {
+      edges {
+        node {
+          id
+          platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    kirupa: allKirupaYaml {
+      edges {
+        node {
+          id
+          platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    allArticlesOnMyWebite: allMarkdownRemark(
+      filter: { fields: { slug: { regex: "/^(/p/)/" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 4
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          timeToRead
+          frontmatter {
+            tags
+            title
+            date
+            pageDescription
+          }
+        }
       }
     }
   }
 `
-
-const BodySection = styled.div``
-
-const { publications, pageLinks, social, RESUME } = constants
-
-export default function Home() {
-  const pubsLength = publications.length
-
-  return (
-    <Layout>
-      <Main>
-        <BioSection>
-          <div className="container">
-            <ProfilePicture>
-              <img src={constants.MY_PICTURE} alt="Profile picture" />
-            </ProfilePicture>
-            <Text>
-              <span className="name">Dillion Megida</span>
-              <span className="short-bio">
-                Software Engineer 👨🏽‍💻 and Content Creator ✨ based in Nigeria.
-              </span>
-              <span className="some-text">
-                As a Software Engineer, my major focus is on the Frontend. I
-                love building accessible applications on the web. I also love
-                learning and simplifying tech--coding, practices, tools--via
-                technical articles, videos, and every means possible. I write
-                mostly about web development topics and JavaScript on{" "}
-                <Link to={pageLinks.BLOG}>my blog here</Link>
-                {publications.map((p, i) =>
-                  i === pubsLength - 1 ? (
-                    <>
-                      {" "}
-                      and <a href={p.link}>{p.label}</a>
-                    </>
-                  ) : (
-                    <>
-                      , <a href={p.link}>{p.label}</a>
-                    </>
-                  )
-                )}{" "}
-                <br />
-                <br />I also create Tech video content on{" "}
-                <NewTabLink link={social.YouTube.link}>
-                  my YouTube Channel
-                </NewTabLink>
-                <br />
-                <br />
-                Co-founder,{" "}
-                <NewTabLink link="http://skulmart.com/">SkulMart</NewTabLink>
-                <br />
-                <br />
-                <span className="resume">
-                  <NewTabLink link={RESUME}>Resume</NewTabLink>
-                </span>
-              </span>
-            </Text>
-          </div>
-        </BioSection>
-        <BodySection className="body">
-          <div className="container">
-            <h1>Hello</h1>
-          </div>
-        </BodySection>
-      </Main>
-    </Layout>
-  )
-}

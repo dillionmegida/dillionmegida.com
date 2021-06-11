@@ -31,6 +31,8 @@ html.smoothScroll {
 body {
   margin: 0;
   font-family: "Nunito", "Helvetica";
+  border: 10px solid var(--mainColor1);
+  border-right: none;
 }
 * {
   box-sizing: border-box;

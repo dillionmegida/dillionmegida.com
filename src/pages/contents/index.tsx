@@ -32,7 +32,7 @@ function Contents({ data, location }: Props) {
         pageLink="/contents"
       />
       <ContentsPage
-      params={location.search}
+        params={location.search}
         youtube={data.youtube}
         devto={data.devto}
         edpresso={data.edpresso}
