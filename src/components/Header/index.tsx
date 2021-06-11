@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import Styles from "./index.module.scss"
+import React from "react"
 
 import { Link } from "gatsby"
 import constants from "../../constants"
@@ -51,7 +50,7 @@ const _Link = styled(Link)`
   font-size: 16px;
   margin: 0 10px;
   padding: 7px;
-  width: 90px;
+  width: 70px;
   text-align: center;
 
   &.active {
@@ -64,8 +63,6 @@ const _Link = styled(Link)`
 `
 
 const Header = () => {
-  const [showDrawer, setDrawerStatus] = useState(false)
-
   const Links = () => (
     <>
       {[
@@ -73,11 +70,7 @@ const Header = () => {
         { label: "Blog", link: constants.pageLinks.BLOG },
         { label: "Contents", link: constants.pageLinks.CONTENTS },
       ].map(l => (
-        <_Link
-          to={l.link}
-          onClick={() => setDrawerStatus(false)}
-          activeClassName="active"
-        >
+        <_Link to={l.link} activeClassName="active">
           {l.label}
         </_Link>
       ))}
@@ -85,7 +78,7 @@ const Header = () => {
   )
 
   return (
-    <_Header className={Styles.Header}>
+    <_Header>
       <div className="container">
         <Link className="name" to="/" activeClassName="active">
           <div className="picture">
@@ -97,23 +90,6 @@ const Header = () => {
           <Links />
         </nav>
       </div>
-      <button
-        className={Styles.ShowDrawer}
-        onClick={() => setDrawerStatus(true)}
-      >
-        <i className="fa fa-bars"></i>
-      </button>
-      {showDrawer && (
-        <div className={Styles.Drawer}>
-          <button onClick={() => setDrawerStatus(false)}>
-            <i className="fa fa-times"></i>
-          </button>
-          <nav>
-            <Links />
-          </nav>
-          <span>2019 - {new Date().getFullYear()} &copy; Dillion Megida</span>
-        </div>
-      )}
     </_Header>
   )
 }

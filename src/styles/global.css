@@ -49,6 +49,6 @@ a {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 40px;
   width: 100%;
 }

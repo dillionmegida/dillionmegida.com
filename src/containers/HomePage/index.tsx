@@ -24,8 +24,13 @@ const BioSection = styled.div`
 
   .container {
     display: grid;
-    grid-template-columns: auto 1fr;
+    --columns: auto 1fr;
+    grid-template-columns: var(--columns);
     grid-gap: 30px;
+
+    @media (max-width: 650px) {
+      --columns: 1fr;
+    }
 
     & > * {
       position: relative;
@@ -38,6 +43,15 @@ const ProfilePicture = styled.div`
   max-width: 400px;
   border: 10px solid var(--mainColor1);
   left: -10px;
+
+  @media (max-width: 800px) {
+    max-width: 250px;
+  }
+
+  @media (max-width: 650px) {
+    max-width: 100%;
+    order: 2;
+  }
 
   img {
     width: 100%;
@@ -76,6 +90,11 @@ const Text = styled.div`
       font-size: 18px;
       a {
         color: var(--mainColor1);
+
+        @media (max-width: 650px) {
+          color: #bcc6d3;
+          font-size: 20px;
+        }
       }
     }
   }
@@ -103,6 +122,10 @@ const BodySection = styled.div`
       --columns: 2;
       grid-template-columns: repeat(var(--columns), 1fr);
       grid-column-gap: 40px;
+
+      @media (max-width: 650px) {
+        --columns: 1;
+      }
     }
 
     .view-all-link {
@@ -157,11 +180,17 @@ export default function HomePage({ contents }: Props) {
                 i === pubsLength - 1 ? (
                   <>
                     {" "}
-                    and <a href={p.link}>{p.label}</a>
+                    and{" "}
+                    <a key={`link${i}`} href={p.link}>
+                      {p.label}
+                    </a>
                   </>
                 ) : (
                   <>
-                    , <a href={p.link}>{p.label}</a>
+                    ,{" "}
+                    <a key={`link${i}`} href={p.link}>
+                      {p.label}
+                    </a>
                   </>
                 )
               )}{" "}
