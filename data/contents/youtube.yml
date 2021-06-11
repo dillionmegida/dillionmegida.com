@@ -2,6 +2,26 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title:
+      link: https://www.youtube.com/watch?v=CDTwyh4XE0U
+      tags: ['react']
+    - item:
+      title: Git Bisect Simplified - What it is, why and how to use it to debug your applications
+      link: https://youtu.be/ozTQNyGmtfg
+      tags: ["git"]
+    - item:
+      title: How to implement Conditional Props using TypeScript in React
+      link: https://youtu.be/fSivGWZ3iSQ
+      tags: ["react", "typescript"]
+    - item:
+      title: How to export terminal output into a file
+      link: https://www.youtube.com/watch?v=HKvjXHl8MEU
+      tags: ["linux", "terminal"]
+    - item:
+      title: How react-helmet is not a solution for improving the SEO of websites
+      link: https://www.youtube.com/watch?v=j_nxKlnuOu0
+      tags: ["react"]
+    - item:
       title: New youtuber
       link: https://www.youtube.com/watch?v=mXd6AsU_Dyg
     - item:
@@ -12,21 +32,9 @@
       title: How to create Custom Tasks in VSCode
       link: https://www.youtube.com/watch?v=IdhvvlZkS9g
       tags: ["vscode"]
-    - item:
-      title: How react-helmet is not a solution for improving the SEO of websites
-      link: https://www.youtube.com/watch?v=j_nxKlnuOu0
-      tags: ["react"]
-    - item:
-      title: How to export terminal output into a file
-      link: https://www.youtube.com/watch?v=HKvjXHl8MEU
-      tags: ["linux", "terminal"]
-    - item:
-      title: How to implement Conditional Props using TypeScript in React
-      link: https://youtu.be/fSivGWZ3iSQ
-      tags: ["react", "typescript"]
-    - item:
-      title: Git Bisect Simplified - What it is, why and how to use it to debug your applications
-      link: https://youtu.be/ozTQNyGmtfg
-      tags: ["git"]
+    
+    
+   
+    
 
       

@@ -8,6 +8,7 @@ import { AllPostsGql } from "../../interfaces/Post"
 import Post from "../../components/Blog/PostMini"
 import ArticlesSection from "./ArticlesSection"
 import YoutubeSection from "./YoutubeSection"
+import Newsletter from "../../components/Newsletter"
 
 const { publications, pageLinks, social, RESUME } = constants
 const pubsLength = publications.length
@@ -186,6 +187,7 @@ export default function HomePage({ contents }: Props) {
         <div className="container">
           <ArticlesSection articles={allArticlesOnMyWebite} />
           <YoutubeSection videos={youtube} />
+          <Newsletter />
         </div>
       </BodySection>
     </Main>

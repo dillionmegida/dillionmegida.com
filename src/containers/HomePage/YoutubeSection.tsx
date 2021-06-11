@@ -37,20 +37,17 @@ export default function YoutubeSection({ videos }: Props) {
       <h2>Youtube</h2>
       <div className="grid">
         {videos.edges.map(({ node }) =>
-          node.content
-            .reverse()
-            .slice(0, 4)
-            .map(({ title, link }) => {
-              const videoId = link.split(/(=|\/)/).pop()
+          node.content.slice(0, 4).map(({ link }) => {
+            const videoId = link.split(/(=|\/)/).pop()
 
-              return (
-                <YouTube
-                  opts={{ width: "100%" }}
-                  key={videoId}
-                  videoId={videoId}
-                />
-              )
-            })
+            return (
+              <YouTube
+                opts={{ width: "100%" }}
+                key={videoId}
+                videoId={videoId}
+              />
+            )
+          })
         )}
       </div>
       <NewTabLink className="view-all-link" link={social.YouTube.link}>
