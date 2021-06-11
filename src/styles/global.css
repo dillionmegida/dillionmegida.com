@@ -43,3 +43,10 @@ ul {
 a {
   text-decoration: none;
 }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
