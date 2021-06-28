@@ -1,5 +1,5 @@
 ---
-title: Two years of writing technical articles 💣
+title: Two years of writing technical articles 🎉
 date: 2021-06-28
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1624886556/images/blogs_cover/2-years-anniversary_xvkakn.png"
 pageDescription: "26th June 2021 makes it two years since I've been written technical articles, and here, I share some things learned"
@@ -54,9 +54,9 @@ There are many more benefits but the list above entails the major of them.
 
 I wrote this article--[Getting Started with Technical Writing](/p/getting-started-with-technical-writing/)--on 4th April, but it's still valid till today. You can use that, or the talk I shared above.
 
-It starts from sharing what you already know--even if it's "What is HTML?". People will definitely complain--we're humans--"We already know what HTML is. Write about something better". My advice: Ignore them. If you feel an article has been written too many times already, check out what I wrote here--[The fact that an article on that topic has been written before shouldn't stop you](/p/getting-started-with-technical-writing/#2-the-fact-that-an-article-on-that-topic-has-been-written-before-shouldnt-stop-you)
+It starts from sharing what you already know--even if it's "What is HTML?". People will definitely complain--we're humans--"We already know what HTML is. Write about something better". My advice: Ignore them. If you feel an article has been written too many times already, and there's no need to write, check out what I wrote here--[The fact that an article on that topic has been written before shouldn't stop you](/p/getting-started-with-technical-writing/#2-the-fact-that-an-article-on-that-topic-has-been-written-before-shouldnt-stop-you)
 
-Edidiong wrote about [Getting Started with the DOM](https://edidiongasikpo.com/getting-started-with-the-dom) on the 5th of May, 2020, and you need to say how many appreciations and "I learned a lot from this" that I came across on Twitter. For DOM manipulations that one may think is very popular, there were still many people that benefitted from that article.
+Edidiong wrote about [Getting Started with the DOM](https://edidiongasikpo.com/getting-started-with-the-dom) on the 5th of May, 2020, and you need to see how many appreciations and "I learned a lot from this" that I came across on Twitter. For DOM manipulations that one may think is very popular, there were still many people that benefitted from that article.
 
 Also, consistency. I look back at some of my articles and I cringe at some of the grammar mistakes I made. And I'm also grateful for how far I have come.
 
