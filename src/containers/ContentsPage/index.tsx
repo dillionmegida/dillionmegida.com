@@ -96,6 +96,8 @@ type Props = {
   podcast: AllContentsQql
   talk: AllContentsQql
   kirupa: AllContentsQql
+    egghead: AllContentsQql
+
   allArticlesOnThisWebsite: AllPostsGql
   params: string
 }
@@ -110,6 +112,7 @@ export default function ContentsPage({
   fcc,
   kirupa,
   podcast,
+  egghead,
   talk,
   allArticlesOnThisWebsite,
   params,
@@ -118,6 +121,7 @@ export default function ContentsPage({
     logrocket,
     youtube,
     podcast,
+    egghead,
     vonage,
     kirupa,
     edpresso,

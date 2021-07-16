@@ -18,6 +18,7 @@ type Props = {
     podcast: AllContentsQql
     talk: AllContentsQql
     kirupa: AllContentsQql
+    egghead: AllContentsQql
     allArticlesOnMyWebite: AllPostsGql
   }
   location: Location
@@ -43,6 +44,7 @@ function Contents({ data, location }: Props) {
         podcast={data.podcast}
         talk={data.talk}
         kirupa={data.kirupa}
+        egghead={data.egghead}
         allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
       />
     </Layout>
@@ -87,6 +89,20 @@ export const query = graphql`
           id
           platform
           link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    egghead: allEggheadYaml {
+      edges {
+        node {
+          id
+          platform
           content {
             title
             link

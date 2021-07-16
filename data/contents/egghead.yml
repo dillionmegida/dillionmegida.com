@@ -1,0 +1,7 @@
+- platform: Egghead
+  link: null
+  content:
+    - item:
+      title: Why Does React Exist
+      link: https://egghead.io/blog/why-does-react-exist-in-the-first-place
+      tags: ["react", "javascript"]
