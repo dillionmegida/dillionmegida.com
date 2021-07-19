@@ -1,5 +1,5 @@
 ---
-title: Next.js: Explaining Main Concepts and Ideas 
+title: "Next.js: Explaining Main Concepts and Ideas"
 date: 2021-07-18
 pageDescription: "In this article, we'll understand the main concepts and techniques that make up Next.js, and also understand how this framework serves as an SSR tool"
 pageKeywords: "nextjs, server-side rendering, ssr, prerendering, react, next.js"
