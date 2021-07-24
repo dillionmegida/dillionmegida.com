@@ -4,7 +4,6 @@ date: "2021-05-15"
 pageDescription: "In this article, I explain what ImageKit is, and how it's an effective platform/tool for image processing, then I share how to upload images using nodejs"
 pageKeywords: "image, image processing, imagekit, nodejs"
 tags: ["nodejs"]
-monetize: true
 ---
 
 Images are used a lot in modern web applications. One reason is they give a visual explanation to content. Another reason is they get user’s attention faster than texts. And there are many more reasons that encourage the use of images. However, poor image management can negatively impact the performance and load-time of such applications. With ImageKit, this negative impact is reduced via optimization techniques that the tool provides.

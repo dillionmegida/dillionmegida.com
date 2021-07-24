@@ -49,6 +49,7 @@ const Helmet = ({
         property="og:url"
         content={`https://dillionmegida.com${pageLink}`}
       />
+      <meta name="monetization" content="$ilp.uphold.com/89fH6XniNm9R" />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={pageDesc} />

@@ -19,7 +19,6 @@ type Props = {
 
 export default ({ data }: Props) => {
   const post = data.markdownRemark
-  const notMonetized = post.frontmatter.monetize === false ? true : false
   return (
     <Layout>
       <Helmet
@@ -29,11 +28,7 @@ export default ({ data }: Props) => {
         pageKeywords={post.frontmatter.pageKeywords}
         imageCard={post.frontmatter.cover}
         largeTwitterCard={true}
-      >
-        {notMonetized && (
-          <meta name="monetization" content="$ilp.uphold.com/89fH6XniNm9R" />
-        )}
-      </Helmet>
+      />
 
       <main className={Styles.BlogPost}>
         <article>
@@ -110,7 +105,6 @@ export const query = graphql`
         pageKeywords
         cover
         tags
-        monetize
         questions {
           name
           options

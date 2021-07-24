@@ -35,7 +35,6 @@ export interface GqlPostFull {
     title: string
     tags?: string[]
     date: Date
-    monetize: boolean
     pageKeywords: string
     cover: string
     questions: any

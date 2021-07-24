@@ -5,7 +5,6 @@ cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1577047793/images
 pageDescription: "2019 was an awesome year for me. Looking at the things I was able to explore and achieve, I'm motived to more. 2020 is sure going to be better"
 pageKeywords: "2019 in review, year in review, review year, achievements"
 tags: ["general", "life"]
-monetize: false
 ---
 
 The year 2019 has indeed been an awesome year for me. I explored a lot this year. First, I'd like to give all Glory to God for everything - privilege to be alive and protection.

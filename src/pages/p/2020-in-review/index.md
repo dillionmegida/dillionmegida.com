@@ -5,7 +5,6 @@ cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1609374682/images
 pageDescription: "2020 turned out better than 2019! Had quite some career and personal wins."
 pageKeywords: "2020 in review"
 tags: ["general", "life"]
-monetize: false
 ---
 
 I'm thankful to God that I made it to the end of the year 💛
