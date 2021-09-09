@@ -2,6 +2,14 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: What I've learned working as a full-time Software Engineer for 1 year
+      link: https://youtu.be/Q8PwOdy_Dzo
+      tags: ['general']
+    - item:
+      title: Here's what I learned on Consistency using my Gym experience
+      link: https://youtu.be/n9yX3jgIN9U
+      tags: ['general']
+    - item:
       title: How I got my first Full-time Software Developer Job
       link: https://youtu.be/2QamIL37Vwk
       tags: ['general']
