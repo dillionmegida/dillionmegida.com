@@ -1,0 +1,31 @@
+- platform: CodeSource
+  link: https://codesource.io/author/dillion/
+  content:
+    - item:
+      title: Regular Expressions (RegExp) in JavaScript
+      link: https://codesource.io/regular-expressions-regexp-in-javascript/
+      tags: ["regex", "javascript"]
+    - item:
+      title: Trim() Method for Strings in JavaScript
+      link: https://codesource.io/trim-method-for-strings-in-javascript/
+      tags: ["javascript"]
+    - item:
+      title: Array pop(), push(), shift() and unshift() Methods in JavaScript
+      link: https://codesource.io/array-pop-push-shift-and-unshift-methods-in-javascript/
+      tags: ["javascript", "array"]
+    - item:
+      title: Build a Simple Blog using Axios With React
+      link: https://codesource.io/build-simple-blog-using-axios-with-react/
+      tags: ["css"]
+    - item:
+      title: Understanding Object.keys in JavaScript
+      link: https://codesource.io/understanding-object-keys-in-javascript/
+      tags: ["javascript"]
+    - item:
+      title: Getting Started with React Context API
+      link: https://codesource.io/getting-started-with-react-context-api/
+      tags: ["react"]
+    - item:
+      title: Props Validation with prop-types in React
+      link: https://codesource.io/props-validation-with-prop-types-in-react/
+      tags: ["react"]

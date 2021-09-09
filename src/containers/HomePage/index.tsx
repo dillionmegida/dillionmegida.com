@@ -141,15 +141,6 @@ const BodySection = styled.div`
 type Props = {
   contents: {
     youtube: AllContentsQql
-    devto: AllContentsQql
-    edpresso: AllContentsQql
-    logrocket: AllContentsQql
-    soshace: AllContentsQql
-    vonage: AllContentsQql
-    fcc: AllContentsQql
-    podcast: AllContentsQql
-    talk: AllContentsQql
-    kirupa: AllContentsQql
     allArticlesOnMyWebite: AllPostsGql
   }
 }

@@ -87,6 +87,7 @@ const commonTags = ["all", "gatsby", "node", "javascript", "react"]
 
 type Props = {
   youtube: AllContentsQql
+  codesource: AllContentsQql
   devto: AllContentsQql
   edpresso: AllContentsQql
   logrocket: AllContentsQql
@@ -108,6 +109,7 @@ export default function ContentsPage({
   edpresso,
   logrocket,
   soshace,
+  codesource,
   vonage,
   fcc,
   kirupa,
@@ -120,6 +122,7 @@ export default function ContentsPage({
   const allContents = [
     logrocket,
     youtube,
+    codesource,
     podcast,
     egghead,
     vonage,
