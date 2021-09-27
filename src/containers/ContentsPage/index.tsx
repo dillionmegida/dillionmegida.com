@@ -97,8 +97,8 @@ type Props = {
   podcast: AllContentsQql
   talk: AllContentsQql
   kirupa: AllContentsQql
-    egghead: AllContentsQql
-
+  egghead: AllContentsQql
+  strapi: AllContentsQql
   allArticlesOnThisWebsite: AllPostsGql
   params: string
 }
@@ -117,6 +117,7 @@ export default function ContentsPage({
   egghead,
   talk,
   allArticlesOnThisWebsite,
+  strapi,
   params,
 }: Props) {
   const allContents = [
@@ -131,6 +132,7 @@ export default function ContentsPage({
     soshace,
     talk,
     fcc,
+    strapi,
     devto,
   ]
 

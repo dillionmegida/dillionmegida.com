@@ -20,6 +20,7 @@ type Props = {
     talk: AllContentsQql
     kirupa: AllContentsQql
     egghead: AllContentsQql
+    strapi: AllContentsQql
     allArticlesOnMyWebite: AllPostsGql
   }
   location: Location
@@ -47,6 +48,7 @@ function Contents({ data, location }: Props) {
         talk={data.talk}
         kirupa={data.kirupa}
         egghead={data.egghead}
+        strapi={data.strapi}
         allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
       />
     </Layout>
@@ -233,6 +235,20 @@ export const query = graphql`
     }
 
     kirupa: allKirupaYaml {
+      edges {
+        node {
+          id
+          platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    strapi: allStrapiYaml {
       edges {
         node {
           id
