@@ -13,7 +13,7 @@ type Props = {
 
 const PostTemplate = ({ url, postId, postTitle }: Props) => {
   let disqusConfig = {
-    url: constants.SITE_URL + url,
+    url: "https://" + constants.SITE_URL + url,
     identifier: postId,
     title: postTitle,
   }
