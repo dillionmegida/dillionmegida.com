@@ -8,13 +8,13 @@ export default {
   SITE_URL: "dillionmegida.com",
 
   meta: {
-    TITLE: "Dillion Megida - Software Engineer and Content Creator ✨",
+    TITLE: "Dillion Megida - Developer Advocate 🥑 and Content Creator ✨",
     DESC:
-      "Dillion is a Software Engineer and Content Creator passionate about learning, building, and simplifying topics around tech via articles and videos",
+      "Dillion is a Developer Advocate and Content Creator passionate about learning, building, and simplifying topics around tech via articles and videos",
   },
 
-  CURRENT_WORK_NAME: "ThisDot",
-  CURRENT_WORK_LINK: "https://labs.thisdot.co",
+  CURRENT_WORK_NAME: "Stream",
+  CURRENT_WORK_LINK: "http://getstream.io/",
 
   RESUME: "https://bit.ly/3tE2eba",
 

@@ -35,6 +35,11 @@ const BioSection = styled.div`
       position: relative;
       top: 110px;
     }
+
+    .work-link {
+      color: var(--mainColor2);
+      text-decoration: underline;
+    }
   }
 `
 
@@ -148,6 +153,8 @@ type Props = {
 export default function HomePage({ contents }: Props) {
   const { allArticlesOnMyWebite, youtube } = contents
 
+  const { CURRENT_WORK_LINK, CURRENT_WORK_NAME } = constants
+
   return (
     <Main>
       <BioSection>
@@ -158,7 +165,17 @@ export default function HomePage({ contents }: Props) {
           <Text>
             <h1 className="name">Dillion Megida</h1>
             <span className="short-bio">
-              Software Engineer 👨🏽‍💻 and Content Creator ✨
+              Developer 🥑{" "}
+              {CURRENT_WORK_NAME && CURRENT_WORK_LINK ? (
+                <>
+                  {" "}
+                  at{" "}
+                  <NewTabLink className="work-link" link={CURRENT_WORK_LINK}>
+                    {CURRENT_WORK_NAME}
+                  </NewTabLink>
+                </>
+              ) : null}{" "}
+              and Content Creator ✨
             </span>
             <span className="some-text">
               As a Software Engineer, I focus majorly on the frontend of
