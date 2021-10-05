@@ -4,17 +4,18 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const createPaginatedPages = require("gatsby-paginate")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-    const { createNodeField } = actions
-    if (node.internal.type === `MarkdownRemark`) {
-      const slug = createFilePath({ node, getNode, basePath: `pages` })
-      createNodeField({
-        node,
-        name: `slug`,
-        value: slug,
-      })
-    }
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    const postPath = slug.replace(/^(\/p\/\d+\.\s)/, "/p/")
+
+    createNodeField({
+      node,
+      name: `slug`,
+      value: postPath,
+    })
   }
-  
+}
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -71,12 +72,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     edges: result.data.allMarkdownRemark.edges,
     createPage: createPage,
     pageTemplate: path.resolve(__dirname, "./src/components/Blog/index.tsx"),
-    pageLength: 10, 
+    pageLength: 10,
     pathPrefix: "blog",
     context: {},
   })
 
-  result.data.tagsGroup.group.forEach((tag) => {
+  result.data.tagsGroup.group.forEach(tag => {
     createPage({
       path: `tags/${_.kebabCase(tag.fieldValue)}/`,
       component: path.resolve(
