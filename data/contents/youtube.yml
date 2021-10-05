@@ -2,6 +2,18 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: First Flight Experience | Vlog
+      link: https://youtu.be/7KSb_Df-2E8
+      tags: ['general']
+    - item:
+      title: What is Developer Relations and How can I get in?
+      link: https://youtu.be/UTVjlJJHbRU
+      tags: ['general']
+    - item:
+      title: New Adventure ✨Transitioning to Developer Advocacy
+      link: https://youtu.be/xz5UTuVKPx4
+      tags: ['general']
+    - item:
       title: What I've learned working as a full-time Software Engineer for 1 year
       link: https://youtu.be/Q8PwOdy_Dzo
       tags: ['general']
