@@ -8,6 +8,7 @@ import { AllPostsGql } from "../../interfaces/Post"
 import ArticlesSection from "./ArticlesSection"
 import YoutubeSection from "./YoutubeSection"
 import Newsletter from "../../components/Newsletter"
+import STWBlock from "./STWBlock"
 
 const { publications, pageLinks, social, RESUME } = constants
 const pubsLength = publications.length
@@ -112,7 +113,7 @@ const BodySection = styled.div`
       font-size: 25px;
       position: relative;
       overflow: hidden;
-      &::after {
+      &.underline::after {
         content: "";
         position: absolute;
         top: 17px;
@@ -222,6 +223,7 @@ export default function HomePage({ contents }: Props) {
       </BioSection>
       <BodySection className="body">
         <div className="container">
+          <STWBlock />
           <ArticlesSection articles={allArticlesOnMyWebite} />
           <YoutubeSection videos={youtube} />
           <Newsletter />

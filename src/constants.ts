@@ -4,6 +4,12 @@ import Mail from "./components/Icon/Mail"
 import Twitter from "./components/Icon/Twitter"
 import YouTube from "./components/Icon/YouTube"
 
+export const STW = {
+  title: "Simplifying Technical Writing",
+  link: "https://writing.dillionmegida.com",
+  intro: "https://writing.dillionmegida.com/blog/introduction",
+}
+
 export default {
   SITE_URL: "dillionmegida.com",
 

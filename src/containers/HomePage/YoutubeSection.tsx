@@ -29,11 +29,11 @@ type Props = {
 }
 
 const { pageLinks, social } = constants
-
+    
 export default function YoutubeSection({ videos }: Props) {
   return (
     <Section>
-      <h2>Youtube</h2>
+      <h2 className='underline'>Youtube</h2>
       <div className="grid">
         {videos.edges.map(({ node }) =>
           node.content.slice(0, 4).map(({ link }) => {

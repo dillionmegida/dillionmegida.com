@@ -16,7 +16,7 @@ const { pageLinks } = constants
 export default function ArticlesSection({ articles }: Props) {
   return (
     <Section>
-      <h2>Articles</h2>
+      <h2 className='underline'>Articles</h2>
       <div className="grid">
         {articles.edges.map(
           ({ node: { id, frontmatter, timeToRead, fields, html } }) => (
