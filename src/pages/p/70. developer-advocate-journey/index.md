@@ -8,7 +8,7 @@ pageKeywords: "devrel, developer relations, developer advocate"
 tags: ["general"]
 ---
 
-Drumroll 🥁🥁 please...
+Drumroll 🥁 please...
 
 Welcome your new Developer Advocate 🥑 🔥🔥🔥🔥🔥🔥
 
