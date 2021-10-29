@@ -19,6 +19,14 @@ type Props = {
 
 export default ({ data }: Props) => {
   const post = data.markdownRemark
+
+  const postCover = post.frontmatter.cover
+  const postCoverUrl = postCover
+    ? postCover.startsWith("https")
+      ? postCover
+      : `/post-covers/${postCover}`
+    : null
+
   return (
     <Layout>
       <Helmet
@@ -26,7 +34,7 @@ export default ({ data }: Props) => {
         pageLink={post.fields.slug}
         pageDesc={post.frontmatter.pageDescription}
         pageKeywords={post.frontmatter.pageKeywords}
-        imageCard={post.frontmatter.cover}
+        imageCard={postCoverUrl}
         largeTwitterCard={true}
       />
 
@@ -48,8 +56,8 @@ export default ({ data }: Props) => {
               </p>
             ) : null}
           </div>
-          {post.frontmatter.cover && post.frontmatter.cover !== "" ? (
-            <img src={post.frontmatter.cover} alt="Blog Cover" width="100%" />
+          {postCoverUrl ? (
+            <img src={postCoverUrl} alt="Blog Cover" width="100%" />
           ) : null}
           <div className={Styles.BlogContent}>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />

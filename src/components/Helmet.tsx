@@ -6,7 +6,7 @@ type Props = {
   pageLink: string
   pageDesc: string
   pageKeywords?: string
-  imageCard?: string
+  imageCard?: string | null
   largeTwitterCard?: boolean
   smoothScroll?: boolean
   children?: React.ReactNode
@@ -17,11 +17,16 @@ const Helmet = ({
   pageLink,
   pageDesc,
   pageKeywords = "",
-  imageCard = "https://dillionmegida.com/img/deee.jpg",
+  imageCard: _imageCard = "https://dillionmegida.com/img/deee.jpg",
   largeTwitterCard = false,
   smoothScroll = false,
   children = null,
 }: Props) => {
+  const imageCard =
+    _imageCard && _imageCard.startsWith("http")
+      ? _imageCard
+      : `https://dillionmegida.com${_imageCard}`
+
   return (
     <RHelmet>
       <html className={smoothScroll ? "smoothScroll" : undefined} lang="en" />
