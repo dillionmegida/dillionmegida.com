@@ -18,7 +18,17 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  // redirect some paths to homepage
+  ;["/me", "/about"].forEach(p => {
+    createRedirect({
+      fromPath: p,
+      toPath: "/",
+      isPermanent: true,
+    })
+  })
+
   const result = await graphql(`
     query {
       allMarkdownRemark(

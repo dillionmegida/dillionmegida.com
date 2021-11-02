@@ -181,5 +181,6 @@ module.exports = {
 
     // Gatsby offline
     `gatsby-plugin-offline`,
+    `gatsby-plugin-client-side-redirect`,
   ],
 }
