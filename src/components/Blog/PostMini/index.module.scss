@@ -14,13 +14,13 @@
   & h2 {
     color: var(--lightBlue);
     margin-bottom: 0;
-    font-weight: bold;
   }
 
   & .Date {
+    font-family: var(--sec-font);
     color: var(--mainColor1);
     opacity: 0.5;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   & .Excerpt {

@@ -80,6 +80,7 @@ export default ({ data }: Props) => {
             fontSize: "25px",
             fontWeight: "bold",
             margin: "30px 0 0",
+            fontFamily: "var(--main-font)",
           }}
         >
           Share this article

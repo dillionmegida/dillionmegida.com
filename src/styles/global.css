@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Zen+Antique+Soft&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap);
 
 html.smoothScroll {
   scroll-behavior: smooth;
@@ -11,6 +12,9 @@ html.smoothScroll {
   --mainColor3: #c1d950;
   --mainColor4: #8be79f;
   --lightBlue: #319ac1;
+
+  --main-font: "Zen Antique Soft", "Nunito", "Helvetica";
+  --sec-font: "Poppins", "Helvetica";
 }
 
 ::-webkit-scrollbar {
@@ -30,10 +34,21 @@ html.smoothScroll {
 
 body {
   margin: 0;
-  font-family: "Nunito", "Helvetica";
+  font-family: var(--sec-font);
+  font-weight: 300;
   border: 10px solid var(--mainColor1);
   border-top: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--main-font);
+}
+
 * {
   box-sizing: border-box;
   transition: 300ms;
@@ -51,4 +66,10 @@ a {
   margin: 0 auto;
   padding: 20px 40px;
   width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
 }

@@ -15,6 +15,8 @@ const Section = styled.section`
 
   p {
     color: white;
+    font-weight: 300;
+    line-height: 1.7;
     font-size: 20px;
   }
 

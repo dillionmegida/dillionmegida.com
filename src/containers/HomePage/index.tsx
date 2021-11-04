@@ -86,7 +86,7 @@ const Text = styled.div`
   .some-text {
     color: white;
     margin-top: 10px;
-    line-height: 1.5;
+    line-height: 2;
 
     a {
       text-decoration: underline;
@@ -96,6 +96,7 @@ const Text = styled.div`
       font-size: 18px;
       a {
         color: var(--mainColor1);
+        font-weight: 500;
 
         @media (max-width: 650px) {
           color: white;
@@ -110,14 +111,14 @@ const BodySection = styled.div`
   section {
     margin-bottom: 80px;
     > h2 {
-      font-size: 25px;
+      font-size: 30px;
       position: relative;
       overflow: hidden;
       &.underline::after {
         content: "";
         position: absolute;
-        top: 17px;
-        left: 110px;
+        top: 25px;
+        left: 130px;
         border-top: 1px solid var(--mainColor1);
         width: 100%;
       }
@@ -140,6 +141,7 @@ const BodySection = styled.div`
       text-decoration: underline;
       display: block;
       margin-top: 20px;
+      font-weight: 500;
     }
   }
 `

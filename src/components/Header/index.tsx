@@ -22,6 +22,7 @@ const _Header = styled.header`
     font-size: 30px;
     letter-spacing: 3px;
     color: var(--mainColor2);
+    font-family: var(--main-font);
 
     &:hover,
     &.active {

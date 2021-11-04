@@ -20,7 +20,7 @@
 .BlogPost a {
   color: var(--mainColor1);
   text-decoration: underline;
-  font-weight: bold;
+  font-weight: 400;
   padding: 2px;
 }
 .BlogPost a:hover,
@@ -39,7 +39,7 @@
 }
 .BlogDate {
   color: var(--mainColor1);
-  font-weight: bold;
+  font-weight: 400;
 }
 .BlogInfo {
   border-bottom: 1px solid var(--mainColor1);
@@ -51,15 +51,23 @@
   }
 }
 .BlogContent {
-  line-height: 30px;
-  font-size: 20px;
+  line-height: 1.7;
+  font-size: 18px;
 
   /* Markdown custom styles */
+
+  b,
+  strong {
+    font-weight: 500;
+  }
 
   & div[class="gatsby-highlight"] {
     // margin: 0.5em 0;
     margin: 0 -20px;
     overflow: auto;
+    &::-webkit-scrollbar {
+      height: 7px;
+    }
 
     & pre[class*="language-"] {
       // to control overlap start
@@ -113,12 +121,16 @@
 
   & ul li {
     list-style-type: initial;
+    line-height: 1.7;
   }
 
   & code[class="language-text"] {
     color: var(--mainColor1);
-    background-color: pink;
-    padding: 3px;
+    background-color: rgb(227, 227, 227);
+    padding: 3px 6px;
     border-radius: 3px;
+    font-family: monospace;
+    color: #333;
+    font-weight: lighter;
   }
 }

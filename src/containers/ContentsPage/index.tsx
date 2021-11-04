@@ -36,7 +36,8 @@ const Main = styled.main`
         font-size: 20px;
         letter-spacing: 1px;
         font-weight: bold;
-        width: 120px;
+        width: 140px;
+        font-family: var(--main-font);
       }
 
       @media (max-width: 450px) {
