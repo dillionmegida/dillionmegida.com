@@ -1,12 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import { capitalize } from "../../utils/string"
 
 const Container = styled.div`
-  .tags-container {
+  .tags-container,
+  .types-container {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
-    .tag-btn {
+    .set-btn {
       background: none;
       border: none;
       margin-right: 10px;
@@ -33,17 +35,25 @@ const Container = styled.div`
 
 type Props = {
   onQuery: (val: string) => void
-  onClickTag: (val: string) => void
+  defaultValue?: string
+
   commonTags: string[]
   activeTag: string
-  defaultValue?: string
+  onClickTag: (val: string) => void
+
+  contentTypes: string[]
+  activeType: string
+  onClickType: (val: string) => void
 }
 
 export default function SearchInput({
   onQuery,
-  onClickTag,
   commonTags,
   activeTag,
+  onClickTag,
+  contentTypes,
+  activeType,
+  onClickType,
   defaultValue,
 }: Props) {
   return (
@@ -52,10 +62,21 @@ export default function SearchInput({
         {commonTags.map((tag, i) => (
           <button
             onClick={() => onClickTag(tag)}
-            className={"tag-btn " + (activeTag === tag ? "active" : "")}
+            className={"set-btn " + (activeTag === tag ? "active" : "")}
             key={tag + "-" + i}
           >
             #{tag}
+          </button>
+        ))}
+      </div>
+      <div className="types-container">
+        {contentTypes.map((type, i) => (
+          <button
+            onClick={() => onClickType(type)}
+            className={"set-btn " + (activeType === type ? "active" : "")}
+            key={type + "-" + i}
+          >
+            {capitalize(type)}
           </button>
         ))}
       </div>

@@ -85,6 +85,7 @@ const Main = styled.main`
 `
 
 const commonTags = ["all", "gatsby", "node", "javascript", "react"]
+const contentTypes = ["all", "post", "talk", "video", "podcast"]
 
 type Props = {
   youtube: AllContentsQql
@@ -141,40 +142,77 @@ export default function ContentsPage({
   const [articles, setArticles] = useState(allArticlesOnThisWebsite.edges)
   const [activeQuery, setActiveQuery] = useState("")
   const [activeTag, setActiveTag] = useState("all")
+  const [activeType, setActiveType] = useState<typeof contentTypes[number]>(
+    "all"
+  )
 
   const updateParamsUrl = ({
     tag = activeTag,
+    type = activeType,
     query = activeQuery,
   }: {
     tag?: string
     query?: string
+    type?: string
   }) => {
     changeWithoutReloading(
       null,
       "",
-      "?tag=" + tag + (query.length > 0 ? "&query=" + query : "")
+      "?tag=" +
+        tag +
+        "&type=" +
+        type +
+        (query.length > 0 ? "&query=" + query : "")
     )
   }
 
-  const { tag = null, query = null } = queryString.parse(params)
+  const { tag = null, query = null, type = null } = queryString.parse(params)
 
   useEffect(() => {
-    if (tag || query) {
+    if (tag || query || type) {
       if (tag) setActiveTag(tag as string)
       if (query) setActiveQuery(query as string)
+      if (type) setActiveType(type as string)
 
-      onQuery((query as string) || activeQuery, (tag as string) || activeTag)
+      onQuery(
+        (query as string) || activeQuery,
+        (tag as string) || activeTag,
+        (type as string) || activeType
+      )
     }
   }, [])
 
-  const onQuery = (val: string, tag: string = "all") => {
+  const onQuery = (
+    val: string,
+    tag: string = activeTag,
+    type: string = activeType
+  ) => {
+    if (val === activeQuery && tag === activeTag && type === activeType) return
+
     const valReg = new RegExp(val, "ig")
     const tagReg = new RegExp(tag, "ig")
     const contents: AllContentsQql[] = []
 
     const isActiveTagAll = tag === "all" || !commonTags.includes(tag)
+    const isActiveTypeAll = type === "all" || !contentTypes.includes(type)
 
-    allContents.forEach((c, i) => {
+    const contentsByType = [
+      (isActiveTypeAll || type === "post") && logrocket,
+      (isActiveTypeAll || type === "video") && youtube,
+      (isActiveTypeAll || type === "post") && codesource,
+      (isActiveTypeAll || type === "podcast") && podcast,
+      (isActiveTypeAll || type === "post") && egghead,
+      (isActiveTypeAll || type === "post") && vonage,
+      (isActiveTypeAll || type === "post") && kirupa,
+      (isActiveTypeAll || type === "post") && edpresso,
+      (isActiveTypeAll || type === "post") && soshace,
+      (isActiveTypeAll || type === "talk") && talk,
+      (isActiveTypeAll || type === "post") && fcc,
+      (isActiveTypeAll || type === "post") && strapi,
+      (isActiveTypeAll || type === "post") && devto,
+    ].filter(Boolean) as AllContentsQql[]
+
+    contentsByType.forEach((c, i) => {
       contents[i] = { edges: [] }
       c.edges.forEach(({ node }, j) => {
         contents[i].edges[j] = { node: { ...node, content: [] } }
@@ -196,17 +234,22 @@ export default function ContentsPage({
 
     setContents(contents)
 
-    const articles = allArticlesOnThisWebsite.edges.filter(({ node }) => {
-      const {
-        frontmatter: { title, tags },
-      } = node
-      const tagsStr = tags?.join("") as string
+    const articles =
+      type !== "post" && type !== "all"
+        ? []
+        : allArticlesOnThisWebsite.edges.filter(({ node }) => {
+            const {
+              frontmatter: { title, tags },
+            } = node
+            const tagsStr = tags?.join("") as string
 
-      return (
-        (valReg.test(title) || valReg.test(tagsStr)) &&
-        (isActiveTagAll ? true : tagReg.test(title) || tagReg.test(tagsStr))
-      )
-    })
+            return (
+              (valReg.test(title) || valReg.test(tagsStr)) &&
+              (isActiveTagAll
+                ? true
+                : tagReg.test(title) || tagReg.test(tagsStr))
+            )
+          })
 
     setArticles(articles)
   }
@@ -249,24 +292,31 @@ export default function ContentsPage({
         {/* <FeaturedContent /> */}
         <div className="search-input-container">
           <SearchInput
+            {...{ contentTypes, activeType, activeTag, commonTags }}
             onClickTag={tag => {
               setActiveTag(tag)
               updateParamsUrl({ tag })
               onQuery(activeQuery, tag)
             }}
-            activeTag={activeTag}
-            commonTags={commonTags}
+            onClickType={type => {
+              setActiveType(type)
+              updateParamsUrl({ type })
+              onQuery(activeQuery, activeTag, type)
+            }}
             onQuery={val => {
               setActiveQuery(val)
               updateParamsUrl({ query: val })
-              onQuery(val, activeTag)
+              onQuery(val)
             }}
             defaultValue={activeQuery}
           />
         </div>
         <span
           className={classNames("filtered-count", {
-            hidden: activeTag === "all" && activeQuery.length < 1,
+            hidden:
+              activeTag === "all" &&
+              activeQuery.length < 1 &&
+              activeType === "all",
           })}
         >
           {filteredContentsLength} {pluralize("result", filteredContentsLength)}
