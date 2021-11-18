@@ -10,8 +10,17 @@ export const STW = {
   intro: "https://writing.dillionmegida.com/blog/introduction",
 }
 
+export const SITE_URL = "dillionmegida.com"
+
+export const NEWSLETTER = {
+  link: "http://newsletter." + SITE_URL,
+  title: "Dillion Megida's Weekly Newsletter",
+  description:
+    "A weekly newsletter where I share resources around Tech, Career and Life",
+}
+
 export default {
-  SITE_URL: "dillionmegida.com",
+  SITE_URL,
 
   meta: {
     TITLE: "Dillion Megida - Developer Advocate 🥑 and Content Creator ✨",

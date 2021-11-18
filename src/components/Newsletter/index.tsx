@@ -1,14 +1,129 @@
 import React from "react"
-import Styles from "./index.module.scss"
+import styled from "styled-components"
+import { NEWSLETTER } from "../../constants"
+import { NewTabLink } from "../Link"
+
+const Container = styled.section`
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid var(--mainColor1);
+  margin: 20px auto 40px;
+  padding: 40px;
+  border-radius: 5px;
+
+  .wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    margin: 0 0 5px;
+    text-align: center;
+    font-size: 30px;
+    a {
+      color: var(--mainColor1);
+    }
+  }
+
+  @media (max-width: 400px) {
+    padding: 25px;
+
+    h2 {
+      font-size: 25px;
+    }
+  }
+
+  .newsletter-info {
+    text-align: center;
+    max-width: 100%;
+    color: var(--mainColor1);
+    margin: 0 0 20px;
+  }
+
+  form {
+    display: flex;
+  }
+
+  .revue-form-group {
+    margin-bottom: 15px;
+    flex: 1;
+
+    input {
+      padding: 15px;
+      width: 100%;
+      background-color: #faf8fa;
+      border: 1px solid var(--mainColor1);
+      border-radius: 0;
+      border-right: 0;
+    }
+  }
+
+  .revue-form-actions {
+    margin-bottom: 20px;
+    .submit-input {
+      padding: 15px;
+      width: 100%;
+      background-color: var(--mainColor1);
+      color: white;
+      border: 1px solid var(--mainColor1);
+      border-radius: 0;
+      cursor: pointer;
+    }
+  }
+
+  .revue-form-footer {
+    font-size: 0.8rem;
+    text-align: center;
+    a {
+      color: var(--lightBlue);
+    }
+  }
+`
 
 export default () => (
-  <div className={Styles.Newsletter}>
-    <iframe
-      src="https://dillionmegida.substack.com/embed"
-      width="480"
-      height="320"
-      frameBorder="0"
-      scrolling="no"
-    />
-  </div>
+  <Container id="revue-embed">
+    <div className="wrapper">
+      <h2>
+        <NewTabLink link={NEWSLETTER.link}>{NEWSLETTER.title}</NewTabLink>
+      </h2>
+      <p className="newsletter-info">{NEWSLETTER.description}</p>
+      <form
+        action="http://newsletter.dillionmegida.com/add_subscriber"
+        method="post"
+        id="revue-form"
+        name="revue-form"
+        target="_blank"
+      >
+        <div className="revue-form-group">
+          <input
+            className="revue-form-field"
+            placeholder="Your email address..."
+            type="email"
+            name="member[email]"
+            id="member_email"
+          />
+        </div>
+        <div className="revue-form-actions">
+          <input
+            className="submit-input"
+            value="Subscribe"
+            type="submit"
+            name="member[subscribe]"
+            id="member_submit"
+          />
+        </div>
+      </form>
+      <div className="revue-form-footer">
+        By subscribing, you agree with Revue’s{" "}
+        <a target="_blank" href="https://www.getrevue.co/terms">
+          Terms of Service
+        </a>{" "}
+        and{" "}
+        <a target="_blank" href="https://www.getrevue.co/privacy">
+          Privacy Policy
+        </a>
+        .
+      </div>
+    </div>
+  </Container>
 )
