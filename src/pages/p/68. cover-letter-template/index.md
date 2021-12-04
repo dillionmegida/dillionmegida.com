@@ -4,6 +4,7 @@ date: "2021-09-27"
 pageDescription: Here, I share a cover letter template that has worked for a few of my friends and me
 pageKeywords: "cover letter, cover letter template, job application"
 tags: ["cover-letter"]
+cover: cover-letter-template.png
 ---
 
 Heyyo 👋
