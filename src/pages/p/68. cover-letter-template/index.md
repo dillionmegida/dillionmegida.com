@@ -1,24 +1,24 @@
 ---
 title: Cover Letter Template for your next job 💪🏽
 date: "2021-09-27"
-pageDescription: Here, I share a cover letter template that has worked for me and a few of my friends
+pageDescription: Here, I share a cover letter template that has worked for a few of my friends and me
 pageKeywords: "cover letter, cover letter template, job application"
 tags: ["cover-letter"]
 ---
 
 Heyyo 👋
 
-This is not an article per se. It's a template for a cover letter.
+This piece is not an article per se. It's a template for a cover letter.
 
 ## Why am I sharing this?
 
-I have this cover letter format I've been using for my job applications. It has been able to land me some interviews, and two of my friends (one, a Game Developer, and the other, a Developer Advocate) also testified that they got an interview using it.
+I have this cover letter format I've been using for my job applications. It has landed me some interviews, and two of my friends (one a Game Developer, and the other, a Developer Advocate) also testified that they got an interview using it.
 
-Note that this is not the best of templates. It's also lengthy, so if not used correctly (and/or just maybe the odds aren't in your favor), a recruiter won't even read it 🥲
+Note that this is not the best of templates. It can also turn out to be very long if you're not concise enough.
 
-Anyways, I hope you find this useful. And if you do, kindly consider sharing it with your friends, and also reach out to me on Twitter--[@iamdillion](https://twitter.com/iamdillion)--with your testimony. Also, if you have any questions or improvement-suggestions, please feel free to reach out to me.
+I hope you find this helpful. And if you do, kindly consider sharing it with your friends and reach out to me on Twitter--[@iamdillion](https://twitter.com/iamdillion)--with your testimony. Also, if you have any questions or improvement suggestions, please feel free to reach out to me.
 
-I'll share the template, explain few points in the template, and also an example I've used before.
+I'll share the template, explain a few points in the template, and an example I've used before.
 
 ## The Template
 
@@ -34,9 +34,9 @@ I'd love to work for **[Company Name]**.
 
 Why **[Company Name]**? **[Here, you state why you want to work for the company. What excited you about the company? What product got your attention? Why this company? You have to do your research obviously, so you can clearly state something about the company that matches your interests]**
 
-> Here, you're showing the recruiter why you want to work for the company. Your cover letter shouldn't come off as a general email you sent to 50 job application emails. It should be tailored to the job you're applying for.
+> Here, you're showing the recruiter why you want to work for the company. Your cover letter shouldn't come off as a general email you sent to 50 job application emails. It would be best if you tailored it to the job you're applying for.
 
-Why me? **[A little about you--who you are, what you love doing, your strengths and skills (ensure they align with the job's description)]**
+Why me? **[A little about you--who you are, what you love doing, your strengths and skills concisely (ensure they align with the job's description)]**
 
 > Here, you're showing why you're fit.
 
@@ -47,15 +47,15 @@ Here are some of my achievements below that'll make you consider my application:
 - ...
 - **[Achievement n with reference links]**
 
-Am I fit for this? I believe I am. **[State that particular, special, or distinct attribute or skill that you possess that aligns so much with the role]**
+Am I fit for this? I believe I am. **[State that particular, unique, or distinct attribute or skill that you possess that aligns so much with the role]**
 
-> This part here should be very catchy. Try your best to make it clear that you have what it takes, or you're very willing to do what it takes
+> This part here should be exceedingly catchy. Try your best to clarify that you have what it takes, or you're very willing to do what it takes.
 
-**[Optional]** Do you think I am fit? If you aren't, you can assess my skills with a task. **[Give some examples of tasks that you could be assessed with]**
+**[Optional]** Do you think I am fit? If you aren't, you can assess my skills with a task. **[Give some examples of tasks that the recruiter could use to evaluate you]**
 
-> This part may come off like you're desperate, so it's okay if you don't want to add it. I add this part to show them how "confident" I am about the job, and how much I'd love to work for the company.
+> This part may come off like you're desperate, so it's okay if you don't want to add it. I usually add this part to show the recruiters how "confident" I am about the job and how much I'd love to work for the company.
 
-Looking forward to hearing more about this opportunity.
+I am looking forward to hearing more about this opportunity.
 
 ---
 
@@ -92,4 +92,4 @@ Looking forward to hearing more about this opportunity.
 
 I'd love to hear what you think--improvements, questions, general feedback, please send them in.
 
-Rooting for you, famm!
+I am rooting for you, famm!
