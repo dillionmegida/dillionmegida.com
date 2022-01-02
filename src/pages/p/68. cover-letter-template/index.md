@@ -17,7 +17,11 @@ I have this cover letter format I've been using for my job applications. It has 
 
 Note that this is not the best of templates. It can also turn out to be very long if you're not concise enough.
 
-I hope you find this helpful. And if you do, kindly consider sharing it with your friends and reach out to me on Twitter--[@iamdillion](https://twitter.com/iamdillion)--with your testimony. Also, if you have any questions or improvement suggestions, please feel free to reach out to me.
+I hope you find this helpful. And if you do, kindly consider sharing it with your friends and reach out to me on Twitter--[@iamdillion](https://twitter.com/iamdillion)--with your testimony.
+
+Here's a twitter thread where I'd be adding people's testimonies as they come in: [Cover Letter Tweet](https://twitter.com/iamdillion/status/1476123357095632900?s=20)
+
+Also, if you have any questions or improvement suggestions, please feel free to reach out to me.
 
 I'll share the template, explain a few points in the template, and an example I've used before.
 
@@ -64,7 +68,6 @@ How do you see it?
 
 <div style="width:100%;height:0;padding-bottom:76%;position:relative;"><iframe src="https://giphy.com/embed/LKf4i5Tvt7mE0" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/interesting-eyebrow-kevin-nash-LKf4i5Tvt7mE0">via GIPHY</a></p>
 
-
 ### Here's an example
 
 Dear Hiring Manager,
@@ -73,7 +76,7 @@ I'd love to work for [redacted].
 
 Why [redacted]? I love working on products that contribute to the growth of other businesses. I love the purpose that drives [redacted] and I believe I can contribute my skills to the continued success of the product.
 
-Why me? I'm currently a Software Engineer and Technical writer who loves learning, teaching, and building web tools and applications. I haven't worked as a Developer Advocate but I've been wanting to transition to that role. I realized that I'd want to do more than building. I'd want to also share resources, teach online, and guide developers. I've been doing this as a Content Creator, but I want to explore more areas and reach out to more people as an official Developer Advocate.  I don't meet up with the 1-year Developer Advocacy requirement, but without that, I believe you'd still want to consider my application with my achievements below:
+Why me? I'm currently a Software Engineer and Technical writer who loves learning, teaching, and building web tools and applications. I haven't worked as a Developer Advocate but I've been wanting to transition to that role. I realized that I'd want to do more than building. I'd want to also share resources, teach online, and guide developers. I've been doing this as a Content Creator, but I want to explore more areas and reach out to more people as an official Developer Advocate. I don't meet up with the 1-year Developer Advocacy requirement, but without that, I believe you'd still want to consider my application with my achievements below:
 
 - Written over 66 articles on my website on various web technologies - [https://dillionmegida.com/blog](https://dillionmegida.com/blog)
 - Published over 143+ contents (from videos to articles to talks) - [https://dillionmegida.com/contents](https://dillionmegida.com/contents)
