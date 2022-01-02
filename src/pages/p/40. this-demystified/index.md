@@ -185,7 +185,7 @@ As seen above, `this` in `print2()` would point to the `window` object if there 
 
 **Side note:** Every function declaration is a "function object" combo, i.e functions are also objects ([more details](https://www.freecodecamp.org/news/how-javascript-implements-oop#objectfunctioncombination)). This means properties and methods (like `call`) can be added or called on them. Such variables are only invoked as a function when parenthesis '()' is used on them.
 
-Check out this article - [call, bind and apply in Javascript](/p/javascript/call-bind-apply-javascript) to learn about `bind` and `apply`.
+Check out this article - [call, bind and apply in Javascript](/p/call-bind-apply-javascript) to learn about `bind` and `apply`.
 
 ### 3. Arrow Functions
 
