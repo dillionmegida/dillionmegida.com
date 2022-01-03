@@ -95,6 +95,7 @@ type Props = {
   logrocket: AllContentsQql
   soshace: AllContentsQql
   vonage: AllContentsQql
+  stream: AllContentsQql
   fcc: AllContentsQql
   podcast: AllContentsQql
   talk: AllContentsQql
@@ -120,6 +121,7 @@ export default function ContentsPage({
   talk,
   allArticlesOnThisWebsite,
   strapi,
+  stream,
   params,
 }: Props) {
   const allContents = [
@@ -136,6 +138,7 @@ export default function ContentsPage({
     fcc,
     strapi,
     devto,
+    stream,
   ]
 
   const [contents, setContents] = useState(allContents)
@@ -210,6 +213,7 @@ export default function ContentsPage({
       (isActiveTypeAll || type === "post") && fcc,
       (isActiveTypeAll || type === "post") && strapi,
       (isActiveTypeAll || type === "post") && devto,
+      (isActiveTypeAll || type === "post") && stream,
     ].filter(Boolean) as AllContentsQql[]
 
     contentsByType.forEach((c, i) => {

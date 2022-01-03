@@ -21,6 +21,7 @@ type Props = {
     kirupa: AllContentsQql
     egghead: AllContentsQql
     strapi: AllContentsQql
+    stream: AllContentsQql
     allArticlesOnMyWebite: AllPostsGql
   }
   location: Location
@@ -49,6 +50,7 @@ function Contents({ data, location }: Props) {
         kirupa={data.kirupa}
         egghead={data.egghead}
         strapi={data.strapi}
+        stream={data.stream}
         allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
       />
     </Layout>
@@ -122,6 +124,20 @@ export const query = graphql`
           id
           platform
           link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    stream: allStreamYaml {
+      edges {
+        node {
+          id
+          platform
           content {
             title
             link
