@@ -6,6 +6,7 @@ pageDescription: >-
   The minus (-) option in Git, is an alias for the previous checked-out branch. In this article, I explain how this option works and what it's an alias for.
 pageKeywords: "git, git branches, branches, previous branch, git alias"
 tags: ["git"]
+video: https://youtu.be/Pe-CJ3jqUVI
 ---
 
 Have you ever checked out a branch and forgot the name of the previous branch you were on? Or do you just find the previous branch too long to type? If yes to either or both, this article is for you.

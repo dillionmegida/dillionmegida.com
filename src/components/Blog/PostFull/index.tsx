@@ -60,6 +60,12 @@ export default ({ data }: Props) => {
             <img src={postCoverUrl} alt="Blog Cover" width="100%" />
           ) : null}
           <div className={Styles.BlogContent}>
+            {post.frontmatter.video && (
+              <div className={Styles.VideoText}>
+                Here's a video if you'd prefer that:{" "}
+                <a href={post.frontmatter.video}>{post.frontmatter.video}</a>
+              </div>
+            )}
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
         </article>
@@ -114,6 +120,7 @@ export const query = graphql`
         pageKeywords
         cover
         tags
+        video
         questions {
           name
           options

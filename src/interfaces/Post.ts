@@ -34,6 +34,7 @@ export interface GqlPostFull {
     pageDescription: string
     title: string
     tags?: string[]
+    video?: string
     date: Date
     pageKeywords: string
     cover: string
