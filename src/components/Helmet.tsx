@@ -12,20 +12,23 @@ type Props = {
   children?: React.ReactNode
 }
 
+const DEFAULT_IMAGE = "https://dillionmegida.com/img/deee.jpg"
+
 const Helmet = ({
   pageTitle,
   pageLink,
   pageDesc,
   pageKeywords = "",
-  imageCard: _imageCard = "https://dillionmegida.com/img/deee.jpg",
+  imageCard: _imageCard = DEFAULT_IMAGE,
   largeTwitterCard = false,
   smoothScroll = false,
   children = null,
 }: Props) => {
-  const imageCard =
-    _imageCard && _imageCard.startsWith("http")
+  const imageCard = _imageCard
+    ? _imageCard.startsWith("https")
       ? _imageCard
       : `https://dillionmegida.com${_imageCard}`
+    : DEFAULT_IMAGE
 
   return (
     <RHelmet>
