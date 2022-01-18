@@ -2,6 +2,14 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: How to quickly git checkout/merge/rebase your previous branch
+      link: https://youtu.be/Pe-CJ3jqUVI
+      tags: ['git']
+    - item:
+      title: First International Trip | My Ghana Experience Vlog
+      link: https://youtu.be/_T8n0m_9nt4
+      tags: ['general']
+    - item:
       title: Getting the Developer Advocate Job
       link: https://youtu.be/EdOEXLMPSTI
       tags: ['general']
