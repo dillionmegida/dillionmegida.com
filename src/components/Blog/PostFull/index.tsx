@@ -35,7 +35,7 @@ export default ({ data }: Props) => {
         pageDesc={post.frontmatter.pageDescription}
         pageKeywords={post.frontmatter.pageKeywords}
         imageCard={postCoverUrl}
-        largeTwitterCard={true}
+        largeTwitterCard={!!postCoverUrl}
       />
 
       <main className={Styles.BlogPost}>
