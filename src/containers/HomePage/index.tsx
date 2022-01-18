@@ -181,11 +181,19 @@ export default function HomePage({ contents }: Props) {
               and Content Creator ✨
             </span>
             <span className="some-text">
-              As a Software Engineer, I focus majorly on the frontend of
-              applications. I love building accessible applications on the web.
-              I also love learning and simplifying tech--coding, practices,
-              tools--via technical articles, videos, and every means possible. I
-              write mostly about web development topics and JavaScript on{" "}
+              I'm a Content Creator passionate about simplifying topics around
+              tech/web/programming via videos and articles. I also love sharing
+              my experiences with life and career as I believe they can help
+              someone out there.
+              <br />
+              <br />
+              As a Software Engineer familiar with backend technologies, I focus
+              majorly on the frontend side of applications, with professional
+              experience in React (and its frameworks) and basic experience with
+              Angular and Vue. I also love building accessible applications, and
+              playing with CSS.
+              <br />
+              <br />I write mostly on{" "}
               <Link to={pageLinks.BLOG}>my blog here</Link>
               {publications.map((p, i) =>
                 i === pubsLength - 1 ? (
