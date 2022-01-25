@@ -9,9 +9,7 @@ tags: ["writing"]
 
 Hello dear 👋,
 
-I'm a passionate technical writer, who writes in different platforms (including this). I am the founder of [TheWebFor5](https://thewebfor5.com), a technical blog platform for simplifying web topics in the simplest way possible.
-
-I also started the challenge [#2Articles1Week](https://twitter.com/hashtag/2Articles1Week) early this year and shared it on twitter which is a means to further improve my skills, and also invite more people into technical writing.
+I'm a passionate technical writer, who writes in different platforms (including this). I also started the challenge [#2Articles1Week](https://twitter.com/hashtag/2Articles1Week) early this year and shared it on twitter which is a means to further improve my skills, and also invite more people into technical writing.
 
 Yes, I am also an advocate for technical writing. I've received a lot of questions on the hows of getting into technical writing from people I've tried inviting and some others who know me for what I do. I've often answered them through calls and messages, but I decided to have a general reference for everyone (from now and the future) who wants to get started with technical writing from my point of view.gra
 
