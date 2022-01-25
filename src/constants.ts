@@ -46,6 +46,8 @@ export default {
     "E-mail": { link: "mailto:dillionmegida@gmail.com", Icon: Mail },
   },
 
+  CALENDLY: "https://calendly.com/dillionmegida",
+
   pageLinks: {
     HOME: "/",
     CONTENTS: "/contents",

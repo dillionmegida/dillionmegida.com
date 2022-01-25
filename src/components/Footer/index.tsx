@@ -1,6 +1,6 @@
 import React from "react"
 import constants from "../../constants"
-import { AnchorLink } from "../Link"
+import { AnchorLink, NewTabLink } from "../Link"
 import Styles from "./index.module.scss"
 
 export default () => {
@@ -9,6 +9,9 @@ export default () => {
   return (
     <footer id="contact" className={Styles.ContactSection}>
       <h2>Connect with me ✨</h2>
+      <NewTabLink className={Styles.calendly} link={constants.CALENDLY}>
+        Schedule a meeting with me 🗓
+      </NewTabLink>
       <div className={Styles.Contacts}>
         <div>
           <span>

@@ -5,6 +5,13 @@
   text-align: center;
   background-color: var(--mainColor1);
   color: white;
+
+  .calendly {
+    color: white;
+    text-decoration: underline;
+    margin: 10px 0;
+    color: var(--mainColor2);
+  }
 }
 .ContactSection > p {
   font-size: 17px;
