@@ -3,7 +3,7 @@ import React from "react"
 import constants from "../../constants"
 import { Link } from "gatsby"
 import { NewTabLink } from "../../components/Link"
-import { AllContentsQql } from "../../interfaces/Contents"
+import { AllContentsGql } from "../../interfaces/Contents"
 import { AllPostsGql } from "../../interfaces/Post"
 import ArticlesSection from "./ArticlesSection"
 import YoutubeSection from "./YoutubeSection"
@@ -148,7 +148,7 @@ const BodySection = styled.div`
 
 type Props = {
   contents: {
-    youtube: AllContentsQql
+    youtube: AllContentsGql
     allArticlesOnMyWebite: AllPostsGql
   }
 }

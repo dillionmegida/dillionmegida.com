@@ -4,12 +4,12 @@ import Helmet from "../components/Helmet"
 import Layout from "../components/Layout"
 import constants from "../constants"
 import HomePage from "../containers/HomePage"
-import { AllContentsQql } from "../interfaces/Contents"
+import { AllContentsGql } from "../interfaces/Contents"
 import { AllPostsGql } from "../interfaces/Post"
 
 type Props = {
   data: {
-    youtube: AllContentsQql
+    youtube: AllContentsGql
     allArticlesOnMyWebite: AllPostsGql
   }
 }

@@ -36,9 +36,9 @@ export default function STWBlock() {
           Here's something for you 🤗
           <br />
           <br />
-          As a technical writer, I'm trying to share my knowledge and experience
-          on this space: <NewTabLink link={STW.link}>{STW.title}</NewTabLink>.
-          It's a WIP, and you can check out more about the platform here:{" "}
+          As a technical writer, I shared my knowledge and experience
+          on this platform: <NewTabLink link={STW.link}>{STW.title}</NewTabLink>.
+          Check out more about the platform here:{" "}
           <NewTabLink link={STW.intro}>Introduction to STW</NewTabLink>
         </p>
       </div>

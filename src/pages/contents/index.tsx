@@ -3,25 +3,26 @@ import ContentsPage from "../../containers/ContentsPage"
 import Helmet from "../../components/Helmet"
 import Layout from "../../components/Layout"
 import { graphql } from "gatsby"
-import { AllContentsQql } from "../../interfaces/Contents"
+import { AllContentsGql } from "../../interfaces/Contents"
 import { AllPostsGql } from "../../interfaces/Post"
 
 type Props = {
   data: {
-    youtube: AllContentsQql
-    codesource: AllContentsQql
-    devto: AllContentsQql
-    edpresso: AllContentsQql
-    logrocket: AllContentsQql
-    soshace: AllContentsQql
-    vonage: AllContentsQql
-    fcc: AllContentsQql
-    podcast: AllContentsQql
-    talk: AllContentsQql
-    kirupa: AllContentsQql
-    egghead: AllContentsQql
-    strapi: AllContentsQql
-    stream: AllContentsQql
+    youtube: AllContentsGql
+    codesource: AllContentsGql
+    devto: AllContentsGql
+    edpresso: AllContentsGql
+    logrocket: AllContentsGql
+    stw: AllContentsGql
+    soshace: AllContentsGql
+    vonage: AllContentsGql
+    fcc: AllContentsGql
+    podcast: AllContentsGql
+    talk: AllContentsGql
+    kirupa: AllContentsGql
+    egghead: AllContentsGql
+    strapi: AllContentsGql
+    stream: AllContentsGql
     allArticlesOnMyWebite: AllPostsGql
   }
   location: Location
@@ -42,6 +43,7 @@ function Contents({ data, location }: Props) {
         devto={data.devto}
         edpresso={data.edpresso}
         logrocket={data.logrocket}
+        stw={data.stw}
         soshace={data.soshace}
         vonage={data.vonage}
         fcc={data.fcc}
@@ -148,6 +150,21 @@ export const query = graphql`
     }
 
     logrocket: allLogrocketYaml {
+      edges {
+        node {
+          id
+          platform
+          link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    stw: allStwYaml {
       edges {
         node {
           id

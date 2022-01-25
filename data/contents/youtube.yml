@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: Getting my Netherlands VISA
+      link: https://youtu.be/8_3uLpcVN-Y
+      tags: ['general']
+    - item:
       title: How to quickly git checkout/merge/rebase your previous branch
       link: https://youtu.be/Pe-CJ3jqUVI
       tags: ['git']

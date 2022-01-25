@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { AllContentsQql } from "../../interfaces/Contents"
+import { AllContentsGql } from "../../interfaces/Contents"
 import styled from "styled-components"
 import Masonry from "react-masonry-css"
 import { AllPostsGql } from "../../interfaces/Post"
@@ -84,24 +84,25 @@ const Main = styled.main`
   }
 `
 
-const commonTags = ["all", "gatsby", "node", "javascript", "react"]
+const commonTags = ["all", "gatsby", "node", "javascript", "react", "writing"]
 const contentTypes = ["all", "post", "talk", "video", "podcast"]
 
 type Props = {
-  youtube: AllContentsQql
-  codesource: AllContentsQql
-  devto: AllContentsQql
-  edpresso: AllContentsQql
-  logrocket: AllContentsQql
-  soshace: AllContentsQql
-  vonage: AllContentsQql
-  stream: AllContentsQql
-  fcc: AllContentsQql
-  podcast: AllContentsQql
-  talk: AllContentsQql
-  kirupa: AllContentsQql
-  egghead: AllContentsQql
-  strapi: AllContentsQql
+  youtube: AllContentsGql
+  codesource: AllContentsGql
+  devto: AllContentsGql
+  edpresso: AllContentsGql
+  logrocket: AllContentsGql
+  stw: AllContentsGql
+  soshace: AllContentsGql
+  vonage: AllContentsGql
+  stream: AllContentsGql
+  fcc: AllContentsGql
+  podcast: AllContentsGql
+  talk: AllContentsGql
+  kirupa: AllContentsGql
+  egghead: AllContentsGql
+  strapi: AllContentsGql
   allArticlesOnThisWebsite: AllPostsGql
   params: string
 }
@@ -111,6 +112,7 @@ export default function ContentsPage({
   devto,
   edpresso,
   logrocket,
+  stw,
   soshace,
   codesource,
   vonage,
@@ -126,6 +128,7 @@ export default function ContentsPage({
 }: Props) {
   const allContents = [
     logrocket,
+    stw,
     youtube,
     codesource,
     podcast,
@@ -194,13 +197,14 @@ export default function ContentsPage({
 
     const valReg = new RegExp(val, "ig")
     const tagReg = new RegExp(tag, "ig")
-    const contents: AllContentsQql[] = []
+    const contents: AllContentsGql[] = []
 
     const isActiveTagAll = tag === "all" || !commonTags.includes(tag)
     const isActiveTypeAll = type === "all" || !contentTypes.includes(type)
 
     const contentsByType = [
       (isActiveTypeAll || type === "post") && logrocket,
+      (isActiveTypeAll || type === "post") && stw,
       (isActiveTypeAll || type === "video") && youtube,
       (isActiveTypeAll || type === "post") && codesource,
       (isActiveTypeAll || type === "podcast") && podcast,
@@ -214,7 +218,7 @@ export default function ContentsPage({
       (isActiveTypeAll || type === "post") && strapi,
       (isActiveTypeAll || type === "post") && devto,
       (isActiveTypeAll || type === "post") && stream,
-    ].filter(Boolean) as AllContentsQql[]
+    ].filter(Boolean) as AllContentsGql[]
 
     contentsByType.forEach((c, i) => {
       contents[i] = { edges: [] }
@@ -262,7 +266,7 @@ export default function ContentsPage({
     filteredContentsLength = 0
 
   function updateContentsLength(
-    content: AllContentsQql,
+    content: AllContentsGql,
     type: "total" | "filtered"
   ) {
     content.edges.forEach(({ node }) =>
