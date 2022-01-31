@@ -9,6 +9,7 @@ import { AllPostsGql } from "../../interfaces/Post"
 type Props = {
   data: {
     youtube: AllContentsGql
+    videos: AllContentsGql
     codesource: AllContentsGql
     devto: AllContentsGql
     edpresso: AllContentsGql
@@ -39,6 +40,7 @@ function Contents({ data, location }: Props) {
       <ContentsPage
         params={location.search}
         youtube={data.youtube}
+        videos={data.videos}
         codesource={data.codesource}
         devto={data.devto}
         edpresso={data.edpresso}
@@ -66,6 +68,20 @@ export const query = graphql`
         node {
           id
           link
+          platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    videos: allVideosYaml {
+      edges {
+        node {
+          id
           platform
           content {
             title

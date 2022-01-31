@@ -90,6 +90,7 @@ const Main = styled.main`
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
+    text-align: center;
   }
 
   .starter-link {
@@ -104,6 +105,7 @@ const contentTypes = ["all", "post", "talk", "video", "podcast"]
 
 type Props = {
   youtube: AllContentsGql
+  videos: AllContentsGql
   codesource: AllContentsGql
   devto: AllContentsGql
   edpresso: AllContentsGql
@@ -138,6 +140,7 @@ export default function ContentsPage({
   talk,
   allArticlesOnThisWebsite,
   strapi,
+  videos,
   stream,
   params,
 }: Props) {
@@ -157,6 +160,7 @@ export default function ContentsPage({
     strapi,
     devto,
     stream,
+    videos,
   ]
 
   const [contents, setContents] = useState(allContents)
@@ -221,6 +225,7 @@ export default function ContentsPage({
       (isActiveTypeAll || type === "post") && logrocket,
       (isActiveTypeAll || type === "post") && stw,
       (isActiveTypeAll || type === "video") && youtube,
+      (isActiveTypeAll || type === "video") && videos,
       (isActiveTypeAll || type === "post") && codesource,
       (isActiveTypeAll || type === "podcast") && podcast,
       (isActiveTypeAll || type === "post") && egghead,

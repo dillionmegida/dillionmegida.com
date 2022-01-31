@@ -4,4 +4,4 @@
     - item:
       title: How to Avoid Multiple WebSocket Connections in a React Chat App
       link: https://getstream.io/blog/websocket-connections-react/
-      tags: ["react", "javascript"]
+      tags: ["react", "javascript", "stream"]
