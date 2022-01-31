@@ -48,6 +48,9 @@ export default {
 
   CALENDLY: "https://calendly.com/dillionmegida",
 
+  GATSBY_STARTER_ALL_CONTENTS:
+    "https://github.com/dillionmegida/gatsby-starter-all-contents",
+
   pageLinks: {
     HOME: "/",
     CONTENTS: "/contents",

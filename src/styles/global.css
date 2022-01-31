@@ -68,8 +68,8 @@ a {
   width: 100%;
 }
 
-@media only screen and (max-width: 500px) {
-  .container {
-    padding: 20px;
-  }
-}
+    @media only screen and (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+    }

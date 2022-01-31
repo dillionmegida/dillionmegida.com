@@ -11,6 +11,8 @@ import { pluralize } from "../../utils/string"
 import classNames from "classnames"
 import queryString from "query-string"
 import { changeWithoutReloading } from "../../utils/url"
+import { NewTabLink } from "../../components/Link"
+import constants from "../../constants"
 
 const Main = styled.main`
   width: 100%;
@@ -81,6 +83,19 @@ const Main = styled.main`
     .my-masonry-grid_column > div {
       margin-bottom: 50px;
     }
+  }
+
+  .starter-section {
+    background-color: var(--mainColor1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  .starter-link {
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
   }
 `
 
@@ -365,6 +380,16 @@ export default function ContentsPage({
               />
             )}
           </Masonry>
+        </div>
+        <div className="starter-section">
+          If you'll love to have a contents page similar to this, check out this{" "}
+          <NewTabLink
+            className="starter-link"
+            link={constants.GATSBY_STARTER_ALL_CONTENTS}
+          >
+            Gatsby Starter All Contents
+          </NewTabLink>{" "}
+          template I built.
         </div>
       </div>
     </Main>

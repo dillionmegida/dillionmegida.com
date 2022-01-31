@@ -2,65 +2,69 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
-      title: Getting my Netherlands VISA
+      title: 3.1. MVV (Visa) Validity Period
+      link: hhttps://youtu.be/o8eUXWxh480
+      tags: ["general"]
+    - item:
+      title: 3. Getting my Netherlands VISA
       link: https://youtu.be/8_3uLpcVN-Y
-      tags: ['general']
+      tags: ["general"]
     - item:
       title: How to quickly git checkout/merge/rebase your previous branch
       link: https://youtu.be/Pe-CJ3jqUVI
-      tags: ['git']
+      tags: ["git"]
     - item:
       title: First International Trip | My Ghana Experience Vlog
       link: https://youtu.be/_T8n0m_9nt4
-      tags: ['general']
+      tags: ["general"]
     - item:
-      title: Getting the Developer Advocate Job
+      title: 2. Getting the Developer Advocate Job
       link: https://youtu.be/EdOEXLMPSTI
-      tags: ['general']
+      tags: ["general"]
     - item:
-      title: Relocating from Nigeria to the Netherlands
+      title: 1. Relocating from Nigeria to the Netherlands
       link: https://youtu.be/RPpLIOX70zw
-      tags: ['general']
+      tags: ["general"]
     - item:
       title: Workspace and Tools I use for my YouTube videos
       link: https://youtu.be/Fe3vl9BnmW8
-      tags: ['general']
+      tags: ["general"]
     - item:
       title: First Flight Experience | Vlog
       link: https://youtu.be/7KSb_Df-2E8
-      tags: ['general']
+      tags: ["general"]
     - item:
       title: What is Developer Relations and How can I get in?
       link: https://youtu.be/UTVjlJJHbRU
-      tags: ['general']
+      tags: ["general"]
     - item:
       title: New Adventure ✨Transitioning to Developer Advocacy
       link: https://youtu.be/xz5UTuVKPx4
-      tags: ['general']
+      tags: ["general"]
     - item:
       title: What I've learned working as a full-time Software Engineer for 1 year
       link: https://youtu.be/Q8PwOdy_Dzo
-      tags: ['general']
+      tags: ["general"]
     - item:
       title: Here's what I learned on Consistency using my Gym experience
       link: https://youtu.be/n9yX3jgIN9U
-      tags: ['general']
+      tags: ["general"]
     - item:
       title: How I got my first Full-time Software Developer Job
       link: https://youtu.be/2QamIL37Vwk
-      tags: ['general']
+      tags: ["general"]
     - item:
       title: Internationalization (i18n) in NextJS apps using next-intl
       link: https://youtu.be/uDXyk1ZgLK0
-      tags: ['nextjs', 'i18n']
+      tags: ["nextjs", "i18n"]
     - item:
       title: JWT decode vs verify - Understanding which to use for token verification
       link: https://youtu.be/vgocTvahk18
-      tags: ['jwt']
+      tags: ["jwt"]
     - item:
       title: React ref and forwardRef Tutorial
       link: https://www.youtube.com/watch?v=CDTwyh4XE0U
-      tags: ['react']
+      tags: ["react"]
     - item:
       title: Git Bisect Simplified - What it is, why and how to use it to debug your applications
       link: https://youtu.be/ozTQNyGmtfg
@@ -88,9 +92,3 @@
       title: How to create Custom Tasks in VSCode
       link: https://www.youtube.com/watch?v=IdhvvlZkS9g
       tags: ["vscode"]
-    
-    
-   
-    
-
-      
