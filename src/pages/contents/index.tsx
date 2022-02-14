@@ -10,6 +10,7 @@ type Props = {
   data: {
     youtube: AllContentsGql
     videos: AllContentsGql
+    deeecode: AllContentsGql
     codesource: AllContentsGql
     devto: AllContentsGql
     edpresso: AllContentsGql
@@ -41,6 +42,7 @@ function Contents({ data, location }: Props) {
         params={location.search}
         youtube={data.youtube}
         videos={data.videos}
+        deeecode={data.deeecode}
         codesource={data.codesource}
         devto={data.devto}
         edpresso={data.edpresso}
@@ -79,6 +81,20 @@ export const query = graphql`
     }
 
     videos: allVideosYaml {
+      edges {
+        node {
+          id
+          platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    deeecode: allDeeecodeYaml {
       edges {
         node {
           id

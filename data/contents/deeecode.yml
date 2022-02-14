@@ -1,0 +1,48 @@
+- platform: deeecode (Tech + Code)
+  link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
+  content:
+    - item:
+      title: How to apply a default image URL to an image tag with JavaScript
+      link: https://youtu.be/ikLmHpUOwuE
+      tags: ["javascript", "html"]
+    - item:
+      title: useMemo simplified
+      link: https://youtu.be/JluonoPRHuY
+      tags: ["react", "hooks"]
+    - item:
+      title: Internationalization (i18n) in NextJS apps using next-intl
+      link: https://www.youtube.com/watch?v=CvA8LOGJoYw
+      tags: ["nextjs", "i18n"]
+    - item:
+      title: JWT decode vs verify - Understanding which to use for token verification
+      link: https://www.youtube.com/watch?v=uqZpkjwxS8o
+      tags: ["jwt"]
+    - item:
+      title: React ref and forwardRef Tutorial
+      link: https://www.youtube.com/watch?v=V47iCwslUf0
+      tags: ["react"]
+    - item:
+      title: Git Bisect Simplified - What it is, why and how to use it to debug your applications
+      link: https://www.youtube.com/watch?v=SEcNS6sDeMk
+      tags: ["git"]
+    - item:
+      title: How to implement Conditional Props using TypeScript in React
+      link: https://www.youtube.com/watch?v=RIU092lzeE4
+      tags: ["react", "typescript"]
+    - item:
+      title: How to export terminal output into a file
+      link: https://www.youtube.com/watch?v=bo-NjxlB9pE
+      tags: ["linux", "terminal"]
+    - item:
+      title: How react-helmet is not a solution for improving the SEO of websites
+      link: https://www.youtube.com/watch?v=wjdPXTXvi8I
+      tags: ["react"]
+    - item:
+      title: Git submodules - Why and How to use them
+      link: https://www.youtube.com/watch?v=Hzj5l7rpNVs
+      tags: ["git"]
+    - item:
+      title: How to create Custom Tasks in VSCode
+      link: https://www.youtube.com/watch?v=0MqvGPU-SwQ
+      tags: ["vscode"]
+     

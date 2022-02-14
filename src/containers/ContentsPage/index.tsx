@@ -106,6 +106,7 @@ const contentTypes = ["all", "post", "talk", "video", "podcast"]
 type Props = {
   youtube: AllContentsGql
   videos: AllContentsGql
+  deeecode: AllContentsGql
   codesource: AllContentsGql
   devto: AllContentsGql
   edpresso: AllContentsGql
@@ -141,6 +142,7 @@ export default function ContentsPage({
   allArticlesOnThisWebsite,
   strapi,
   videos,
+  deeecode,
   stream,
   params,
 }: Props) {
@@ -156,11 +158,12 @@ export default function ContentsPage({
     edpresso,
     soshace,
     talk,
-    fcc,
     strapi,
     devto,
     stream,
+    deeecode,
     videos,
+    fcc,
   ]
 
   const [contents, setContents] = useState(allContents)
@@ -224,6 +227,7 @@ export default function ContentsPage({
     const contentsByType = [
       (isActiveTypeAll || type === "post") && logrocket,
       (isActiveTypeAll || type === "post") && stw,
+      (isActiveTypeAll || type === "video") && deeecode,
       (isActiveTypeAll || type === "video") && youtube,
       (isActiveTypeAll || type === "video") && videos,
       (isActiveTypeAll || type === "post") && codesource,
