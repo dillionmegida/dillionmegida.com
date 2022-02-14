@@ -4,6 +4,7 @@ date: "2021-05-13"
 pageDescription: ""
 pageKeywords: ""
 tags: ["javascript"]
+video: https://youtu.be/ikLmHpUOwuE
 ---
 
 Image loading in websites fail for many reasons. It could be that the `src` of the image contains a broken link. Or, the internet connection may be poor, and not enough to fetch the image from an external source. Or, the image's server (which may be external) may be down.
