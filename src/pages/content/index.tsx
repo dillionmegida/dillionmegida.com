@@ -1,44 +1,45 @@
 import React from "react"
-import ContentsPage from "../../containers/ContentsPage"
+import ContentPage from "../../containers/ContentPage"
 import Helmet from "../../components/Helmet"
 import Layout from "../../components/Layout"
 import { graphql } from "gatsby"
-import { AllContentsGql } from "../../interfaces/Contents"
+import { AllContentGql } from "../../interfaces/Content"
 import { AllPostsGql } from "../../interfaces/Post"
+import constants from "../../constants"
 
 type Props = {
   data: {
-    youtube: AllContentsGql
-    videos: AllContentsGql
-    deeecode: AllContentsGql
-    codesource: AllContentsGql
-    devto: AllContentsGql
-    edpresso: AllContentsGql
-    logrocket: AllContentsGql
-    stw: AllContentsGql
-    soshace: AllContentsGql
-    vonage: AllContentsGql
-    fcc: AllContentsGql
-    podcast: AllContentsGql
-    talk: AllContentsGql
-    kirupa: AllContentsGql
-    egghead: AllContentsGql
-    strapi: AllContentsGql
-    stream: AllContentsGql
+    youtube: AllContentGql
+    videos: AllContentGql
+    deeecode: AllContentGql
+    codesource: AllContentGql
+    devto: AllContentGql
+    edpresso: AllContentGql
+    logrocket: AllContentGql
+    stw: AllContentGql
+    soshace: AllContentGql
+    vonage: AllContentGql
+    fcc: AllContentGql
+    podcast: AllContentGql
+    talk: AllContentGql
+    kirupa: AllContentGql
+    egghead: AllContentGql
+    strapi: AllContentGql
+    stream: AllContentGql
     allArticlesOnMyWebite: AllPostsGql
   }
   location: Location
 }
 
-function Contents({ data, location }: Props) {
+function Content({ data, location }: Props) {
   return (
     <Layout>
       <Helmet
-        pageTitle="All my contents in one place ✨"
+        pageTitle="All my content in one place ✨"
         pageDesc="This is a page for every content I've created ranging from articles to videos to podcasts to everything on web development and tech."
-        pageLink="/contents"
+        pageLink={constants.pageLinks.CONTENT}
       />
-      <ContentsPage
+      <ContentPage
         params={location.search}
         youtube={data.youtube}
         videos={data.videos}
@@ -64,7 +65,7 @@ function Contents({ data, location }: Props) {
 }
 
 export const query = graphql`
-  query ContentsPageQuery {
+  query ContentPageQuery {
     youtube: allYoutubeYaml {
       edges {
         node {
@@ -350,4 +351,4 @@ export const query = graphql`
   }
 `
 
-export default Contents
+export default Content

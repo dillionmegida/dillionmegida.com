@@ -83,7 +83,7 @@ export default function SearchInput({
       <div className="input-container">
         <input
           type="text"
-          placeholder="Search my contents"
+          placeholder="Search my content"
           onChange={e => onQuery(e.target.value)}
           defaultValue={defaultValue}
         />

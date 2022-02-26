@@ -3,7 +3,7 @@ import React from "react"
 import constants from "../../constants"
 import { Link } from "gatsby"
 import { NewTabLink } from "../../components/Link"
-import { AllContentsGql } from "../../interfaces/Contents"
+import { AllContentGql } from "../../interfaces/Content"
 import { AllPostsGql } from "../../interfaces/Post"
 import ArticlesSection from "./ArticlesSection"
 import YoutubeSection from "./YoutubeSection"
@@ -147,14 +147,14 @@ const BodySection = styled.div`
 `
 
 type Props = {
-  contents: {
-    youtube: AllContentsGql
+  content: {
+    youtube: AllContentGql
     allArticlesOnMyWebite: AllPostsGql
   }
 }
 
-export default function HomePage({ contents }: Props) {
-  const { allArticlesOnMyWebite, youtube } = contents
+export default function HomePage({ content }: Props) {
+  const { allArticlesOnMyWebite, youtube } = content
 
   const { CURRENT_WORK_LINK, CURRENT_WORK_NAME } = constants
 

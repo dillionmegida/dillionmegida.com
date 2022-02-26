@@ -9,7 +9,7 @@ tags: ["general"]
 
 Prior to [my first post on my website](/p/first-blog/) which was written on 18th July 2019, I wrote my first ever technical article on Dev.to on 26th June, 20219--[Making sticky column with grid area](https://dev.to/dillionmegida/making-sticky-column-with-grid-area-5eph).
 
-26th June 2021 makes it two years since my first article, and over time, I've written [90+ public articles](/contents) and some private ones. In this article, I want to celebrate myself, share a little background story, and also share a little of what I've learned during this period.
+26th June 2021 makes it two years since my first article, and over time, I've written [90+ public articles](/content) and some private ones. In this article, I want to celebrate myself, share a little background story, and also share a little of what I've learned during this period.
 
 ## Congratulations Dillion, cut soap for me 😅
 
@@ -17,7 +17,7 @@ Congratulations Dillion, you're doing an amazing job sharing helpful content thr
 
 On 4th Jan 2020, I started a 2 Articles 1 Week challenge, and [after 32 weeks (with 1 to 3 missed weeks in between), I ended the challenge](https://twitter.com/iamdillion/status/1213021849065529345). It was quite a journey and I re-learned how important consistency is. I believe this writing thing, there's more to learn, but I'm doing quite well.
 
-Also to add, I'm open to public writing opportunities on tech and web-related topics. Asides from the income part which has helped me make a living, I love having my content spread across the world. I believe different platforms have different audiences, and I want to reach as many audiences as I possibly can. [My contents](/contents) can speak for me.
+Also to add, I'm open to public writing opportunities on tech and web-related topics. Asides from the income part which has helped me make a living, I love having my content spread across the world. I believe different platforms have different audiences, and I want to reach as many audiences as I possibly can. [My content](/content) can speak for me.
 
 ## A little background story
 

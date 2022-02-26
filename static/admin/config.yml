@@ -17,13 +17,13 @@ collections:
       - { name: tags, label: Blog Tags, widget: list, required: false }
       - { name: cover, label: Blog Cover Link, required: false }
       - { name: body, label: Body, widget: markdown }
-  - name: "contents"
-    label: "Contents"
-    description: "All my contents"
+  - name: "content"
+    label: "Content"
+    description: "All my content"
     files:
       - label: "Youtube Videos"
         name: "youtube"
-        file: "data/contents/youtube.yml"
+        file: "data/content/youtube.yml"
         format: 'yml'
         create: true
         fields:

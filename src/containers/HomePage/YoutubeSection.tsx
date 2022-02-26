@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { AllContentsQql } from "../../interfaces/Contents"
+import { AllContentGql } from "../../interfaces/Content"
 import React from "react"
 import YouTube from "react-youtube"
 import { Link } from "gatsby"
@@ -25,7 +25,7 @@ const Section = styled.section`
 `
 
 type Props = {
-  videos: AllContentsQql
+  videos: AllContentGql
 }
 
 const { pageLinks, social } = constants

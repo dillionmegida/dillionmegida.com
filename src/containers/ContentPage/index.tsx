@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { AllContentsGql } from "../../interfaces/Contents"
+import { AllContentGql } from "../../interfaces/Content"
 import styled from "styled-components"
 import Masonry from "react-masonry-css"
 import { AllPostsGql } from "../../interfaces/Post"
@@ -68,7 +68,7 @@ const Main = styled.main`
     }
   }
 
-  .contents-container {
+  .content-container {
     margin-top: 20px;
     .my-masonry-grid {
       display: flex;
@@ -104,28 +104,28 @@ const commonTags = ["all", "gatsby", "node", "javascript", "react", "writing"]
 const contentTypes = ["all", "post", "talk", "video", "podcast"]
 
 type Props = {
-  youtube: AllContentsGql
-  videos: AllContentsGql
-  deeecode: AllContentsGql
-  codesource: AllContentsGql
-  devto: AllContentsGql
-  edpresso: AllContentsGql
-  logrocket: AllContentsGql
-  stw: AllContentsGql
-  soshace: AllContentsGql
-  vonage: AllContentsGql
-  stream: AllContentsGql
-  fcc: AllContentsGql
-  podcast: AllContentsGql
-  talk: AllContentsGql
-  kirupa: AllContentsGql
-  egghead: AllContentsGql
-  strapi: AllContentsGql
+  youtube: AllContentGql
+  videos: AllContentGql
+  deeecode: AllContentGql
+  codesource: AllContentGql
+  devto: AllContentGql
+  edpresso: AllContentGql
+  logrocket: AllContentGql
+  stw: AllContentGql
+  soshace: AllContentGql
+  vonage: AllContentGql
+  stream: AllContentGql
+  fcc: AllContentGql
+  podcast: AllContentGql
+  talk: AllContentGql
+  kirupa: AllContentGql
+  egghead: AllContentGql
+  strapi: AllContentGql
   allArticlesOnThisWebsite: AllPostsGql
   params: string
 }
 
-export default function ContentsPage({
+export default function ContentPage({
   youtube,
   devto,
   edpresso,
@@ -146,7 +146,7 @@ export default function ContentsPage({
   stream,
   params,
 }: Props) {
-  const allContents = [
+  const allContent = [
     logrocket,
     stw,
     youtube,
@@ -166,7 +166,7 @@ export default function ContentsPage({
     fcc,
   ]
 
-  const [contents, setContents] = useState(allContents)
+  const [content, setContent] = useState(allContent)
   const [articles, setArticles] = useState(allArticlesOnThisWebsite.edges)
   const [activeQuery, setActiveQuery] = useState("")
   const [activeTag, setActiveTag] = useState("all")
@@ -219,12 +219,12 @@ export default function ContentsPage({
 
     const valReg = new RegExp(val, "ig")
     const tagReg = new RegExp(tag, "ig")
-    const contents: AllContentsGql[] = []
+    const content: AllContentGql[] = []
 
     const isActiveTagAll = tag === "all" || !commonTags.includes(tag)
     const isActiveTypeAll = type === "all" || !contentTypes.includes(type)
 
-    const contentsByType = [
+    const contentByType = [
       (isActiveTypeAll || type === "post") && logrocket,
       (isActiveTypeAll || type === "post") && stw,
       (isActiveTypeAll || type === "video") && deeecode,
@@ -242,12 +242,12 @@ export default function ContentsPage({
       (isActiveTypeAll || type === "post") && strapi,
       (isActiveTypeAll || type === "post") && devto,
       (isActiveTypeAll || type === "post") && stream,
-    ].filter(Boolean) as AllContentsGql[]
+    ].filter(Boolean) as AllContentGql[]
 
-    contentsByType.forEach((c, i) => {
-      contents[i] = { edges: [] }
+    contentByType.forEach((c, i) => {
+      content[i] = { edges: [] }
       c.edges.forEach(({ node }, j) => {
-        contents[i].edges[j] = { node: { ...node, content: [] } }
+        content[i].edges[j] = { node: { ...node, content: [] } }
 
         node.content.forEach(item => {
           const tagStr = item.tags?.join("") as string
@@ -258,13 +258,13 @@ export default function ContentsPage({
               ? true
               : tagReg.test(item.title) || tagReg.test(tagStr))
           ) {
-            contents[i].edges[j].node.content.push(item)
+            content[i].edges[j].node.content.push(item)
           }
         })
       })
     })
 
-    setContents(contents)
+    setContent(content)
 
     const articles =
       type !== "post" && type !== "all"
@@ -286,25 +286,25 @@ export default function ContentsPage({
     setArticles(articles)
   }
 
-  let totalContentsLength = 0,
-    filteredContentsLength = 0
+  let totalContentLength = 0,
+    filteredContentLength = 0
 
-  function updateContentsLength(
-    content: AllContentsGql,
+  function updateContentLength(
+    content: AllContentGql,
     type: "total" | "filtered"
   ) {
     content.edges.forEach(({ node }) =>
       type === "total"
-        ? (totalContentsLength += node.content.length)
-        : (filteredContentsLength += node.content.length)
+        ? (totalContentLength += node.content.length)
+        : (filteredContentLength += node.content.length)
     )
   }
 
-  allContents.forEach(c => updateContentsLength(c, "total"))
-  allArticlesOnThisWebsite.edges.forEach(() => (totalContentsLength += 1))
+  allContent.forEach(c => updateContentLength(c, "total"))
+  allArticlesOnThisWebsite.edges.forEach(() => (totalContentLength += 1))
 
-  contents.forEach(c => updateContentsLength(c, "filtered"))
-  articles.forEach(() => (filteredContentsLength += 1))
+  content.forEach(c => updateContentLength(c, "filtered"))
+  articles.forEach(() => (filteredContentLength += 1))
 
   const isWiderThan800 = useMedia({ minWidth: 1000 })
 
@@ -315,8 +315,8 @@ export default function ContentsPage({
       <div className="heading-bg">
         <div className="container">
           <div className="heading-bg-wrapper">
-            <h1>All my contents in one place ✨</h1>
-            <span className="count">Total: {totalContentsLength}+</span>
+            <h1>All my content in one place ✨</h1>
+            <span className="count">Total: {totalContentLength}+</span>
           </div>
         </div>
       </div>
@@ -351,15 +351,15 @@ export default function ContentsPage({
               activeType === "all",
           })}
         >
-          {filteredContentsLength} {pluralize("result", filteredContentsLength)}
+          {filteredContentLength} {pluralize("result", filteredContentLength)}
         </span>
-        <div className="contents-container">
+        <div className="content-container">
           <Masonry
             breakpointCols={isWiderThan800 ? 3 : isWiderThan600 ? 2 : 1}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {contents.map(c =>
+            {content.map(c =>
               c.edges.map(({ node }) => {
                 if (node.content.length < 1) return null
 
@@ -391,12 +391,12 @@ export default function ContentsPage({
           </Masonry>
         </div>
         <div className="starter-section">
-          If you'll love to have a contents page similar to this, check out this{" "}
+          If you'll love to have a content page similar to this, check out this{" "}
           <NewTabLink
             className="starter-link"
-            link={constants.GATSBY_STARTER_ALL_CONTENTS}
+            link={constants.GATSBY_STARTER_ALL_CONTENT}
           >
-            Gatsby Starter All Contents
+            Gatsby Starter All Content
           </NewTabLink>{" "}
           template I built.
         </div>

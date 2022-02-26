@@ -23,7 +23,7 @@ A markup language is a computer language used for defining, processing and prese
 HyperText is a text which contains links to other texts. The other texts can be within the same document of this text or another document (or webpage). For example, when you click on [this link](/), it redirects to the homepage of this site. `this link` is called a hypertext because it references another document. It is called `hyper` because there's more information about the text than what is seen.
 <br/><br/>
 **_Putting these terms together,_**<br/>
-HTML is a language which defines the contents of web pages. It tells a web browser what contents to display in specified formats. Contents varies from headings to paragraphs, to lists, links, images and so on. These contents may not be styled as that is not the official work of HTML. Content styling is done by a language called CSS. [Check out this article](/p/css/what-is-css) for more information.
+HTML is a language which defines the content of web pages. It tells a web browser what content to display in specified formats. Contents varies from headings to paragraphs, to lists, links, images and so on. These contents may not be styled as that is not the official work of HTML. Content styling is done by a language called CSS. [Check out this article](/p/css/what-is-css) for more information.
 
 **To create a HTML document**, you'll create a file, then save it with an extension of `.html`. When you trying opening any of such files with a browser, the browser will attempt to interpret the definitions made by the language and display it as a web page.
 

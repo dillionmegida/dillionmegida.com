@@ -8,7 +8,7 @@ export interface ContentGql {
   }[]
 }
 
-export interface AllContentsGql {
+export interface AllContentGql {
   edges: {
     node: ContentGql
   }[]

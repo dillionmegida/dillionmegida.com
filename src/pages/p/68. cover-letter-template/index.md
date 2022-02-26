@@ -79,7 +79,7 @@ Why [redacted]? I love working on products that contribute to the growth of othe
 Why me? I'm currently a Software Engineer and Technical writer who loves learning, teaching, and building web tools and applications. I haven't worked as a Developer Advocate but I've been wanting to transition to that role. I realized that I'd want to do more than building. I'd want to also share resources, teach online, and guide developers. I've been doing this as a Content Creator, but I want to explore more areas and reach out to more people as an official Developer Advocate. I don't meet up with the 1-year Developer Advocacy requirement, but without that, I believe you'd still want to consider my application with my achievements below:
 
 - Written over 66 articles on my website on various web technologies - [https://dillionmegida.com/blog](https://dillionmegida.com/blog)
-- Published over 143+ contents (from videos to articles to talks) - [https://dillionmegida.com/contents](https://dillionmegida.com/contents)
+- Published over 143+ content (from videos to articles to talks) - [https://dillionmegida.com/content](https://dillionmegida.com/content)
 - Written over 15+ articles on FreeCodeCamp ([https://www.freecodecamp.org/news/author/dillionmegida/](https://www.freecodecamp.org/news/author/dillionmegida/)) with over 12k+ weekly views and regular "Thank you, Dillion, for this article"s on Twitter : )
 - Created over 10+ videos on my growing youtube channel ([https://bit.ly/2RMfqfX](https://bit.ly/2RMfqfX)) with an average of 800+ views per month
 - I also create open-source packages once in a while. Here's my best: [https://github.com/dillionmegida/gatsby-remark-liquid-tags](https://github.com/dillionmegida/gatsby-remark-liquid-tags)

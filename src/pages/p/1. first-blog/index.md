@@ -11,7 +11,7 @@ My name is <b>Dillion Megida</b>.
 <br/><br/>
 This is my first blog and I plan to keep this as a reference as to when I launched <b>dillionmegida.com</b>
 
-I share relevant contents on my blog (and some other blog platforms) so that I could also in my little way, add value to the community and also challenge/improve myself.
+I share relevant content on my blog (and some other blog platforms) so that I could also in my little way, add value to the community and also challenge/improve myself.
 
 At the moment, I am a Front-end Web Developer, quite efficient with HTML5, CSS3, Reactjs, Javascript and few other front-end languages.
 

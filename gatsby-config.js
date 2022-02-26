@@ -92,8 +92,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `contents`,
-        path: `${__dirname}/data/contents/`,
+        name: `content`,
+        path: `${__dirname}/data/content/`,
       },
     },
 
@@ -105,7 +105,7 @@ module.exports = {
       },
     },
 
-    // For transforming markdown contents
+    // For transforming markdown content
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,

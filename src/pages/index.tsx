@@ -4,12 +4,12 @@ import Helmet from "../components/Helmet"
 import Layout from "../components/Layout"
 import constants from "../constants"
 import HomePage from "../containers/HomePage"
-import { AllContentsGql } from "../interfaces/Contents"
+import { AllContentGql } from "../interfaces/Content"
 import { AllPostsGql } from "../interfaces/Post"
 
 type Props = {
   data: {
-    youtube: AllContentsGql
+    youtube: AllContentGql
     allArticlesOnMyWebite: AllPostsGql
   }
 }
@@ -20,13 +20,13 @@ export default function Home({ data }: Props) {
   return (
     <Layout>
       <Helmet pageTitle={meta.TITLE} pageLink="/" pageDesc={meta.DESC} />
-      <HomePage contents={data} />
+      <HomePage content={data} />
     </Layout>
   )
 }
 
 export const query = graphql`
-  query ContentsQuery {
+  query ContentQuery {
     youtube: allYoutubeYaml {
       edges {
         node {

@@ -20,7 +20,7 @@ Web development consists of the means by which [websites or web applications]() 
 
 This part of web development focuses on how a website should look - the presentational view.
 
-The front-end process requires languages which place contents of different formats on pages with designs. In some websites, only the frontend development process is required. The developers involved in this process are called front-end developers.
+The front-end process requires languages which place content of different formats on pages with designs. In some websites, only the frontend development process is required. The developers involved in this process are called front-end developers.
 
 An example is a robot. Front-end is how the robot looks - the hands, legs, shield, head, helmet and so on. But, a robot does different things as assigned to. The shield is activated when certain external factors come up. The robot can choose to walk or run or even fly. These functionalities are guided by some inner operations which refer to the back-end.
 
@@ -30,7 +30,7 @@ This part focuses on how a website should work. This controls what is displayed 
 
 In the robot example, the back-end focuses on how the robot should work or respond to changes.
 
-Most times, the back-end developers work with the front-end developers as they are responsible for structuring the positions which the contents gotten from the back-end process are gotten.
+Most times, the back-end developers work with the front-end developers as they are responsible for structuring the positions which the content gotten from the back-end process are gotten.
 
 Front-end developers are not restricted to only the front-end neither are the back-end developers to only the back-end. Any knowledge of the other field aids in good communication between the two sections.
 

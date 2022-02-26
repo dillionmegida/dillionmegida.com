@@ -23,7 +23,7 @@ And I'm ending the year with career wins, personal wins, some good mental-health
 - [started a podcast](https://anchor.fm/dillion-megida) where I talk about a lot of things (I've been pretty slow on this one, though)
 - got accepted as a Guest author for [Sanity.io](https://sanity.io), [Strapijs](https://strapijs.com) and [ContentLabIO](https://contentlab.io)
 - learned a little about the relevance of investing and [started investing on Rise](https://rise.capital/)...use **G1M7TQ18** as the referral code if you're signing up please 🥺
-- [created more contentsssss](https://dillionmegida.com/contents)
+- [created more contentttttt](https://dillionmegida.com/content)
 - [started tiktoking](https://tiktok.com/@iamdillion) for fun 😂
 - [started a newsletter](http://newsletter.dillionmegida.com/), ought to be a weekly one, but it was pretty hard keeping up with it on a few occasions...hopefully, I do better next year
 - by the grace of God, I made lives easier for many people...I tend not to accept thank yous a lot, but I'm delighted I could help many people this year, financially and in their careers.

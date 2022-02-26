@@ -2,7 +2,7 @@
 title: RSS Feeds like I'm 5 - What are RSS Feeds?
 date: 2021-10-29
 pageDescription: >-
-  "RSS Feeds are a better way of organizing and following up with content from different platforms. You subscribe to the RSS Feed of a platform, and  the RSS Feed viewer that you use notifies you of newly published or updated contents."
+  "RSS Feeds are a better way of organizing and following up with content from different platforms. You subscribe to the RSS Feed of a platform, and  the RSS Feed viewer that you use notifies you of newly published or updated content."
 pageKeywords: "rss, rss feeds, Really Simple Syndication, like I'm 5"
 tags: ["rss"]
 cover: rss-feeds.png
@@ -35,9 +35,9 @@ Now here comes RSS Feeds...
 
 RSS Feeds stand for Really Simple Syndication feeds.
 
-They are like a raw version of a website (in XML format) that contains raw data of its contents. They are also subscribe-able, which makes them very interesting.
+They are like a raw version of a website (in XML format) that contains raw data of its content. They are also subscribe-able, which makes them very interesting.
 
-RSS feeds make content follow-ups more effortless. Are you interested in following up on five newsletters, six blog pages, or ten contents whatsoever? As long as the platforms on which these contents exist are RSS-compatible, you can subscribe to them all. And when you do that, you can view all the contents you've subscribed to in one place.
+RSS feeds make content follow-ups more effortless. Are you interested in following up on five newsletters, six blog pages, or ten content whatsoever? As long as the platforms on which these content exist are RSS-compatible, you can subscribe to them all. And when you do that, you can view all the content you've subscribed to in one place.
 
 When you subscribe, you don't just get notified of new content. Depending on the platform you use to view the RSS Feeds, you can quickly identify blogs/newsletters with new content.
 
@@ -49,7 +49,7 @@ The image above is the RSS Feed of my website (yes, I added them just while writ
 
 The image above is unreadable. What do you do with all these XMLs? And this is where RSS Feed Viewers come in. We'll see that in the next section.
 
-It's worth noting that RSS Feeds are not just for blogs or newsletters. I used these examples because I believe you'll relate well to understand this article. RSS Feeds can be used for any kind of content. On a basic level, as an author of the feed, you're saving the title, date, URL, and maybe description of your contents on the feed.
+It's worth noting that RSS Feeds are not just for blogs or newsletters. I used these examples because I believe you'll relate well to understand this article. RSS Feeds can be used for any kind of content. On a basic level, as an author of the feed, you're saving the title, date, URL, and maybe description of your content on the feed.
 
 It's also important to know that you only have access to what the author made available to the feed when you view RSS Feeds.
 

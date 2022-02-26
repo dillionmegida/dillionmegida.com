@@ -48,12 +48,12 @@ export default {
 
   CALENDLY: "https://calendly.com/dillionmegida",
 
-  GATSBY_STARTER_ALL_CONTENTS:
-    "https://github.com/dillionmegida/gatsby-starter-all-contents",
+  GATSBY_STARTER_ALL_CONTENT:
+    "https://github.com/dillionmegida/gatsby-starter-all-content",
 
   pageLinks: {
     HOME: "/",
-    CONTENTS: "/contents",
+    CONTENT: "/content",
     BLOG: "/blog",
   },
 

@@ -46,7 +46,7 @@ Since the target property has given us access to the element, we could then read
 #### 1. Getting properties
 
 The most common use case is in input elements.
-For example, a `change` event is listened to on an input field. This event is fired once there is a change in the contents of that input (which could be a change in value). The value of the input could then be transformed or displayed somewhere else.
+For example, a `change` event is listened to on an input field. This event is fired once there is a change in the content of that input (which could be a change in value). The value of the input could then be transformed or displayed somewhere else.
 
 Check out this pen - A simple program that displays the value as it changes.
 
@@ -60,7 +60,7 @@ Let's analyze the code used.
 
 - I set variable references to the input tag and the initially empty h1 tag.
 
-- I listened for every change event on the input and applied a function that sets the value of the input to the contents of the h1 tag.
+- I listened for every change event on the input and applied a function that sets the value of the input to the content of the h1 tag.
 
 - I used the `target` property to target the input.
 

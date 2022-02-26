@@ -69,7 +69,7 @@ const Header = () => {
       {[
         // { label: "Dillion", link: constants.pageLinks.HOME },
         { label: "Blog", link: constants.pageLinks.BLOG },
-        { label: "Contents", link: constants.pageLinks.CONTENTS },
+        { label: "Content", link: constants.pageLinks.CONTENT },
       ].map(l => (
         <_Link to={l.link} activeClassName="active">
           {l.label}
