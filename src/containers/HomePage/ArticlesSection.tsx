@@ -4,6 +4,7 @@ import Post from "../../components/Blog/PostMini"
 import constants from "../../constants"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { FormattedMessage } from "react-intl"
 
 const Section = styled.section``
 
@@ -14,9 +15,12 @@ type Props = {
 const { pageLinks } = constants
 
 export default function ArticlesSection({ articles }: Props) {
+  console.log({ articles })
   return (
     <Section>
-      <h2 className='underline'>Articles</h2>
+      <h2 className="underline">
+        <FormattedMessage id="articles" />
+      </h2>
       <div className="grid">
         {articles.edges.map(
           ({ node: { id, frontmatter, timeToRead, fields, html } }) => (
@@ -33,7 +37,7 @@ export default function ArticlesSection({ articles }: Props) {
         )}
       </div>
       <Link className="view-all-link" to={pageLinks.BLOG}>
-        View all articles
+        <FormattedMessage id="view all articles" />
       </Link>
     </Section>
   )

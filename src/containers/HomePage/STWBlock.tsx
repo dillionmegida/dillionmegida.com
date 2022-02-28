@@ -1,4 +1,5 @@
 import React from "react"
+import { FormattedMessage } from "react-intl"
 import styled from "styled-components"
 import { NewTabLink } from "../../components/Link"
 import { STW } from "../../constants"
@@ -32,15 +33,19 @@ export default function STWBlock() {
   return (
     <Section>
       <div className="container">
-        <h2>Are you interested in Getting Started with Technical Writing?</h2>
+        <h2>
+          <FormattedMessage id="stw.heading" />
+        </h2>
         <p>
-          Here's something for you 🤗
+          <FormattedMessage id="stw.subHeading" /> 🤗
           <br />
           <br />
-          As a technical writer, I shared my knowledge and experience on this
-          platform: <NewTabLink link={STW.link}>{STW.title}</NewTabLink>. Check
-          out more about the platform here:{" "}
-          <NewTabLink link={STW.intro}>Introduction to STW</NewTabLink>
+          <FormattedMessage id="stw.para1" />{" "}
+          <NewTabLink link={STW.link}>{STW.title}</NewTabLink>.{" "}
+          <FormattedMessage id="stw.para2" />{" "}
+          <NewTabLink link={STW.intro}>
+            <FormattedMessage id="stw.link2" />
+          </NewTabLink>
         </p>
       </div>
     </Section>

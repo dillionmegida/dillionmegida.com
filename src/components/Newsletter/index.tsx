@@ -1,4 +1,5 @@
 import React from "react"
+import { FormattedMessage, useIntl } from "react-intl"
 import styled from "styled-components"
 import { NEWSLETTER } from "../../constants"
 import { NewTabLink } from "../Link"
@@ -88,50 +89,57 @@ const Container = styled.section`
   }
 `
 
-export default () => (
-  <Container id="revue-embed">
-    <div className="wrapper">
-      <h2>
-        <NewTabLink link={NEWSLETTER.link}>{NEWSLETTER.title}</NewTabLink>
-      </h2>
-      <p className="newsletter-info">{NEWSLETTER.description}</p>
-      <form
-        action="http://newsletter.dillionmegida.com/add_subscriber"
-        method="post"
-        id="revue-form"
-        name="revue-form"
-        target="_blank"
-      >
-        <div className="revue-form-group">
-          <input
-            className="revue-form-field"
-            placeholder="Your email address..."
-            type="email"
-            name="member[email]"
-            id="member_email"
-          />
+export default () => {
+  const intl = useIntl()
+  const { messages: t } = intl
+
+  return (
+    <Container id="revue-embed">
+      <div className="wrapper">
+        <h2>
+          <NewTabLink link={NEWSLETTER.link}>
+            {t["newsletter.title"]}
+          </NewTabLink>
+        </h2>
+        <p className="newsletter-info">{t["newsletter.description"]}</p>
+        <form
+          action="http://newsletter.dillionmegida.com/add_subscriber"
+          method="post"
+          id="revue-form"
+          name="revue-form"
+          target="_blank"
+        >
+          <div className="revue-form-group">
+            <input
+              className="revue-form-field"
+              placeholder={t["yourEmailAddress"] + "..."}
+              type="email"
+              name="member[email]"
+              id="member_email"
+            />
+          </div>
+          <div className="revue-form-actions">
+            <input
+              className="submit-input"
+              value={t["subscribe"] as string}
+              type="submit"
+              name="member[subscribe]"
+              id="member_submit"
+            />
+          </div>
+        </form>
+        <div className="revue-form-footer">
+          <FormattedMessage id="newsletter.subscribing" />{" "}
+          <a target="_blank" href="https://www.getrevue.co/terms">
+            <FormattedMessage id="newsletter.termsOfService" />
+          </a>{" "}
+          <FormattedMessage id="and" />{" "}
+          <a target="_blank" href="https://www.getrevue.co/privacy">
+            <FormattedMessage id="newsletter.privacyPolicy" />
+          </a>
+          .
         </div>
-        <div className="revue-form-actions">
-          <input
-            className="submit-input"
-            value="Subscribe"
-            type="submit"
-            name="member[subscribe]"
-            id="member_submit"
-          />
-        </div>
-      </form>
-      <div className="revue-form-footer">
-        By subscribing, you agree with Revue’s{" "}
-        <a target="_blank" href="https://www.getrevue.co/terms">
-          Terms of Service
-        </a>{" "}
-        and{" "}
-        <a target="_blank" href="https://www.getrevue.co/privacy">
-          Privacy Policy
-        </a>
-        .
       </div>
-    </div>
-  </Container>
-)
+    </Container>
+  )
+}

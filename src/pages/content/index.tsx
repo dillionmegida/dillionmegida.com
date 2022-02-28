@@ -28,7 +28,7 @@ type Props = {
     egghead: AllContentGql
     strapi: AllContentGql
     stream: AllContentGql
-    allArticlesOnMyWebite: AllPostsGql
+    allArticlesOnMyWebsite: AllPostsGql
   }
   location: Location
 }
@@ -62,7 +62,7 @@ function Content({ data, location }: Props) {
         egghead={data.egghead}
         strapi={data.strapi}
         stream={data.stream}
-        allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
+        allArticlesOnThisWebsite={data.allArticlesOnMyWebsite}
       />
     </Layout>
   )
@@ -361,7 +361,7 @@ export const query = graphql`
       }
     }
 
-    allArticlesOnMyWebite: allMarkdownRemark(
+    allArticlesOnMyWebsite: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/^(/p/)/" } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {

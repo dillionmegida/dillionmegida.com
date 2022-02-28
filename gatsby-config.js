@@ -182,5 +182,32 @@ module.exports = {
     // Gatsby offline
     `gatsby-plugin-offline`,
     `gatsby-plugin-client-side-redirect`,
+
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyForNull: "en",
+        langKeyDefault: "en",
+        useLangKeyLayout: true,
+        prefixDefault: false,
+        markdownRemark: {
+          postPage: "src/components/Blog/PostFull/index.tsx",
+          query: `
+              {
+                  allMarkdownRemark {
+                      edges {
+                      node {
+                          fields {
+                          slug,
+                          langKey
+                          }
+                      }
+                      }
+                  }
+              }
+              `,
+        },
+      },
+    },
   ],
 }

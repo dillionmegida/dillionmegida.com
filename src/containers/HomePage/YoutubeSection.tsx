@@ -2,9 +2,9 @@ import styled from "styled-components"
 import { AllContentGql } from "../../interfaces/Content"
 import React from "react"
 import YouTube from "react-youtube"
-import { Link } from "gatsby"
 import constants from "../../constants"
 import { NewTabLink } from "../../components/Link"
+import { FormattedMessage } from "react-intl"
 
 const Section = styled.section`
   .articles {
@@ -64,7 +64,7 @@ export default function YoutubeSection({ youtube, deeecode }: Props) {
         )}
       </div>
       <NewTabLink className="view-all-link" link={social.YouTube.link}>
-        View all videos
+        <FormattedMessage id="view all videos" />
       </NewTabLink>
     </Section>
   )

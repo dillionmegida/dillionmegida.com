@@ -9,6 +9,7 @@ import ArticlesSection from "./ArticlesSection"
 import YoutubeSection from "./YoutubeSection"
 import Newsletter from "../../components/Newsletter"
 import STWBlock from "./STWBlock"
+import { FormattedMessage } from "react-intl"
 
 const { publications, pageLinks, social, RESUME } = constants
 const pubsLength = publications.length
@@ -179,12 +180,12 @@ type Props = {
   content: {
     youtube: AllContentGql
     deeecode: AllContentGql
-    allArticlesOnMyWebite: AllPostsGql
+    allArticlesOnMyWebsite: AllPostsGql
   }
 }
 
 export default function HomePage({ content }: Props) {
-  const { allArticlesOnMyWebite, youtube, deeecode } = content
+  const { allArticlesOnMyWebsite, youtube, deeecode } = content
 
   const { CURRENT_WORK_LINK, CURRENT_WORK_NAME } = constants
 
@@ -202,34 +203,30 @@ export default function HomePage({ content }: Props) {
               {CURRENT_WORK_NAME && CURRENT_WORK_LINK ? (
                 <>
                   {" "}
-                  at{" "}
+                  <FormattedMessage id="at" />{" "}
                   <NewTabLink className="work-link" link={CURRENT_WORK_LINK}>
                     {CURRENT_WORK_NAME}
                   </NewTabLink>
                 </>
               ) : null}{" "}
-              and Content Creator ✨
+              <FormattedMessage id="and" /> Content Creator ✨
             </span>
             <span className="some-text">
-              I'm a Content Creator passionate about simplifying topics around
-              tech/web/programming via videos and articles. I also love sharing
-              my experiences with life and career as I believe they can help
-              someone out there.
+              <FormattedMessage id="home.intro1" />
               <br />
               <br />
-              As a Software Engineer familiar with backend technologies, I focus
-              majorly on the frontend side of applications, with professional
-              experience in React (and its frameworks) and basic experience with
-              Angular and Vue. I also love building accessible applications, and
-              playing with CSS.
+              <FormattedMessage id="home.intro2" />
               <br />
-              <br />I write mostly on{" "}
-              <Link to={pageLinks.BLOG}>my blog here</Link>
+              <br />
+              <FormattedMessage id="home.iWrite" />{" "}
+              <Link to={pageLinks.BLOG}>
+                <FormattedMessage id="home.myBlogHere" />
+              </Link>
               {publications.map((p, i) =>
                 i === pubsLength - 1 ? (
                   <React.Fragment key={`publication-${i}`}>
                     {" "}
-                    and{" "}
+                    <FormattedMessage id="and" />{" "}
                     <a key={`link${i}`} href={p.link}>
                       {p.label}
                     </a>
@@ -244,17 +241,14 @@ export default function HomePage({ content }: Props) {
                 )
               )}{" "}
               <br />
-              <br />I also create Career/Life video content on{" "}
+              <br />
+              <FormattedMessage id="home.iCreate" />{" "}
               <NewTabLink link={social.YouTube.link}>
-                my YouTube Channel
-              </NewTabLink>{" "}
-              and Tech video content on{" "}
-              <NewTabLink link={social.DeeeCode.link}>
-                my DeeeCode Channel
+                <FormattedMessage id="home.myYoutube" />
               </NewTabLink>
               <br />
               <br />
-              Co-founder,{" "}
+              <FormattedMessage id="home.coFounder" />,{" "}
               <NewTabLink link="http://skulmart.com/">SkulMart</NewTabLink>
               <br />
               <br />
@@ -268,7 +262,7 @@ export default function HomePage({ content }: Props) {
       <BodySection className="body">
         <div className="container">
           <STWBlock />
-          <ArticlesSection articles={allArticlesOnMyWebite} />
+          <ArticlesSection articles={allArticlesOnMyWebsite} />
           <YoutubeSection deeecode={deeecode} youtube={youtube} />
           <Newsletter />
         </div>

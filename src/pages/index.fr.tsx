@@ -10,14 +10,15 @@ import { AllPostsGql } from "../interfaces/Post"
 type Props = {
   data: {
     youtube: AllContentGql
-    deeecode: AllContentGql
     allArticlesOnMyWebsite: AllPostsGql
+    deeecode: AllContentGql
   }
 }
 
 const { meta } = constants
 
 export default function Home({ data }: Props) {
+  console.log({ data })
   return (
     <Layout>
       <Helmet pageTitle={meta.TITLE} pageLink="/" pageDesc={meta.DESC} />
@@ -27,7 +28,7 @@ export default function Home({ data }: Props) {
 }
 
 export const query = graphql`
-  query ContentQuery {
+  query FrContentQuery {
     youtube: allYoutubeYaml {
       edges {
         node {

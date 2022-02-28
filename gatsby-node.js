@@ -70,18 +70,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(
-        __dirname,
-        `./src/components/Blog/PostFull/index.tsx`
-      ),
-      context: {
-        slug: node.fields.slug,
-      },
-    })
-  })
+//   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+//     createPage({
+//       path: node.fields.slug,
+//       component: path.resolve(
+//         __dirname,
+//         `./src/components/Blog/PostFull/index.tsx`
+//       ),
+//       context: {
+//         slug: node.fields.slug,
+//       },
+//     })
+//   })
 
   // pagination doc: https://www.gatsbyjs.com/plugins/gatsby-paginate/
   createPaginatedPages({
