@@ -10,6 +10,7 @@ import { AllPostsGql } from "../interfaces/Post"
 type Props = {
   data: {
     youtube: AllContentGql
+    deeecode: AllContentGql
     allArticlesOnMyWebite: AllPostsGql
   }
 }
@@ -28,6 +29,21 @@ export default function Home({ data }: Props) {
 export const query = graphql`
   query ContentQuery {
     youtube: allYoutubeYaml {
+      edges {
+        node {
+          id
+          link
+          platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    deeecode: allDeeecodeYaml {
       edges {
         node {
           id

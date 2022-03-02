@@ -5,6 +5,7 @@ cover: "move commit to right branch.png"
 pageDescription: "When you create a commit on a wrong branch, you can fix it by using the cherr-pick git command to move the commit to the right branch"
 pageKeywords: "git, cherry-pick, cherry pick, git cherry-pick, wrong branch, branch, right branch, from wrong branch to right branch, git command, cherry-pick command, git cherry-pick command, move a commit, commit"
 tags: ["git"]
+video: 'https://youtu.be/E00MV5E_6GM'
 ---
 
 Cherry-picking is literally the act of picking the best out of many others. Bringing that to git, cherry-picking means picking a "desirable" commit amongst other commits in a branch and attaching it to another branch.

@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: How to move a commit from the wrong branch to the correct branch using git cherry-pick command
+      link: https://youtu.be/E00MV5E_6GM
+      tags: ["git"]
+    - item:
       title: How to apply a default image URL to an image tag with JavaScript
       link: https://youtu.be/ikLmHpUOwuE
       tags: ["javascript", "html"]

@@ -149,12 +149,13 @@ const BodySection = styled.div`
 type Props = {
   content: {
     youtube: AllContentGql
+    deeecode: AllContentGql
     allArticlesOnMyWebite: AllPostsGql
   }
 }
 
 export default function HomePage({ content }: Props) {
-  const { allArticlesOnMyWebite, youtube } = content
+  const { allArticlesOnMyWebite, youtube, deeecode } = content
 
   const { CURRENT_WORK_LINK, CURRENT_WORK_NAME } = constants
 
@@ -235,7 +236,7 @@ export default function HomePage({ content }: Props) {
         <div className="container">
           <STWBlock />
           <ArticlesSection articles={allArticlesOnMyWebite} />
-          <YoutubeSection videos={youtube} />
+          <YoutubeSection deeecode={deeecode} youtube={youtube} />
           <Newsletter />
         </div>
       </BodySection>

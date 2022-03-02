@@ -25,18 +25,32 @@ const Section = styled.section`
 `
 
 type Props = {
-  videos: AllContentGql
+  youtube: AllContentGql
+  deeecode: AllContentGql
 }
 
 const { pageLinks, social } = constants
-    
-export default function YoutubeSection({ videos }: Props) {
+
+export default function YoutubeSection({ youtube, deeecode }: Props) {
   return (
     <Section>
-      <h2 className='underline'>Youtube</h2>
+      <h2 className="underline">Youtube</h2>
       <div className="grid">
-        {videos.edges.map(({ node }) =>
-          node.content.slice(0, 4).map(({ link }) => {
+        {deeecode.edges.map(({ node }) =>
+          node.content.slice(0, 2).map(({ link }) => {
+            const videoId = link.split(/(=|\/)/).pop()
+
+            return (
+              <YouTube
+                opts={{ width: "100%" }}
+                key={videoId}
+                videoId={videoId}
+              />
+            )
+          })
+        )}
+        {youtube.edges.map(({ node }) =>
+          node.content.slice(0, 2).map(({ link }) => {
             const videoId = link.split(/(=|\/)/).pop()
 
             return (
