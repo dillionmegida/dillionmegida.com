@@ -2,6 +2,10 @@
   link: null
   content:
     - item:
+      title: "Stream Chat React: Quick Start Guide"
+      link: https://www.youtube.com/watch?v=kGKq4giL4ok
+      tags: ["react", "stream"]
+    - item:
       title: Using Stream to build a team messaging app
       link: https://www.youtube.com/watch?v=WjvZL0bnbIE
       tags: ["javascript", "react", "stream"]
