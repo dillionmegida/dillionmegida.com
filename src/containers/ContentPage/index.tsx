@@ -119,6 +119,7 @@ type Props = {
   podcast: AllContentGql
   talk: AllContentGql
   kirupa: AllContentGql
+  memberstack: AllContentGql
   egghead: AllContentGql
   strapi: AllContentGql
   allArticlesOnThisWebsite: AllPostsGql
@@ -136,6 +137,7 @@ export default function ContentPage({
   vonage,
   fcc,
   kirupa,
+  memberstack,
   podcast,
   egghead,
   talk,
@@ -154,6 +156,7 @@ export default function ContentPage({
     podcast,
     egghead,
     vonage,
+    memberstack,
     kirupa,
     edpresso,
     soshace,
@@ -239,6 +242,7 @@ export default function ContentPage({
       (isActiveTypeAll || type === "post") && soshace,
       (isActiveTypeAll || type === "talk") && talk,
       (isActiveTypeAll || type === "post") && fcc,
+      (isActiveTypeAll || type === "post") && memberstack,
       (isActiveTypeAll || type === "post") && strapi,
       (isActiveTypeAll || type === "post") && devto,
       (isActiveTypeAll || type === "post") && stream,

@@ -22,6 +22,7 @@ type Props = {
     fcc: AllContentGql
     podcast: AllContentGql
     talk: AllContentGql
+    memberstack: AllContentGql
     kirupa: AllContentGql
     egghead: AllContentGql
     strapi: AllContentGql
@@ -47,6 +48,7 @@ function Content({ data, location }: Props) {
         codesource={data.codesource}
         devto={data.devto}
         edpresso={data.edpresso}
+        memberstack={data.memberstack}
         logrocket={data.logrocket}
         stw={data.stw}
         soshace={data.soshace}
@@ -263,6 +265,20 @@ export const query = graphql`
           id
           platform
           link
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    memberstack: allMemberstackYaml {
+      edges {
+        node {
+          id
+          platform
           content {
             title
             link
