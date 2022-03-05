@@ -2,66 +2,86 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
-      title: How to Change Startup Programs in Windows 7, 8 And 10
-      link: https://www.freecodecamp.org/news/how-to-change-startup-program-in-windows-7-8-and-10/
-      tags: ["windows"]
+      title: How to Install Python 3 on Mac and Update the Version with Pyenv – MacOS Homebrew Command Guide
+      link: https://www.freecodecamp.org/news/how-to-install-python-3-on-mac-and-update-the-python-version-macos-homebrew-command-guide/
+      tags: ["python"]
     - item:
-      title: Object Oriented Programming in JavaScript – Explained with Examples
-      link: https://www.freecodecamp.org/news/how-javascript-implements-oop/
+      title: The 5 Best Code Editors for Mac – MacOS Text Editor Guide
+      link: https://www.freecodecamp.org/news/the-5-best-code-editors-for-mac-macos-text-editor-guide/
+      tags: ["general"]
+    - item:
+      title: What is JavaScript? A Definition of the JS Programming Language
+      link: https://www.freecodecamp.org/news/what-is-javascript-definition-of-js/
       tags: ["javascript"]
     - item:
-      title: How to Deploy a MERN Application to Heroku Using MongoDB Atlas
-      link: https://www.freecodecamp.org/news/deploying-a-mern-application-using-mongodb-atlas-to-heroku/
-      tags: ["react", "nodejs", "express", "mongodb"]
+      title: HTML Link Code – How to Insert a Link to a Website with HREF
+      link: https://www.freecodecamp.org/news/html-link-code-how-to-insert-a-link-to-a-website-with-href-3/
+      tags: ["html"]
     - item:
-      title: Symlink Tutorial in Linux – How to Create and Remove a Symbolic Link
-      link: https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/
-      tags: ["linux"]
+      title: Git Checkout Remote Branch Tutorial
+      link: https://www.freecodecamp.org/news/git-checkout-remote-branch-tutorial/
+      tags: ["git"]
     - item:
-      title: Grep Command Tutorial – How to Search for a File in Linux and Unix with Recursive Find
-      link: https://www.freecodecamp.org/news/grep-command-tutorial-how-to-search-for-a-file-in-linux-and-unix/
-      tags: ["linux"]
-    - item:
-      title: 6 Tools You Can Use to Check for Vulnerabilities in Node.js
-      link: https://www.freecodecamp.org/news/6-tools-you-can-use-to-check-for-vulnerabilities-in-node-js/
-      tags: ["nodejs"]
-    - item:
-      title: How to Create a Reusable Fade-in Animation Component in React With GSAP
-      link: https://www.freecodecamp.org/news/how-to-create-a-reusable-fade-in-animation-component-in-react-with-gsap/
-      tags: ["react"]
-    - item:
-      title: How to Get Started with TailwindCSS
-      link: https://www.freecodecamp.org/news/get-started-with-tailwindcss/
-      tags: ["tailwind"]
-    - item:
-      title: JavaScript toString Example – How to Convert a Number into a String in JS and More
-      link: https://www.freecodecamp.org/news/javascript-tostring-example-convert-number-to-string-in-js/
-      tags: ["javascript"]
-    - item:
-      title: JavaScript String.Replace() Example with RegEx
-      link: https://www.freecodecamp.org/news/javascript-string-replace-example-with-regex/
+      title: What is the Correct Content-Type for JSON? Request Header Mime Type Explained
+      link: https://www.freecodecamp.org/news/what-is-the-correct-content-type-for-json-request-header-mime-type-explained/
       tags: ["javascript"]
     - item:
       title: JavaScript Void 0 – What Does javascript:void(0); Mean?
       link: https://www.freecodecamp.org/news/javascript-void-keyword-explained/
       tags: ["javascript"]
     - item:
-      title: What is the Correct Content-Type for JSON? Request Header Mime Type Explained
-      link: https://www.freecodecamp.org/news/what-is-the-correct-content-type-for-json-request-header-mime-type-explained/
+      title: JavaScript String.Replace() Example with RegEx
+      link: https://www.freecodecamp.org/news/javascript-string-replace-example-with-regex/
       tags: ["javascript"]
     - item:
-      title: Git Checkout Remote Branch Tutorial
-      link: https://www.freecodecamp.org/news/git-checkout-remote-branch-tutorial/
-      tags: ["git"]
-    - item:
-      title: HTML Link Code – How to Insert a Link to a Website with HREF
-      link: https://www.freecodecamp.org/news/html-link-code-how-to-insert-a-link-to-a-website-with-href-3/
-      tags: ["html"]
-    - item:
-      title: What is JavaScript? A Definition of the JS Programming Language
-      link: https://www.freecodecamp.org/news/what-is-javascript-definition-of-js/
+      title: JavaScript toString Example – How to Convert a Number into a String in JS and More
+      link: https://www.freecodecamp.org/news/javascript-tostring-example-convert-number-to-string-in-js/
       tags: ["javascript"]
     - item:
-      title: The 5 Best Code Editors for Mac – MacOS Text Editor Guide
-      link: https://www.freecodecamp.org/news/the-5-best-code-editors-for-mac-macos-text-editor-guide/
-      tags: ["general"]
+      title: How to Get Started with TailwindCSS
+      link: https://www.freecodecamp.org/news/get-started-with-tailwindcss/
+      tags: ["tailwind"]
+    - item:
+      title: How to Create a Reusable Fade-in Animation Component in React With GSAP
+      link: https://www.freecodecamp.org/news/how-to-create-a-reusable-fade-in-animation-component-in-react-with-gsap/
+      tags: ["react"]
+    - item:
+      title: 6 Tools You Can Use to Check for Vulnerabilities in Node.js
+      link: https://www.freecodecamp.org/news/6-tools-you-can-use-to-check-for-vulnerabilities-in-node-js/
+      tags: ["nodejs"]
+    - item:
+      title: Grep Command Tutorial – How to Search for a File in Linux and Unix with Recursive Find
+      link: https://www.freecodecamp.org/news/grep-command-tutorial-how-to-search-for-a-file-in-linux-and-unix/
+      tags: ["linux"]
+    - item:
+      title: Symlink Tutorial in Linux – How to Create and Remove a Symbolic Link
+      link: https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/
+      tags: ["linux"]
+    - item:
+      title: How to Deploy a MERN Application to Heroku Using MongoDB Atlas
+      link: https://www.freecodecamp.org/news/deploying-a-mern-application-using-mongodb-atlas-to-heroku/
+      tags: ["react", "nodejs", "express", "mongodb"]
+    - item:
+      title: Object Oriented Programming in JavaScript – Explained with Examples
+      link: https://www.freecodecamp.org/news/how-javascript-implements-oop/
+      tags: ["javascript"]
+    - item:
+      title: How to Change Startup Programs in Windows 7, 8 And 10
+      link: https://www.freecodecamp.org/news/how-to-change-startup-program-in-windows-7-8-and-10/
+      tags: ["windows"]
+    
+    
+    
+   
+   
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
