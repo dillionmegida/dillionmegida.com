@@ -1,5 +1,5 @@
 ---
-title: "Difference between ng-container and ng-template | What they are and when to use them"
+title: "Difference between ng-container and ng-template in Angular | What they are and when to use them"
 date: "2022-03-05"
 cover: "77-ng-container-vs-ng-template.png"
 pageDescription: "In this article, you'll learn the difference between the `ng-container` and `ng-template` Angular elements."

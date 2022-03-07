@@ -2,9 +2,13 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: 5. Things I had to do after getting my apartment in the Netherlands
+      link: https://youtu.be/XLa15WwMOtw
+      tags: ["general", "relocation"]
+    - item:
       title: 5. Things I did after arriving in Netherlands, and House Hunting
       link: https://youtu.be/KAQSJbRMBUY
-      tags: ["general"]
+      tags: ["general", "relocation"]
     - item:
       title: How I got into tech and my Career journey so far ✨
       link: https://youtu.be/kUmCMxpKdBU
@@ -12,7 +16,7 @@
     - item:
       title: 4.1 How I went about my PCR Covid Test
       link: https://youtu.be/IbaJcBtRekw
-      tags: ["general"]
+      tags: ["general", "relocation"]
     - item:
       title: A new channel for Tech+Code | DEEECODE
       link: https://youtu.be/y9VQYSeL4fw
@@ -24,7 +28,7 @@
     - item:
       title: 4. Things I did before leaving Nigeria, after getting my Visa
       link: https://youtu.be/MoUbHMpgcRk
-      tags: ["general"]
+      tags: ["general", "relocation"]
     - item:
       title: The Transportation System in AMS, and the Ov Chipkaart
       link: https://youtu.be/7uWu072XpWA
@@ -32,15 +36,15 @@
     - item:
       title: 3.2. MVV (Visa) Validity Period
       link: https://youtu.be/o8eUXWxh480
-      tags: ["general"]
+      tags: ["general", "relocation"]
     - item:
       title: 3.1 Legalizing my birth certificate for Netherlands
       link: https://youtu.be/cJ5mzak186Y
-      tags: ["general"]
+      tags: ["general", "relocation"]
     - item:
       title: 3. Getting my Netherlands VISA
       link: https://youtu.be/8_3uLpcVN-Y
-      tags: ["general"]
+      tags: ["general", "relocation"]
     - item:
       title: How to quickly git checkout/merge/rebase your previous branch
       link: https://youtu.be/Pe-CJ3jqUVI
@@ -52,11 +56,11 @@
     - item:
       title: 2. Getting the Developer Advocate Job
       link: https://youtu.be/EdOEXLMPSTI
-      tags: ["general"]
+      tags: ["general", "relocation"]
     - item:
       title: 1. Relocating from Nigeria to the Netherlands
       link: https://youtu.be/RPpLIOX70zw
-      tags: ["general"]
+      tags: ["general", "relocation"]
     - item:
       title: Workspace and Tools I use for my YouTube videos
       link: https://youtu.be/Fe3vl9BnmW8
