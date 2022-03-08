@@ -23,6 +23,7 @@ type Props = {
     podcast: AllContentGql
     talk: AllContentGql
     memberstack: AllContentGql
+    polywork: AllContentGql
     kirupa: AllContentGql
     egghead: AllContentGql
     strapi: AllContentGql
@@ -57,6 +58,7 @@ function Content({ data, location }: Props) {
         podcast={data.podcast}
         talk={data.talk}
         kirupa={data.kirupa}
+        polywork={data.polywork}
         egghead={data.egghead}
         strapi={data.strapi}
         stream={data.stream}
@@ -279,6 +281,21 @@ export const query = graphql`
         node {
           id
           platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    polywork: allPolyworkYaml {
+      edges {
+        node {
+          id
+          platform
+          link
           content {
             title
             link

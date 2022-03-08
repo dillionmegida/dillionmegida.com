@@ -1,0 +1,7 @@
+- platform: Polywork
+  link: https://blog.polywork.com/author/dillionmegida/
+  content:
+    - item:
+      title: How I Polywork?
+      link: https://blog.polywork.com/how-i-polywork/
+      tags: ["general"]

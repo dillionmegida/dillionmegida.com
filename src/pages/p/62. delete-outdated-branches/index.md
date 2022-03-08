@@ -100,7 +100,7 @@ You can also set up a git alias for this. In your global git config global file,
 
 ```txt
 [alias]
-    delete-local-merged = "!git fetch && git branch --merged | egrep -v 'master|dev|main|staging'"
+    delete-local-merged = "!git fetch && git branch --merged | egrep -v 'master|dev|main|staging'  | xargs git branch -d"
 ```
 
 And execute like so:

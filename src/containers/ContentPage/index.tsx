@@ -120,6 +120,7 @@ type Props = {
   talk: AllContentGql
   kirupa: AllContentGql
   memberstack: AllContentGql
+  polywork: AllContentGql
   egghead: AllContentGql
   strapi: AllContentGql
   allArticlesOnThisWebsite: AllPostsGql
@@ -136,16 +137,17 @@ export default function ContentPage({
   codesource,
   vonage,
   fcc,
+  polywork,
   kirupa,
   memberstack,
+  deeecode,
   podcast,
   egghead,
   talk,
-  allArticlesOnThisWebsite,
   strapi,
   videos,
-  deeecode,
   stream,
+  allArticlesOnThisWebsite,
   params,
 }: Props) {
   const allContent = [
@@ -158,13 +160,14 @@ export default function ContentPage({
     vonage,
     memberstack,
     kirupa,
+    deeecode,
     edpresso,
     soshace,
     talk,
     strapi,
     devto,
     stream,
-    deeecode,
+    polywork,
     videos,
     fcc,
   ]
@@ -243,6 +246,7 @@ export default function ContentPage({
       (isActiveTypeAll || type === "talk") && talk,
       (isActiveTypeAll || type === "post") && fcc,
       (isActiveTypeAll || type === "post") && memberstack,
+      (isActiveTypeAll || type === "post") && polywork,
       (isActiveTypeAll || type === "post") && strapi,
       (isActiveTypeAll || type === "post") && devto,
       (isActiveTypeAll || type === "post") && stream,
