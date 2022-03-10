@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: git config – How to Configure Git Settings to Improve Your Development Workflow
+      link: https://www.freecodecamp.org/news/git-config-how-to-configure-git-settings/
+      tags: ["git"]
+    - item:
       title: How to Install Python 3 on Mac and Update the Version with Pyenv – MacOS Homebrew Command Guide
       link: https://www.freecodecamp.org/news/how-to-install-python-3-on-mac-and-update-the-python-version-macos-homebrew-command-guide/
       tags: ["python"]
