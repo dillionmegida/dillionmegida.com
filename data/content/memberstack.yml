@@ -2,6 +2,10 @@
   link: null
   content:
     - item:
+      title: The useMemo hook
+      link: https://www.memberstack.com/blog/usememo
+      tags: ["react", "hooks"]
+    - item:
       title: React Custom Hooks
       link: https://www.memberstack.com/blog/react-custom-hooks
       tags: ["react", "hooks"]

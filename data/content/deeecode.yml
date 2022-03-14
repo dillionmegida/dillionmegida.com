@@ -2,6 +2,14 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: How to create an organized Content page on your website with my Gatsby starter template
+      link: https://youtu.be/_TXC20_UdF8
+      tags: ["git"]
+    - item:
+      title: Displaying git help results on a browser for easy view and readability -- shorts
+      link: https://youtu.be/Gr0RoDu8L_c
+      tags: ["git", "shorts"]
+    - item:
       title: How to move a commit from the wrong branch to the correct branch using git cherry-pick command
       link: https://youtu.be/E00MV5E_6GM
       tags: ["git"]
