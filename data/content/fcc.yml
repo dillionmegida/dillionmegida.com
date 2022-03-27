@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: HTML Starter Template – A Basic HTML5 Boilerplate for index.html
+      link: https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/
+      tags: ["html"]
+    - item:
       title: git config – How to Configure Git Settings to Improve Your Development Workflow
       link: https://www.freecodecamp.org/news/git-config-how-to-configure-git-settings/
       tags: ["git"]

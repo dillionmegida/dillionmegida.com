@@ -2,6 +2,14 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: How I Create my Scripts for my YouTube Videos
+      link: https://www.youtube.com/watch?v=xTekRf1N8VM
+      tags: ["content"]
+    - item:
+      title: Two things you should do before applying to a company -- shorts
+      link: https://www.youtube.com/shorts/8Hl6FdtMmgc
+      tags: ["shorts", "career"]
+    - item:
       title: 6. Things I had to do after getting my apartment in the Netherlands
       link: https://youtu.be/XLa15WwMOtw
       tags: ["general", "relocation"]
@@ -92,4 +100,3 @@
     - item:
       title: New youtuber
       link: https://www.youtube.com/watch?v=mXd6AsU_Dyg
-   

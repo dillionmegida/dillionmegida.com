@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: Meta tags and Head tags you can use to improve the SEO of your web applications
+      link: https://youtu.be/3djDJeZaCgM
+      tags: ["html", "seo"]
+    - item:
       title: How to create an organized Content page on your website with my Gatsby starter template
       link: https://youtu.be/_TXC20_UdF8
       tags: ["git"]
