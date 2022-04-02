@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: How to Pass Callback Functions to String.replace() in JavaScript
+      link: https://www.freecodecamp.org/news/how-to-pass-callback-functions-to-string-replace-javascript/
+      tags: ["javascript", "regex"]
+    - item:
       title: HTML Starter Template – A Basic HTML5 Boilerplate for index.html
       link: https://www.freecodecamp.org/news/html-starter-template-a-basic-html5-boilerplate-for-index-html/
       tags: ["html"]
