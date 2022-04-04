@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: How to create a reusable React Helmet component to improve the SEO of your app with react-helmet
+      link: https://youtu.be/cVTFHio6t-4
+      tags: ["react", "seo", "gatsby"]
+    - item:
       title: Meta tags and Head tags you can use to improve the SEO of your web applications
       link: https://youtu.be/3djDJeZaCgM
       tags: ["html", "seo"]
