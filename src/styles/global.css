@@ -5,9 +5,9 @@ html.smoothScroll {
 }
 
 :root {
-  --mainColor1: #130327;
-  --midMainColor1: #130327;
-  --midMainColor2: #130327;
+  /* --mainColor1: #130327; */
+  /* --midMainColor1: #130327; */
+  /* --midMainColor2: #130327; */
   --mainColor2: #e7f6ba;
   --mainColor3: #c1d950;
   --mainColor4: #8be79f;
@@ -40,8 +40,6 @@ body {
   margin: 0;
   font-family: var(--sec-font);
   font-weight: 300;
-  border: 10px solid var(--mainColor1);
-  border-top: none;
 }
 
 h1,
