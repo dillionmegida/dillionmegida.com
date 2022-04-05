@@ -44,6 +44,10 @@ export default {
       Icon: LinkedIn,
     },
     "E-mail": { link: "mailto:dillionmegida@gmail.com", Icon: Mail },
+    DeeeCode: {
+      link: "https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg",
+      Icon: YouTube,
+    },
   },
 
   CALENDLY: "https://calendly.com/dillionmegida",

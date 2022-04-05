@@ -20,7 +20,7 @@ const Main = styled.main`
 
   .heading-bg {
     width: 100%;
-    background-color: var(--lightBlue);
+    background-color: var(--midMainColor2);
 
     &-wrapper {
       width: 100%;
@@ -32,14 +32,16 @@ const Main = styled.main`
       h1 {
         margin-right: 50px;
         flex: 1;
+        color: white;
       }
 
       .count {
         font-size: 20px;
         letter-spacing: 1px;
         font-weight: bold;
-        width: 140px;
-        font-family: var(--main-font);
+        width: 160px;
+        color: white;
+        font-family: var(--sec-font);
       }
 
       @media (max-width: 450px) {
@@ -63,6 +65,7 @@ const Main = styled.main`
     display: flex;
     align-items: center;
     margin-top: 10px;
+    color: white;
     &.hidden {
       visibility: hidden;
     }
@@ -97,6 +100,7 @@ const Main = styled.main`
     font-weight: bold;
     text-decoration: underline;
     color: white;
+    line-height: 1.8;
   }
 `
 

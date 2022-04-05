@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Zen+Antique+Soft&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Azeret+Mono:wght@300;400&display=swap");
 
 html.smoothScroll {
   scroll-behavior: smooth;
@@ -7,14 +6,19 @@ html.smoothScroll {
 
 :root {
   --mainColor1: #130327;
-  --midMainColor1: #280750;
+  --midMainColor1: #130327;
+  --midMainColor2: #130327;
   --mainColor2: #e7f6ba;
   --mainColor3: #c1d950;
   --mainColor4: #8be79f;
   --lightBlue: #319ac1;
 
-  --main-font: "Zen Antique Soft", "Nunito", "Helvetica";
-  --sec-font: "Poppins", "Helvetica";
+  --mainColor1: rgb(61, 61, 61);
+  --midMainColor1: rgb(101, 101, 101);
+  --midMainColor2: rgb(83, 83, 83);
+
+  --main-font: "Aclonica", "Zen Antique Soft", "Nunito", "Helvetica";
+  --sec-font: "Azeret Mono", "Helvetica";
 }
 
 ::-webkit-scrollbar {
@@ -47,6 +51,19 @@ h4,
 h5,
 h6 {
   font-family: var(--main-font);
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  line-height: 1.5;
+}
+
+h2 {
+  line-height: 1.8;
+}
+
+p {
+  line-height: 1.8;
 }
 
 * {
@@ -68,8 +85,8 @@ a {
   width: 100%;
 }
 
-    @media only screen and (max-width: 500px) {
-    .container {
-        padding: 20px;
-    }
-    }
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+}

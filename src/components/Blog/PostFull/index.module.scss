@@ -3,6 +3,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 50px 20px;
+  color: white;
 
   & h1 {
     margin: 0;
@@ -15,21 +16,25 @@
   & h5,
   & h6 {
     padding: 20px 0 0; // for a little offset
+    color: white;
   }
 }
 .BlogPost a {
-  color: var(--mainColor1);
   text-decoration: underline;
   font-weight: 400;
   padding: 2px;
 }
+.BlogPost a {
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--mainColor2);
+}
 .BlogPost a:hover,
 .BlogPost a:focus {
   text-decoration: none;
-  outline: 1px solid var(--mainColor1);
+  outline: 1px solid var(--mainColor2);
 }
 .BlogTitle {
-  color: var(--lightBlue);
   font-size: 40px;
 }
 @media only screen and (max-width: 400px) {
@@ -38,18 +43,13 @@
   }
 }
 .BlogDate {
-  color: var(--mainColor1);
   font-weight: 400;
+  opacity: 0.8;
 }
 .BlogInfo {
   border-bottom: 1px solid var(--mainColor1);
 }
-.BlogTags {
-  & a {
-    display: inline-block;
-    margin-right: 10px;
-  }
-}
+
 .VideoText {
   margin: 20px 0;
 }
@@ -62,6 +62,10 @@
   b,
   strong {
     font-weight: 500;
+  }
+
+  p {
+    line-height: 2.2;
   }
 
   & div[class="gatsby-highlight"] {
@@ -95,11 +99,11 @@
 
   & blockquote {
     border: 1px solid #aaa;
-    border-left: 5px solid var(--mainColor1);
-    border-right: 5px solid var(--mainColor1);
+    border: 2px solid var(--midMainColor2);
     margin: 0;
     padding: 0 20px;
-    color: #341d52;
+    color: white;
+    opacity: 0.8;
   }
 
   & ul {

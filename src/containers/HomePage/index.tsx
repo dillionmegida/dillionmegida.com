@@ -49,6 +49,19 @@ const ProfilePicture = styled.div`
   border: 10px solid var(--mainColor1);
   left: -10px;
   width: 100%;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    width: 110%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    left: -50px;
+    z-index: -1;
+    top: -20px;
+  }
 
   @media (max-width: 800px) {
     max-width: 250px;
@@ -90,12 +103,11 @@ const Text = styled.div`
 
     a {
       text-decoration: underline;
-      color: #bcc6d3;
+      color: var(--mainColor2);
     }
     .resume {
       font-size: 18px;
       a {
-        color: var(--mainColor1);
         font-weight: 500;
 
         @media (max-width: 650px) {
@@ -114,12 +126,13 @@ const BodySection = styled.div`
       font-size: 30px;
       position: relative;
       overflow: hidden;
+      color: var(--mainColor2);
       &.underline::after {
         content: "";
         position: absolute;
         top: 25px;
-        left: 130px;
-        border-top: 1px solid var(--mainColor1);
+        left: 150px;
+        border-top: 1px solid var(--mainColor2);
         width: 100%;
       }
     }
@@ -136,12 +149,28 @@ const BodySection = styled.div`
     }
 
     .view-all-link {
-      color: var(--mainColor1);
+      color: var(--mainColor2);
       font-size: 20px;
-      text-decoration: underline;
+      /* text-decoration: underline; */
       display: block;
       margin-top: 20px;
       font-weight: 500;
+      position: relative;
+      width: max-content;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 160%;
+        background-color: rgba(255, 255, 255, 0.05);
+        left: -30px;
+        top: -7px;
+      }
     }
   }
 `
@@ -198,26 +227,30 @@ export default function HomePage({ content }: Props) {
               <Link to={pageLinks.BLOG}>my blog here</Link>
               {publications.map((p, i) =>
                 i === pubsLength - 1 ? (
-                  <>
+                  <React.Fragment key={`publication-${i}`}>
                     {" "}
                     and{" "}
                     <a key={`link${i}`} href={p.link}>
                       {p.label}
                     </a>
-                  </>
+                  </React.Fragment>
                 ) : (
-                  <>
+                  <React.Fragment key={`publication-${i}`}>
                     ,{" "}
                     <a key={`link${i}`} href={p.link}>
                       {p.label}
                     </a>
-                  </>
+                  </React.Fragment>
                 )
               )}{" "}
               <br />
-              <br />I also create Tech video content on{" "}
+              <br />I also create Career/Life video content on{" "}
               <NewTabLink link={social.YouTube.link}>
                 my YouTube Channel
+              </NewTabLink>{" "}
+              and Tech video content on{" "}
+              <NewTabLink link={social.DeeeCode.link}>
+                my DeeeCode Channel
               </NewTabLink>
               <br />
               <br />

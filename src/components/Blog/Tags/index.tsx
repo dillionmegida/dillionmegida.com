@@ -44,7 +44,7 @@ const Tags = ({ pageContext, data }: Props) => {
       // ...But it always shows for large screens
     >
       <main className={Styles.TagMain}>
-        <h2 className="TagHeader">{tagHeader}</h2>
+        <h2 className={Styles.TagHeader}>{tagHeader}</h2>
         <section className="Blogs">
           {edges.map(({ node }) => {
             const { readTime } = node

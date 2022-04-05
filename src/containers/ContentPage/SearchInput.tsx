@@ -9,16 +9,17 @@ const Container = styled.div`
     flex-wrap: wrap;
     margin-bottom: 20px;
     .set-btn {
+      font-family: var(--sec-font);
       background: none;
       border: none;
       margin-right: 10px;
-      color: var(--lightBlue);
+      color: var(--mainColor2);
       text-decoration: underline;
       cursor: pointer;
       padding: 5px;
       border: 1px solid transparent;
       &.active {
-        border-color: var(--mainColor1);
+        border-color: var(--mainColor2);
         text-decoration: none;
       }
     }
@@ -29,6 +30,7 @@ const Container = styled.div`
       width: 100%;
       border: 1px solid var(--mainColor1);
       border-radius: 5px;
+      font-family: var(--sec-font);
     }
   }
 `

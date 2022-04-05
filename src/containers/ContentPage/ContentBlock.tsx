@@ -2,15 +2,14 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { AnchorLink, NewTabLink } from "../../components/Link"
-import { ContentGql } from "../../interfaces/Content"
-import { GqlPost } from "../../interfaces/Post"
 
 const Container = styled.div`
   h2 {
     margin: 0 0 10px;
     &,
     a {
-      color: var(--midMainColor1);
+      color: white;
+      opacity: 0.9;
     }
 
     a {
@@ -19,9 +18,12 @@ const Container = styled.div`
   }
   .content-block__item {
     a {
-      color: var(--mainColor);
+      font-weight: 300;
+      line-height: 1.8;
+      color: white;
+      opacity: 0.9;
       text-decoration: underline;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       display: block;
     }
   }

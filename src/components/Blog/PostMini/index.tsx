@@ -3,17 +3,11 @@ import Styles from "./index.module.scss"
 
 import { formatBlogDate } from "../../../utils/dates"
 import { Link } from "gatsby"
-import {Post as IPost} from "../../../interfaces/Post"
+import { Post as IPost } from "../../../interfaces/Post"
 
 const Post = ({ readTime, date, href, title, content, tags }: IPost) => (
   <article className={Styles.PostTemplate}>
-    <Link
-      to={href}
-      title={title}
-      style={{
-        fontFamily: "Antic, helvetica",
-      }}
-    >
+    <Link to={href} title={title}>
       <h2>{title}</h2>
       <p className={Styles.Date}>
         {formatBlogDate(date)} | {readTime} min

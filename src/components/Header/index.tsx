@@ -24,9 +24,16 @@ const _Header = styled.header`
     color: var(--mainColor2);
     font-family: var(--main-font);
 
+    @media (max-width: 500px) {
+      .text {
+        display: none;
+      }
+    }
+
     &:hover,
     &.active {
-      color: var(--lightBlue);
+      /* color: var(--lightBlue); */
+      color: white;
     }
 
     .picture {
@@ -50,16 +57,13 @@ const _Link = styled(Link)`
   color: var(--mainColor2);
   font-size: 16px;
   margin: 0 10px;
-  padding: 7px;
-  width: 70px;
+  padding: 7px 10px;
+  width: max-content;
   text-align: center;
 
-  &.active {
-    color: var(--lightBlue);
-  }
-
+  &.active,
   &:hover {
-    color: var(--lightBlue);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 `
 
@@ -71,7 +75,7 @@ const Header = () => {
         { label: "Blog", link: constants.pageLinks.BLOG },
         { label: "Content", link: constants.pageLinks.CONTENT },
       ].map(l => (
-        <_Link to={l.link} activeClassName="active">
+        <_Link key={l.label} to={l.link} activeClassName="active">
           {l.label}
         </_Link>
       ))}
@@ -85,7 +89,7 @@ const Header = () => {
           <div className="picture">
             <img src={constants.MY_PICTURE} alt="Profile picture" />
           </div>
-          DM
+          <span className="text">DM</span>
         </Link>
         <nav>
           <Links />

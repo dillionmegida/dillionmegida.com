@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0 auto;
   line-height: 25px;
+  color: white;
 
   & .Emoji {
     font-size: 20px;
@@ -12,7 +13,7 @@
   }
 
   a {
-    color: var(--lightBlue);
+    color: var(--mainColor2);
     font-weight: bold;
   }
 }

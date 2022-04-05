@@ -46,7 +46,7 @@ export default ({ pageContext }: Props) => {
               tags={node.frontmatter.tags}
               content={
                 node.frontmatter.pageDescription.length > 150
-                  ? `${node.frontmatter.pageDescription.substr(0, 150)}...`
+                  ? `${node.frontmatter.pageDescription.substring(0, 150)}...`
                   : node.frontmatter.pageDescription
               }
             />

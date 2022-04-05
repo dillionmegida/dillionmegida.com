@@ -24,6 +24,7 @@ let ErrorPage = () => (
         style={{
           fontSize: "40px",
           textAlign: "center",
+          color: "var(--mainColor2)",
         }}
       >
         Page Not Found 🤧

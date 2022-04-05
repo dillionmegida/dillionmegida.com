@@ -6,10 +6,13 @@ import { NewTabLink } from "../Link"
 const Container = styled.section`
   max-width: 500px;
   width: 100%;
-  border: 1px solid var(--mainColor1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.08);
   margin: 20px auto 40px;
   padding: 40px;
   border-radius: 5px;
+  position: relative;
+  z-index: 100;
 
   .wrapper {
     max-width: 320px;
@@ -21,7 +24,7 @@ const Container = styled.section`
     text-align: center;
     font-size: 30px;
     a {
-      color: var(--mainColor1);
+      color: white;
     }
   }
 
@@ -36,7 +39,7 @@ const Container = styled.section`
   .newsletter-info {
     text-align: center;
     max-width: 100%;
-    color: var(--mainColor1);
+    color: white;
     margin: 0 0 20px;
   }
 
@@ -55,12 +58,14 @@ const Container = styled.section`
       border: 1px solid var(--mainColor1);
       border-radius: 0;
       border-right: 0;
+      font-family: var(--sec-font);
     }
   }
 
   .revue-form-actions {
     margin-bottom: 20px;
     .submit-input {
+      font-family: var(--sec-font);
       padding: 15px;
       width: 100%;
       background-color: var(--mainColor1);
@@ -72,10 +77,12 @@ const Container = styled.section`
   }
 
   .revue-form-footer {
+    color: white;
+    line-height: 1.8;
     font-size: 0.8rem;
     text-align: center;
     a {
-      color: var(--lightBlue);
+      color: var(--mainColor2);
     }
   }
 `

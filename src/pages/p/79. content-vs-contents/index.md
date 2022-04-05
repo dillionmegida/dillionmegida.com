@@ -2,7 +2,7 @@
 title: "Content vs Contents | Here are my contents?"
 date: "2022-03-31"
 cover: "79-content-vs-contents.png"
-pageDescription: "My attempt at explaining the difference between Content and Contents. I also explained how to determine when to use each"
+pageDescription: "My attempt at explaining the difference between Content and Contents. I also explained how to determine when to use each."
 pageKeywords: "content, grammar, contents, table of contents, content vs contents, difference between content and contents, when to use content, when to use contents"
 tags: ["general"]
 ---
