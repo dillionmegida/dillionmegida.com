@@ -2,6 +2,14 @@
   link: https://dev.to/dillionmegida
   content:
     - item:
+      title: How to cancel a setTimeout in JavaScript
+      link: https://dev.to/dillionmegida/how-to-cancel-a-settimeout-in-javascript-l2p
+      tags: ["javascript"]
+    - item:
+      title: Array.map()
+      link: https://dev.to/dillionmegida/arraymap-2n2n
+      tags: ["javascript"]
+    - item:
       title: Making Sticky Column with grid area
       link: https://dev.to/dillionmegida/making-sticky-column-with-grid-area-5eph
       tags: ["css"]
