@@ -2,6 +2,14 @@
   link: https://dev.to/dillionmegida
   content:
     - item:
+      title: Array.filter()
+      link: https://dev.to/dillionmegida/arrayfilter-26hk
+      tags: ["javascript"]
+    - item:
+      title: How to navigate a browser to the previous page with JavaScript
+      link: https://dev.to/dillionmegida/how-to-navigate-a-browser-to-the-previous-page-with-javascript-bp5
+      tags: ["javascript"]
+    - item:
       title: How to cancel a setTimeout in JavaScript
       link: https://dev.to/dillionmegida/how-to-cancel-a-settimeout-in-javascript-l2p
       tags: ["javascript"]
