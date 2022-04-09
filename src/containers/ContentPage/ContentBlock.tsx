@@ -17,14 +17,20 @@ const Container = styled.div`
     }
   }
   .content-block__item {
+    font-size: 18px;
+    margin-bottom: 20px;
     a {
       font-weight: 300;
       line-height: 1.8;
       color: white;
       opacity: 0.9;
-      text-decoration: underline;
+      /* text-decoration: underline; */
       margin-bottom: 15px;
       display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 `

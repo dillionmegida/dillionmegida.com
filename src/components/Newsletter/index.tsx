@@ -15,14 +15,14 @@ const Container = styled.section`
   z-index: 100;
 
   .wrapper {
-    max-width: 320px;
+    max-width: 400px;
     margin: 0 auto;
   }
 
   h2 {
     margin: 0 0 5px;
     text-align: center;
-    font-size: 30px;
+    font-size: 32px;
     a {
       color: white;
     }
@@ -39,6 +39,7 @@ const Container = styled.section`
   .newsletter-info {
     text-align: center;
     max-width: 100%;
+    font-size: 22px;
     color: white;
     margin: 0 0 20px;
   }
@@ -79,7 +80,7 @@ const Container = styled.section`
   .revue-form-footer {
     color: white;
     line-height: 1.8;
-    font-size: 0.8rem;
+    font-size: 18px;
     text-align: center;
     a {
       color: var(--mainColor2);

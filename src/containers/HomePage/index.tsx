@@ -92,11 +92,12 @@ const Text = styled.div`
   }
   .short-bio {
     color: white;
-    font-size: 20px;
     margin: 20px 0;
+    font-size: 22px;
     font-weight: 500;
   }
   .some-text {
+    font-size: 20px;
     color: white;
     margin-top: 10px;
     line-height: 2;
@@ -106,7 +107,6 @@ const Text = styled.div`
       color: var(--mainColor2);
     }
     .resume {
-      font-size: 18px;
       a {
         font-weight: 500;
 
@@ -141,7 +141,7 @@ const BodySection = styled.div`
       display: grid;
       --columns: 2;
       grid-template-columns: repeat(var(--columns), 1fr);
-      grid-column-gap: 40px;
+      grid-column-gap: 60px;
 
       @media (max-width: 650px) {
         --columns: 1;

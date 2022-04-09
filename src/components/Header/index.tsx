@@ -10,6 +10,7 @@ const _Header = styled.header`
   z-index: 1;
 
   .container {
+    border-bottom: 1px solid var(--midMainColor1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,9 +56,9 @@ const _Header = styled.header`
 const _Link = styled(Link)`
   display: inline-block;
   color: var(--mainColor2);
-  font-size: 16px;
+  font-size: 20px;
   margin: 0 10px;
-  padding: 7px 10px;
+  padding: 8px 12px;
   width: max-content;
   text-align: center;
 

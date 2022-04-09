@@ -37,6 +37,7 @@ let ErrorPage = () => (
             color: "white",
             padding: "10px",
             borderRadius: "10px",
+            fontSize: "20px",
             borderBottom: "5px solid var(--mainColor2)",
           }}
         >

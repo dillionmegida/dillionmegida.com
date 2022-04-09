@@ -57,7 +57,12 @@ export default ({ data }: Props) => {
             ) : null}
           </div>
           {postCoverUrl ? (
-            <img src={postCoverUrl} alt="Blog Cover" width="100%" />
+            <img
+              className={Styles.BlogCover}
+              src={postCoverUrl}
+              alt="Blog Cover"
+              width="100%"
+            />
           ) : null}
           <div className={Styles.BlogContent}>
             {post.frontmatter.video && (

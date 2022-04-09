@@ -1,5 +1,4 @@
 .SearchMain {
-  max-width: 700px;
   width: 100%;
   padding: 20px;
   margin: 0 auto;
@@ -17,14 +16,15 @@
 
 .Search {
   width: 100%;
-  margin: 20px auto;
+  margin: 0 auto;
 
   & input {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
+    font-size: 20px;
     font-family: var(--sec-font);
     border-radius: 5px;
-    border: 1px solid var(--mainColor1);
+    border: none;
   }
 }
 

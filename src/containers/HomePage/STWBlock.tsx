@@ -6,6 +6,7 @@ import { STW } from "../../constants"
 const Section = styled.section`
   background-color: var(--mainColor1);
   border-radius: 10px;
+  border: 1px solid #e982a3;
 
   h2 {
     color: #e982a3;
@@ -17,7 +18,7 @@ const Section = styled.section`
     color: white;
     font-weight: 300;
     line-height: 1.7;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   a {
@@ -36,9 +37,9 @@ export default function STWBlock() {
           Here's something for you 🤗
           <br />
           <br />
-          As a technical writer, I shared my knowledge and experience
-          on this platform: <NewTabLink link={STW.link}>{STW.title}</NewTabLink>.
-          Check out more about the platform here:{" "}
+          As a technical writer, I shared my knowledge and experience on this
+          platform: <NewTabLink link={STW.link}>{STW.title}</NewTabLink>. Check
+          out more about the platform here:{" "}
           <NewTabLink link={STW.intro}>Introduction to STW</NewTabLink>
         </p>
       </div>

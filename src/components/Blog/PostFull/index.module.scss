@@ -1,5 +1,5 @@
 .BlogPost {
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   padding: 50px 20px;
@@ -17,6 +17,13 @@
   & h6 {
     padding: 20px 0 0; // for a little offset
     color: white;
+  }
+
+  // for heading links
+  .anchor.before {
+    fill: white;
+    width: 30px;
+    height: 30px;
   }
 }
 .BlogPost a {
@@ -42,9 +49,16 @@
     font-size: 30px;
   }
 }
+.BlogTags {
+  font-size: 20px;
+  a {
+    text-decoration: none;
+  }
+}
 .BlogDate {
   font-weight: 400;
   opacity: 0.8;
+  font-size: 18px;
 }
 .BlogInfo {
   border-bottom: 1px solid var(--mainColor1);
@@ -53,9 +67,14 @@
 .VideoText {
   margin: 20px 0;
 }
+
+.BlogCover {
+  border: 1px solid var(--mainColor2);
+}
+
 .BlogContent {
   line-height: 1.7;
-  font-size: 18px;
+  font-size: 24px;
 
   /* Markdown custom styles */
 

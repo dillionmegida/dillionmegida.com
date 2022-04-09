@@ -4,6 +4,25 @@ import Styles from "./index.module.scss"
 import { StaticQuery, graphql } from "gatsby"
 import Post from "../PostMini"
 import { GqlPost } from "../../../interfaces/Post"
+import styled from "styled-components"
+import Back from "../../Icon/Back"
+
+const Main = styled.div`
+  .header {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .back-btn {
+    position: relative;
+    left: -20px;
+  }
+
+  h1 {
+    position: relative;
+    left: -10px;
+  }
+`
 
 type GqlPostModified = {
   node: GqlPost
@@ -46,6 +65,12 @@ const Search = () => {
     setFilteredArticles(filteredArr)
   }
 
+  const onClickBack = () => {
+    if (!window) return
+
+    window.history.back()
+  }
+
   return (
     <StaticQuery
       query={graphql`
@@ -79,46 +104,53 @@ const Search = () => {
         const filtered = filteredArticles
 
         return (
-          <main className={Styles.SearchMain}>
-            <h1>Search from {allPosts.totalCount} posts</h1>
-            <div className={Styles.Search}>
-              <input
-                type="text"
-                placeholder="Search articles..."
-                onChange={event => {
-                  handleInput(allPosts, event)
-                }}
-                ref={searchInput}
-              />
+          <Main className={Styles.SearchMain}>
+            <div className="container">
+              <div className="header">
+                <button onClick={onClickBack} className="back-btn">
+                  <Back color="white" size={40} />
+                </button>
+                <h1>Search from {allPosts.totalCount} posts</h1>
+              </div>
+              <div className={Styles.Search}>
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  onChange={event => {
+                    handleInput(allPosts, event)
+                  }}
+                  ref={searchInput}
+                />
+              </div>
+              {filtered.length !== 0 && (
+                <p className={Styles.ResultCount}>
+                  <b>{filtered.length}</b> result
+                  {filtered.length !== 1 && "s"} found.
+                </p>
+              )}
+              {filtered.length !== 0 ? (
+                <section>
+                  {filtered.map(({ node }) => (
+                    <Post
+                      href={node.fields.slug}
+                      title={node.frontmatter.title}
+                      readTime={node.timeToRead}
+                      date={node.frontmatter.date}
+                      tags={node.frontmatter.tags}
+                      content={
+                        node.frontmatter.pageDescription.length > 150
+                          ? `${node.frontmatter.pageDescription.substr(
+                              0,
+                              150
+                            )}...`
+                          : node.frontmatter.pageDescription
+                      }
+                    />
+                  ))}
+                </section>
+              ) : null}
             </div>
-            {filtered.length !== 0 && (
-              <p className={Styles.ResultCount}>
-                <b>{filtered.length}</b> result
-                {filtered.length !== 1 && "s"} found.
-              </p>
-            )}
-            {filtered.length !== 0 ? (
-              <section>
-                {filtered.map(({ node }) => (
-                  <Post
-                    href={node.fields.slug}
-                    title={node.frontmatter.title}
-                    readTime={node.timeToRead}
-                    date={node.frontmatter.date}
-                    tags={node.frontmatter.tags}
-                    content={
-                      node.frontmatter.pageDescription.length > 150
-                        ? `${node.frontmatter.pageDescription.substr(
-                            0,
-                            150
-                          )}...`
-                        : node.frontmatter.pageDescription
-                    }
-                  />
-                ))}
-              </section>
-            ) : null}
-          </main>
+          </Main>
         )
       }}
     />

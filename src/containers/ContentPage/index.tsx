@@ -20,11 +20,14 @@ const Main = styled.main`
 
   .heading-bg {
     width: 100%;
+    position: relative;
+    top: -2px;
+    z-index: 1;
     background-color: var(--midMainColor2);
 
     &-wrapper {
       width: 100%;
-      padding: 20px;
+      padding: 20px 0;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -36,7 +39,7 @@ const Main = styled.main`
       }
 
       .count {
-        font-size: 20px;
+        font-size: 22px;
         letter-spacing: 1px;
         font-weight: bold;
         width: 160px;
@@ -62,6 +65,7 @@ const Main = styled.main`
 
   .filtered-count {
     height: 30px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     margin-top: 10px;
@@ -91,7 +95,9 @@ const Main = styled.main`
   .starter-section {
     background-color: var(--mainColor1);
     color: white;
+    font-size: 20px;
     padding: 10px 20px;
+    border: 1px solid var(--mainColor2);
     border-radius: 5px;
     text-align: center;
   }

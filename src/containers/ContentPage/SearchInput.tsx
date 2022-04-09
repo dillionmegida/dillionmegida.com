@@ -9,6 +9,7 @@ const Container = styled.div`
     flex-wrap: wrap;
     margin-bottom: 20px;
     .set-btn {
+      font-size: 18px;
       font-family: var(--sec-font);
       background: none;
       border: none;
@@ -27,6 +28,7 @@ const Container = styled.div`
   .input-container {
     input {
       padding: 20px;
+      font-size: 20px;
       width: 100%;
       border: 1px solid var(--mainColor1);
       border-radius: 5px;
