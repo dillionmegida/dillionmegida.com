@@ -13,7 +13,7 @@ In this series, I'll be interviewing Junior/Mid developers and have them share t
 
 The inspiration is for developers to share their stories, and other developers looking to get their first jobs can pick tips from these stories to improve their job application process.
 
-I'll also be sharing a summary and notes on my website of these interviews.
+I'll also be sharing a summary and notes on my website for these interviews.
 
 ## Interview with [Dillion Megida](/)
 
@@ -57,6 +57,6 @@ Also, I used a [structured cover letter template](https://dillionmegida.com/p/co
 
 ---
 
-The story I shared here is a summarized version of how I got my first job. Here's a more detailed version: [How I got my first Full-time Software Developer Job(https://youtu.be/2QamIL37Vwk)
+The story I shared here is a summarized version of how I got my first job. Here's a more detailed version: [How I got my first Full-time Software Developer Job](https://youtu.be/2QamIL37Vwk)
 
 Watch out for more videos on these series.
