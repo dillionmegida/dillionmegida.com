@@ -100,6 +100,8 @@ But after one second, this `Random` component unmounts, which means on the third
 
 To avoid such errors, you have to clean up the side effect that does this update.
 
+However, here's a [pull request](https://github.com/facebook/react/pull/22114) with an intention to remove this warning as setting state on unmounted components may not necessarily cause a memory leak. I'd still recommend that it is helpful to cleanup such cases to avoid bugs in general.
+
 ## How to Cleanup side effects in React
 
 The syntax of `useEffect` is:
