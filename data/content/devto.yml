@@ -2,6 +2,10 @@
   link: https://dev.to/dillionmegida
   content:
     - item:
+      title: Array.flat() - for flatting nested arrays within an array
+      link: https://dev.to/dillionmegida/arrayflat-for-flatting-nested-arrays-within-an-array-3d1o
+      tags: ["javascript"]
+    - item:
       title: Array.filter()
       link: https://dev.to/dillionmegida/arrayfilter-26hk
       tags: ["javascript"]
