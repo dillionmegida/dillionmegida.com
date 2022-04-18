@@ -1,4 +1,5 @@
 import GitHub from "./components/Icon/GitHub"
+import Instagram from "./components/Icon/Instagram"
 import LinkedIn from "./components/Icon/LinkedIn"
 import Mail from "./components/Icon/Mail"
 import Twitter from "./components/Icon/Twitter"
@@ -43,6 +44,7 @@ export default {
       link: "https://www.linkedin.com/in/dillionmegida/",
       Icon: LinkedIn,
     },
+    Instagram: { link: "https://instagram.com/deeecode", Icon: Instagram },
     "E-mail": { link: "mailto:dillionmegida@gmail.com", Icon: Mail },
     DeeeCode: {
       link: "https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg",

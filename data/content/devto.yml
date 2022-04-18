@@ -2,6 +2,14 @@
   link: https://dev.to/dillionmegida
   content:
     - item:
+      title: Array.slice() - for slicing an array
+      link: https://dev.to/dillionmegida/arrayslice-for-slicing-an-array-581h
+      tags: ["javascript"]
+    - item:
+      title: Array.forEach() - for looping through items in an array
+      link: https://dev.to/dillionmegida/arrayforeach-for-looping-through-items-in-an-array-1kmo
+      tags: ["javascript"]
+    - item:
       title: Array.flat() - for flatting nested arrays within an array
       link: https://dev.to/dillionmegida/arrayflat-for-flatting-nested-arrays-within-an-array-3d1o
       tags: ["javascript"]

@@ -2,6 +2,14 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: How to Use TypeScript with GraphQL using TypeGraphQL
+      link: https://www.freecodecamp.org/news/how-to-use-typescript-with-graphql/
+      tags: ["typescript", "javascript", "graphql"]
+    - item:
+      title: How to Update Node and NPM to the Latest Version
+      link: https://www.freecodecamp.org/news/how-to-update-node-and-npm-to-the-latest-version/
+      tags: ["javascript", "node"]
+    - item:
       title: How to Pass Callback Functions to String.replace() in JavaScript
       link: https://www.freecodecamp.org/news/how-to-pass-callback-functions-to-string-replace-javascript/
       tags: ["javascript", "regex"]
