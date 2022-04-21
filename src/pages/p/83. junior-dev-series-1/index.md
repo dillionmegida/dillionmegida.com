@@ -133,8 +133,13 @@ You can join your school's Google Developer Student Club. That's an excellent wa
 
 ## Resources
 
-incoming...
-
-<!-- * [Cold Email Template]()
-* [React Robot Tutorial Course]()
-* [Your Portfolio]() -->
+- Cold Email Template
+  > Hello,
+  >
+  > I'm Fortune Ikechi, I am a Frontend Engineer with proficiency in React, React Native and TypeScript. I see you have an opening at SalesTrue. I'd like to apply for a frontend development blogger position at SalesTrue.
+  >
+  > Attached to this mail is a copy of my resume and linkedin.
+  >
+  > Thanks.
+- [React Robot Tutorial Course](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_77879424134_._ad_535397245863_._kw__._de_c_._dm__._pl__._ti_dsa-1007766171312_._li_1010297_._pd__._&matchtype=&gclid=Cj0KCQjw3v6SBhCsARIsACyrRAl2VV0uBOcaLq7rj_gKqO3AEocl0OnqFiPCdAMMNZT0H4jsibzKQIcaAuxyEALw_wcB)
+- [Fortune's Portfolio](https://docs.google.com/file/d/1LM-e1mno_RA49fbbVHgAQb0km5-EHltV/edit?filetype=msword)
