@@ -2,6 +2,10 @@
   link: null
   content:
     - item:
+      title: How to Code a Gmail Spaces Clone With React
+      link: https://getstream.io/blog/gmail-spaces-clone-react/
+      tags: ["react", "javascript", "stream"]
+    - item:
       title: How to Avoid Multiple WebSocket Connections in a React Chat App
       link: https://getstream.io/blog/websocket-connections-react/
       tags: ["react", "javascript", "stream"]

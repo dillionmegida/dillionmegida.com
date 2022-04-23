@@ -2,6 +2,14 @@
   link: https://dev.to/dillionmegida
   content:
     - item:
+      title: Array.flatMap() - for applying a map and a flat on an array
+      link: https://dev.to/dillionmegida/arrayflatmap-for-applying-a-map-and-a-flat-on-an-array-2dll
+      tags: ["javascript"]
+    - item:
+      title: Array.some() - for testing that at least one item meets a condition
+      link: https://dev.to/dillionmegida/arraysome-for-testing-that-at-least-one-item-meets-a-condition-4c1l
+      tags: ["javascript"]
+    - item:
       title: Array.slice() - for slicing an array
       link: https://dev.to/dillionmegida/arrayslice-for-slicing-an-array-581h
       tags: ["javascript"]
