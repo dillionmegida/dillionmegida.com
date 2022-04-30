@@ -20,7 +20,7 @@ type Props = {
 export default ({ data }: Props) => {
   const post = data.markdownRemark
 
-  const postCover = post.frontmatter.cover
+  const { cover: postCover, canonicalLink } = post.frontmatter
   const postCoverUrl = postCover
     ? postCover.startsWith("https")
       ? postCover
@@ -31,7 +31,7 @@ export default ({ data }: Props) => {
     <Layout>
       <Helmet
         pageTitle={`${post.frontmatter.title} - Dillion's Blog`}
-        pageLink={post.fields.slug}
+        pageLink={canonicalLink ?? post.fields.slug}
         pageDesc={post.frontmatter.pageDescription}
         pageKeywords={post.frontmatter.pageKeywords}
         imageCard={postCoverUrl}
@@ -126,6 +126,7 @@ export const query = graphql`
         cover
         tags
         video
+        canonicalLink
         questions {
           name
           options

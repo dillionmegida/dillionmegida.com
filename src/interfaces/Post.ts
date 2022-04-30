@@ -39,6 +39,7 @@ export interface GqlPostFull {
     pageKeywords: string
     cover: string
     questions: any
+    canonicalLink?: string
   }
   timeToRead: number
   html: string

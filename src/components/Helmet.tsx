@@ -25,20 +25,20 @@ const Helmet = ({
   children = null,
 }: Props) => {
   const imageCard = _imageCard
-    ? _imageCard.startsWith("https")
+    ? _imageCard.startsWith("http")
       ? _imageCard
       : `https://dillionmegida.com${_imageCard}`
     : DEFAULT_IMAGE
+
+  const canonicalLink = pageLink.startsWith("http")
+    ? pageLink
+    : `https://dillionmegida.com${pageLink}`
 
   return (
     <RHelmet>
       <html className={smoothScroll ? "smoothScroll" : undefined} lang="en" />
       <title>{pageTitle}</title>
-      <link
-        rel="canonical"
-        href={`https://dillionmegida.com${pageLink}`}
-      />{" "}
-      {/* edit */}
+      <link rel="canonical" href={canonicalLink} /> {/* edit */}
       <meta name="description" content={pageDesc} /> {/* edit */}
       <meta
         name="keywords"
@@ -55,7 +55,7 @@ const Helmet = ({
       <meta property="og:image" content={imageCard} />
       <meta
         property="og:url"
-        content={`https://dillionmegida.com${pageLink}`}
+        content={`https://dillionmegida.com${canonicalLink}`}
       />
       <meta name="monetization" content="$ilp.uphold.com/89fH6XniNm9R" />
       <meta property="og:type" content="article" />
