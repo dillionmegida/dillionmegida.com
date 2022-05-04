@@ -2,6 +2,14 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: How to Create Reusable SVG Icon React Components
+      link: https://www.freecodecamp.org/news/how-to-create-reusable-icon-react-components-for-colors-and-sizes-customization/
+      tags: ["react", "javascript"]
+    - item:
+      title: module.exports – How to Export in Node.js and JavaScript
+      link: https://www.freecodecamp.org/news/module-exports-how-to-export-in-node-js-and-javascript/
+      tags: ["typescript", "javascript", "graphql"]
+    - item:
       title: How to Use TypeScript with GraphQL using TypeGraphQL
       link: https://www.freecodecamp.org/news/how-to-use-typescript-with-graphql/
       tags: ["typescript", "javascript", "graphql"]

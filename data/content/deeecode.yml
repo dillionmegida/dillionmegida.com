@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: Formatting Dates in JS with the Intl API -- shorts
+      link: https://www.youtube.com/shorts/fzBTNgPaECk
+      tags: ["git", "shorts"]
+    - item:
       title: How to create a reusable React Helmet component to improve the SEO of your app with react-helmet
       link: https://youtu.be/cVTFHio6t-4
       tags: ["react", "seo", "gatsby"]

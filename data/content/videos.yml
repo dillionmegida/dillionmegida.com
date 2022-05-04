@@ -2,6 +2,10 @@
   link: null
   content:
     - item:
+      title: "Build In-App Chat with Stream w/ Gift"
+      link: https://www.youtube.com/watch?v=i1dZBHnToC8
+      tags: ["react", "stream"]
+    - item:
       title: "Stream Chat React: Quick Start Guide"
       link: https://www.youtube.com/watch?v=kGKq4giL4ok
       tags: ["react", "stream"]

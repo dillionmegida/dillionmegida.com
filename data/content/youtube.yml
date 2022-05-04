@@ -2,6 +2,14 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: Practicing, a key way to growing in Tech -- shorts
+      link: https://www.youtube.com/shorts/jjmGmbfDqNA
+      tags: ["career", "shorts"]
+    - item:
+      title: How did Victor get his first Full-time Job as a Junior Designer? - Junior Dev Series
+      link: https://youtu.be/MNeZnJhfslg
+      tags: ["career"]
+    - item:
       title: How did Fortune get his first Full-time Job as a Junior Developer? - Junior Dev Series
       link: https://youtu.be/RMAE1DgG_cY
       tags: ["career"]
@@ -12,7 +20,7 @@
     - item:
       title: 3 Tips for Beginners in Technical Writing -- shorts
       link: https://youtu.be/9_DYndb0HkQ
-      tags: ["writing"]
+      tags: ["writing", "shorts"]
     - item:
       title: How I Create my Scripts for my YouTube Videos
       link: https://www.youtube.com/watch?v=xTekRf1N8VM

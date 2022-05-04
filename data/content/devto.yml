@@ -2,6 +2,14 @@
   link: https://dev.to/dillionmegida
   content:
     - item:
+      title: Array.reverse() - for reversing an array
+      link: https://dev.to/dillionmegida/arrayreverse-for-reversing-an-array-3cpe
+      tags: ["javascript"]
+    - item:
+      title: Array.every() - for checking if all items meet a condition
+      link: https://dev.to/dillionmegida/arrayevery-for-checking-if-all-items-meet-a-condition-5h3p
+      tags: ["javascript"]
+    - item:
       title: Array.flatMap() - for applying a map and a flat on an array
       link: https://dev.to/dillionmegida/arrayflatmap-for-applying-a-map-and-a-flat-on-an-array-2dll
       tags: ["javascript"]
