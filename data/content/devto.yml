@@ -2,6 +2,10 @@
   link: https://dev.to/dillionmegida
   content:
     - item:
+      title: Array.reduce() - for reducing an array to a single value
+      link: https://dev.to/dillionmegida/arrayreduce-for-reducing-an-array-to-a-single-value-31a6
+      tags: ["javascript"]
+    - item:
       title: Array.reverse() - for reversing an array
       link: https://dev.to/dillionmegida/arrayreverse-for-reversing-an-array-3cpe
       tags: ["javascript"]

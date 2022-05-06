@@ -2,6 +2,10 @@
   link: null
   content:
     - item:
+      title: Google Search Tips Every Developer Should Know
+      link: https://www.kirupa.com/hodgepodge/google_tips_every_developer_should_know.htm
+      tags: ["web"]
+    - item:
       title: Cookies vs. localStorage vs. sessionStorage
       link: https://www.kirupa.com/hodgepodge/cookies_local_session_storage.htm
       tags: ["javascript"]

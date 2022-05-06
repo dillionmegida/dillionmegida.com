@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: How to Manage Browser Defaults with event.preventDefault() and event.stopPropagation()
+      link: https://www.freecodecamp.org/news/manage-default-behavior-in-browser/
+      tags: ["javascript", "html"]
+    - item:
       title: How to Create Reusable SVG Icon React Components
       link: https://www.freecodecamp.org/news/how-to-create-reusable-icon-react-components-for-colors-and-sizes-customization/
       tags: ["react", "javascript"]
