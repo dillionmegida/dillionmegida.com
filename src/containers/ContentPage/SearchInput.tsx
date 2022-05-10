@@ -87,7 +87,7 @@ export default function SearchInput({
       <div className="input-container">
         <input
           type="text"
-          placeholder="Search my content"
+          placeholder="Search it...I've probably written about it"
           onChange={e => onQuery(e.target.value)}
           defaultValue={defaultValue}
         />

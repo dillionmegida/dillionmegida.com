@@ -2,6 +2,10 @@
   link: null
   content:
     - item:
+      title: Building Your First Application With Deno
+      link: https://getstream.io/blog/build-deno-app/
+      tags: ["deno", "javascript", "node"]
+    - item:
       title: How to Code a Gmail Spaces Clone With React
       link: https://getstream.io/blog/gmail-spaces-clone-react/
       tags: ["react", "javascript", "stream"]

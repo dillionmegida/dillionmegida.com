@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: How to Center an Absolute Positioned Element Vertically and Horizontally with CSS
+      link: https://www.freecodecamp.org/news/how-to-center-an-absolute-positioned-element/
+      tags: ["css", "html"]
+    - item:
       title: How to Manage Browser Defaults with event.preventDefault() and event.stopPropagation()
       link: https://www.freecodecamp.org/news/manage-default-behavior-in-browser/
       tags: ["javascript", "html"]

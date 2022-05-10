@@ -2,6 +2,14 @@
   link: https://dev.to/dillionmegida
   content:
     - item:
+      title: Array.shift() - for shifting the first item in an array
+      link: https://dev.to/dillionmegida/arrayshift-for-shifting-the-first-item-in-an-array-3lka
+      tags: ["javascript"]
+    - item:
+      title: Array.pop() - for popping the last item of an array
+      link: https://dev.to/dillionmegida/arraypop-for-popping-the-last-item-of-an-array-5025
+      tags: ["javascript"]
+    - item:
       title: Array.reduce() - for reducing an array to a single value
       link: https://dev.to/dillionmegida/arrayreduce-for-reducing-an-array-to-a-single-value-31a6
       tags: ["javascript"]
