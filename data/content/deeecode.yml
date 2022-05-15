@@ -2,6 +2,18 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: CSS aspect-ratio for auto sizing and layout -- shorts
+      link: https://youtube.com/shorts/9h-zZ8FupUs
+      tags: ["html", "css", "shorts"]
+    - item:
+      title: Building a Fork with HTML and CSS - CSS Battle
+      link: https://youtu.be/1RXOaRLzjvk
+      tags: ["html", "css"]
+    - item:
+      title: daily.dev clone with React
+      link: https://youtu.be/mz0zxDy0FjE
+      tags: ["react"]
+    - item:
       title: Formatting Dates in JS with the Intl API -- shorts
       link: https://www.youtube.com/shorts/fzBTNgPaECk
       tags: ["git", "shorts"]
