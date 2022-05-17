@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: The :not() pseudo class in CSS - How it works -- shorts
+      link: https://www.youtube.com/shorts/BbbvXyl_2Fw
+      tags: ["css", "shorts"]
+    - item:
       title: Find the Days Difference between two Dates in JavaScript -- shorts
       link: https://www.youtube.com/shorts/sIVizt0YXis
       tags: ["javascript", "shorts"]
