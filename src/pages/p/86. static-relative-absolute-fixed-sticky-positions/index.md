@@ -1,7 +1,7 @@
 ---
 title: "static, relative, absolute, fixed, sticky - Understanding the difference"
 date: "2022-05-06"
-cover: "83-positioning-styles.png"
+cover: "86-positioning-styles.png"
 pageDescription: "Understand the difference between these positioning styles and how they work in CSS"
 pageKeywords: "css, top, left, bottom, right, position, css positions, static, relative, absolute, fixed, sticky"
 tags: ["css"]
