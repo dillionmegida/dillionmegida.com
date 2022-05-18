@@ -2,6 +2,10 @@
   link: https://dev.to/dillionmegida
   content:
     - item:
+      title: Array.splice() - for removing, replacing or adding values to an array
+      link: https://dev.to/dillionmegida/arraysplice-for-removing-replacing-or-adding-values-to-an-array-1k6c
+      tags: ["javascript"]
+    - item:
       title: How to calculate the difference of days between two dates in JavaScript
       link: https://dev.to/dillionmegida/how-to-calculate-the-difference-of-days-between-two-dates-in-javascript-chd
       tags: ["javascript"]
