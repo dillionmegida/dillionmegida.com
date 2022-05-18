@@ -68,5 +68,4 @@ console.log(array[2])
 
 The fact that the other values in the array are not repositioned is why you should not use the delete method to remove items from an array. It is not a practical approach as it can result in unexpected conflicts.
 
-If you want to remove values from an array, you can use the slice array method.
- <!-- [splice array method]() -->
+If you want to remove values from an array, you can use the [splice array method](https://dev.to/dillionmegida/arraysplice-for-removing-replacing-or-adding-values-to-an-array-1k6c).
