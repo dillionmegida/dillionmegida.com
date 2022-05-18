@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: Minify CSS – CSS Minifying and Compression Explained
+      link: https://www.freecodecamp.org/news/minify-css-css-minifying-and-compression-explained/
+      tags: ["css"]
+    - item:
       title: JavaScript Promises – The promise.then, promise.catch and promise.finally Methods Explained
       link: https://www.freecodecamp.org/news/javascript-promise-methods/
       tags: ["javascript"]
