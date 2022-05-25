@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: Building a Tiger's Eye with HTML and CSS - CSS Battle
+      link: https://youtu.be/TC0A6kqZeRY
+      tags: ["html", "css"]
+    - item:
       title: The :not() pseudo class in CSS - How it works -- shorts
       link: https://www.youtube.com/shorts/BbbvXyl_2Fw
       tags: ["css", "shorts"]

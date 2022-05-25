@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: All Caps in CSS - How to Uppercase Text with Style
+      link: https://www.freecodecamp.org/news/all-caps-in-css-how-to-uppercase-text-with-style/
+      tags: ["css"]
+    - item:
       title: Minify CSS – CSS Minifying and Compression Explained
       link: https://www.freecodecamp.org/news/minify-css-css-minifying-and-compression-explained/
       tags: ["css"]
