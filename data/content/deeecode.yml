@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: React Context in 1 minute - shorts
+      link: https://www.youtube.com/shorts/OEPBHO6aGcI
+      tags: ["react"]
+    - item:
       title: Building a Tiger's Eye with HTML and CSS - CSS Battle
       link: https://youtu.be/TC0A6kqZeRY
       tags: ["html", "css"]
