@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: JavaScript String.Split() Example with RegEx
+      link: https://www.freecodecamp.org/news/javascript-string-split-example-with-regex/
+      tags: ["javascript"]
+    - item:
       title: All Caps in CSS - How to Uppercase Text with Style
       link: https://www.freecodecamp.org/news/all-caps-in-css-how-to-uppercase-text-with-style/
       tags: ["css"]
