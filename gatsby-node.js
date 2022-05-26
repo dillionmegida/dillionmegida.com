@@ -6,7 +6,11 @@ const createPaginatedPages = require("gatsby-paginate")
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: `pages`,
+    })
     const postPath = slug.replace(/^(\/p\/\d+\.\s)/, "/p/")
 
     createNodeField({
@@ -27,6 +31,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       toPath: "/",
       isPermanent: true,
     })
+  })
+
+  // this article https://www.freecodecamp.org/news/all-caps-in-css-how-to-uppercase-text-with-style/
+  // still references the wrong link
+  createRedirect({
+    fromPath: "/p/10-useful-string-methods-in-javascirpt/",
+    toPath: "/p/10-useful-string-methods-in-javascript/",
+    isPermanent: true,
   })
 
   createRedirect({
