@@ -9,7 +9,7 @@ tags: ["html", "dom"]
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1593280975/images/thewebfor5/DocumentFragment_njrssv.png"
 ---
 
-[The DOM](/p/javascript/the-dom) is a logical representation of an HTML document, which the browser uses to determine how a page is displayed. The DOM also provides APIs which JavaScript uses to modify pages displayed (adding styles, adding elements, and so on).
+[The DOM](/p/the-dom) is a logical representation of an HTML document, which the browser uses to determine how a page is displayed. The DOM also provides APIs which JavaScript uses to modify pages displayed (adding styles, adding elements, and so on).
 
 As easy as modifications are to implement, they come with a cost when overused. Performance!
 

@@ -67,7 +67,7 @@ When the browser is done with the timer (or any other API which it provides for 
 
 ### When are they called back?
 
-Remember the Call Stack? This is a feature in Javascript used to keep track of executing functions. Read more - [Call Stack in Javascript](/p/javascript/call-stack).
+Remember the Call Stack? This is a feature in Javascript used to keep track of executing functions. Read more - [Call Stack in Javascript](/p/call-stack).
 
 The Callback queue waits until the call stack is empty. Afterwards, the codes in it are executed in First In, First Out (FIFO) order. As more functions or codes are added to the callback queue, they stay at the back and wait for the ones in the front to leave the queue first.
 

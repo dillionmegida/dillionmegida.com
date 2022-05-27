@@ -163,7 +163,7 @@ Syntax for CSS comments is;
 
 The first is for single line comments while the second is for multi lines. In short, anything found between `/*` and `*/` is a comment.
 
-In the above codes, we selected the elements we wanted to style by their tag names. This means that every element on the page with that tag will be affected by the style declarations. On most occassions, this is not our intention. Sometimes, a developer may just want to select some paragraphs or some images to style. This is possible. Check out this article to know how - [Selector Methods in CSS](/p/css/css-selector-methods)
+In the above codes, we selected the elements we wanted to style by their tag names. This means that every element on the page with that tag will be affected by the style declarations. On most occassions, this is not our intention. Sometimes, a developer may just want to select some paragraphs or some images to style. This is possible. Check out this article to know how - [Selector Methods in CSS](/p/css-selector-methods)
 
 ---
 
@@ -185,4 +185,4 @@ With HTML and CSS, you already have a building. Javascript may not be necessary.
 When the user opens the door with a key, what should the door do? Open right? Interaction.
 The HTML and CSS just defines the structure of the building, but there's no response to action. Javascript enables the actions.
 
-Learn more on HTML in this article - [What is HTML?](/p/html/what-is-html) and Javascript in this article - [What is Javascript?](/p/javascript/what-is-javascript).
+Learn more on HTML in this article - [What is HTML?](/p/what-is-html) and Javascript in this article - [What is Javascript?](/p/what-is-javascript).

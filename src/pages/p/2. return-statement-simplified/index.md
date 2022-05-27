@@ -8,9 +8,9 @@ tags: ["javascript"]
 ---
 
 I usually have issues with this statement and as I was able to have a grasp of it, I decided to write about it.
-<br/><br/>
+
 The return statement is a statement that evaluates a value and attaches it to a function. When such functions are called, they return the value that was evaluated.
-<br>
+
 Take a look at this example,
 
 ```javascript
@@ -23,11 +23,8 @@ console.log("a: " + a + ", b: " + b + ", c: " + c)
 ```
 
 The way return statements work is similar to the program above. When 'a' is called, it returns '5' as the value. Calling 'a' is the same thing as calling '5'. You can replace '5' with 'a', wherever you want to use '5'.
-<br/>
-<br/>
 
 Return statements are mostly used in functions. They are different from 'console.log'. Console.log will output the evaluated value from its arguments to the console but the return statement will attach the value to the function.
-<br/><br/>
 
 ```javascript
 // return
@@ -42,7 +39,7 @@ function write2() {
 ```
 
 Calling the write1() function wouldn't do much work as the value is only attached to the function and there's no action for outputting it. Calling the write2() function would display the arguments on the console.
-<br/><br/>
+
 From the first program, we can liken write1() to:
 
 ```javascript
@@ -52,7 +49,7 @@ function write1() = 'I will be attached to the write function';
 ```
 
 Calling write1() is the same thing as calling 'I will be attached to the write function'.
-<br/><br/>
+
 Another use case for return statements could be:
 
 ```javascript
@@ -78,16 +75,11 @@ if(typeOf getAgeFor(myYearOfBirth) === 'number') {
 ```
 
 First, we have to make sure it is a number for the string ('My current age is ') to work properly, because our getAgeFor function returns either a string ('But dude...') or a number (currentYear - yearOfBirth). This if statement can then be used to output the string containing the evaluated age gotten from our function.
-<br/><br/>
 
 I'd also like to bring to your knowledge that return statements end the execution of a function i.e, the preceding codes for that function would never be reached.
-<br/><br/>
 
-You can read more about return statements here: return - <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return'>Javascript | MDN</a>
-<br/><br/>
+You can read more about return statements here: return - [Javascript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
 
 I do hope that this article has taught you a thing or two. Do you have any questions, corrections or contributions, please share them in the comment section.
-<br/>
 
 Thank you!
-<br/><br/>

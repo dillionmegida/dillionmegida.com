@@ -64,7 +64,7 @@ If `slice` was used instead, the result would be 'el' - 1 being the starting poi
 
 ## Wrap up
 
-`slice` (just like [`substring`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring)) works like `(from, to)` while `substr` works like `(from, length-to-cut)`
+`slice` (just like [`substring`](/p/10-useful-string-methods-in-javascript/#substring)) works like `(from, to)` while `substr` works like `(from, length-to-cut)`
 
 These methods can be used to achieve the same thing, but, they have their key differences. I believe with this article, you not only know the uniqueness of these two methods but also how to apply them.
 

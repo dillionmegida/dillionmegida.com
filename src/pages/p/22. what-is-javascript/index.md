@@ -12,9 +12,9 @@ tags: ["javascript"]
 
 ## What is Javascript?
 
-Javascript is a [scripting language](/p/general/what-are-scripting-languages) which is dynamic in nature. It is popularly known for it's usage on the web. With this language, interactions and functionalities are added to webpages. These include interacting with users (e.g processing user inputs), creating dynamic webpages and also manipulating the contents on a web page. These are just a few.
+Javascript is a [scripting language](/p/what-are-scripting-languages) which is dynamic in nature. It is popularly known for it's usage on the web. With this language, interactions and functionalities are added to webpages. These include interacting with users (e.g processing user inputs), creating dynamic webpages and also manipulating the contents on a web page. These are just a few.
 
-It is often confused to be related with JAVA but they are two different langauges. JAVA is a compiled langauge and Javascript is a script language. Check out the referenced article above ([scripting langauges](/p/general/what-are-scripting-languages))
+It is often confused to be related with JAVA but they are two different langauges. JAVA is a compiled langauge and Javascript is a script language. Check out the referenced article above ([scripting langauges](/p/what-are-scripting-languages))
 
 However, I've read from books that the name Javascript replaced LiveScript (the former name) because of the popularity which JAVA was gaining.
 
@@ -30,7 +30,7 @@ However, I've read from books that the name Javascript replaced LiveScript (the 
 
 ## Usage
 
-Javascript is generally used on web pages but that is not all. It is also used in some backend operations like creating servers. For start, we'll be looking at javascript on the frontend. If you find frontend and backend confusing, check out this article - [Frontend and Backend Development](/p/general/frontend-and-backend-development).
+Javascript is generally used on web pages but that is not all. It is also used in some backend operations like creating servers. For start, we'll be looking at javascript on the frontend. If you find frontend and backend confusing, check out this article - [Frontend and Backend Development](/p/frontend-and-backend-development).
 
 To use javascript on webpages, the script has to be called in HTML. When the HTML document is requested, the script also works with it.
 
@@ -163,4 +163,4 @@ The second line is an `if` statement which executes some codes when a condition 
 
 There's a lot mroe to cover in javascript (like functions, loops and so much more) of which we would be looking at in future articles. Stay tuned!
 
-You can check out how javascript gains access to HTML contents in this article - [The DOM](/p/javascript/the-dom)
+You can check out how javascript gains access to HTML contents in this article - [The DOM](/p/the-dom)
