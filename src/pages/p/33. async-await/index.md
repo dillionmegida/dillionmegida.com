@@ -10,7 +10,7 @@ tags: ["async", "javascript"]
 
 Async/Await method makes working with Promises easy. Added to this is that code is very readable compared to nested `.then()`s.
 
-No prior knowledge of Promises? Read about promises here - [Promises in Javascript](/p/javascript/javascript-promises).
+No prior knowledge of Promises? Read about promises here - [Promises in Javascript](/p/javascript-promises).
 
 ## Syntax
 
