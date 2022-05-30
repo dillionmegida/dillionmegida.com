@@ -133,7 +133,7 @@ There are many forms of side effects, but we'll look at three use cases.
 
 #### 1. Cleaning up API requests on unmount
 
-In the cleanup function, you can abort requests using `AbortController` in [fetch](https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort) or [axios](https://github.com/axios/axios#cancellation). I believe they will also provide some abort methods for other request libraries.
+In the cleanup function, you can cancel [requests using `AbortController` in fetch or axios](/p/abort-api-request-in-javascript/). I believe they will also provide some abort methods for other request libraries.
 
 Here's how it looks in code:
 
