@@ -78,6 +78,10 @@
 
   /* Markdown custom styles */
 
+  a {
+    word-break: break-all;
+  }
+
   img {
     width: 100%;
   }
