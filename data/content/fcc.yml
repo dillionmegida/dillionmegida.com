@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: How to Square a Number in Python – Squaring Function
+      link: https://www.freecodecamp.org/news/how-to-square-a-number-in-python-squaring-function/
+      tags: ["python"]
+    - item:
       title: JavaScript String.Split() Example with RegEx
       link: https://www.freecodecamp.org/news/javascript-string-split-example-with-regex/
       tags: ["javascript"]
