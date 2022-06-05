@@ -5,6 +5,7 @@ cover: "89-abort-api-request-in-javascript.png"
 pageDescription: "In JavaScript, you can abort API requests before they are completed. In this article, I explain how to abort API requests made with fetch and axios."
 pageKeywords: "javascript, axios, fetch, abort, abort api request, abort api request in javascript, abort api request in javascript with fetch, abort api request in javascript with axios, abort api request in javascript with axios and fetch"
 tags: ["javascript"]
+video: "https://youtu.be/EvAuLZUOG2Q"
 ---
 
 When building applications, you make API requests to servers for different reasons; to authenticate user credentials, fetch resources, create resources, and so much more.

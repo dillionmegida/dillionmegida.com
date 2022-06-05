@@ -2,6 +2,14 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: Abort API Requests in JavaScript using the AbortController
+      link: https://youtu.be/EvAuLZUOG2Q
+      tags: ["javascript"]
+    - item:
+      title: Learn and Improve your Web Development Skills with FreeCodeCamp ✨ - shorts
+      link: https://youtube.com/shorts/pNIupRJ1eeE
+      tags: ["general"]
+    - item:
       title: React Context in 1 minute - shorts
       link: https://www.youtube.com/shorts/OEPBHO6aGcI
       tags: ["react"]
