@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: The Linux cp Command – How to Copy Files in Linux
+      link: https://www.freecodecamp.org/news/the-linux-cp-command-how-to-copy-files-in-linux/
+      tags: ["shell", "linux"]
+    - item:
       title: How to Square a Number in Python – Squaring Function
       link: https://www.freecodecamp.org/news/how-to-square-a-number-in-python-squaring-function/
       tags: ["python"]
@@ -108,11 +112,11 @@
     - item:
       title: Grep Command Tutorial – How to Search for a File in Linux and Unix with Recursive Find
       link: https://www.freecodecamp.org/news/grep-command-tutorial-how-to-search-for-a-file-in-linux-and-unix/
-      tags: ["linux"]
+      tags: ["shell", "linux"]
     - item:
       title: Symlink Tutorial in Linux – How to Create and Remove a Symbolic Link
       link: https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/
-      tags: ["linux"]
+      tags: ["shell", "linux"]
     - item:
       title: How to Deploy a MERN Application to Heroku Using MongoDB Atlas
       link: https://www.freecodecamp.org/news/deploying-a-mern-application-using-mongodb-atlas-to-heroku/
