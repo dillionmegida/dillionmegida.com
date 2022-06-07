@@ -64,7 +64,7 @@ JSX is syntactic sugar for `React.createElement` which is a normal JavaScript me
 To create a React element without JSX, you use the `createElement` method on the `React` object. The syntax for this method is:
 
 ```js
-React.createReactElement(element, props, ...children)
+React.createElement(element, props, ...children)
 ```
 
 For example, this JSX:
@@ -112,12 +112,8 @@ This JSX translates to:
 
 ```js
 function App() {
-  return React.createElement(
-    "div",
-    null,
-    React.createElement("h1", null, "Hello")
-  )
-  React.createElement("div", null, "Another parent")
+  return React.createElement("div", null, "Why")
+  React.createElement("div", null, "Can I not do this?")
 }
 ```
 
