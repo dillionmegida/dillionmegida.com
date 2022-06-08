@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: How to Remove a Directory in Linux – Delete a Folder Command
+      link: https://www.freecodecamp.org/news/how-to-remove-a-directory-in-linux/
+      tags: ["shell", "linux"]
+    - item:
       title: The Linux cp Command – How to Copy Files in Linux
       link: https://www.freecodecamp.org/news/the-linux-cp-command-how-to-copy-files-in-linux/
       tags: ["shell", "linux"]
