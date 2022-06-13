@@ -7,7 +7,7 @@ pageKeywords: "technical articles, anniversary, two years"
 tags: ["general"]
 ---
 
-Prior to [my first post on my website](/p/first-blog/) which was written on 18th July 2019, I wrote my first ever technical article on Dev.to on 26th June, 20219--[Making sticky column with grid area](https://dev.to/dillionmegida/making-sticky-column-with-grid-area-5eph).
+Prior to [my first post on my website](/p/first-blog/) which was written on 18th July 2019, I wrote my first ever technical article on Dev.to on 26th June, 2019--[Making sticky column with grid area](https://dev.to/dillionmegida/making-sticky-column-with-grid-area-5eph).
 
 26th June 2021 makes it two years since my first article, and over time, I've written [90+ public articles](/content) and some private ones. In this article, I want to celebrate myself, share a little background story, and also share a little of what I've learned during this period.
 
