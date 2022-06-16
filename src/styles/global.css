@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
-@import url("https://fonts.cdnfonts.com/css/sofia-pro");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:wght@300;400;500&display=swap");
 
 html.smoothScroll {
   scroll-behavior: smooth;
@@ -19,7 +18,7 @@ html.smoothScroll {
   --midMainColor2: rgb(83, 83, 83);
 
   --main-font: "Aclonica", "Zen Antique Soft", "Nunito", "Helvetica";
-  --sec-font: "Sofia Pro", "Helvetica";
+  --sec-font: "Inter", "Helvetica";
 }
 
 ::-webkit-scrollbar {
