@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: Debouncing Simplified | How to implement in JavaScript with Example
+      link: https://youtu.be/0cEGcIH8YXw
+      tags: ["javascript"]
+    - item:
       title: Abort API Requests in JavaScript using the AbortController
       link: https://youtu.be/EvAuLZUOG2Q
       tags: ["javascript"]

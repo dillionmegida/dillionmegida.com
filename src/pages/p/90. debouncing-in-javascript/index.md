@@ -5,6 +5,7 @@ cover: "90-debouncing-in-javascript.png"
 pageDescription: "Debouncing in JavaScript is a technique used to reduce the rate at which a function is called and helps to improve performance in an application."
 pageKeywords: "debounce, javascript, setTimeout, clearTimeout, function, debounce function, lodash"
 tags: ["javascript"]
+video: "https://youtu.be/0cEGcIH8YXw"
 ---
 
 Debouncing is a technique used to optimize application performance by reducing the rate at which functions are called. Some functions are expensive (could be using more memory, or could be using a lot of CPU time, or causing many database transactions), and we don’t want to call them too often. Debouncing solves this.
