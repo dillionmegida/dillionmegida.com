@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: HTML Arrow – Symbol Unicode for Single and Double Arrows, Left and Right Arrows
+      link: https://www.freecodecamp.org/news/html-arrow-symbol-unicode-for-single-and-double-arrows-left-and-right-arrows/
+      tags: ["html"]
+    - item:
       title: How to Remove a Directory in Linux – Delete a Folder Command
       link: https://www.freecodecamp.org/news/how-to-remove-a-directory-in-linux/
       tags: ["shell", "linux"]
