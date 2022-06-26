@@ -2,6 +2,14 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: Improve your Frontend Skills with these Project Ideas
+      link: https://www.youtube.com/shorts/2l8kj19Lhx8
+      tags: ["frontend", "general", "shorts"]
+    - item:
+      title: How I went from 60 to 1k followers in a month | My Instagram Story
+      link: https://youtu.be/tm_lgi2Bkt0
+      tags: ["general"]
+    - item:
       title: My Process of Getting Many Technical Writing Topics
       link: https://youtu.be/yhqMyy7_iu8
       tags: ["writing", "general"]
@@ -10,7 +18,7 @@
       link: https://youtu.be/yxbAX6vTUgc
       tags: ["writing", "general"]
     - item:
-      title: Welcome to the Netherlands, where you’re rewarded for contributing to recycling ✨ -- shorts
+      title: Welcome to the Netherlands, where you’re rewarded for contributing to recycling ✨
       link: https://www.youtube.com/shorts/yFaQvjIWfPg
       tags: ["netherlands", "shorts"]
     - item:

@@ -2,6 +2,14 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: Types of Scope in JavaScript
+      link: https://www.youtube.com/shorts/Njj3YSguXxQ
+      tags: ["javascript", "shorts"]
+    - item:
+      title: Hoisting with let, const and var in JavaScript
+      link: https://www.youtube.com/shorts/6I7t5w839pk
+      tags: ["javascript", "shorts"]
+    - item:
       title: Debouncing Simplified | How to implement in JavaScript with Example
       link: https://youtu.be/0cEGcIH8YXw
       tags: ["javascript"]
@@ -10,27 +18,27 @@
       link: https://youtu.be/EvAuLZUOG2Q
       tags: ["javascript"]
     - item:
-      title: Learn and Improve your Web Development Skills with FreeCodeCamp ✨ - shorts
+      title: Learn and Improve your Web Development Skills with FreeCodeCamp ✨
       link: https://youtube.com/shorts/pNIupRJ1eeE
-      tags: ["general"]
+      tags: ["general", "shorts"]
     - item:
-      title: React Context in 1 minute - shorts
+      title: React Context in 1 minute
       link: https://www.youtube.com/shorts/OEPBHO6aGcI
-      tags: ["react"]
+      tags: ["react", "shorts"]
     - item:
       title: Building a Tiger's Eye with HTML and CSS - CSS Battle
       link: https://youtu.be/TC0A6kqZeRY
       tags: ["html", "css"]
     - item:
-      title: The :not() pseudo class in CSS - How it works -- shorts
+      title: The :not() pseudo class in CSS - How it works
       link: https://www.youtube.com/shorts/BbbvXyl_2Fw
       tags: ["css", "shorts"]
     - item:
-      title: Find the Days Difference between two Dates in JavaScript -- shorts
+      title: Find the Days Difference between two Dates in JavaScript
       link: https://www.youtube.com/shorts/sIVizt0YXis
       tags: ["javascript", "shorts"]
     - item:
-      title: CSS aspect-ratio for auto sizing and layout -- shorts
+      title: CSS aspect-ratio for auto sizing and layout
       link: https://youtube.com/shorts/9h-zZ8FupUs
       tags: ["html", "css", "shorts"]
     - item:
@@ -42,7 +50,7 @@
       link: https://youtu.be/mz0zxDy0FjE
       tags: ["react"]
     - item:
-      title: Formatting Dates in JS with the Intl API -- shorts
+      title: Formatting Dates in JS with the Intl API
       link: https://www.youtube.com/shorts/fzBTNgPaECk
       tags: ["git", "shorts"]
     - item:
@@ -58,7 +66,7 @@
       link: https://youtu.be/_TXC20_UdF8
       tags: ["git"]
     - item:
-      title: Displaying git help results on a browser for easy view and readability -- shorts
+      title: Displaying git help results on a browser for easy view and readability
       link: https://youtu.be/Gr0RoDu8L_c
       tags: ["git", "shorts"]
     - item:
