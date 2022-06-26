@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: JavaScript Capitalize First Letter – How to Uppercase the First Letter in a Word with JS
+      link: https://www.freecodecamp.org/news/javascript-capitalize-first-letter-of-word/
+      tags: ["javascript"]
+    - item:
       title: HTML Arrow – Symbol Unicode for Single and Double Arrows, Left and Right Arrows
       link: https://www.freecodecamp.org/news/html-arrow-symbol-unicode-for-single-and-double-arrows-left-and-right-arrows/
       tags: ["html"]
