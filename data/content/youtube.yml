@@ -2,6 +2,10 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: 3 years in Technical Writing | What I've Learnt/Gained
+      link: https://youtu.be/lEtHR2bkn-g
+      tags: ["writing", "general"]
+    - item:
       title: Improve your Frontend Skills with these Project Ideas
       link: https://www.youtube.com/shorts/2l8kj19Lhx8
       tags: ["frontend", "general", "shorts"]

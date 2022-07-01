@@ -2,6 +2,18 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: React Portals in 1 minute
+      link: https://www.youtube.com/shorts/-qtdvR-am5A
+      tags: ["javascript", "react", "shorts"]
+    - item:
+      title: React Portals Simplified | Why and How to Use It
+      link: https://www.youtube.com/watch?v=eUjyhP825rQ
+      tags: ["javascript", "react"]
+    - item:
+      title: 3 Useful Array Methods
+      link: https://www.youtube.com/shorts/yB6GXQq66gU
+      tags: ["javascript", "shorts"]
+    - item:
       title: Types of Scope in JavaScript
       link: https://www.youtube.com/shorts/Njj3YSguXxQ
       tags: ["javascript", "shorts"]

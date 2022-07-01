@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: How to Clear a JavaScript Array – JS Empty Array
+      link: https://www.freecodecamp.org/news/how-to-clear-a-javascript-array-js-empty-array/
+      tags: ["javascript"]
+    - item:
       title: JavaScript Capitalize First Letter – How to Uppercase the First Letter in a Word with JS
       link: https://www.freecodecamp.org/news/javascript-capitalize-first-letter-of-word/
       tags: ["javascript"]
