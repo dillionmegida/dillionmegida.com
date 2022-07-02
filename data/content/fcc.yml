@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: JavaScript String Comparison – How to Compare Strings in JS
+      link: https://www.freecodecamp.org/news/javascript-string-comparison-how-to-compare-strings-in-js/
+      tags: ["javascript"]
+    - item:
       title: How to Clear a JavaScript Array – JS Empty Array
       link: https://www.freecodecamp.org/news/how-to-clear-a-javascript-array-js-empty-array/
       tags: ["javascript"]
