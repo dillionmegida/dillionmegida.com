@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import ContentPage from "../../containers/ContentPage"
 import Helmet from "../../components/Helmet"
 import Layout from "../../components/Layout"
@@ -32,6 +32,30 @@ type Props = {
   }
   location: Location
 }
+// @ts-ignore
+function withAuthentication(Component) {
+  return function ComponentWithAuthentication() {
+    useEffect(() => {
+      console.log("hi")
+      // check if user is logged in
+      // if user is not
+    //   navigate("/login")
+    }, [])
+
+    return <Component />
+  }
+}
+
+function LoginComponent() {
+  // return login component
+  return (
+    <div>
+      <h1>Hello</h1>
+    </div>
+  )
+}
+
+export default withAuthentication(LoginComponent)
 
 function Content({ data, location }: Props) {
   return (
@@ -384,4 +408,4 @@ export const query = graphql`
   }
 `
 
-export default Content
+// export default Content
