@@ -32,30 +32,6 @@ type Props = {
   }
   location: Location
 }
-// @ts-ignore
-function withAuthentication(Component) {
-  return function ComponentWithAuthentication() {
-    useEffect(() => {
-      console.log("hi")
-      // check if user is logged in
-      // if user is not
-    //   navigate("/login")
-    }, [])
-
-    return <Component />
-  }
-}
-
-function LoginComponent() {
-  // return login component
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  )
-}
-
-export default withAuthentication(LoginComponent)
 
 function Content({ data, location }: Props) {
   return (
@@ -63,7 +39,9 @@ function Content({ data, location }: Props) {
       <Helmet
         pageTitle="All my content in one place ✨"
         pageDesc="This is a page for every content I've created ranging from articles to videos to podcasts to everything on web development and tech."
-        pageLink={constants.pageLinks.CONTENT}
+        pageLink={
+          constants.pageLinks.CONTENT
+        }
       />
       <ContentPage
         params={location.search}
@@ -86,7 +64,9 @@ function Content({ data, location }: Props) {
         egghead={data.egghead}
         strapi={data.strapi}
         stream={data.stream}
-        allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
+        allArticlesOnThisWebsite={
+          data.allArticlesOnMyWebite
+        }
       />
     </Layout>
   )
@@ -386,8 +366,15 @@ export const query = graphql`
     }
 
     allArticlesOnMyWebite: allMarkdownRemark(
-      filter: { fields: { slug: { regex: "/^(/p/)/" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        fields: {
+          slug: { regex: "/^(/p/)/" }
+        }
+      }
+      sort: {
+        fields: [frontmatter___date]
+        order: DESC
+      }
     ) {
       edges {
         node {
@@ -408,4 +395,4 @@ export const query = graphql`
   }
 `
 
-// export default Content
+export default Content
