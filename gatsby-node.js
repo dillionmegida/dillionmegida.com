@@ -11,7 +11,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       getNode,
       basePath: `pages`,
     })
-    const postPath = slug.replace(/^(\/p\/\d+\.\s)/, "/p/")
+    const postPath = slug.replace(/^(\/\d+\.\s)/, "/p/")
 
     createNodeField({
       node,

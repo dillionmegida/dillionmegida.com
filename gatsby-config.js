@@ -96,6 +96,13 @@ module.exports = {
         path: `${__dirname}/data/content/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/data/articles/`,
+      },
+    },
 
     // For disqus - Interaction with users on posts
     {
