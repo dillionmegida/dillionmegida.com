@@ -2,14 +2,30 @@
   link: null
   content:
     - item:
+      title: Twitter Clone Part 3 - Adding Tweet Reactions and Showing Notifications
+      link: https://getstream.io/blog/twitter-reactions-notifications/
+      tags: ["react", "javascript", "feeds", "stream"]
+    - item:
+      title: Twitter Clone Part 2 - Creating a Profile Page and Following Users
+      link: https://getstream.io/blog/twitter-profile-page-follow-users/
+      tags: ["react", "javascript", "feeds", "stream"]
+    - item:
+      title: Twitter Clone Part 1 - Connecting Users to Stream Feeds and Creating a Tweet
+      link: https://getstream.io/blog/twitter-feeds-tweet/
+      tags: ["react", "javascript", "feeds", "stream"]
+    - item:
+      title: Build a Twitter Clone with Activity Feeds and React
+      link: https://getstream.io/blog/build-twitter-clone/
+      tags: ["react", "javascript", "feeds", "stream"]
+    - item:
       title: Building Your First Application With Deno
       link: https://getstream.io/blog/build-deno-app/
       tags: ["deno", "javascript", "node"]
     - item:
       title: How to Code a Gmail Spaces Clone With React
       link: https://getstream.io/blog/gmail-spaces-clone-react/
-      tags: ["react", "javascript", "stream"]
+      tags: ["react", "javascript", "stream", "chat"]
     - item:
       title: How to Avoid Multiple WebSocket Connections in a React Chat App
       link: https://getstream.io/blog/websocket-connections-react/
-      tags: ["react", "javascript", "stream"]
+      tags: ["react", "javascript", "stream", "chat"]

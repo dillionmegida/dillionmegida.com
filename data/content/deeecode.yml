@@ -2,6 +2,18 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: Parameters & Arguments in JavaScript | The Difference
+      link: https://youtube.com/shorts/ORLE2CRtysU
+      tags: ["javascript", "react", "shorts"]
+    - item:
+      title: 3 Ways to Get Last Item from Array
+      link: https://youtube.com/shorts/p-m6FkMg3z0
+      tags: ["javascript", "shorts"]
+    - item:
+      title: Filter Falsy Values from an Array
+      link: https://youtube.com/shorts/IzXgYohwX_s
+      tags: ["javascript", "shorts"]
+    - item:
       title: React Portals in 1 minute
       link: https://www.youtube.com/shorts/-qtdvR-am5A
       tags: ["javascript", "react", "shorts"]
