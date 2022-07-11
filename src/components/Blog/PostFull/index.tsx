@@ -66,10 +66,10 @@ export default ({ data }: Props) => {
           ) : null}
           <div className={Styles.BlogContent}>
             {post.frontmatter.video && (
-              <div className={Styles.VideoText}>
+              <p className={Styles.VideoText}>
                 Here's a video if you'd prefer that:{" "}
                 <a href={post.frontmatter.video}>{post.frontmatter.video}</a>
-              </div>
+              </p>
             )}
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
