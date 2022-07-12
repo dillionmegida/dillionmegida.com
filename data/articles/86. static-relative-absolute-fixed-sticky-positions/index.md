@@ -5,6 +5,7 @@ cover: "86-positioning-styles.png"
 pageDescription: "Understand the difference between these positioning styles and how they work in CSS"
 pageKeywords: "css, top, left, bottom, right, position, css positions, static, relative, absolute, fixed, sticky"
 tags: ["css"]
+video: "https://youtu.be/Sb4oI8vU2FU"
 ---
 
 CSS has different positions that can be applied to elements. They include `static`, `relative`,`absolute`, `fixed`, and `sticky`. These positions specify how an element should be positioned in a document which causes the element to behave differently.
