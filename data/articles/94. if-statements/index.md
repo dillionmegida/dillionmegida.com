@@ -15,7 +15,7 @@ These are called **conditionals**.
 
 Not everything is one direct flow. Sometimes, you create conditional statements where a piece of code is executed if some conditions are met.
 
-In JavaScript, you can create conditional statements using `if` and `switch` statements. In this article, we'll look at the `if` statements.
+In JavaScript, you can create conditional statements using `if` and `switch` statements. In this article, we'll look at the `if` statements. Check out `switch` statements [in this article](/p/switch-statements)
 
 ## If statements
 
