@@ -2,6 +2,34 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: CSS Box Model Simplified
+      link: https://youtu.be/opHpcJIUbEU
+      tags: ["css", "html"]
+    - item:
+      title: The Concept of React Hooks | Why they are relevant
+      link: https://youtu.be/LQLekBr1jNM
+      tags: ["javascript", "react"]
+    - item:
+      title: React Components as Living Things | State and Lifecycle Simplified
+      link: https://youtu.be/TWJDePKD2o8
+      tags: ["javascript", "react"]
+    - item:
+      title: How to Combine 2 Arrays without mutating them
+      link: https://youtube.com/shorts/tCfcC6_Q2YM
+      tags: ["javascript", "shorts"]
+    - item:
+      title: Pass Data from Child to Parent Component in React
+      link: https://youtube.com/shorts/gIR8BP0B2q8
+      tags: ["javascript", "react", "shorts"]
+    - item:
+      title: CSS positions explained | static, relative, absolute, fixed and sticky
+      link: https://youtu.be/Sb4oI8vU2FU
+      tags: ["css", "html"]
+    - item:
+      title: Difference between do…while and while loop
+      link: https://youtube.com/shorts/a-ns5gj-lY4
+      tags: ["javascript", "shorts"]
+    - item:
       title: Parameters & Arguments in JavaScript | The Difference
       link: https://youtube.com/shorts/ORLE2CRtysU
       tags: ["javascript", "react", "shorts"]

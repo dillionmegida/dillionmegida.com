@@ -2,6 +2,18 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: strftime() Python – Datetime Format Tutorial
+      link: https://www.freecodecamp.org/news/strftime-in-python/
+      tags: ["python"]
+    - item:
+      title: Python List.append() – How to Append to a List in Python
+      link: https://www.freecodecamp.org/news/python-list-append-how-to-append-to-a-list-in-python/
+      tags: ["python"]
+    - item:
+      title: JavaScript String Format – Formatting Strings in JS
+      link: https://www.freecodecamp.org/news/javascript-string-format-how-to-format-strings-in-js/
+      tags: ["javascript"]
+    - item:
       title: JavaScript String Comparison – How to Compare Strings in JS
       link: https://www.freecodecamp.org/news/javascript-string-comparison-how-to-compare-strings-in-js/
       tags: ["javascript"]
