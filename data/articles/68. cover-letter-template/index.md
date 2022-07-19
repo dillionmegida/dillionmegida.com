@@ -39,11 +39,11 @@ I'd love to work for **[Company Name]**.
 
 Why **[Company Name]**? **[Here, you state why you want to work for the company. What excited you about the company? What product got your attention? Why this company? You have to do your research obviously, so you can clearly state something about the company that matches your interests]**
 
-> Here, you're showing the recruiter why you want to work for the company. Your cover letter shouldn't come off as a general email you sent to 50 job application emails. It would be best if you tailored it to the job you're applying for.
+> Here, you're showing the recruiter why you want to work for the company. Your cover letter shouldn't come off as a general email you sent to 50 job application emails. It would be best if you tailored it to the job you're applying for and at least show the recruiter that you've done some research about the company.
 
 Why me? **[A little about you--who you are, what you love doing, your strengths and skills concisely (ensure they align with the job's description)]**
 
-> Here, you're showing why you're fit.
+> Here, you're showing why you're fit. Mention the skills that applies to the description because that's what matters here.
 
 Here are some of my achievements below that'll make you consider my application:
 
@@ -51,6 +51,8 @@ Here are some of my achievements below that'll make you consider my application:
 - **[Achievement 2 with reference links]**
 - ...
 - **[Achievement n with reference links]**
+
+> In addition to the skills you've mentioned, highlight some achievements here. Recruiters are not just here for your words (of course you can boast as much as you want), they also want to see some of your works/wins.
 
 Am I fit for this? I believe I am. **[State that particular, unique, or distinct attribute or skill that you possess that aligns so much with the role]**
 
@@ -74,7 +76,7 @@ Dear Hiring Manager,
 
 I'd love to work for [redacted].
 
-Why [redacted]? I love working on products that contribute to the growth of other businesses. I love the purpose that drives [redacted] and I believe I can contribute my skills to the continued success of the product.
+Why [redacted]? I love working on products that contribute to the growth of other businesses. Looking at the work your team is doing on [product X] and [product Y], your team is solving interesting problems in the tech space. I love the purpose that drives [redacted] and I believe I can contribute my skills to the continued success of the product.
 
 Why me? I'm currently a Software Engineer and Technical writer who loves learning, teaching, and building web tools and applications. I haven't worked as a Developer Advocate but I've been wanting to transition to that role. I realized that I'd want to do more than building. I'd want to also share resources, teach online, and guide developers. I've been doing this as a Content Creator, but I want to explore more areas and reach out to more people as an official Developer Advocate. I don't meet up with the 1-year Developer Advocacy requirement, but without that, I believe you'd still want to consider my application with my achievements below:
 
