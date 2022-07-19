@@ -12,7 +12,7 @@ type Props = {
   children?: React.ReactNode
 }
 
-const DEFAULT_IMAGE = "https://dillionmegida.com/img/deee.jpg"
+const DEFAULT_IMAGE = "https://dillionmegida.com/img/cover.png"
 
 const Helmet = ({
   pageTitle,
@@ -50,7 +50,7 @@ const Helmet = ({
       <meta name="theme-color" content="#130327" />
       <link
         rel="icon"
-        href="https://res.cloudinary.com/dillionmegida/image/upload/v1570493725/images/website/favicon.png"
+        href="https://dillionmegida.com/img/favicon.png"
       />
       <meta property="og:image" content={imageCard} />
       <meta
@@ -63,11 +63,7 @@ const Helmet = ({
       <meta property="og:description" content={pageDesc} />
       {/* This selects the summary card by default but if the LargeTwitterCard props is specified, it users the bigger card
 			I implemented bigger cards for articles with covers */}
-      {largeTwitterCard ? (
-        <meta name="twitter:card" content="summary_large_image" />
-      ) : (
-        <meta name="twitter:card" content="summary" />
-      )}
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@iamdillion" />
       <meta name="twitter:title" content={pageTitle} /> {/* edit */}
       <meta name="twitter:description" content={pageDesc} /> {/* edit */}

@@ -10,12 +10,55 @@ import "question-form/dist/index.css"
 import Styles from "./index.module.scss"
 import { GqlPostFull } from "../../../interfaces/Post"
 import Helmet from "../../Helmet"
+import styled from "styled-components"
 
 type Props = {
   data: {
     markdownRemark: GqlPostFull
   }
 }
+
+const Main = styled.main`
+  // for heading links
+  .anchor.before {
+    fill: var(--mainColor2);
+
+    svg {
+      visibility: visible;
+    }
+  }
+
+  a {
+    position: relative;
+    color: white;
+    transition: color 300ms;
+    --color: var(--mainColor2);
+    display: inline-block;
+    color: var(--mainColor2);
+
+    @media (max-width: 600px) {
+      color: var(--color);
+    }
+
+    &:not(.anchor)::after {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 1px;
+      background-color: var(--color);
+      bottom: 3px;
+      left: 0;
+      transition: width 300ms;
+    }
+
+    &:hover {
+      color: var(--color);
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+`
 
 export default ({ data }: Props) => {
   const post = data.markdownRemark
@@ -38,7 +81,7 @@ export default ({ data }: Props) => {
         largeTwitterCard={!!postCoverUrl}
       />
 
-      <main className={Styles.BlogPost}>
+      <Main className={Styles.BlogPost}>
         <article>
           <div className={Styles.BlogInfo}>
             <h1 className={Styles.BlogTitle}>{post.frontmatter.title}</h1>
@@ -104,7 +147,7 @@ export default ({ data }: Props) => {
           postId={post.id}
           postTitle={post.frontmatter.title}
         />
-      </main>
+      </Main>
     </Layout>
   )
 }

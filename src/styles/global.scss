@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:wght@300;400;500&family=Albert+Sans:wght@300;400&display=swap");
 
 html.smoothScroll {
   scroll-behavior: smooth;
@@ -9,16 +9,19 @@ html.smoothScroll {
   /* --midMainColor1: #130327; */
   /* --midMainColor2: #130327; */
   --mainColor2: #e7f6ba;
+  --mainColor2: #cf95fc;
   --mainColor3: #c1d950;
   --mainColor4: #8be79f;
   --lightBlue: #319ac1;
 
   --mainColor1: rgb(61, 61, 61);
+  --mainColor1: #1f0632;
   --midMainColor1: rgb(101, 101, 101);
+  --midMainColor1: #4b2965;
   --midMainColor2: rgb(83, 83, 83);
 
   --main-font: "Aclonica", "Zen Antique Soft", "Nunito", "Helvetica";
-  --sec-font: "Inter", "Helvetica";
+  --sec-font: "Albert Sans", "Inter", "Helvetica";
 }
 
 ::-webkit-scrollbar {
@@ -92,5 +95,39 @@ a {
 @media only screen and (max-width: 500px) {
   .container {
     padding: 20px;
+  }
+}
+
+.a-link {
+  position: relative;
+  color: white;
+  transition: color 300ms;
+  --color: var(--mainColor2);
+
+  @media (max-width: 600px) {
+    color: var(--color);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background-color: var(--color);
+    bottom: -3px;
+    left: 0;
+    transition: width 300ms;
+  }
+
+  &.inverse::after {
+    left: unset;
+    right: 0;
+  }
+
+  &:hover {
+    color: var(--color);
+    &::after {
+      width: 100%;
+    }
   }
 }

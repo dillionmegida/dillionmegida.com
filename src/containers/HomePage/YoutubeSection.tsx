@@ -63,7 +63,7 @@ export default function YoutubeSection({ youtube, deeecode }: Props) {
           })
         )}
       </div>
-      <NewTabLink className="view-all-link" link={social.YouTube.link}>
+      <NewTabLink className="view-all-link a-link" link={social.YouTube.link}>
         View all videos
       </NewTabLink>
     </Section>

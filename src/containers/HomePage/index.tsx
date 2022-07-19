@@ -39,7 +39,6 @@ const BioSection = styled.div`
 
     .work-link {
       color: var(--mainColor2);
-      text-decoration: underline;
     }
   }
 `
@@ -102,10 +101,13 @@ const Text = styled.div`
     margin-top: 10px;
     line-height: 2;
 
-    a {
-      text-decoration: underline;
-      color: var(--mainColor2);
+    .video-link {
+      display: inline-block;
+      &.a-link::after {
+        bottom: 5px;
+      }
     }
+
     .resume {
       a {
         font-weight: 500;
@@ -151,26 +153,11 @@ const BodySection = styled.div`
     .view-all-link {
       color: var(--mainColor2);
       font-size: 20px;
-      /* text-decoration: underline; */
       display: block;
       margin-top: 20px;
       font-weight: 500;
       position: relative;
       width: max-content;
-
-      &:hover {
-        text-decoration: underline;
-      }
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 160%;
-        background-color: rgba(255, 255, 255, 0.05);
-        left: -30px;
-        top: -7px;
-      }
     }
   }
 `
@@ -203,7 +190,10 @@ export default function HomePage({ content }: Props) {
                 <>
                   {" "}
                   at{" "}
-                  <NewTabLink className="work-link" link={CURRENT_WORK_LINK}>
+                  <NewTabLink
+                    className="work-link a-link"
+                    link={CURRENT_WORK_LINK}
+                  >
                     {CURRENT_WORK_NAME}
                   </NewTabLink>
                 </>
@@ -224,20 +214,22 @@ export default function HomePage({ content }: Props) {
               playing with CSS.
               <br />
               <br />I write mostly on{" "}
-              <Link to={pageLinks.BLOG}>my blog here</Link>
+              <Link to={pageLinks.BLOG} className="a-link">
+                my blog here
+              </Link>
               {publications.map((p, i) =>
                 i === pubsLength - 1 ? (
                   <React.Fragment key={`publication-${i}`}>
                     {" "}
                     and{" "}
-                    <a key={`link${i}`} href={p.link}>
+                    <a className="a-link" key={`link${i}`} href={p.link}>
                       {p.label}
                     </a>
                   </React.Fragment>
                 ) : (
                   <React.Fragment key={`publication-${i}`}>
                     ,{" "}
-                    <a key={`link${i}`} href={p.link}>
+                    <a className="a-link" key={`link${i}`} href={p.link}>
                       {p.label}
                     </a>
                   </React.Fragment>
@@ -245,21 +237,29 @@ export default function HomePage({ content }: Props) {
               )}{" "}
               <br />
               <br />I also create Career/Life video content on{" "}
-              <NewTabLink link={social.YouTube.link}>
+              <NewTabLink
+                className="video-link a-link"
+                link={social.YouTube.link}
+              >
                 my YouTube Channel
               </NewTabLink>{" "}
               and Tech video content on{" "}
-              <NewTabLink link={social.DeeeCode.link}>
+              <NewTabLink
+                className="video-link a-link"
+                link={social.DeeeCode.link}
+              >
                 my DeeeCode Channel
               </NewTabLink>
               <br />
               <br />
-              Co-founder,{" "}
-              <NewTabLink link="http://skulmart.com/">SkulMart</NewTabLink>
+              {/* Co-founder,{" "}
+              <NewTabLink link="http://skulmart.com/">SkulMart</NewTabLink> */}
               <br />
               <br />
               <span className="resume">
-                <NewTabLink link={RESUME}>Resume</NewTabLink>
+                <NewTabLink className="a-link" link={RESUME}>
+                  Resume
+                </NewTabLink>
               </span>
             </span>
           </Text>

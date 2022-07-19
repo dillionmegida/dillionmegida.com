@@ -3,6 +3,13 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const createPaginatedPages = require("gatsby-paginate")
 
+const FEATURED = [
+  "static-relative-absolute-fixed-sticky-positions",
+  "why-you-should-cleanup-when-component-unmounts",
+  "what-is-a-canonical-link",
+  "why-jsx-expressions-must-have-one-parent",
+]
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
@@ -96,13 +103,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // pagination doc: https://www.gatsbyjs.com/plugins/gatsby-paginate/
+
+  const featuredArticles = []
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const slug = node.fields.slug.replace("/p/", "").replace("/", "")
+    if (FEATURED.includes(slug)) featuredArticles.push({ node })
+  })
+
   createPaginatedPages({
     edges: result.data.allMarkdownRemark.edges,
     createPage: createPage,
     pageTemplate: path.resolve(__dirname, "./src/components/Blog/index.tsx"),
     pageLength: 10,
     pathPrefix: "blog",
-    context: {},
+    context: {
+      featuredArticles,
+    },
   })
 
   result.data.tagsGroup.group.forEach(tag => {

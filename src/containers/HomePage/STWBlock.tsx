@@ -22,9 +22,10 @@ const Section = styled.section`
   }
 
   a {
-    color: #e982a3;
-    text-decoration: underline;
     font-weight: bold;
+    &.a-link {
+      --color: #e982a3;
+    }
   }
 `
 
@@ -38,9 +39,14 @@ export default function STWBlock() {
           <br />
           <br />
           As a technical writer, I shared my knowledge and experience on this
-          platform: <NewTabLink link={STW.link}>{STW.title}</NewTabLink>. Check
-          out more about the platform here:{" "}
-          <NewTabLink link={STW.intro}>Introduction to STW</NewTabLink>
+          platform:{" "}
+          <NewTabLink className="a-link" link={STW.link}>
+            {STW.title}
+          </NewTabLink>
+          . Check out more about the platform here:{" "}
+          <NewTabLink className="a-link" link={STW.intro}>
+            Introduction to STW
+          </NewTabLink>
         </p>
       </div>
     </Section>

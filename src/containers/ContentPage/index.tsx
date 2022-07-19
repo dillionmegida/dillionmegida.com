@@ -23,7 +23,7 @@ const Main = styled.main`
     position: relative;
     top: -2px;
     z-index: 1;
-    background-color: var(--midMainColor2);
+    background-color: var(--midMainColor1);
 
     &-wrapper {
       width: 100%;

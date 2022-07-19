@@ -3,12 +3,14 @@
   border: none;
   background-color: var(--mainColor1);
   color: var(--mainColor2);
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
   margin: 15px 0;
+  font-size: 20px;
+  border: 1px solid transparent;
 }
 
 .ShareBtn:hover,
 .ShareBtn:focus {
-  box-shadow: 5px 5px 0 #aaa;
+  border-color: var(--mainColor2);
 }

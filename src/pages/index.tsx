@@ -61,7 +61,6 @@ export const query = graphql`
     allArticlesOnMyWebite: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/^(/p/)/" } } }
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 4
     ) {
       edges {
         node {
