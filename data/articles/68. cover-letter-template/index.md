@@ -11,6 +11,12 @@ Heyyo 👋
 
 This piece is not an article per se. It's a template for a cover letter.
 
+You can watch the video here:
+
+{% youtube 9KPE3CR36fU %}
+
+Or if you prefer an article, read further 👇🏾
+
 ## Why am I sharing this?
 
 I have this cover letter format I've been using for my job applications. It has landed me some interviews, and two of my friends (one a Game Developer, and the other, a Developer Advocate) also testified that they got an interview using it.

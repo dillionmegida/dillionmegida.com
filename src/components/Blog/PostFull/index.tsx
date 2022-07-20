@@ -58,6 +58,10 @@ const Main = styled.main`
       }
     }
   }
+
+  iframe {
+    width: 100%;
+  }
 `
 
 export default ({ data }: Props) => {
