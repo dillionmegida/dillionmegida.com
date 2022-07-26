@@ -5,6 +5,7 @@ cover: "json stringify second argument.png"
 pageDescription: "When JSON.stringify() is called, the second argument is usually null. In this article, I explain the relevance of this argument and why people don't often use it"
 pageKeywords: "json, json.stringify, json replace, javascript"
 tags: ["javascript"]
+video: "https://youtube.com/shorts/y3P17LC8rJQ?"
 ---
 
 `stringify` is a method of the global object `JSON`, that converts a JavaScript value to a JSON string. There are many reasons for converting objects to a string; here's some:
