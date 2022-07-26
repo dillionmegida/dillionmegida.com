@@ -4,7 +4,8 @@ date: "2020-03-28"
 pageDescription: "this is an inherently (automatically) created variable at the creation of every function. In this article, you'll learn how it works in Javascript and what it references at every time it is called"
 pageKeywords: "this, this in Javascript, call, bind, apply, arrow functions, arrow functions and this"
 tags: ["javascript"]
-cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1585344783/images/blogs_cover/Almighty_gg2axf.png"
+cover: "40-this-demystified.png"
+video: "https://youtu.be/MgOK_DwJqTM"
 ---
 
 `this` is a popular misunderstood concept in Javascript as during usage, you cannot determine most of the time what it references. In this article, I hope to clear every confusion surrounding it.
