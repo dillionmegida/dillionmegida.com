@@ -5,6 +5,7 @@ cover: "97-connection-status-js.png"
 pageDescription: "Here is how to easily check the internet connection status in the browser using JavaScript"
 pageKeywords: "javascript, internet, wifi, internet connection status, online event, offline event, browser events, online and offline, browser, browser APIs, navigator, navigator.onLine"
 tags: ["javascript"]
+video: "https://www.youtube.com/shorts/647DpUmx5HI"
 ---
 
 The browser triggers numerous events for different things that happen in it. When you click a button, a `click` event is triggered on that button. When you leave a tab to another tab, a `visibilitychange` event is triggered.
