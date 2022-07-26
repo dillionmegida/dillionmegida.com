@@ -2,6 +2,22 @@
   link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
   content:
     - item:
+      title: Check Internet Connection Status in JS
+      link: https://www.youtube.com/shorts/647DpUmx5HI
+      tags: ["javascript", "shorts"]
+    - item:
+      title: this, in JavaScript, simplified
+      link: https://youtu.be/MgOK_DwJqTM
+      tags: ["javascript"]
+    - item:
+      title: Array Destructuring Simplified, in JavaScript
+      link: https://youtu.be/WU9TBMI5h7s
+      tags: ["javascript"]
+    - item:
+      title: JSON stringify second for replacing object properties
+      link: https://youtube.com/shorts/y3P17LC8rJQ
+      tags: ["javascript", "shorts"]
+    - item:
       title: CSS Box Model Simplified
       link: https://youtu.be/opHpcJIUbEU
       tags: ["css", "html"]
