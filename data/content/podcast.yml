@@ -2,7 +2,11 @@
   link: null
   content:
     - item:
+      title: CSS Properties with Dillion Megida
+      link: https://topenddevs.com/podcasts/react-round-up/episodes/css-properties-with-dillion-megida-rru-189
+      tags: ["css"]
+    - item:
       title: Creating Gatsby Source Plugins with Dillion Megida
-      link: https://devchat.tv/react-round-up/rru-139-creating-gatsby-source-plugins-with-dillion-megida/
+      link: https://topenddevs.com/podcasts/react-round-up/episodes/rru-139-creating-gatsby-source-plugins-with-dillion-megida
       tags: ["gatsby"]
   

@@ -1,6 +1,14 @@
 - platform: deeecode (Tech + Code)
-  link: https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg
+  link: https://www.youtube.com/c/deeecode
   content:
+    - item:
+      title: Adding Pagination to your Gatsby blogs using gatsby-paginate
+      link: https://youtu.be/JRqM7iFCdTk
+      tags: ["javascript", "gatsby", "shorts"]
+    - item:
+      title: The Comma , operator in JavaScript
+      link: https://youtube.com/shorts/kKRCEPhXC7Y
+      tags: ["javascript", "shorts"]
     - item:
       title: Check Internet Connection Status in JS
       link: https://www.youtube.com/shorts/647DpUmx5HI
