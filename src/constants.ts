@@ -2,6 +2,7 @@ import GitHub from "./components/Icon/GitHub"
 import Instagram from "./components/Icon/Instagram"
 import LinkedIn from "./components/Icon/LinkedIn"
 import Mail from "./components/Icon/Mail"
+import TikTok from "./components/Icon/TikTok"
 import Twitter from "./components/Icon/Twitter"
 import YouTube from "./components/Icon/YouTube"
 
@@ -45,9 +46,10 @@ export default {
       Icon: LinkedIn,
     },
     Instagram: { link: "https://instagram.com/deeecode", Icon: Instagram },
+    TikTok: {link: "https://tiktok.com/@iamdillion", Icon: TikTok},
     "E-mail": { link: "mailto:dillionmegida@gmail.com", Icon: Mail },
     DeeeCode: {
-      link: "https://www.youtube.com/channel/UCYcBEebHKfCZZKigbGa5Kpg",
+      link: "https://www.youtube.com/c/deeecode",
       Icon: YouTube,
     },
   },
