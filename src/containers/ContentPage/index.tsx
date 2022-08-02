@@ -115,6 +115,7 @@ const contentTypes = ["all", "post", "talk", "video", "podcast"]
 
 type Props = {
   youtube: AllContentGql
+  tiktok: AllContentGql
   videos: AllContentGql
   deeecode: AllContentGql
   codesource: AllContentGql
@@ -151,6 +152,7 @@ export default function ContentPage({
   kirupa,
   memberstack,
   deeecode,
+  tiktok,
   podcast,
   egghead,
   talk,
@@ -170,6 +172,7 @@ export default function ContentPage({
     vonage,
     memberstack,
     kirupa,
+    tiktok,
     deeecode,
     edpresso,
     soshace,
@@ -246,6 +249,7 @@ export default function ContentPage({
       (isActiveTypeAll || type === "video") && deeecode,
       (isActiveTypeAll || type === "video") && youtube,
       (isActiveTypeAll || type === "video") && videos,
+      (isActiveTypeAll || type === "video") && tiktok,
       (isActiveTypeAll || type === "post") && codesource,
       (isActiveTypeAll || type === "podcast") && podcast,
       (isActiveTypeAll || type === "post") && egghead,

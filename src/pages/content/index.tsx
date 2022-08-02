@@ -10,6 +10,7 @@ import constants from "../../constants"
 type Props = {
   data: {
     youtube: AllContentGql
+    tiktok: AllContentGql
     videos: AllContentGql
     deeecode: AllContentGql
     codesource: AllContentGql
@@ -39,13 +40,12 @@ function Content({ data, location }: Props) {
       <Helmet
         pageTitle="All my content in one place ✨"
         pageDesc="This is a page for every content I've created ranging from articles to videos to podcasts to everything on web development and tech."
-        pageLink={
-          constants.pageLinks.CONTENT
-        }
+        pageLink={constants.pageLinks.CONTENT}
       />
       <ContentPage
         params={location.search}
         youtube={data.youtube}
+        tiktok={data.tiktok}
         videos={data.videos}
         deeecode={data.deeecode}
         codesource={data.codesource}
@@ -64,9 +64,7 @@ function Content({ data, location }: Props) {
         egghead={data.egghead}
         strapi={data.strapi}
         stream={data.stream}
-        allArticlesOnThisWebsite={
-          data.allArticlesOnMyWebite
-        }
+        allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
       />
     </Layout>
   )
@@ -90,6 +88,20 @@ export const query = graphql`
     }
 
     videos: allVideosYaml {
+      edges {
+        node {
+          id
+          platform
+          content {
+            title
+            link
+            tags
+          }
+        }
+      }
+    }
+
+    tiktok: allTiktokYaml {
       edges {
         node {
           id
@@ -366,15 +378,8 @@ export const query = graphql`
     }
 
     allArticlesOnMyWebite: allMarkdownRemark(
-      filter: {
-        fields: {
-          slug: { regex: "/^(/p/)/" }
-        }
-      }
-      sort: {
-        fields: [frontmatter___date]
-        order: DESC
-      }
+      filter: { fields: { slug: { regex: "/^(/p/)/" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
