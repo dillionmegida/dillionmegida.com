@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: HTML New Line – How to Add a Line Break with the BR Tag
+      link: https://www.freecodecamp.org/news/html-new-line-how-to-add-a-line-break-with-the-br-tag/
+      tags: ["html"]
+    - item:
       title: Error - src refspec master does not match any – How to Fix in Git
       link: https://www.freecodecamp.org/news/error-src-refspec-master-does-not-match-any-how-to-fix-in-git/
       tags: ["git"]
