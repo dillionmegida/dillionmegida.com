@@ -30,8 +30,10 @@ export default {
       "Dillion is a Developer Advocate and Content Creator passionate about learning, building, and simplifying topics around tech via articles and videos",
   },
 
-  CURRENT_WORK_NAME: "Stream",
-  CURRENT_WORK_LINK: "http://getstream.io/",
+  //   CURRENT_WORK_NAME: "Stream",
+  CURRENT_WORK_NAME: null,
+  //   CURRENT_WORK_LINK: "http://getstream.io/",
+  CURRENT_WORK_LINK: null,
 
   RESUME: "https://bit.ly/3tE2eba",
 
@@ -46,7 +48,7 @@ export default {
       Icon: LinkedIn,
     },
     Instagram: { link: "https://instagram.com/deeecode", Icon: Instagram },
-    TikTok: {link: "https://tiktok.com/@iamdillion", Icon: TikTok},
+    TikTok: { link: "https://tiktok.com/@iamdillion", Icon: TikTok },
     "E-mail": { link: "mailto:dillionmegida@gmail.com", Icon: Mail },
     DeeeCode: {
       link: "https://www.youtube.com/c/deeecode",
