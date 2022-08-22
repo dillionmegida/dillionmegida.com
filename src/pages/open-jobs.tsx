@@ -17,6 +17,23 @@ const jobs = [
         "https://ricive.notion.site/ricive/Ricive-Careers-b338847d86f7471e86a09e38dfb160db",
     },
   },
+  {
+    role: "Microsoft Intern Opportunities for Nigerian Students",
+    jobPage:
+      "https://careers.microsoft.com/us/en/job/1385397/Intern-Opportunities-for-Students-in-Nigeria-Software-Engineering-Start-date-Summer-2023",
+    location: "Lagos, Nigeria",
+    company: {
+      name: "Microsoft",
+      website: "microsoft.com",
+    },
+  },
+  {
+    role: "Companies hiring designers",
+    jobPage:
+      "https://twitter.com/joeyabanks/status/1560646395383644162?s=20&t=wtg1H0f0Ag650CTiHyGX1g",
+    location: null,
+    company: null,
+  },
 ]
 
 const Main = styled.div`
@@ -64,15 +81,19 @@ export default function OpenJobs() {
                   {job.role}
                 </NewTabLink>
               </h2>
-              <span>
-                Company:{" "}
-                <NewTabLink className="a-link" link={job.company.website}>
-                  {job.company.name}
-                </NewTabLink>
-              </span>
-              <br />
-              <br />
-              <span>Location: {job.location}</span>
+              {job.company && (
+                <>
+                  <span>
+                    Company:{" "}
+                    <NewTabLink className="a-link" link={job.company.website}>
+                      {job.company.name}
+                    </NewTabLink>
+                  </span>
+                  <br />
+                  <br />
+                </>
+              )}
+              {job.location && <span>Location: {job.location}</span>}
               {/* <span>
                 All Company Careers
               </span> */}
