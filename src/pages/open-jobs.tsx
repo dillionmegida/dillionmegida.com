@@ -34,6 +34,13 @@ const jobs = [
     location: null,
     company: null,
   },
+  {
+    role: "GitLab Engeering Internship",
+    jobPage:
+      "https://boards.greenhouse.io/gitlab/jobs/6069423002",
+    location: "Remote",
+    company: null,
+  },
 ]
 
 const Main = styled.div`
