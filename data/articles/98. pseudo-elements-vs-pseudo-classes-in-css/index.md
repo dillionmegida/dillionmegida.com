@@ -3,6 +3,7 @@ title: "Pseudo classes vs Pseudo elements"
 date: "2022-08-25"
 cover: "98-pseudo-classes-elements.png"
 pageDescription: "Pseudo classes and Pseudo elements are types of selectors used in CSS for styling elements in different states or different parts of the element. So what's the difference?"
+pageKeywords: "css, pseudo elements, pseudo classes, css selectors, selectors, styles, properties, selection, after, placeholder-shown, placeholder, disabled, hover, css styles, element state"
 tags: ["css"]
 ---
 

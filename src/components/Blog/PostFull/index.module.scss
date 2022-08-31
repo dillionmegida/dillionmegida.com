@@ -111,13 +111,13 @@
     opacity: 0.8;
   }
 
-  & ul {
+  & ul, & ol {
     margin: 0;
     padding: 0 25px;
     & li {
       padding: 0;
       margin: 25px 0;
-      line-height: 1;
+      line-height: 1.5;
       & a {
         margin: 0;
         padding: 0;
