@@ -2,6 +2,18 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: Python String.replace() – How to Replace a Character in a String
+      link: https://www.freecodecamp.org/news/python-string-replace-how-to-replace-a-character-in-a-string/
+      tags: ["python"]
+    - item:
+      title: Python to Lowercase a String – str.lower() Example
+      link: https://www.freecodecamp.org/news/python-to-lowercase-a-string-str-lower-example/
+      tags: ["python"]
+    - item:
+      title: How to Round to 2 Decimal Places in Python
+      link: https://www.freecodecamp.org/news/how-to-round-to-2-decimal-places-in-python/
+      tags: ["python"]
+    - item:
       title: HTML New Line – How to Add a Line Break with the BR Tag
       link: https://www.freecodecamp.org/news/html-new-line-how-to-add-a-line-break-with-the-br-tag/
       tags: ["html"]

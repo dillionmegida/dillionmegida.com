@@ -2,6 +2,78 @@
   link: https://www.youtube.com/c/deeecode
   content:
     - item:
+      title: Array.forEach() Simplified
+      link: https://youtu.be/U2aRJi865pE
+      tags: ["javascript"]
+    - item:
+      title: CSS file-selector-button pseudo element
+      link: https://youtube.com/shorts/X7H2xCJvuYg
+      tags: ["css", "shorts"]
+    - item:
+      title: CSS Pseudo Classes vs Pseudo Elements Explained (with examples)
+      link: https://youtu.be/g-JRPtI__ms
+      tags: ["css"]
+    - item:
+      title: CSS first-letter pseudo element
+      link: https://youtube.com/shorts/bCmVOcZxvfY
+      tags: ["css", "shorts"]
+    - item:
+      title: Array.map() Simplified
+      link: https://youtu.be/QYNYveJj0Ak
+      tags: ["javascript"]
+    - item:
+      title: Array.flat() Simplified
+      link: https://youtu.be/n3cV7VdrJ6I
+      tags: ["javascript"]
+    - item:
+      title: Why must you have only one root JSX element in React?
+      link: https://youtu.be/ca2gCwMxN80
+      tags: ["react"]
+    - item:
+      title: CSS first-line pseudo element
+      link: https://youtube.com/shorts/UgB1qeZTbgk
+      tags: ["css", "shorts"]
+    - item:
+      title: CSS selection pseudo element
+      link: https://youtube.com/shorts/MYQ1yUeX7rQ
+      tags: ["css", "shorts"]
+    - item:
+      title: Array.findIndex() Simplified
+      link: https://youtu.be/3nH8PUDU50I
+      tags: ["javascript"]
+    - item:
+      title: Array.find() Simplified
+      link: https://youtu.be/2TVlfF2Exzg
+      tags: ["javascript"]
+    - item:
+      title: Easy and Quick Way to Reverse a String in JS
+      link: https://youtube.com/shorts/4teDwb8wpGQ
+      tags: ["javascript", "shorts"]
+    - item:
+      title: How to Store Objects and Arrays in Local Storage
+      link: https://youtu.be/E2rvDpubmnA
+      tags: ["javascript"]
+    - item:
+      title: Logical OR || Operator in JavaScript, Simplified
+      link: https://youtu.be/ckpSAMuKy4k
+      tags: ["javascript"]
+    - item:
+      title: Logical AND && Operator in JavaScript, Simplified
+      link: https://youtu.be/HZ-X6JVqfhQ
+      tags: ["javascript"]
+    - item:
+      title: 4 Easy Ways to Loop Through Objects in JavaScript
+      link: https://youtu.be/K6Ku3EzOwLs
+      tags: ["javascript"]
+    - item:
+      title: Array.pop() and Array.shift() in JavaScript
+      link: https://youtube.com/shorts/piQAePYI0ns
+      tags: ["javascript", "shorts"]
+    - item:
+      title: The Page Visibility API in JavaScript, Simplified
+      link: https://youtu.be/_xvygeRP-bM
+      tags: ["javascript"]
+    - item:
       title: Object Destructuring Simplified
       link: https://youtu.be/Xhz7x0t3W58
       tags: ["javascript"]

@@ -2,6 +2,14 @@
   link: https://www.youtube.com/channel/UCDNW5gGEA16ZTHUXhhaVz8g
   content:
     - item:
+      title: Getting used to the Dutch Language with Duolingo, in the Netherlands
+      link: https://youtu.be/0zSjfy4BDVI
+      tags: ["relocation", "general"]
+    - item:
+      title: 6 Responsibilities of Backend Developers
+      link: https://youtu.be/qczvqX8iTM0
+      tags: ["backend", "general"]
+    - item:
       title: 3 Steps to getting Online Jobs as a Technical Writer
       link: https://youtu.be/F-fWvXCo5Ds
       tags: ["writing", "general"]
@@ -17,6 +25,10 @@
       title: 5 Things you can get FINED FOR in the Netherlands - Part 1
       link: https://youtu.be/mNaW0EXP0oY
       tags: ["netherlands", "general"]
+    - item:
+      title: 9 Responsibilities of Frontend Developers
+      link: https://youtu.be/u-mN0aItczw
+      tags: ["frontend", "general"]
     - item:
       title: Things you can get fined for in the Netherlands - Part 5
       link: https://youtube.com/shorts/D90Jh_JRpzI
