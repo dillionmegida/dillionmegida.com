@@ -5,6 +5,7 @@ cover: "84-jsx-expressions-one-parent.png"
 pageDescription: "In this article, I explain why JSX expressions can only have ONE parent element else will break our application."
 pageKeywords: "react, jsx, react jsx, JSX expressions must have one parent element, adjacent JSX elements, enclosing tag, tag, html, javascript, js"
 tags: ["react"]
+video: https://youtu.be/ca2gCwMxN80
 ---
 
 ![Adjacent JSX elements must be wrapped in an enclosing tag](./adjacent-elements-error.png)

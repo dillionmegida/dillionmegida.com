@@ -4,6 +4,7 @@ date: "2022-08-25"
 cover: "99-selection-pseudo-element.png"
 pageDescription: "CSS has many pseudo elements which you can use to style different parts of an element. One of these pseudo elements is `::selection` which we will be looking at in this article"
 tags: ["css"]
+video: https://youtube.com/shorts/MYQ1yUeX7rQ
 ---
 
 CSS has many pseudo elements which you can use to style different parts of an element. One of these pseudo elements is `::selection` which we will be looking at in this article.
