@@ -2,6 +2,14 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: ModuleNotFoundError - no module named Python Error [Fixed]
+      link: https://www.freecodecamp.org/news/module-not-found-error-in-python-solved/
+      tags: ["python"]
+    - item:
+      title: Node Version Manager – nvm Install Guide
+      link: https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+      tags: ["nodejs"]
+    - item:
       title: Python String.replace() – How to Replace a Character in a String
       link: https://www.freecodecamp.org/news/python-string-replace-how-to-replace-a-character-in-a-string/
       tags: ["python"]

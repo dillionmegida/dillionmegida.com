@@ -2,6 +2,58 @@
   link: https://www.youtube.com/c/deeecode
   content:
     - item:
+      title: Array.push vs Array.pop in JavaScript
+      link: https://youtube.com/shorts/iSPmhSG6hCU
+      tags: ["javascript"]
+    - item:
+      title: JS Array Methods Explained No.7 - POP Method
+      link: https://youtu.be/GjPf_OHS2l4
+      tags: ["javascript"]
+    - item:
+      title: Switch Statements, in JavaScript, Simplified
+      link: https://youtu.be/61hFbpf7Q-Q
+      tags: ["javascript"]
+    - item:
+      title: React useContext Hook, Simplified
+      link: https://youtu.be/rwU_W69DPHw
+      tags: ["javascript", "react"]
+    - item:
+      title: Prop Drilling, in React, Simplified
+      link: https://youtu.be/QLO64jkGkRg
+      tags: ["javascript", "react"]
+    - item:
+      title: If Statements, in JavaScript, Simplified
+      link: https://youtu.be/IddJxowdLq0
+      tags: ["javascript"]
+    - item:
+      title: What are React Fragments? Why Use Them?
+      link: https://youtu.be/wKyVZgjlJ-M
+      tags: ["javascript", "react"]
+    - item:
+      title: How to make a textarea non resizable with CSS
+      link: https://youtube.com/shorts/C8kD2tYfjuU
+      tags: ["css"]
+    - item:
+      title: JavaScript Callback Functions Simplified
+      link: https://youtu.be/nlKJmAvZoxo
+      tags: ["javascript"]
+    - item:
+      title: Array.push vs Array.unshift in JS
+      link: https://youtube.com/shorts/PnsgX-xLWmU
+      tags: ["javascript"]
+    - item:
+      title: JS Array Methods Explained No.6 - FILTER Method
+      link: https://youtu.be/F9ERHo0af9E
+      tags: ["javascript"]
+    - item:
+      title: Callback and Higher Order Functions - The Difference
+      link: https://youtube.com/shorts/1bDgHPTT6as
+      tags: ["javascript"]
+    - item:
+      title: Javascript return statement in 1 minute
+      link: https://youtube.com/shorts/z2GfyLeT3tk
+      tags: ["javascript"]
+    - item:
       title: Array.forEach() Simplified
       link: https://youtu.be/U2aRJi865pE
       tags: ["javascript"]
