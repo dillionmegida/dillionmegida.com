@@ -5,6 +5,7 @@ cover: "77-ng-container-vs-ng-template.png"
 pageDescription: "In this article, you'll learn the difference between the `ng-container` and `ng-template` Angular elements."
 pageKeywords: "angular, ng-container, angular container, angular template, ng-template, angular dom, dom, template, structural directives, angular directive"
 tags: ["angular"]
+video: https://youtu.be/LsHQV5VMdFc
 ---
 
 `ng-container` and `ng-template` are Angular elements that work like containers with HTML elements. However, they have different purposes or use cases.
