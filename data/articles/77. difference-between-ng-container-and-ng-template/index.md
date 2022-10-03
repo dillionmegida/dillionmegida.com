@@ -14,23 +14,58 @@ video: https://youtu.be/LsHQV5VMdFc
 
 If you're familiar with React, you may know the `Fragment` React component. This component is used when you do not want to add an extra HTML element to the DOM (like a `div` or `span`), but you want a wrapper around children components.
 
-`ng-container`s work just like that, and it also accepts Angular directives (`ngIf`, `ngFor`, e.t.c). They are elements that can serve as wrappers but do not add an extra element to the DOM.
+`ng-container`s work just like that, and it also accepts Angular structural directives (`ngIf`, `ngFor`, e.t.c). They are elements that can serve as wrappers but do not add an extra element to the DOM.
 
 Let's see an example where you might want to use this:
 
-```html
-<ul *ngIf="store.products" *ngFor="let product of store.products">
-  <li>{{ product.name }}</li>
-</ul>
+```ts
+// app.component.ts
+export class AppComponent {
+  products = [
+    {
+      id: "iphone",
+      name: "iPhone",
+      price: "599",
+    },
+    {
+      id: "samsung",
+      name: "Samsung",
+      price: "699",
+    },
+    {
+      name: "Pixel",
+      price: "599",
+    },
+  ]
+}
 ```
+
+```html
+<!-- app.component.html -->
+<div *ngFor="let product of products">
+  <span>{{ product.name }}</span>
+</div>
+```
+
+Here, in the HTML, we can loop through the `products` array, and display the product's name in a `span` tag.
+
+But what if you want to render the `div` tag conditionally; that is, if the product has an `id` property? Then, we can use the `*ngIf` structural directive, maybe like this:
+
+```html
+<div *ngFor="let product of products" *ngIf="product.id">
+  <span>{{ product.name }}</span>
+</div>
+```
+
+But, this will throw an error.
 
 As you may already know, in Angular, you cannot apply two or more [structural directives](https://angular.io/guide/structural-directives) on an element. Your next solution may be:
 
 ```html
-<div *ngIf="store.products">
-  <ul *ngFor="let product of store.products">
-    <li>{{ product.name }}</li>
-  </ul>
+<div *ngFor="let product of products">
+  <div *ngIf="product.id">
+    <span>{{ product.name }}</span>
+  </div>
 </div>
 ```
 
@@ -39,14 +74,14 @@ This code would work, but now you're introducing a `div` element that you may no
 We can solve this with `ng-container` like so:
 
 ```html
-<ng-container *ngIf="store.products">
-  <ul *ngFor="let product of store.products">
-    <li>{{ product.name }}</li>
-  </ul>
+<ng-container *ngFor="let product of products">
+  <div *ngIf="product.id">
+    <span>{{ product.name }}</span>
+  </div>
 </ng-container>
 ```
 
-With this, the DOM won't include the `ng-container`, so we're not adding an extra element that we do not need. Angular will render the container element as a comment in the DOM. And if you need to use another structural directive before the `ul` element, you can use more `ng-container`s.
+With this, the DOM won't include the `ng-container`, so we're not adding an extra element that we do not need. Angular will render the container element as a comment in the DOM. And if you need to use another structural directive before the `div` element, you can use more `ng-container`s.
 
 ## `ng-template`
 
@@ -83,11 +118,11 @@ Let's look at a use case for this element:
 Above, we've defined a template with the name `noProducts`. In this example, we'll render it to the DOM if there are no products, like this:
 
 ```html
-<ng-container *ngIf="store.products">
-  <ng-container *ngIf="store.products.length > 0 else noProducts">
-    <ul *ngFor="let product of store.products">
-      <li>{{ product.name }}</li>
-    </ul>
+<ng-container *ngIf="products.length > 0; else noProducts">
+  <ng-container *ngFor="let product of products">
+    <div *ngIf="product.id">
+      <span>{{ product.name }}</span>
+    </div>
   </ng-container>
 </ng-container>
 
@@ -107,3 +142,5 @@ We can store a piece of UI code with a template element and apply it to the DOM 
 ---
 
 In this article, we've seen how the `ng-container` and `ng-template` Angular elements work, their differences, and when to use them. If you have questions, you can reach out to me on [Twitter - @iamdillion](https://twitter.com/iamdillion)
+
+Watch the video version of this here: [ng-container vs ng-template](https://youtu.be/LsHQV5VMdFc)
