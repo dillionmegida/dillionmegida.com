@@ -71,7 +71,7 @@ export default ({ pageContext }: Props) => {
           </Link>
         </div>
 
-        {isFirst && (
+        {/* {isFirst && (
           <section className="featured-section">
             <h2 className="section-heading">Featured articles</h2>
             <Link className="go-to-all" to="#all-articles">
@@ -93,7 +93,7 @@ export default ({ pageContext }: Props) => {
               />
             ))}
           </section>
-        )}
+        )} */}
         <section>
           {isFirst && (
             <h2 id="all-articles" className="section-heading">
