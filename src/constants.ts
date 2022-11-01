@@ -30,10 +30,8 @@ export default {
       "Dillion is a Developer Advocate and Content Creator passionate about learning, building, and simplifying topics around tech via articles and videos",
   },
 
-  //   CURRENT_WORK_NAME: "Stream",
-  CURRENT_WORK_NAME: null,
-  //   CURRENT_WORK_LINK: "http://getstream.io/",
-  CURRENT_WORK_LINK: null,
+    CURRENT_WORK_NAME: "Adyen",
+    CURRENT_WORK_LINK: "https://www.adyen.com/",
 
   RESUME: "https://bit.ly/3tE2eba",
 
