@@ -4,7 +4,7 @@ date: "2022-11-22"
 cover: "102-array-concat.png"
 pageDescription: "The array concat method allows you to concatenate values of an array with new values, to form a new array. Learn more in this article"
 tags: ["javascript"]
-# video: https://youtube.com/shorts/MYQ1yUeX7rQ
+video: https://youtu.be/a5kkO4KMvUE
 ---
 
 The `concat` method in JavaSript is used to concatenate the contents of an existing array with new values to form a new array. I'll explain, with examples, how this method works on different values.
