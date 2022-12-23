@@ -172,14 +172,14 @@ Also other scenarios in the cinema and at a store. In fact, a few Nigerians who 
 
 Those were really fulfilling and proud moments for me.
 
-<!-- You can learn more about my content creation journey in this article: [Content Creation Recap 2022](/p/content-creation-recap-2022) -->
+You can learn more about my content creation journey in this article: [Content Creation Recap 2022](/p/content-creation-recap-2022)
 
 ## Wrap Up
 
 Well, that's the wrap-up of my 2022. My church is having a Christmas event on the 24th, and I'd be dancing and singing 🙃. I'll share pictures or links here afterward.
 
-200 hasn't ended yet, so who knows, I might get a new highlight before 2023--perhaps a girlfriend? 🫣 Haha...if I need to add anything, I will.
+2022 hasn't ended yet, so who knows, I might get a new highlight before 2023--perhaps a girlfriend? 🫣 Haha...if I need to add anything, I will.
 
-If you read it this far, my hopes are that by sharing my experience, there's a part of my story that inspires you or pushes you to do and become more. Perhaps the part where [the Netherlands almost chased me out of their country job](https://twitter.com/iamdillion/status/1604868769423269889) since I didn't have a but God came through 😂
+If you read it this far, my hopes are that by sharing my experience, there's a part of my story that inspires you or pushes you to do and become more. Perhaps the part where [the Netherlands almost chased me out of their country job](https://twitter.com/iamdillion/status/1604868769423269889) since I didn't have a job but God came through 😂
 
 Happy Christmas 🎄 and Merry New Year ✨
