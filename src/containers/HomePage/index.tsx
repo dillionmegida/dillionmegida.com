@@ -7,8 +7,8 @@ import { AllContentGql } from "../../interfaces/Content"
 import { AllPostsGql } from "../../interfaces/Post"
 import ArticlesSection from "./ArticlesSection"
 import YoutubeSection from "./YoutubeSection"
-import Newsletter from "../../components/Newsletter"
 import STWBlock from "./STWBlock"
+import JsCourseSection from "./JsCourseSection"
 
 const { publications, pageLinks, social, RESUME } = constants
 const pubsLength = publications.length
@@ -177,6 +177,7 @@ export default function HomePage({ content }: Props) {
 
   return (
     <Main>
+      <JsCourseSection />
       <BioSection>
         <div className="container">
           <ProfilePicture>
@@ -270,7 +271,7 @@ export default function HomePage({ content }: Props) {
           <STWBlock />
           <ArticlesSection articles={allArticlesOnMyWebite} />
           <YoutubeSection deeecode={deeecode} youtube={youtube} />
-          <Newsletter />
+          {/* <Newsletter /> */}
         </div>
       </BodySection>
     </Main>
