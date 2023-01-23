@@ -85,6 +85,7 @@ export default function JsCourse() {
         pageTitle={pageTitle}
         pageLink="/javascript"
         pageDesc={pageDesc}
+        imageCard='/img/js-course-cover.png'
       />
       <Header>
         <div className="container">
@@ -108,7 +109,7 @@ export default function JsCourse() {
             To be honest, I never thought of creating a course in 2023. I have
             always been scared of the commitment it requires, and believed I
             didn't have the time for that yet. Not until{" "}
-            <NewTabLink className="a-link" link="/">
+            <NewTabLink className="a-link" link="https://twitter.com/elbasfar10/status/1612432677747175424?s=20&t=z_D__-MZNEXUMcXbfXKviA">
               this conversation on Twitter
             </NewTabLink>
             . Then I thought, "well maybe I can create a course on JavaScript
@@ -146,9 +147,9 @@ export default function JsCourse() {
             publicly about how my videos simplified one topic or the other for
             different people. Very fulfilling moments sincerely. I collated some
             of those feedback{" "}
-            <NewTabLink className="a-link" link="/videos-feedback">
+            <Link className="a-link" to="/videos-feedback">
               on this page
-            </NewTabLink>
+            </Link>
             .
           </p>
           <p>
