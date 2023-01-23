@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:wght@300;400;500&family=Albert+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Albert+Sans:wght@300;400&display=swap");
 
 html.smoothScroll {
   scroll-behavior: smooth;
@@ -20,7 +20,10 @@ html.smoothScroll {
   --midMainColor1: #4b2965;
   --midMainColor2: rgb(83, 83, 83);
 
-  --main-font: "Aclonica", "Zen Antique Soft", "Nunito", "Helvetica";
+  --javascript: #f7df1e;
+  --javascriptMid: #faf1ad;
+
+  --main-font: "Jost", "Zen Antique Soft", "Nunito", "Helvetica";
   --sec-font: "Albert Sans", "Inter", "Helvetica";
 }
 
@@ -53,6 +56,7 @@ h5,
 h6 {
   font-family: var(--main-font);
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -60,7 +64,7 @@ h1 {
 }
 
 h2 {
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 p {
@@ -99,8 +103,9 @@ a {
 }
 
 .a-link {
+  --preColor: white;
   position: relative;
-  color: white;
+  color: var(--preColor);
   transition: color 300ms;
   --color: var(--mainColor2);
 
