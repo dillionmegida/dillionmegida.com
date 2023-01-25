@@ -76,9 +76,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+
       tagsGroup: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___tags) {
           fieldValue
+        }
+      }
+
+      allSlides: allSlidesYaml(sort: { fields: date, order: DESC }) {
+        edges {
+          node {
+            path
+          }
         }
       }
     }
@@ -98,6 +107,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       ),
       context: {
         slug: node.fields.slug,
+      },
+    })
+  })
+
+  result.data.allSlides.edges.forEach(({ node }) => {
+    createPage({
+      path: `/talks/${node.path}`,
+      component: path.resolve(
+        __dirname,
+        `./src/components/Talk/TalkFull/index.tsx`
+      ),
+      context: {
+        slug: node.path,
       },
     })
   })
