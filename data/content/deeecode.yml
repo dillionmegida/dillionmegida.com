@@ -2,6 +2,38 @@
   link: https://www.youtube.com/c/deeecode
   content:
     - item:
+      title: JS Array Methods Explained No.11 - UNSHIFT Method
+      link: https://youtu.be/gdpUs7zfEBg
+      tags: ["javascript"]
+    - item:
+      title: JS Array Methods Explained No.10 - PUSH Method
+      link: https://youtu.be/xe5agkMOkqo
+      tags: ["javascript"]
+    - item:
+      title: CSS Combinators Simplified (with examples)
+      link: https://youtu.be/ZKRRUUPl8SA
+      tags: ["css"]
+    - item:
+      title: CSS marker pseudo element
+      link: https://youtube.com/shorts/3CzxTTOgLcQ?feature=share
+      tags: ["css", "shorts"]
+    - item:
+      title: JS Array Methods Explained No.9 - FILL Method
+      link: https://youtu.be/P1XGiAajDqg
+      tags: ["javascript"]
+    - item:
+      title: Array.find vs Array.findLast in JavaScript
+      link: https://youtube.com/shorts/41mHLgE5AqQ?feature=share
+      tags: ["javascript", "shorts"]
+    - item:
+      title: 11 Ways to Select Elements to Style in CSS
+      link: https://youtu.be/0yysG5U_2i8
+      tags: ["css"]
+    - item:
+      title: JS Array Methods Explained No.8 - SHIFT Method
+      link: https://youtu.be/FdL65b7qn8I
+      tags: ["javascript"]
+    - item:
       title: Array.push vs Array.pop in JavaScript
       link: https://youtube.com/shorts/iSPmhSG6hCU
       tags: ["javascript"]

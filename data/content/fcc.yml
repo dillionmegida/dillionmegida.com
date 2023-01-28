@@ -2,6 +2,90 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: Why a Ternary Operator is not a Conditional Operator in JS
+      link: https://www.freecodecamp.org/news/why-a-ternary-operator-is-not-a-conditional-operator-in-js/
+      tags: ["javascript"]
+    - item:
+      title: Unary, Binary, and Ternary Operators in JavaScript – Explained with Examples
+      link: https://www.freecodecamp.org/news/unary-binary-ternary-operators-javascript/
+      tags: ["javascript"]
+    - item:
+      title: var, let, and const in JavaScript – the Differences Between These Keywords Explained
+      link: https://www.freecodecamp.org/news/differences-between-var-let-const-javascript/
+      tags: ["javascript"]
+    - item:
+      title: How to Delete a File in Python – And Remove a Directory, Too
+      link: https://www.freecodecamp.org/news/how-to-delete-a-file-in-python-and-remove-a-directory-too/
+      tags: ["python"]
+    - item:
+      title: JavaScript Ternary Operator – Syntax and Example Use Case
+      link: https://www.freecodecamp.org/news/the-ternary-operator-in-javascript/
+      tags: ["javascript"]
+    - item:
+      title: CSS display:none and visibility:hidden – What's the Difference?
+      link: https://www.freecodecamp.org/news/css-display-none-and-visibility-hidden-the-difference/
+      tags: ["css"]
+    - item:
+      title: Python Slicing – How to Slice an Array and What Does [::-1] Mean?
+      link: https://www.freecodecamp.org/news/python-slicing-how-to-slice-an-array/
+      tags: ["python"]
+    - item:
+      title: How to Generate a Random Number within Certain a Range in JavaScript
+      link: https://www.freecodecamp.org/news/generate-random-number-within-a-range-in-javascript/
+      tags: ["javascript"]
+    - item:
+      title: CSS Pseudo-Classes – How the :is Pseudo-Class Works with Examples
+      link: https://www.freecodecamp.org/news/css-is-pseudo-class-explained/
+      tags: ["css"]
+    - item:
+      title: How to Reverse an Array in JavaScript – JS .reverse() Function
+      link: https://www.freecodecamp.org/news/how-to-reverse-an-array-in-javascript-js-reverse-function/
+      tags: ["javascript"]
+    - item:
+      title: How to Merge Arrays in JavaScript – Array Concatenation in JS
+      link: https://www.freecodecamp.org/news/how-to-merge-arrays-in-javascript-array-concatenation-in-js/
+      tags: ["javascript"]
+    - item:
+      title: Hoisting in JavaScript with let and const – and How it Differs from var
+      link: https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/
+      tags: ["javascript"]
+    - item:
+      title: Coercion and Type Conversion in JavaScript – Explained with Code Examples
+      link: https://www.freecodecamp.org/news/coercion-and-type-conversion-in-javascript/
+      tags: ["javascript"]
+    - item:
+      title: JavaScript Minify – Minifying JS with a Minifier or jsmin
+      link: https://www.freecodecamp.org/news/javascript-minify-minifying-js-with-a-minifier-or-jsmin/
+      tags: ["javascript"]
+    - item:
+      title: Event Delegation in JavaScript –Explained with an Example
+      link: https://www.freecodecamp.org/news/event-delegation-javascript/
+      tags: ["javascript"]
+    - item:
+      title: Event Bubbling in JavaScript – How Event Propagation Works with Examples
+      link: https://www.freecodecamp.org/news/event-bubbling-in-javascript/
+      tags: ["javascript"]
+    - item:
+      title: How Does Recursion Work? Simplified in JavaScript with Examples
+      link: https://www.freecodecamp.org/news/recursion-in-javascript-simplified/
+      tags: ["javascript"]
+    - item:
+      title: What is rem in CSS? rem Unit Font Size, Padding, Height, and More
+      link: https://www.freecodecamp.org/news/what-is-rem-in-css-rem-unit-font-size-padding-height-and-more/
+      tags: ["css"]
+    - item:
+      title: What are Absolute and Relative Units in CSS? Explained with Examples
+      link: https://www.freecodecamp.org/news/absolute-and-relative-css-units/
+      tags: ["css"]
+    - item:
+      title: How to Use CSS Combinators to Select and Style Elements
+      link: https://www.freecodecamp.org/news/css-combinators-to-select-elements/
+      tags: ["css"]
+    - item:
+      title: CSS Selector Types – How to Select Elements to Style in CSS
+      link: https://www.freecodecamp.org/news/how-to-select-elements-to-style-in-css/
+      tags: ["css"]
+    - item:
       title: ModuleNotFoundError - no module named Python Error [Fixed]
       link: https://www.freecodecamp.org/news/module-not-found-error-in-python-solved/
       tags: ["python"]
