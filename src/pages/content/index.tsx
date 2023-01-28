@@ -41,6 +41,7 @@ function Content({ data, location }: Props) {
         pageTitle="All my content in one place ✨"
         pageDesc="This is a page for every content I've created ranging from articles to videos to podcasts to everything on web development and tech."
         pageLink={constants.pageLinks.CONTENT}
+        imageCard="/img/contents-cover.png"
       />
       <ContentPage
         params={location.search}
