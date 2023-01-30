@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import { AllContentGql } from "../../interfaces/Content"
 import { AllPostsGql } from "../../interfaces/Post"
 import constants from "../../constants"
+import { AllTalksGql } from "../../interfaces/Talk"
 
 type Props = {
   data: {
@@ -22,13 +23,13 @@ type Props = {
     vonage: AllContentGql
     fcc: AllContentGql
     podcast: AllContentGql
-    talk: AllContentGql
     memberstack: AllContentGql
     polywork: AllContentGql
     kirupa: AllContentGql
     egghead: AllContentGql
     strapi: AllContentGql
     stream: AllContentGql
+    talks: AllTalksGql
     allArticlesOnMyWebite: AllPostsGql
   }
   location: Location
@@ -59,12 +60,12 @@ function Content({ data, location }: Props) {
         vonage={data.vonage}
         fcc={data.fcc}
         podcast={data.podcast}
-        talk={data.talk}
         kirupa={data.kirupa}
         polywork={data.polywork}
         egghead={data.egghead}
         strapi={data.strapi}
         stream={data.stream}
+        talks={data.talks}
         allArticlesOnThisWebsite={data.allArticlesOnMyWebite}
       />
     </Layout>
@@ -336,16 +337,14 @@ export const query = graphql`
       }
     }
 
-    talk: allTalkYaml {
+    talks: allSlidesYaml {
       edges {
         node {
           id
-          platform
-          content {
-            title
-            link
-            tags
-          }
+          title
+          url
+          path
+          tags
         }
       }
     }

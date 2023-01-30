@@ -13,6 +13,7 @@ import queryString from "query-string"
 import { changeWithoutReloading } from "../../utils/url"
 import { NewTabLink } from "../../components/Link"
 import constants from "../../constants"
+import { AllTalksGql } from "../../interfaces/Talk"
 
 const Main = styled.main`
   width: 100%;
@@ -128,13 +129,13 @@ type Props = {
   stream: AllContentGql
   fcc: AllContentGql
   podcast: AllContentGql
-  talk: AllContentGql
   kirupa: AllContentGql
   memberstack: AllContentGql
   polywork: AllContentGql
   egghead: AllContentGql
   strapi: AllContentGql
   allArticlesOnThisWebsite: AllPostsGql
+  talks: AllTalksGql
   params: string
 }
 
@@ -155,12 +156,12 @@ export default function ContentPage({
   tiktok,
   podcast,
   egghead,
-  talk,
   strapi,
   videos,
   stream,
   allArticlesOnThisWebsite,
   params,
+  talks,
 }: Props) {
   const allContent = [
     logrocket,
@@ -176,7 +177,6 @@ export default function ContentPage({
     deeecode,
     edpresso,
     soshace,
-    talk,
     strapi,
     devto,
     stream,
@@ -187,6 +187,7 @@ export default function ContentPage({
 
   const [content, setContent] = useState(allContent)
   const [articles, setArticles] = useState(allArticlesOnThisWebsite.edges)
+  const [talkSlides, setTalkSlides] = useState(talks.edges)
   const [activeQuery, setActiveQuery] = useState("")
   const [activeTag, setActiveTag] = useState("all")
   const [activeType, setActiveType] = useState<typeof contentTypes[number]>(
@@ -257,7 +258,6 @@ export default function ContentPage({
       (isActiveTypeAll || type === "post") && kirupa,
       (isActiveTypeAll || type === "post") && edpresso,
       (isActiveTypeAll || type === "post") && soshace,
-      (isActiveTypeAll || type === "talk") && talk,
       (isActiveTypeAll || type === "post") && fcc,
       (isActiveTypeAll || type === "post") && memberstack,
       (isActiveTypeAll || type === "post") && polywork,
@@ -306,6 +306,21 @@ export default function ContentPage({
           })
 
     setArticles(articles)
+
+    const talkSlides =
+      type !== "talk" && type !== "all"
+        ? []
+        : talks.edges.filter(({ node }) => {
+            const { title, tags } = node
+            const tagsStr = tags.join("")
+
+            return (valReg.test(title) || valReg.test(tagsStr)) &&
+              isActiveTagAll
+              ? true
+              : tagReg.test(title) || tagReg.test(tagsStr)
+          })
+
+    setTalkSlides(talkSlides)
   }
 
   let totalContentLength = 0,
@@ -325,8 +340,12 @@ export default function ContentPage({
   allContent.forEach(c => updateContentLength(c, "total"))
   allArticlesOnThisWebsite.edges.forEach(() => (totalContentLength += 1))
 
+  talks.edges.forEach(() => (totalContentLength += 1))
+
   content.forEach(c => updateContentLength(c, "filtered"))
   articles.forEach(() => (filteredContentLength += 1))
+
+  talkSlides.forEach(() => (filteredContentLength += 1))
 
   const isWiderThan800 = useMedia({ minWidth: 1000 })
 
@@ -396,6 +415,15 @@ export default function ContentPage({
                   />
                 )
               })
+            )}
+            {talkSlides.reverse().length < 1 ? null : (
+              <ContentBlock
+                heading={{ title: "Talks", link: "/talks" }}
+                items={talkSlides.map(({ node: { title, path } }) => ({
+                  title,
+                  link: `/talks/${path}`,
+                }))}
+              />
             )}
             {articles.reverse().length < 1 ? null : (
               <ContentBlock
