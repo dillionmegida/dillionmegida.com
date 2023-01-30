@@ -75,7 +75,12 @@ type Props = {
 export default function Talks({ data }: Props) {
   return (
     <Layout>
-      <Helmet pageTitle="Slides from my Talks" pageDesc="Here are the slides of some of the talks I've given" pageLink="/talks" />
+      <Helmet
+        pageTitle="Slides from my Talks"
+        pageDesc="Here are the slides of some of the talks I've given"
+        pageLink="/talks"
+        imageCard="/img/talks-cover.png"
+      />
       <Main className="container">
         <h1>SLIDES FROM MY TALKS</h1>
         <div className="talks-container">
