@@ -87,7 +87,7 @@ export default function Talks({ data }: Props) {
           {data.slides.edges.map(({ node }) => (
             <Link to={node.path} className="talk a-link">
               <div className="talk__cover">
-                <img src={`talk-covers/${node.cover}`} />
+                <img src={`/talk-covers/${node.cover}`} />
               </div>
             </Link>
           ))}
