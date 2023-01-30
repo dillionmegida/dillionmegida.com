@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import Helmet from "../../components/Helmet"
@@ -7,6 +7,58 @@ import Layout from "../../components/Layout"
 const Main = styled.main`
   h1 {
     color: white;
+
+    @media (max-width: 800px) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 23px;
+    }
+  }
+
+  .talks-container {
+    display: grid;
+    --columns: 3;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+
+    @media (max-width: 800px) {
+      --columns: 2;
+    }
+
+    @media (max-width: 500px) {
+      --columns: 1;
+    }
+
+    .talk {
+      width: 100%;
+      position: relative;
+      &__cover {
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 2/1.2;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &:hover {
+        .talk__cover img {
+          transform: scale(1.2);
+        }
+      }
+
+      &.a-link {
+        --color: var(--mainColor3);
+        &::after {
+          bottom: -15px;
+        }
+      }
+    }
   }
 `
 
@@ -14,7 +66,7 @@ type Props = {
   data: {
     slides: {
       edges: {
-        node: { title: string; url: string; path: string }
+        node: { title: string; url: string; path: string; cover: string }
       }[]
     }
   }
@@ -23,19 +75,19 @@ type Props = {
 export default function Talks({ data }: Props) {
   return (
     <Layout>
-      <Helmet pageTitle="My Talks" pageDesc="My Talks" pageLink="/talks" />
+      <Helmet pageTitle="Slides from my Talks" pageDesc="Here are the slides of some of the talks I've given" pageLink="/talks" />
       <Main className="container">
-        <h1>TALKS PAGE IN PROGRESS...</h1>
-        {/* <ul>
+        <h1>SLIDES FROM MY TALKS</h1>
+        <div className="talks-container">
           {data.slides.edges.map(({ node }) => (
-            <li>
-              <Link to={node.path}>{node.title}</Link>
-            </li>
+            <Link to={node.path} className="talk a-link">
+              <div className="talk__cover">
+                <img src={`talk-covers/${node.cover}`} />
+              </div>
+            </Link>
           ))}
-        </ul> */}
+        </div>
       </Main>
-      {/* <Helmet pageTitle={meta.TITLE} pageLink="/" pageDesc={meta.DESC} />
-        <HomePage content={data} /> */}
     </Layout>
   )
 }
@@ -48,6 +100,7 @@ export const query = graphql`
           title
           url
           path
+          cover
         }
       }
     }
