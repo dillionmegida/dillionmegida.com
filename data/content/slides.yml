@@ -2,18 +2,24 @@
   url: "https://docs.google.com/presentation/d/e/2PACX-1vTJ-cw96IjniOjJDMjKwxZ5E7m_ufDhjwU-QhNDp9m6TIBjTib5rX1UVuU24OaJIAprbdRGnc3_Ildj/embed"
   path: "improve-css-without-framework"
   date: "2023-01-25"
-  cover: "4-improve-css-without-framework.png"
+  cover: "5-improve-css-without-framework.png"
 
 - title: "Challenges we face in the tech space + solutions"
   url: "https://docs.google.com/presentation/d/e/2PACX-1vTn_GFPBc1_UQ6Cgzj5AHtgen7fpmziSLv8_JA8fwOZ--6FbjEnyIOpxqvWVGWXJA3zRdJ0NiU--f1e/embed"
   path: "challenges-in-tech-space"
-  date: "2022-01-20"
-  cover: "3-challenges-in-tech-space.png"
+  date: "2022-12-04"
+  cover: "4-challenges-in-tech-space.png"
+
+- title: "Getting Started with Technical Writing"
+  url: "https://docs.google.com/presentation/d/e/2PACX-1vTrawhU1rC3s02AnN1BBVdvdI8R_Y_cxDWB7-ocmio_LAm0NieVlggvzeBfUldXeWbXf7ZAU-wAZIri/embed"
+  path: "getting-started-with-technical-writing"
+  date: "2022-06-24"
+  cover: "3-getting-started-with-technical-writing.png"
 
 - title: "Writing search engine optimized technical content"
   url: "https://docs.google.com/presentation/d/e/2PACX-1vS46EJMr0qWFpjXijK1J0YTP3o-XZHSKg06Dcf8-qzLXiDfsOlwZNeWvQYXk7mQbYX_CbBqwNDUmOxC/embed"
   path: "write-search-engine-optimized-content"
-  date: "2022-01-20"
+  date: "2022-04-02"
   cover: "2-write-search-engine-optimized-content.png"
 
 - title: "TypeScript vs PropTypes"
