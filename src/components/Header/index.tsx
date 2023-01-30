@@ -20,20 +20,18 @@ const _Header = styled.header`
     color: white;
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 3px;
     color: var(--mainColor2);
     font-family: var(--main-font);
+    font-weight: 500;
 
-    @media (max-width: 500px) {
-      .text {
-        display: none;
-      }
+    .long-text {
+      display: none;
     }
 
     &:hover,
     &.active {
-      /* color: var(--lightBlue); */
       color: white;
     }
 
@@ -49,6 +47,29 @@ const _Header = styled.header`
         width: 100%;
         height: 100%;
       }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .name {
+      width: max-content;
+
+      .short-text {
+        display: none;
+      }
+    }
+
+    .nav {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
 `
@@ -75,6 +96,8 @@ const Header = () => {
         // { label: "Dillion", link: constants.pageLinks.HOME },
         { label: "Blog", link: constants.pageLinks.BLOG },
         { label: "Content", link: constants.pageLinks.CONTENT },
+        { label: "Talks", link: constants.pageLinks.TALKS },
+        { label: "JS Course", link: constants.pageLinks.JAVASCRIPT },
       ].map(l => (
         <_Link key={l.label} to={l.link} activeClassName="active">
           {l.label}
@@ -90,9 +113,10 @@ const Header = () => {
           <div className="picture">
             <img src={constants.MY_PICTURE} alt="Profile picture" />
           </div>
-          <span className="text">DM</span>
+          <span className="short-text">DM</span>
+          <span className="long-text">DILLION MEGIDA</span>
         </Link>
-        <nav>
+        <nav className="nav">
           <Links />
         </nav>
       </div>
