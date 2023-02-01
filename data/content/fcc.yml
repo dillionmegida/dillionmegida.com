@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: Python Length of List – How to Find the Size of a List
+      link: https://www.freecodecamp.org/news/python-length-of-list-how-to-find-the-size-of-a-list/
+      tags: ["python"]
+    - item:
       title: Why a Ternary Operator is not a Conditional Operator in JS
       link: https://www.freecodecamp.org/news/why-a-ternary-operator-is-not-a-conditional-operator-in-js/
       tags: ["javascript"]

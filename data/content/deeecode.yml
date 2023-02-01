@@ -2,6 +2,22 @@
   link: https://www.youtube.com/c/deeecode
   content:
     - item:
+      title: CSS Variables Simplified
+      link: https://youtu.be/OfjpjAN--qw
+      tags: ["css"]
+    - item:
+      title: CSS Pseudo Classes Explained - No.2 disabled
+      link: https://youtube.com/shorts/Zk2V5HO-o2I
+      tags: ["css"]
+    - item:
+      title: CSS Pseudo Classes Explained - No.1 placeholder-shown
+      link: https://youtu.be/3CZKrFyZjuw
+      tags: ["css"]
+    - item:
+      title: JS Array Methods Explained No.12 - ISARRAY Method
+      link: https://youtube.com/shorts/YBrP5hEiXmc
+      tags: ["javascript"]
+    - item:
       title: JS Array Methods Explained No.11 - UNSHIFT Method
       link: https://youtu.be/gdpUs7zfEBg
       tags: ["javascript"]
