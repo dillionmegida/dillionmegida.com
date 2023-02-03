@@ -4,6 +4,7 @@ import Styles from "./index.module.scss"
 import { graphql } from "gatsby"
 import Post from "../PostMini"
 import Layout from "../BlogLayout"
+import Helmet from "../../Helmet"
 
 type Props = {
   pageContext: {
@@ -34,15 +35,13 @@ const Tags = ({ pageContext, data }: Props) => {
   const tagHeader = `#${tag} - ${totalCount} post${totalCount === 1 ? "" : "s"}`
 
   return (
-    <Layout
-      PageTitle={`Blog Posts tagged with #${tag} - Dillion's Blog`}
-      PageLink="/"
-      PageDescription={`Blog Posts tagged with #${tag} in Dillion's Blog`}
-      PageKeywords="branding, design, dillion megida, dillion, megida, web developer, web development, frontend, javascript"
-      TwitterCardTtitle="Dillion Megida"
-      //The copyright only shows on the blog page and on each blog for mobile
-      // ...But it always shows for large screens
-    >
+    <Layout>
+      <Helmet
+        pageTitle={`Blog Posts tagged with #${tag} - Dillion's Blog`}
+        pageLink={`/tags/${tag}`}
+        pageDesc={`Blog Posts tagged with #${tag} in Dillion's Blog`}
+        pageKeywords={`${tag}, dillion megida, dillion, megida, web developer, web development, frontend, javascript`}
+      />
       <main className={Styles.TagMain}>
         <h2 className={Styles.TagHeader}>{tagHeader}</h2>
         <section className="Blogs">
