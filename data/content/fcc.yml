@@ -2,6 +2,10 @@
   link: https://www.freecodecamp.org/news/author/dillionmegida/
   content:
     - item:
+      title: Fall-Through in JavaScript Switch Statements – Explained with Examples
+      link: https://www.freecodecamp.org/news/fall-through-in-javascript-switch-statements/
+      tags: ["javascript"]
+    - item:
       title: Python Length of List – How to Find the Size of a List
       link: https://www.freecodecamp.org/news/python-length-of-list-how-to-find-the-size-of-a-list/
       tags: ["python"]
