@@ -8,7 +8,7 @@ import { AllPostsGql } from "../../interfaces/Post"
 import ArticlesSection from "./ArticlesSection"
 import YoutubeSection from "./YoutubeSection"
 import STWBlock from "./STWBlock"
-import JsCourseSection from "./JsCourseSection"
+import RegexCourseSection from "./RegexCourseSection"
 
 const { publications, pageLinks, social, RESUME } = constants
 const pubsLength = publications.length
@@ -177,7 +177,7 @@ export default function HomePage({ content }: Props) {
 
   return (
     <Main>
-      <JsCourseSection />
+      <RegexCourseSection />
       <BioSection>
         <div className="container">
           <ProfilePicture>

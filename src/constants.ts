@@ -65,6 +65,7 @@ export default {
     BLOG: "/blog",
     TALKS: "/talks",
     JAVASCRIPT: "/javascript",
+    REGEX: "/regex",
   },
 
   publications: [

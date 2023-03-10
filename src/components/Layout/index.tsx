@@ -1,8 +1,14 @@
 import React from "react"
-import Styles from "./index.module.scss"
 
 import Header from "../Header"
 import Footer from "../Footer"
+import styled from "styled-components"
+
+const Children = styled.div`
+  min-height: 600px;
+  background-color: var(--mainColor1);
+  padding-bottom: 80px;
+`
 
 type Props = {
   children: React.ReactNode
@@ -12,7 +18,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <div className={Styles.Children}>{children}</div>
+      <Children>{children}</Children>
       <Footer />
     </>
   )
