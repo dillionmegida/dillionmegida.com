@@ -1,5 +1,6 @@
 import React from "react"
-import Styles from "./template.module.scss"
+
+const Styles = {} as any
 
 type Props = {
   name: string

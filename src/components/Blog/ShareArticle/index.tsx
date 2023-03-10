@@ -1,8 +1,25 @@
 import React from "react"
-import Styles from "./ShareArticle.module.scss"
 
 import { checkGlobal } from "../../../utils/dates"
 import { Share } from "../../UI/Icons"
+import styled from "styled-components"
+
+const ShareBtn = styled.button`
+  background: none;
+  border: none;
+  background-color: var(--mainColor1);
+  color: var(--mainColor2);
+  padding: 10px;
+  cursor: pointer;
+  margin: 15px 0;
+  font-size: 20px;
+  border: 1px solid transparent;
+
+  &:hover,
+  &:focus {
+    border-color: var(--mainColor2);
+  }
+`
 
 const checkNativeShare = () => checkGlobal() && navigator.share
 
@@ -16,26 +33,24 @@ const nativeShare = (url: string, title: string) => {
     .then(() => {
       console.log("Successful shared article.")
     })
-    .catch((err) => console.log("Couldn't share article because ", err))
+    .catch(err => console.log("Couldn't share article because ", err))
 }
 
 type Props = {
-url: string;
-title: string;
+  url: string
+  title: string
 }
 
-const NativeShare = ({url, title}: Props) => {
-
+const NativeShare = ({ url, title }: Props) => {
   return (
     <React.Fragment>
       {checkNativeShare() !== undefined ? (
-        <button
-          className={Styles.ShareBtn}
+        <ShareBtn
           title="Share article via your applications"
           onClick={() => nativeShare(url, title)}
         >
           <Share /> Share
-        </button>
+        </ShareBtn>
       ) : (
         <p style={{ fontSize: "30px", margin: "20px 0" }}>
           <a

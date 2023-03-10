@@ -1,8 +1,9 @@
 import React from "react"
-import Styles from "./index.module.scss"
 
 import { graphql, useStaticQuery } from "gatsby"
 import Template from "./template"
+
+const Styles = {} as any
 
 type Project = {
   node: {

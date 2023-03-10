@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react"
-import Styles from "./index.module.scss"
 
 import { StaticQuery, graphql } from "gatsby"
 import Post from "../PostMini"
@@ -8,6 +7,11 @@ import styled from "styled-components"
 import Back from "../../Icon/Back"
 
 const Main = styled.div`
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  min-height: 400px;
+
   .header {
     display: flex;
     align-items: center;
@@ -21,7 +25,32 @@ const Main = styled.div`
   h1 {
     position: relative;
     left: -10px;
+    font-size: 30px;
+    color: white;
+
+    @media (max-width: 500px) {
+      font-size: 20px;
+    }
   }
+`
+
+const SearchInput = styled.div`
+  width: 100%;
+  margin: 0 auto;
+
+  input {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    font-family: var(--sec-font);
+    border-radius: 5px;
+    border: none;
+  }
+`
+
+const ResultCount = styled.p`
+  color: white;
+  font-size: 15px;
 `
 
 type GqlPostModified = {
@@ -104,7 +133,7 @@ const Search = () => {
         const filtered = filteredArticles
 
         return (
-          <Main className={Styles.SearchMain}>
+          <Main>
             <div className="container">
               <div className="header">
                 <button onClick={onClickBack} className="back-btn">
@@ -112,7 +141,7 @@ const Search = () => {
                 </button>
                 <h1>Search from {allPosts.totalCount} posts</h1>
               </div>
-              <div className={Styles.Search}>
+              <SearchInput>
                 <input
                   type="text"
                   placeholder="Search articles..."
@@ -121,12 +150,12 @@ const Search = () => {
                   }}
                   ref={searchInput}
                 />
-              </div>
+              </SearchInput>
               {filtered.length !== 0 && (
-                <p className={Styles.ResultCount}>
+                <ResultCount>
                   <b>{filtered.length}</b> result
                   {filtered.length !== 1 && "s"} found.
-                </p>
+                </ResultCount>
               )}
               {filtered.length !== 0 ? (
                 <section>

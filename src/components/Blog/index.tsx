@@ -1,5 +1,4 @@
 import React from "react"
-import Styles from "./index.module.scss"
 
 import { Link } from "gatsby"
 import Post from "./PostMini"
@@ -19,6 +18,11 @@ type Props = {
 }
 
 const Main = styled.main`
+  width: 100%;
+  padding: 30px 20px;
+  margin: 0 auto;
+  max-width: 700px;
+
   .section-heading {
     color: white;
     position: relative;
@@ -51,6 +55,51 @@ const Main = styled.main`
   }
 `
 
+const SearchSection = styled.div`
+  width: 100%;
+  height: 50px;
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    color: white;
+    border: 1px solid white;
+    padding: 15px;
+
+    &:hover {
+      border-color: var(--mainColor2);
+    }
+  }
+`
+
+const Pagination = styled.div`
+  margin: 20px 0;
+  font-size: 20px;
+  height: 20px;
+
+  @media (max-width: 400px) {
+    font-size: 15px;
+  }
+
+  a {
+    color: var(--mainColor2);
+
+    &:is(:focus, :hover) {
+      text-decoration: none;
+    }
+
+    &.previous {
+      float: left;
+    }
+
+    &.next {
+      float: right;
+    }
+  }
+`
+
 const { meta } = constants
 
 export default ({ pageContext }: Props) => {
@@ -64,12 +113,12 @@ export default ({ pageContext }: Props) => {
   return (
     <Layout>
       <Helmet pageTitle={meta.TITLE} pageLink="/blog" pageDesc={meta.DESC} />
-      <Main className={Styles.BlogMain}>
-        <div className={Styles.SearchSection}>
+      <Main>
+        <SearchSection>
           <Link to="/search" title="Search articles">
             <i className="fa fa-search"></i> Search articles
           </Link>
-        </div>
+        </SearchSection>
 
         {/* {isFirst && (
           <section className="featured-section">
@@ -117,10 +166,10 @@ export default ({ pageContext }: Props) => {
           ))}
         </section>
         {/* Pagination */}
-        <div className={Styles.Pagination}>
+        <Pagination>
           {!isFirst && (
             <Link
-              className={`${Styles.previous} a-link inverse`}
+              className={"previous a-link inverse"}
               to={prevPage}
               rel="prev"
             >
@@ -128,11 +177,11 @@ export default ({ pageContext }: Props) => {
             </Link>
           )}
           {!isLast && (
-            <Link className={`${Styles.next} a-link`} to={nextPage} rel="next">
+            <Link className={"next a-link"} to={nextPage} rel="next">
               Next Page →
             </Link>
           )}
-        </div>
+        </Pagination>
       </Main>
     </Layout>
   )

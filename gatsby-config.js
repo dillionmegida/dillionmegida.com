@@ -65,7 +65,7 @@ module.exports = {
     `gatsby-plugin-sass`,
 
     // For NetlifyCMS
-    `gatsby-plugin-netlify-cms`,
+    // `gatsby-plugin-netlify-cms`,
 
     // Automatic sitemaps when built
     {

@@ -1,6 +1,24 @@
 import React from "react"
 import { Link } from "gatsby"
-import Styles from "./index.module.scss"
+import styled from "styled-components"
+
+const SLink = styled(Link)`
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: var(--mainColor3);
+  font-weight: bold;
+  display: block;
+  margin: 7px 0;
+
+  &:hover,
+  &:focus,
+  .active-link {
+    transform: scale(1.1);
+    color: white;
+  }
+`
 
 type Props = {
   href: string
@@ -10,14 +28,9 @@ type Props = {
 
 const navLink = ({ href, title, nav }: Props) => {
   return (
-    <Link
-      className={Styles.Link}
-      to={`/${href}`}
-      activeClassName={Styles.ActiveLink}
-      title={title}
-    >
+    <SLink to={`/${href}`} activeClassName="active-link" title={title}>
       {nav.toUpperCase()}
-    </Link>
+    </SLink>
   )
 }
 
