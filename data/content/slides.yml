@@ -1,3 +1,10 @@
+- title: "Introduction to Git and GitHub"
+  url: "https://docs.google.com/presentation/d/e/2PACX-1vRaxQjnoxYdhppLkKCQSX0_fMacctCS7e5WJXc0INivvVNY9Ci_2iYXfOGWxcrqs4UQ7pH5QQKUW10p/embed"
+  path: "intro-to-git-and-github"
+  date: "2023-03-10"
+  cover: "6-intro-to-git-and-github.png"
+  tags: ["git", "github"]
+
 - title: "Improve your CSS code without a framework"
   url: "https://docs.google.com/presentation/d/e/2PACX-1vTJ-cw96IjniOjJDMjKwxZ5E7m_ufDhjwU-QhNDp9m6TIBjTib5rX1UVuU24OaJIAprbdRGnc3_Ildj/embed"
   path: "improve-css-without-framework"
