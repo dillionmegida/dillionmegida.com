@@ -5,6 +5,7 @@ cover: "105-recycle-content.png"
 pageDescription: "As a content creator across different platforms, repurposing the contents I create has improved my process a lot"
 pageKeywords: "content creator, content creation, repurposing content, youtube, instagram, linkedin, tiktok"
 tags: ["content"]
+video: https://youtu.be/CsRZt5szi7s
 ---
 
 If you're a content creator like me, who creates contents on different platforms,  you know that coming up with different ideas for these different platforms **is hard**. Something for Instagram, something else for LinkedIn, something different for Instagram, or YouTube--it's mentally draining having to think of ideas and define scopes for the different topics.
