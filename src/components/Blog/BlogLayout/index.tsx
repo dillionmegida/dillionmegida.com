@@ -1,9 +1,8 @@
 import React from "react"
 
-import Newsletter from "../../Newsletter"
 import Layout from "../../Layout"
 import WithLove from "../WithLove"
-import JsCourseSection from "../../../containers/HomePage/JsCourseSection"
+import RegexCourseSection from "../../../containers/HomePage/RegexCourseSection"
 
 type Props = {
   children: React.ReactNode
@@ -14,7 +13,7 @@ const BlogLayout = ({ children }: Props) => {
     <Layout>
       {children}
       <WithLove />
-      <JsCourseSection />
+      <RegexCourseSection />
       {/* <Newsletter /> */}
     </Layout>
   )
