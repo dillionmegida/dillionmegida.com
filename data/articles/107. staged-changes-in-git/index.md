@@ -48,7 +48,7 @@ Below the staged changes, you see "Changes not staged for commit". These changes
 
 Moving on to the next step, taking a snapshot. Taking a snapshot means committing your changes.
 
-You take snapshots using the `git command` command. Here's one way to use it:
+You take snapshots using the `git commit` command. Here's one way to use it:
 
 ```bash
 git commit -m "a message here"
