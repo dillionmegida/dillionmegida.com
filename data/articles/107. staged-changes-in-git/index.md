@@ -5,6 +5,7 @@ cover: "107-staged-changes-git.png"
 pageDescription: "Staged changes is a concept you would hear a lot in Git. In this article, I explain what this term means and how it works with Git"
 pageKeywords: "git, git commit, git status, git add, staging area, staged changes, not changed, changes, git project"
 tags: ["git"]
+video : https://youtu.be/HyeNfWZBut8
 ---
 
 One of the most common concepts you'll hear in Git is "staged changes". Or you may have heard it as "staging area". What does this mean?
