@@ -5,6 +5,7 @@ cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1588807955/images
 pageDescription: "JavaScript uses browser APIs to perform some operations on the web. Without these APIs, Javascript cannot do what many people think it can. In these article, we'll learn how Javascript works."
 pageKeywords: "fetch api, browswer apis, apis, dom api, setTimeOut"
 tags: ["javascript"]
+video: https://youtu.be/A5k69Op5KR4
 ---
 
 JavaScript isn't completely JavaScript. The reason I say this is that what many people (like I used to) think JavaScript is (or can do) is not exactly true. For example, JavaScript does not have a timer feature (as you may think `setTimeOut`), network feature (as seen in `fetch` or `XTMLHTTPRequest`) and so many more.
