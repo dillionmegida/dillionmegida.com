@@ -245,7 +245,7 @@ export default ({ data }: Props) => {
               {`${post.timeToRead} min${post.timeToRead > 1 ? "s" : ""} read`}
             </p>
             {post.frontmatter.tags ? (
-              <p className="blog.tags">
+              <p className="blog-tags">
                 {post.frontmatter.tags.map((tag, index) => (
                   <Link key={`${tag}_${index}`} to={`/tags/${tag}`}>
                     #{tag}
