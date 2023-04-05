@@ -68,5 +68,3 @@ But if git does not see any changes in that area, you get an info in your termin
 So, staged changes; these are changes that you have "staged" (specified, prepared) for the next commit. When you attempt to make a commit, git checks the staging area for the specified changes that would be part of that commit. If it finds some changes there, it adds those changes to the commit. If it doesn't find any change there, it informs you that there are no (staged) changes to commit.
 
 I hope this explains the term for you. Kindly share if helpful :)
-
-just testing...
