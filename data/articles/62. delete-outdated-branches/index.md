@@ -110,3 +110,23 @@ git delete-local-merged
 ```
 
 `git fetch` would prune remote references that do not exist (if you added that to your config file), and the rest of the command deletes local branches that have been merged.
+
+## The challenge with Squashed or Rebased Branches
+
+This setup I've shared above only works well if "everything goes the normal way". By normal way I mean:
+
+1. create a branch
+2. do your changes
+3. **normal merge** the branch to the main branch on remote
+4. delete the remote branch
+5. fetch the remote main branch to local
+6. check for merged branches
+7. and you see the local branch that was merged
+
+In pull request cases where you do a different merge (for example, a [squash merge](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/configuring-commit-squashing-for-pull-requests)), the branch history is altered and as a result `git branch --merged` will not show locally merged branches.
+
+The same might also happen is you do a fast-forward merged.
+
+I also experienced something similar. I did fast-forward merges on remote with many branches, and when I ran `git branch --merged` locally, it didn't show me any merged branches.
+
+You can read more about that experience and the solutions I recommended to fix that here: [git branch --merged does not show all merged branches](https://dillionmegida.com/p/why-git-merged-does-not-show-merged-branches/)
