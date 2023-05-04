@@ -26,7 +26,7 @@ last_directory_prefix = extract_number(last_directory)
 article_path = input("Article path: ")
 article_path_without_spaces = re.sub('\s+', '-', article_path)
 
-new_article_dir = f'{PATH_TO_ARTICLES}/{last_directory_prefix + 1}. {article_path_without_spaces}'
+new_article_dir = f'{PATH_TO_ARTICLES}/{last_directory_prefix + 1}. {article_path_without_spaces.lower()}'
 
 os.mkdir(new_article_dir)
 
