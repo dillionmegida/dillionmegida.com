@@ -120,7 +120,7 @@ This mindset helped a lot this year. I decided to gradually make prayers a habit
 
 ## Travelling Countries
 
-My VISA in the Netherlands allows me to all [26 Schengen countries in Europe](https://home-affairs.ec.europa.eu/schengen-visa_en). In Nigeria, I wasn't used to traveling--as a matter of fact, I didn't like it because of all the mental planning and anxiety that comes with it. Seeing how accessible the transportation is here, plus free visits to other countries, I decided I would do some traveling.
+My VISA in the Netherlands allows me to all [26 Schengen countries in Europe](https://www.schengenvisainfo.com/schengen-visa-countries-list/). In Nigeria, I wasn't used to traveling--as a matter of fact, I didn't like it because of all the mental planning and anxiety that comes with it. Seeing how accessible the transportation is here, plus free visits to other countries, I decided I would do some traveling.
 
 Asides from traveling to other cities in the Netherlands, I visited three other countries.
 
