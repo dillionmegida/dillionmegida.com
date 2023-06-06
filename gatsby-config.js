@@ -161,7 +161,7 @@ module.exports = {
 
     // For google analytics
     {
-      resolve: `gatsby-plugin-gtag`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ["G-LHRY5D235V"],
         gtagConfig: {
