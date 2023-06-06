@@ -163,17 +163,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingIds: ["G-LHRY5D235V"],
-        gtagConfig: {
-          head: true,
-          anonymize_ip: true,
-          cookie_expires: 0,
-          send_page_view: true,
-        },
-        pluginConfig: {
-          head: false,
-          delayOnRouteUpdate: 0,
-        },
+        trackingId: "G-LHRY5D235V",
+        head: true,
+        anonymize: true,
       },
     },
 
