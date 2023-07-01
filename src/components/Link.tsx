@@ -14,7 +14,7 @@ export function NewTabLink({ link, children, className }: Props) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      {children}
+      {children} ↗
     </a>
   )
 }

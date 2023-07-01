@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
+import { NewTabLink } from "../../components/Link"
 
 const Section = styled.section`
   position: relative;
@@ -36,10 +37,9 @@ export default function RegexCourseSection() {
       </div>
       <p>
         Learn more about{" "}
-        <Link className="a-link" to="/regex">
+        <NewTabLink className="a-link" link="https://deeecode.com/courses/regex/">
           this simplified course
-        </Link>{" "}
-        I'm working on 😊
+        </NewTabLink>{" "} 😊
       </p>
     </Section>
   )
