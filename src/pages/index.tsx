@@ -6,6 +6,12 @@ import constants from "../constants"
 import HomePage from "../containers/HomePage"
 import { AllContentGql } from "../interfaces/Content"
 import { AllPostsGql } from "../interfaces/Post"
+import styled from "styled-components"
+
+const Container = styled.div`
+  min-height: 100vh;
+  width: 100%;
+`
 
 type Props = {
   data: {
@@ -19,11 +25,17 @@ const { meta } = constants
 
 export default function Home({ data }: Props) {
   return (
-    <Layout>
+    <Container>
       <Helmet pageTitle={meta.TITLE} pageLink="/" pageDesc={meta.DESC} />
-      <HomePage content={data} />
-    </Layout>
+      <HomePage />
+    </Container>
   )
+  //   return (
+  //     <Layout>
+  //       <Helmet pageTitle={meta.TITLE} pageLink="/" pageDesc={meta.DESC} />
+  //       <HomePage content={data} />
+  //     </Layout>
+  //   )
 }
 
 export const query = graphql`

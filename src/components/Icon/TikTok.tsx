@@ -1,7 +1,7 @@
 import React from "react"
 import { IconProps } from "./Props"
 
-export default function TikTok({ size = 18, color = "black" }: IconProps) {
+export default function TikTok({ size = 18, color = "#ff0050" }: IconProps) {
   const ratio = 1200 / 1200
 
   const width = size * ratio

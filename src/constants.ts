@@ -49,9 +49,15 @@ export default {
     TikTok: { link: "https://tiktok.com/@iamdillion", Icon: TikTok },
     "E-mail": { link: "mailto:dillionmegida@gmail.com", Icon: Mail },
     DeeeCode: {
-      link: "https://www.youtube.com/c/deeecode",
       Icon: YouTube,
+      link: "https://www.youtube.com/@deeecode",
     },
+  },
+
+  deeecode: {
+    yt: "https://www.youtube.com/@deeecode",
+    web: "https://deeecode.com",
+    courses: "https://deeecode.com/courses",
   },
 
   CALENDLY: "https://calendly.com/dillionmegida",
