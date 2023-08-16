@@ -1,5 +1,5 @@
-- platform: deeecode (Tech + Code)
-  link: https://www.youtube.com/c/deeecode
+- platform: deeecode (code videos)
+  link: https://youtube.com/@deeecode
   content:
     - item:
       title: CSS Variables Simplified

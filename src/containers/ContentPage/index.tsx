@@ -400,9 +400,11 @@ export default function ContentPage({
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {content.map(c =>
-              c.edges.map(({ node }) => {
+            {content.map(c => {
+              return c.edges.map(({ node }) => {
                 if (node.content.length < 1) return null
+
+                if (node.platform.startsWith("deeecode")) console.log(node)
 
                 return (
                   <ContentBlock
@@ -415,7 +417,7 @@ export default function ContentPage({
                   />
                 )
               })
-            )}
+            })}
             {talkSlides.reverse().length < 1 ? null : (
               <ContentBlock
                 heading={{ title: "Talks", link: "/talks" }}

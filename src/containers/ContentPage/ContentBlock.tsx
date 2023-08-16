@@ -10,10 +10,12 @@ const Container = styled.div`
     a {
       color: white;
       opacity: 0.9;
+      height: max-content;
     }
 
     a {
-      text-decoration: underline;
+      margin: 0;
+      /* text-decoration: underline; */
     }
   }
   .content-block__item {
@@ -21,15 +23,17 @@ const Container = styled.div`
     margin-bottom: 20px;
     a {
       font-weight: 300;
-      line-height: 1.8;
+      padding: 10px;
+      /* line-height: 1.8; */
+      height: max-content;
       color: white;
       opacity: 0.9;
       /* text-decoration: underline; */
-      margin-bottom: 15px;
+      margin: 0 0 15px;
       display: block;
 
       &:hover {
-        text-decoration: underline;
+        color: black;
       }
     }
   }
@@ -48,6 +52,7 @@ export default function ContentBlock({
   items,
 }: Props) {
   const isExternalLink = link && link.startsWith("http")
+  const YouTubeLink = link && link.includes("youtu")
 
   return (
     <Container>
@@ -55,7 +60,13 @@ export default function ContentBlock({
         {link ? (
           <>
             {isExternalLink ? (
-              <NewTabLink link={link}>{title}</NewTabLink>
+              <AnchorLink
+                icon={YouTubeLink ? "youtube" : "link"}
+                newTab
+                link={link}
+              >
+                {title}
+              </AnchorLink>
             ) : (
               <Link to={link}>{title}</Link>
             )}

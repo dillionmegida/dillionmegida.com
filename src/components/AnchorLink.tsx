@@ -34,8 +34,8 @@ type Props = {
 }
 
 const iconMap: { [x in Icon]: ReactNode } = {
-  link: <Link />,
-  youtube: <YouTube />,
+  link: <Link size={20} />,
+  youtube: <YouTube size={20} />,
 }
 
 export function NewTabLink({

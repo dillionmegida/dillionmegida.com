@@ -122,6 +122,7 @@ export const query = graphql`
         node {
           id
           platform
+          link
           content {
             title
             link
