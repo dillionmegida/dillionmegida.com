@@ -2,7 +2,7 @@ import Helmet from "../components/Helmet"
 import Layout from "../components/Layout"
 import React from "react"
 import styled from "styled-components"
-import { NewTabLink } from "../components/Link"
+import { NewTabLink } from "../components/AnchorLink"
 
 const jobs = [
   {

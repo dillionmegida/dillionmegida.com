@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { AnchorLink, NewTabLink } from "../../components/Link"
+import AnchorLink, { NewTabLink } from "../../components/AnchorLink"
 
 const Container = styled.div`
   h2 {

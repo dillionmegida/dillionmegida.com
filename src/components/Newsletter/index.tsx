@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { NEWSLETTER } from "../../constants"
-import { NewTabLink } from "../Link"
+import { NewTabLink } from "../AnchorLink"
 
 const Container = styled.section`
   max-width: 500px;

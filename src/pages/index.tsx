@@ -27,7 +27,7 @@ export default function Home({ data }: Props) {
   return (
     <Container>
       <Helmet pageTitle={meta.TITLE} pageLink="/" pageDesc={meta.DESC} />
-      <HomePage />
+      <HomePage content={data} />
     </Container>
   )
   //   return (

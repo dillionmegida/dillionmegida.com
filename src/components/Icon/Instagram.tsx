@@ -1,7 +1,7 @@
 import React from "react"
 import { IconProps } from "./Props"
 
-export default function Instagram({ size = 18, color = "black" }: IconProps) {
+export default function Instagram({ size = 18, color = "#E1306C" }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

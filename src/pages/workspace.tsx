@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import Helmet from "../components/Helmet"
 import Layout from "../components/Layout"
-import { NewTabLink } from "../components/Link"
+import { NewTabLink } from "../components/AnchorLink"
 
 const Main = styled.main`
   h1 {

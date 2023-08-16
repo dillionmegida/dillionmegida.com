@@ -14,13 +14,18 @@ html.smoothScroll {
   --mainColor4: #8be79f;
   --lightBlue: #319ac1;
 
-//   --mainColor1: rgb(61, 61, 61);
-//   --mainColor1: #1f0632;
-  --mainColor1: #333;
-//   --midMainColor1: rgb(101, 101, 101);
-//   --midMainColor1: #4b2965;
---midMainColor1: #515151;
+  --bgColor: #403143;
+
+  //   --mainColor1: rgb(61, 61, 61);
+  //   --mainColor1: #1f0632;
+  --mainColor1: color-mix(in srgb, var(--bgColor) 60%, black);
+  //   --midMainColor1: rgb(101, 101, 101);
+  //   --midMainColor1: #4b2965;
+  --midMainColor1: color-mix(in srgb, var(--mainColor1) 90%, white);
   --midMainColor2: rgb(83, 83, 83);
+
+  --secondary-color: #f0de14;
+  --tertiary-color: #65fcb0;
 
   --javascript: #f7df1e;
   --javascriptMid: #faf1ad;
@@ -52,7 +57,6 @@ body {
   font-family: var(--sec-font);
   font-weight: 300;
   background-color: var(--mainColor1);
-  
 }
 
 h1,
@@ -63,7 +67,6 @@ h5,
 h6 {
   font-family: var(--main-font);
   letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
 h1 {
@@ -119,37 +122,37 @@ a {
   }
 }
 
-.a-link {
-  --preColor: white;
-  position: relative;
-  color: var(--preColor);
-  transition: color 300ms;
-  --color: var(--mainColor2);
+// .a-link {
+//   --preColor: white;
+//   position: relative;
+//   color: var(--preColor);
+//   transition: color 300ms;
+//   --color: var(--mainColor2);
 
-  @media (max-width: 600px) {
-    color: var(--color);
-  }
+//   @media (max-width: 600px) {
+//     color: var(--color);
+//   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 1px;
-    background-color: var(--color);
-    bottom: -3px;
-    left: 0;
-    transition: width 300ms;
-  }
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     width: 40%;
+//     height: 1px;
+//     background-color: var(--color);
+//     bottom: -3px;
+//     left: 0;
+//     transition: width 300ms;
+//   }
 
-  &.inverse::after {
-    left: unset;
-    right: 0;
-  }
+//   &.inverse::after {
+//     left: unset;
+//     right: 0;
+//   }
 
-  &:hover {
-    color: var(--color);
-    &::after {
-      width: 100%;
-    }
-  }
-}
+//   &:hover {
+//     color: var(--color);
+//     &::after {
+//       width: 100%;
+//     }
+//   }
+// }

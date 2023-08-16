@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import constants from "../../constants"
-import { AnchorLink, NewTabLink } from "../Link"
+import AnchorLink, { NewTabLink } from "../AnchorLink"
 
 const Footer = styled.footer`
   .container {
@@ -49,6 +49,10 @@ const Footer = styled.footer`
         border: 1px solid var(--mainColor2);
       }
     }
+
+    .footer-icon {
+        height: 45px;
+    }
   }
 `
 
@@ -69,8 +73,12 @@ export default () => {
                 // @ts-ignore
                 const sm = social[s]
                 return (
-                  <AnchorLink key={sm.link} link={sm.link}>
-                    <sm.Icon size={30} color="var(--mainColor2)" />
+                  <AnchorLink
+                    className="footer-icon"
+                    key={sm.link}
+                    link={sm.link}
+                  >
+                    <sm.Icon size={30} />
                   </AnchorLink>
                 )
               })}

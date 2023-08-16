@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import constants from "../../../constants"
-import { NewTabLink, AnchorLink } from "../../Link"
+import { NewTabLink, AnchorLink } from "../../AnchorLink"
 
 const AboutSection = styled.section`
   width: 100%;

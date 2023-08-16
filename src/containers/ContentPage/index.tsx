@@ -11,7 +11,7 @@ import { pluralize } from "../../utils/string"
 import classNames from "classnames"
 import queryString from "query-string"
 import { changeWithoutReloading } from "../../utils/url"
-import { NewTabLink } from "../../components/Link"
+import { NewTabLink } from "../../components/AnchorLink"
 import constants from "../../constants"
 import { AllTalksGql } from "../../interfaces/Talk"
 

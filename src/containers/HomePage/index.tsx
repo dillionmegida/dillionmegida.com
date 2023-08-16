@@ -280,7 +280,7 @@
 
 import React from "react"
 import styled from "styled-components"
-import { NewTabLink } from "../../components/Link"
+import { NewTabLink } from "../../components/AnchorLink"
 import constants from "../../constants"
 import YouTube from "../../components/Icon/YouTube"
 import LinkIcon from "../../components/Icon/Link"
@@ -288,11 +288,11 @@ import TikTok from "../../components/Icon/TikTok"
 import Twitter from "../../components/Icon/Twitter"
 import LinkedIn from "../../components/Icon/LinkedIn"
 import { Link } from "gatsby"
+import YoutubeSection from "./YoutubeSection"
+import RegexCourseSection from "./RegexCourseSection"
 
 const Main = styled.main`
-  display: flex;
-  justify-content: center;
-  padding: calc(100vh / 8) 20px 0;
+  padding: calc(100vh / 10) 20px 150px;
   color: white;
   position: relative;
   width: 100%;
@@ -301,7 +301,12 @@ const Main = styled.main`
   min-height: 100vh;
   overflow: hidden;
   margin: 0;
-  background-color: #727272;
+  background-color: var(--bgColor);
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
   &::after {
     content: "";
@@ -338,12 +343,13 @@ const Main = styled.main`
   }
 
   .landing {
-    padding: 0 40px 40px;
-    background-color: #393939;
+    padding: 0 40px 100px;
+    background: linear-gradient(
+      var(--mainColor1),
+      var(--mainColor1),
+      transparent
+    );
     height: max-content;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* border: 1px solid #1e1d1d; */
 
     .top-heading {
       width: 100%;
@@ -373,7 +379,7 @@ const Main = styled.main`
         height: 100%;
         object-fit: cover;
         border-radius: 5px;
-        border: 2px solid #393939;
+        border: 2px solid var(--mainColor1);
       }
 
       .main {
@@ -403,7 +409,7 @@ const Main = styled.main`
     padding: 0 6px;
     margin: 0 6px;
     height: 30px;
-    background: #333;
+    background: var(--midMainColor1);
     border-radius: 5px;
     display: inline-flex;
     align-items: center;
@@ -412,7 +418,10 @@ const Main = styled.main`
     top: 3px;
 
     &:hover {
-      background: linear-gradient(#f0de14, #65fcb0);
+      background: linear-gradient(
+        var(--secondary-color),
+        var(--tertiary-color)
+      );
       color: black;
     }
   }
@@ -498,10 +507,16 @@ const Main = styled.main`
   }
 `
 
-export default function HomePage() {
+type Props = {
+  content: any
+}
+
+export default function HomePage({ content }: Props) {
+  const { allArticlesOnMyWebite, youtube, deeecode } = content
+
   return (
     <Main>
-      <div className="landing">
+      <div className="landing container">
         <div className="body">
           <div className="image">
             <img
@@ -598,6 +613,8 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <YoutubeSection deeecode={deeecode} youtube={youtube} />
+      <RegexCourseSection />
     </Main>
   )
 }

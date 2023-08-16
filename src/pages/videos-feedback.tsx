@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "../components/Helmet"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import { NewTabLink } from "../components/Link"
+import { NewTabLink } from "../components/AnchorLink"
 
 const Wrapper = styled.div`
   h1 {

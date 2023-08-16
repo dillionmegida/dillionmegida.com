@@ -4,9 +4,11 @@ import Header from "../Header"
 import Footer from "../Footer"
 import styled from "styled-components"
 
+const Wrapper = styled.div``
+
 const Children = styled.div`
   min-height: 600px;
-  background-color: var(--mainColor1);
+  /* background-color: var(--mainColor1); */
   padding-bottom: 80px;
 `
 
@@ -16,11 +18,11 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <>
+    <Wrapper>
       <Header />
       <Children>{children}</Children>
       <Footer />
-    </>
+    </Wrapper>
   )
 }
 

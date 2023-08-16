@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { NewTabLink } from "../../components/Link"
+import { NewTabLink } from "../../components/AnchorLink"
 import { STW } from "../../constants"
 
 const Section = styled.section`

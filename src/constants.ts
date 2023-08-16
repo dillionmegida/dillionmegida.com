@@ -47,7 +47,7 @@ export default {
     },
     Instagram: { link: "https://instagram.com/deeecode", Icon: Instagram },
     TikTok: { link: "https://tiktok.com/@iamdillion", Icon: TikTok },
-    "E-mail": { link: "mailto:dillionmegida@gmail.com", Icon: Mail },
+    // "E-mail": { link: "mailto:dillionmegida@gmail.com", Icon: Mail },
     DeeeCode: {
       Icon: YouTube,
       link: "https://www.youtube.com/@deeecode",
@@ -74,6 +74,10 @@ export default {
     REGEX: "/regex",
   },
 
+  SIMPLE_REGEX: {
+    link: "https://simpleregex.com",
+  },
+
   publications: [
     {
       label: "FreeCodeCamp",
@@ -93,3 +97,10 @@ export default {
     },
   ],
 }
+
+export const FEATURED_CODING_VIDEOS = [
+  "youtu.be/kX3WpzLRiW4",
+  "youtu.be/AERByfmKMok",
+  "youtu.be/C_M9TX3Gh7w",
+  "youtu.be/HyeNfWZBut8",
+]

@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import Footer from "../components/Footer"
 import Helmet from "../components/Helmet"
-import { NewTabLink } from "../components/Link"
+import { NewTabLink } from "../components/AnchorLink"
 import NativeShare from "../components/Blog/ShareArticle"
 
 const Wrapper = styled.div`
