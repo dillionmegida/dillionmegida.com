@@ -10,9 +10,7 @@ video: https://youtu.be/AhNUQ6Hn3qM
 
 Short-Circuiting is a concept you'd find in many programming languages, including JavaScript. This mechanism applies when an interpreter is executing logical expressions, and skips the "irrelevant" parts of the expressions.
 
-What do I mean by "irrelevant"?
-
-Let's examine this statement:
+What do I mean by "irrelevant"? Let's examine this statement:
 
 **"I am 30 years old, AND I am a singer"**
 

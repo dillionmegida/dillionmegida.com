@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import AnchorLink from "../../AnchorLink"
 import Layout from "../BlogLayout"
 import Disqus from "../disqus"
 import { formatBlogDate } from "../../../utils/dates"
@@ -47,37 +48,6 @@ const Main = styled.main`
     color: white;
   }
 
-  a {
-    position: relative;
-    color: white;
-    transition: color 300ms;
-    --color: var(--mainColor2);
-    display: inline-block;
-    color: var(--mainColor2);
-
-    @media (max-width: 600px) {
-      color: var(--color);
-    }
-
-    &:not(.anchor)::after {
-      content: "";
-      position: absolute;
-      width: 40%;
-      height: 1px;
-      background-color: var(--color);
-      bottom: 3px;
-      left: 0;
-      transition: width 300ms;
-    }
-
-    &:hover {
-      color: var(--color);
-      &::after {
-        width: 100%;
-      }
-    }
-  }
-
   iframe {
     width: 100%;
   }
@@ -92,9 +62,9 @@ const Main = styled.main`
 
   .blog-tags {
     font-size: 20px;
+    margin: 0 0 20px;
+
     a {
-      text-decoration: none;
-      display: inline-block;
       margin-right: 10px;
     }
   }
@@ -124,6 +94,8 @@ const Main = styled.main`
 
     a {
       word-break: break-all;
+      color: var(--secondary-color);
+      text-decoration: underline;
     }
 
     img {
@@ -137,6 +109,7 @@ const Main = styled.main`
 
     p {
       line-height: 1.8;
+      margin: 20px 0 20px;
     }
 
     & div[class="gatsby-highlight"] {
@@ -169,9 +142,8 @@ const Main = styled.main`
     }
 
     & blockquote {
-      border: 1px solid #aaa;
-      border: 2px solid var(--midMainColor1);
-      margin: 0;
+      border: 2px solid var(--tertiary-color);
+      margin: 20px 0;
       padding: 0 20px;
       color: white;
       opacity: 0.8;
@@ -183,7 +155,7 @@ const Main = styled.main`
       padding: 0 25px;
       & li {
         padding: 0;
-        margin: 25px 0;
+        margin: 15px 0;
         line-height: 1.5;
         & a {
           margin: 0;
@@ -247,9 +219,9 @@ export default ({ data }: Props) => {
             {post.frontmatter.tags ? (
               <p className="blog-tags">
                 {post.frontmatter.tags.map((tag, index) => (
-                  <Link key={`${tag}_${index}`} to={`/tags/${tag}`}>
+                  <AnchorLink key={`${tag}_${index}`} link={`/tags/${tag}`}>
                     #{tag}
-                  </Link>
+                  </AnchorLink>
                 ))}
               </p>
             ) : null}

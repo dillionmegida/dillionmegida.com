@@ -4,11 +4,10 @@ import YouTube from "./Icon/YouTube"
 import styled from "styled-components"
 
 const LinkStyle = styled.a`
-  transition: background 300ms;
+  transition: background 300ms, color 300ms;
   color: yellow;
   padding: 0 6px;
-  margin: 0 6px;
-  height: 30px;
+  height: max-content;
   background: var(--midMainColor1);
   border-radius: 5px;
   display: inline-flex;
