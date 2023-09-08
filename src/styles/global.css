@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;800&family=Albert+Sans:wght@300;400;500;800&display=swap");
 
 html.smoothScroll {
@@ -16,11 +20,11 @@ html.smoothScroll {
 
   --bgColor: #403143;
 
-  //   --mainColor1: rgb(61, 61, 61);
-  //   --mainColor1: #1f0632;
+  /* //   --mainColor1: rgb(61, 61, 61); */
+  /* //   --mainColor1: #1f0632; */
   --mainColor1: color-mix(in srgb, var(--bgColor) 60%, black);
-  //   --midMainColor1: rgb(101, 101, 101);
-  //   --midMainColor1: #4b2965;
+  /* //   --midMainColor1: rgb(101, 101, 101); */
+  /* //   --midMainColor1: #4b2965; */
   --midMainColor1: color-mix(in srgb, var(--mainColor1) 90%, white);
   --midMainColor2: rgb(83, 83, 83);
 
@@ -122,7 +126,7 @@ a {
   }
 }
 
-// .a-link {
+/* // .a-link {
 //   --preColor: white;
 //   position: relative;
 //   color: var(--preColor);
@@ -155,4 +159,4 @@ a {
 //       width: 100%;
 //     }
 //   }
-// }
+// } */

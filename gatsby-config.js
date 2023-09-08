@@ -3,6 +3,7 @@ module.exports = {
     siteUrl: `https://dillionmegida.com`,
   },
   plugins: [
+    'gatsby-plugin-postcss',
     `gatsby-plugin-styled-components`,
 
     {

@@ -461,12 +461,12 @@ const Main = styled.main`
     }
 
     h1 {
-      background: linear-gradient(#f0de14, #65fcb0);
-      font-weight: 800;
-      font-size: 40px;
-      background-clip: text;
-      color: transparent;
-      -webkit-background-clip: text;
+      /* background: linear-gradient(#f0de14, #65fcb0); */
+      /* font-weight: 800; */
+      /* font-size: 40px; */
+      /* background-clip: text; */
+      /* color: transparent; */
+      /* -webkit-background-clip: text; */
     }
 
     .bio {
@@ -542,7 +542,9 @@ export default function HomePage({ content }: Props) {
                 <LinkIcon color="#fff" /> /talks
               </Link>
             </div>
-            <h1 className="">Dillion Megida</h1>
+            <h1 className="font-medium bg-gradient text-5xl bg-clip-text text-transparent">
+              Dillion Megida
+            </h1>
             <p className="title">
               Software Engineer,{" "}
               <span className="highlight ">Content Creator</span>,
