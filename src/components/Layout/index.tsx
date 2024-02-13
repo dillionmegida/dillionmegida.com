@@ -8,8 +8,8 @@ const Wrapper = styled.div``
 
 const Children = styled.div`
   min-height: 600px;
-  /* background-color: var(--mainColor1); */
   padding-bottom: 80px;
+  background-color: color-mix(in srgb, white, transparent 98%);
 `
 
 type Props = {

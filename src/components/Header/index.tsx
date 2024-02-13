@@ -97,6 +97,7 @@ const Header = () => {
         { label: "Blog", link: constants.pageLinks.BLOG },
         { label: "Content", link: constants.pageLinks.CONTENT },
         { label: "Talks", link: constants.pageLinks.TALKS },
+        { label: "Now", link: constants.pageLinks.NOW },
         // { label: "Regex Course", link: constants.pageLinks.REGEX },
       ].map(l => (
         <_Link key={l.label} to={l.link} activeClassName="active">

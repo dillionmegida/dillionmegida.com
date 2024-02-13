@@ -354,6 +354,8 @@ const Main = styled.main`
     .top-heading {
       width: 100%;
       display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-bottom: 40px;
       padding: 20px 0;
     }
@@ -407,7 +409,7 @@ const Main = styled.main`
     transition: background 300ms;
     color: yellow;
     padding: 0 6px;
-    margin: 0 6px;
+    margin: 0 3px;
     height: 30px;
     background: var(--midMainColor1);
     border-radius: 5px;
@@ -541,11 +543,14 @@ export default function HomePage({ content }: Props) {
               <Link className="link-highlight" to="/talks">
                 <LinkIcon color="#fff" /> /talks
               </Link>
+              <Link className="link-highlight" to="/now">
+                <LinkIcon color="#fff" /> /now
+              </Link>
             </div>
             <h1 className="">Dillion Megida</h1>
             <p className="title">
               Software Engineer,{" "}
-              <span className="highlight ">Content Creator</span>,
+              <span className="highlight ">Developer Educator</span>,
               <br />
               <span>Developer Advocate</span>
             </p>
@@ -553,7 +558,8 @@ export default function HomePage({ content }: Props) {
               <p>
                 I love to <span className="highlight">TEACH</span> and{" "}
                 <span className="highlight">SIMPLIFY</span> technical concepts.
-                I love to{" "}
+                I get a lot of fulfillment when people understand something
+                through me. I love to{" "}
                 <span className="highlight">create videos & articles</span>. I
                 also love to <span className="highlight">SHARE</span> my
                 knowledge and experiences on different topics 😇
@@ -567,6 +573,10 @@ export default function HomePage({ content }: Props) {
                   <YouTube color="#FF0000" />
                   deeecode
                 </NewTabLink>{" "}
+               which is my{" "}
+                <NewTabLink className="link-highlight" link={constants.deeecode.web}>
+                  other persona
+                </NewTabLink>
               </p>
               <p>
                 I share lessons from my Career and Life in the Netherlands on{" "}
@@ -613,8 +623,8 @@ export default function HomePage({ content }: Props) {
           </div>
         </div>
       </div>
-      <YoutubeSection deeecode={deeecode} youtube={youtube} />
-      <RegexCourseSection />
+      {/* <YoutubeSection deeecode={deeecode} youtube={youtube} />
+      <RegexCourseSection /> */}
     </Main>
   )
 }

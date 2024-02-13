@@ -100,6 +100,8 @@ const Search = () => {
     window.history.back()
   }
 
+  return null
+
   return (
     <StaticQuery
       query={graphql`

@@ -99,6 +99,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `alone`,
+        path: `${__dirname}/data/alone/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `articles`,
         path: `${__dirname}/data/articles/`,
       },

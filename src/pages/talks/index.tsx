@@ -5,8 +5,13 @@ import Helmet from "../../components/Helmet"
 import Layout from "../../components/Layout"
 
 const Main = styled.main`
+  &.container {
+    padding-top: 40px;
+  }
+
   h1 {
     color: white;
+    margin-bottom: 30px;
 
     @media (max-width: 800px) {
       font-size: 28px;

@@ -35,7 +35,7 @@ export default {
 
   RESUME: "https://bit.ly/3tE2eba",
 
-  MY_PICTURE: "/img/deee.jpg",
+  MY_PICTURE: "/img/deee.png",
 
   social: {
     YouTube: { link: "https://bit.ly/2RMfqfX", Icon: YouTube },
@@ -69,6 +69,7 @@ export default {
     HOME: "/",
     CONTENT: "/content",
     BLOG: "/blog",
+    NOW: "/now",
     TALKS: "/talks",
     JAVASCRIPT: "/javascript",
     REGEX: "/regex",

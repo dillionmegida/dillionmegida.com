@@ -55,7 +55,7 @@ const Helmet = ({
       <meta property="og:image" content={imageCard} />
       <meta
         property="og:url"
-        content={`https://dillionmegida.com${canonicalLink}`}
+        content={canonicalLink}
       />
       <meta name="monetization" content="$ilp.uphold.com/89fH6XniNm9R" />
       <meta property="og:type" content="article" />
