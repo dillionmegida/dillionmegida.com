@@ -35,7 +35,7 @@ const Main = styled.main`
   color: white;
 
   h1 {
-    margin: 0;
+    margin: 0 0 20px;
   }
 
   h1,
@@ -46,6 +46,7 @@ const Main = styled.main`
   h6 {
     padding: 20px 0 0; // for a little offset
     color: white;
+    line-height: 100%;
   }
 
   iframe {
@@ -102,19 +103,25 @@ const Main = styled.main`
       width: 100%;
     }
 
+    hr {
+      border-color: #909090;
+      margin: 20px 0;
+    }
+
     b,
     strong {
       font-weight: 500;
     }
 
     p {
-      line-height: 1.8;
-      margin: 20px 0 20px;
+      line-height: 1.6;
+      margin: 30px 0 0;
     }
 
     & div[class="gatsby-highlight"] {
       // margin: 0.5em 0;
-      margin: 0 -20px;
+      margin: 20px -20px;
+      border: 1px solid #909090;
       overflow: auto;
       &::-webkit-scrollbar {
         height: 7px;
@@ -155,7 +162,7 @@ const Main = styled.main`
       padding: 0 25px;
       & li {
         padding: 0;
-        margin: 15px 0;
+        /* margin: 5px 0 15px; */
         line-height: 1.5;
         & a {
           margin: 0;
