@@ -3,6 +3,10 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const createPaginatedPages = require("gatsby-paginate")
 
+const mdxPostTemplate = path.resolve(
+  `./src/components/Blog/PostFull/Mdx.tsx`
+)
+
 const FEATURED = [
   "static-relative-absolute-fixed-sticky-positions",
   "why-you-should-cleanup-when-component-unmounts",
@@ -12,7 +16,7 @@ const FEATURED = [
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `MarkdownRemark` || node.internal.type === "Mdx") {
     const slug = createFilePath({
       node,
       getNode,
@@ -85,6 +89,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
 
+      allMdx(
+        filter: { fields: { slug: { regex: "/^(/p/)/" } } }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        nodes {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            pageDescription
+            tags
+            date
+          }
+          internal {
+            contentFilePath
+          }
+        }
+      }
+
       tagsGroup: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___tags) {
           fieldValue
@@ -119,6 +144,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
+  result.data.allMdx.nodes.forEach((node) => {
+    createPage({
+      path: node.fields.slug,
+      component: `${mdxPostTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
+      context: {
+        slug: node.fields.slug,
+      },
+    })
+  })
+
   result.data.allSlides.edges.forEach(({ node }) => {
     createPage({
       path: `/talks/${node.path}`,
@@ -141,8 +176,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     if (FEATURED.includes(slug)) featuredArticles.push({ node })
   })
 
+  console.log(result.data.allMdx.nodes.concat([
+    ...result.data.allMarkdownRemark.edges.map(({node}) => node),
+  ]))
+
   createPaginatedPages({
-    edges: result.data.allMarkdownRemark.edges,
+    edges: result.data.allMdx.nodes.concat([
+      ...result.data.allMarkdownRemark.edges.map(({node}) => node),
+    ]),
     createPage: createPage,
     pageTemplate: path.resolve(__dirname, "./src/components/Blog/index.tsx"),
     pageLength: 10,

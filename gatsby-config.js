@@ -63,6 +63,7 @@ module.exports = {
     },
 
     `gatsby-plugin-sass`,
+    `gatsby-plugin-mdx`,
 
     // For NetlifyCMS
     // `gatsby-plugin-netlify-cms`,

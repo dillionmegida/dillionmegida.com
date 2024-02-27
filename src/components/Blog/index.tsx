@@ -149,7 +149,7 @@ export default ({ pageContext }: Props) => {
               All articles
             </h2>
           )}
-          {pageContext.group.map(({ node }) => (
+          {pageContext.group.map((node) => (
             <Post
               key={node.id}
               href={node.fields.slug}
