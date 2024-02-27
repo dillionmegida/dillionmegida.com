@@ -1,0 +1,315 @@
+---
+title: What are Replaced Elements? And how to style iFrames
+date: "2024-02-26"
+cover: "112-cascade.png"
+pageDescription: ""
+pageKeywords: "css, cascade, cascading, waterfall"
+tags: ["css", "html"]
+---
+
+Ever heard of replaced elements in HTML? Well here's an example.
+
+Let's say I have **global** style on my website for `h1` elements. It looks like this:
+
+```css
+h1 { 
+  color: yellow;
+}
+```
+
+This means, all my `h1`s will have a `color` of **yellow**:
+
+<CodePreview
+  css={`
+    h1 {
+      color: yellow !important;
+    }
+  `}
+  html={`
+    <h1>Some h1 text here</h1>
+  `}
+/>
+
+
+Now, let's say I have an `iframe` document which contains a `h1` element:
+
+```html
+<iframe srcdoc="<h1>Heading in iframe</h1>"> </iframe>
+```
+
+<Info>The `srcdoc` attribute of `iframe`s allows you to define the HTML content of an inline iframe</Info>
+
+When I embed this iframe on my website, it looks like this:
+
+<CodePreview
+  css={`
+    h1 {
+      color: yellow !important;
+    }
+  `}
+  html={`
+  <iframe srcdoc="<h1>Heading in iframe</h1>"> </iframe>
+`} />
+
+What you notice here is that the `color` of the `h1` is not **yellow**. It stays **black** (the default). Why?
+
+If we already set the `h1` to be yellow in the current document, then why does the `iframe` (which is embedded in the same current document) not have its `h1` content as yellow? Well, that's because `iframe`s are **replaced elements**.
+
+## What is a replaced element?
+
+In CSS, a replaced element is an element whose contents are not affected by the current document's styles.
+
+The element itself inherits the current document's styles though. For example, we can style the `iframe`:
+
+
+
+```css
+iframe {
+  border: 2px solid yellow;
+  margin-left: 100px;
+}
+```
+
+<CodePreview
+  css={`
+    h1 {
+      color: yellow !important;
+    }
+    iframe {
+      border: 2px solid yellow !important;
+      margin-left: 100px !important;
+    }
+  `}
+  html={`
+  <iframe srcdoc="<h1>Heading in iframe</h1>"> </iframe>
+`} />
+
+But, the contents of the replaced element are not affected. The contents do not inherit the parent element's styles.
+
+The idea of "replaced" is that the contents of the element come from "somewhere else". So, the element is "replaced with the external contents". And because they are external, they do not inherit the current document's styles.
+
+## Examples of replaced element
+
+We already looked at the `iframe` element. There are other examples.
+
+### `video`
+
+A `video` element accepts an `src` attribute which allows you to specify the source of the video. This video file is coming from "outside" the current document. So this element is "replaced" with that video data.
+
+### `img`
+
+Similar to `video`, the `img` element accepts an `src` attribute which allows you to specify the source of the image. That image data would "replace" the `img` element.
+
+You can find more examples of replaced element [in the HTML spec](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements).
+
+## ::before and ::after do not work with replaced elements
+
+The `::before` and `::after` pseudo element allows you to add something to the beginning and end of the contents of an element from CSS.
+
+So if you had something like this:
+
+```html
+<h1>
+  Hello, there
+</h1>
+```
+
+The `::before` and `::after` pseudo elements will allow you to something before and after "Hello, there" respectively:
+
+```html
+<h1>
+  ::before Hello, there ::after
+</h1>
+```
+
+You can learn more about these psuedo elements [in my simplified video](https://youtu.be/GC2cGThrz3A?si=EldkKbcz6sHb2qcG).
+
+Coming to replaced elements, because the contents do not come from the current document, you cannot use `::before` and `::after` on such elements. I mean, you can, but you won't see any result on the UI:
+
+```html
+<style>
+  img::before {
+    content: "Some before content--";
+  }
+  img::after {
+    content: "--Some after content";
+  }
+</style>
+
+<img src="https://picsum.photos/200/300" alt="A random image" />
+```
+
+Result:
+
+<CodePreview
+css={`
+  img::before {
+      content: "Some before content--";
+    }
+    img::after {
+      content: "--Some after content";
+    }
+`}
+  html={`
+<img src="https://picsum.photos/200/300" alt="A random image" />
+`} />
+
+Although, in the case that the image cannot be fetched, the `::before` and `::after` content will be shown along with the `alt` text:
+
+```html
+<img src="https://picsum.photos/200/300s" alt="A random image" />
+```
+
+<CodePreview
+css={`
+  img::before {
+      content: "Some before content--";
+    }
+    img::after {
+      content: "--Some after content";
+    }
+`}
+  html={`
+<img src="https://picsum.photos/200/300s" alt="A random image" />
+`} />
+
+The `img` element shows your `alt` text as its content when the image data does not load successfully. Because this content comes from the current document, you can added before and after it.
+
+In the case of videos though, if the video data does not load, you would most likely see an empty video player instead of the `::before` and `::after` contents:
+
+```html
+<style>
+  video::before {
+    content: "Some before content--";
+  }
+  video::after {
+    content: "--Some after content";
+  }
+</style>
+
+<video
+  controls
+  src="https://player.vimeo.com/external/538561465.sd.mp4s?s=786eeae0e3c0f89892c3c0ef13d59127799f3182&profile_id=165&oauth2_token_id=57447761"
+/>
+```
+
+<CodePreview
+css={`
+  video::before {
+      content: "Some before content--";
+    }
+    video::after {
+      content: "--Some after content";
+    }
+`}
+  html={`
+<video
+  controls
+  src="https://player.vimeo.com/external/538561465.sd.mp4s?s=786eeae0e3c0f89892c3c0ef13d59127799f3182&profile_id=165&oauth2_token_id=57447761"
+/>
+`} />
+
+In general, when the an element is replaced by contents coming from outside the current document, you cannot add to the contents with CSS.
+
+---
+
+So, for replaced elements, the actual elements would inherit the current document's styles:
+
+```css
+video {
+  /* ... */
+}
+
+img {
+  /* ... */
+}
+```
+
+But, the **contents** of these elements would not inherit the current document's styles. Even when you apply `filter`s in your styles, what you're actually styling is the element, not the content.
+
+In the case of videos and images, it probably doesn't make sense to style the content. But for iframes, sometimes, you might want to style the content. How would you go about that?
+
+## Styling a replaced element -- iframe
+
+In the case of the `iframe` element, we can style its contents in two ways.
+
+### Adding a Stylesheet in the `iframe` document
+
+Something like this:
+
+```html
+<iframe srcdoc="<style>h1 {color: yellow; }</style><h1>Heading in iframe</h1>">
+</iframe>
+```
+
+Result:
+
+<CodePreview
+  html={`
+<iframe srcdoc="<style>h1 {color: yellow; }</style><h1>Heading in iframe</h1>">
+</iframe>
+`} />
+
+In the `srcdoc` attribute here, we also included a `style` tag as part of the contents. Since this style is now included in the iframe document, it will affect the contents of the iframe document.
+
+However, this approach can affect readability as everything needs to be on one line as a string. One way to improve this is to use JavaScript:
+
+```js
+const iframe = document.createElement("iframe")
+
+iframe.srcdoc = `
+  <style>
+    h1 {
+      color: yellow;
+    }
+  </style>
+
+  <h1>Heading in iframe</h1>
+`
+
+document.body.appendChild(iframe)
+```
+
+By using backticks ` `` `, we can create strings that spans multiple lines, making it easier to read.
+
+### Bind the iframe document to the current document stylesheet
+
+Say you have some styles that you want to apply to the current document as well as the content of an embedded iframe, you can avoid repeating yourself with the binding approach.
+
+If you have a stylesheet, for example, `style.css`, referenced in the current document and you want to bind to the `iframe`, you can do this:
+
+```css
+/* style.css */
+
+h1 {
+  color: yellow;
+}
+```
+
+```html
+<link rel="stylesheet" href="./style.css" />
+
+<iframe id="iframe" srcdoc="<h1>Heading in iframe</h1>"> </iframe>
+```
+
+I added an `id` to the `iframe` element.
+
+```js
+const linkTag = document.createElement("link")
+linkTag.rel = "stylesheet"
+linkTag.href = "style.css"
+linkTag.type = "text/css"
+
+const iframe = document.getElementById("iframe")
+iframe.contentDocument.body.appendChild(linkTag)
+```
+
+What I've done here is create a `link` tag, and added "style.css" as the `href` of the tag. Then, I append the link tag to the `iframe`. This way, the current document, as well as the `iframe` can share from the same stylesheet without having to repeat the same styles in two places.
+
+Note that this might not work if you're using the `src` attribute of iframes, and the source is a different domain from the current document.
+
+## Wrap up
+
+I hope this piece helps you understand the concept of replaced elements. And hopefully, helps you fix your iframe-stylesheets-not-working problems which I also experienced.
+
+I got the inspiration for this article while working on [this article - Responsive Fluid Typography](https://responsivecss.dev/demos/fluid-typography/). I used iframes in the article to demonstrate the responsiveness of a text for demonstration and I struggled with understanding why the iframe's contents were not inheriting the global styles I had in the document. Diving deeper, I discovered it was a behaviour of replaced elements and the solutions I shared here were things I arrived at for my use case.
