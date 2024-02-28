@@ -10,16 +10,10 @@ const Main = styled.main`
   }
 
   h1 {
-    color: white;
+    color: var(--text-color);
     margin-bottom: 30px;
-
-    @media (max-width: 800px) {
-      font-size: 28px;
-    }
-
-    @media (max-width: 500px) {
-      font-size: 23px;
-    }
+    font-size: clamp(1.4rem, 6vw, 2.5rem);
+    line-height: 1.2em;
   }
 
   .talks-container {

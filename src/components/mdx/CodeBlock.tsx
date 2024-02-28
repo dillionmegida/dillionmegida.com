@@ -3,11 +3,11 @@ import { Highlight, themes } from "prism-react-renderer"
 import styled from "styled-components"
 
 const Inline = styled.span`
-  padding: 0 4px;
+  padding: 0 1px;
   border-radius: 5px;
   font-family: "Roboto Mono";
   letter-spacing: -1px;
-  font-size: calc(100% - 2px);
+  font-size: calc(100% - 3px);
   background-color: color-mix(in srgb, white, transparent 80%);
   border: 2px solid color-mix(in srgb, white, transparent 90%);
 `
@@ -16,10 +16,14 @@ const Multiline = styled.div`
   font-family: "Roboto Mono";
   width: 100%;
   font-size: 1.025rem;
+  border: 2px solid #3a3e4d;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
 
   .block {
+    margin: 0;
     padding: 25px 40px 25px 20px;
-    border-radius: 5px;
     width: 100%;
     overflow-x: auto;
     overflow-wrap: break-word;

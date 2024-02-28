@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "../../Layout"
 import WithLove from "../WithLove"
-import RegexCourseSection from "../../../containers/HomePage/RegexCourseSection"
 import { NewTabLink } from "../../AnchorLink"
 import constants from "../../../constants"
 import styled from "styled-components"

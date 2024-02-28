@@ -6,17 +6,23 @@ import { Post as IPost } from "../../../interfaces/Post"
 import styled from "styled-components"
 
 const PostTemplate = styled.article`
-  padding: 20px 0;
-  border-bottom: 1px solid var(--midMainColor1);
+  padding: 20px;
+  border: 1px solid transparent;
   margin-bottom: 30px;
+  background-color: color-mix(in srgb, var(--bgColor) 60%, black);;
+  color: #dedcdc;
 
   &:hover {
-    border-color: var(--mainColor2);
+    border: 1px solid var(--mainColor2);
+    /* border-color: var(--mainColor2); */
+    h2 {
+      color: var(--mainColor2);
+    }
     // background-color: rgba(255, 255, 255, 0.05);
   }
 
   & h2 {
-    color: white;
+    color: #dedcdc;
     margin-bottom: 0;
   }
 
@@ -24,16 +30,19 @@ const PostTemplate = styled.article`
     font-family: var(--sec-font);
     opacity: 0.7;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 0.9em;
     color: white;
+    margin-bottom: 10px;
   }
 
   .excerpt {
-    font-size: 20px;
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin-bottom: 15px;
   }
 
   & p {
-    color: white;
+    color: #dedcdc;
   }
 `
 
@@ -47,7 +56,7 @@ const TagsSection = styled.p`
     border-radius: 5px;
     padding: 5px;
     margin: 0 5px;
-    font-size: 16px;
+    font-size: 0.8em;
     opacity: 0.7;
   }
 `

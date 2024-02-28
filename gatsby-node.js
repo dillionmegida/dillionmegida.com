@@ -3,6 +3,13 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const createPaginatedPages = require("gatsby-paginate")
 
+const paginatedBlogTemplate = path.resolve(
+  `./src/components/Blog/BlogPage.tsx`
+)
+
+const mdPostTemplate = path.resolve(
+  `./src/components/Blog/PostFull/Md.tsx`
+)
 const mdxPostTemplate = path.resolve(
   `./src/components/Blog/PostFull/Mdx.tsx`
 )
@@ -134,10 +141,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(
-        __dirname,
-        `./src/components/Blog/PostFull/index.tsx`
-      ),
+      component: mdPostTemplate,
       context: {
         slug: node.fields.slug,
       },
@@ -185,7 +189,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       ...result.data.allMarkdownRemark.edges.map(({node}) => node),
     ]),
     createPage: createPage,
-    pageTemplate: path.resolve(__dirname, "./src/components/Blog/index.tsx"),
+    pageTemplate: paginatedBlogTemplate,
     pageLength: 10,
     pathPrefix: "blog",
     context: {

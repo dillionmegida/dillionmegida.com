@@ -1,35 +1,43 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { GqlPostFull } from "../../../interfaces/Post"
 import PostTemplate from "./PostTemplate"
 
 type Props = {
   data: {
-    mdx: GqlPostFull
+    markdownRemark: GqlPostFull
   }
-  children: ReactNode
 }
 
-export default function Mdx({ data, children }: Props) {
-  const post = data.mdx
+export default function Md({ data }: Props) {
+  const post = data.markdownRemark
 
-  return <PostTemplate post={post}>{children}</PostTemplate>
+  return <PostTemplate post={post} />
 }
 
 export const query = graphql`
   query($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       fields {
         slug
       }
-      body
+      html
+      timeToRead
       frontmatter {
         title
         date
+        readTime
         pageDescription
         pageKeywords
         cover
         tags
+        video
+        canonicalLink
+        questions {
+          name
+          options
+          answer
+        }
       }
     }
   }

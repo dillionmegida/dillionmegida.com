@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;800&family=Albert+Sans:wght@300;400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Albert+Sans:wght@300;400;500;800&family=Roboto+Mono:wght@400&display=swap");
 
 html.smoothScroll {
   scroll-behavior: smooth;
@@ -33,12 +33,15 @@ html.smoothScroll {
   --regex: #a7ff72;
   --regexMid: #c6faa5;
 
-  --main-font: "Jost", "Zen Antique Soft", "Nunito", "Helvetica";
+  --main-font: "Inter", "Zen Antique Soft", "Nunito", "Helvetica";
   --sec-font: "Albert Sans", "Inter", "Helvetica";
+
+  --text-color: #dedcdc;
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 3px;
+  height: 3px;
 }
 
 /* Track */
@@ -72,6 +75,7 @@ h6 {
 img {
   display: block;
   width: 100%;
+  aspect-ratio: 1920 / 1080;
 }
 
 h1 {
@@ -126,38 +130,3 @@ a {
     padding: 20px;
   }
 }
-
-// .a-link {
-//   --preColor: white;
-//   position: relative;
-//   color: var(--preColor);
-//   transition: color 300ms;
-//   --color: var(--mainColor2);
-
-//   @media (max-width: 600px) {
-//     color: var(--color);
-//   }
-
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     width: 40%;
-//     height: 1px;
-//     background-color: var(--color);
-//     bottom: -3px;
-//     left: 0;
-//     transition: width 300ms;
-//   }
-
-//   &.inverse::after {
-//     left: unset;
-//     right: 0;
-//   }
-
-//   &:hover {
-//     color: var(--color);
-//     &::after {
-//       width: 100%;
-//     }
-//   }
-// }

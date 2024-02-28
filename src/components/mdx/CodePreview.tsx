@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
-  border: 1px solid var(--midMainColor1);
+  border: 2px solid #3a3e4d;
   border-radius: 5px;
   overflow: hidden;
   margin: 20px 0;
@@ -16,6 +16,7 @@ const Container = styled.div`
 
   .content {
     padding: 20px;
+    background-color: color-mix(in srgb, var(--mainColor1) 90%, white);
 
     * {
       margin: 0;
@@ -28,7 +29,7 @@ const Container = styled.div`
     }
 
     iframe {
-      border: 2px solid #aaa; 
+      border: 2px solid #aaa;
     }
 
     style {
@@ -37,7 +38,41 @@ const Container = styled.div`
   }
 `
 
-export default function CodePreview({ html, css }) {
+type Props = {
+  html: string
+  css?: string
+}
+
+const defaultCSS = `
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }  
+
+`
+
+export default function CodePreview({ html, css }: Props) {
+  const contentElem = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (contentElem.current) {
+      const shadow = contentElem.current.attachShadow({ mode: "open" })
+
+      const div = document.createElement("div")
+      div.innerHTML = html
+
+      shadow.appendChild(div)
+
+      if (css) {
+        const sheet = new CSSStyleSheet()
+        sheet.replaceSync(defaultCSS + css)
+
+        shadow.adoptedStyleSheets = [sheet]
+      }
+    }
+  }, [])
+
   return (
     <>
       {/* {css && <CodeBlock className="language-css">{css}</CodeBlock>}
@@ -46,20 +81,7 @@ export default function CodePreview({ html, css }) {
       <Container>
         <div className="top-bar">Code Preview</div>
         <div className="content">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-              <style>
-                @scope {
-                  ${css}
-                }
-              </style>
-              
-              ${html}
-
-              `,
-            }}
-          ></div>
+          <div ref={contentElem} />
         </div>
       </Container>
     </>

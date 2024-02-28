@@ -1,7 +1,6 @@
 import GitHub from "./components/Icon/GitHub"
 import Instagram from "./components/Icon/Instagram"
 import LinkedIn from "./components/Icon/LinkedIn"
-import Mail from "./components/Icon/Mail"
 import TikTok from "./components/Icon/TikTok"
 import Twitter from "./components/Icon/Twitter"
 import YouTube from "./components/Icon/YouTube"
@@ -25,9 +24,9 @@ export default {
   SITE_URL,
 
   meta: {
-    TITLE: "Dillion Megida - Developer Advocate 🥑 and Content Creator ✨",
+    TITLE: "Dillion Megida - Developer Educator ✨",
     DESC:
-      "Dillion is a Developer Advocate and Content Creator passionate about learning, building, and simplifying topics around tech via articles and videos",
+      "Dillion is a Developer Educator passionate about learning, building, and simplifying topics around tech via articles and videos",
   },
 
   CURRENT_WORK_NAME: "Adyen",

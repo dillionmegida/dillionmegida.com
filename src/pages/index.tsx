@@ -30,12 +30,6 @@ export default function Home({ data }: Props) {
       <HomePage content={data} />
     </Container>
   )
-  //   return (
-  //     <Layout>
-  //       <Helmet pageTitle={meta.TITLE} pageLink="/" pageDesc={meta.DESC} />
-  //       <HomePage content={data} />
-  //     </Layout>
-  //   )
 }
 
 export const query = graphql`

@@ -1,7 +1,7 @@
 ---
 title: What are Replaced Elements? And how to style iFrames
 date: "2024-02-26"
-cover: "112-cascade.png"
+cover: "113-replaced-elements.png"
 pageDescription: ""
 pageKeywords: "css, cascade, cascading, waterfall"
 tags: ["css", "html"]
@@ -102,7 +102,7 @@ Similar to `video`, the `img` element accepts an `src` attribute which allows yo
 
 You can find more examples of replaced element [in the HTML spec](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements).
 
-## ::before and ::after do not work with replaced elements
+## `::before` and `::after` do not work with replaced elements
 
 The `::before` and `::after` pseudo element allows you to add something to the beginning and end of the contents of an element from CSS.
 
@@ -229,7 +229,7 @@ But, the **contents** of these elements would not inherit the current document's
 
 In the case of videos and images, it probably doesn't make sense to style the content. But for iframes, sometimes, you might want to style the content. How would you go about that?
 
-## Styling a replaced element -- iframe
+## Styling a replaced element -- `iframe`
 
 In the case of the `iframe` element, we can style its contents in two ways.
 

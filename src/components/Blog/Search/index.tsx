@@ -15,6 +15,7 @@ const Main = styled.div`
   .header {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
     position: relative;
   }
   .back-btn {
@@ -99,8 +100,6 @@ const Search = () => {
 
     window.history.back()
   }
-
-  return null
 
   return (
     <StaticQuery

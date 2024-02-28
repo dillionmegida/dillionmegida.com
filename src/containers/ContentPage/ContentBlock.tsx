@@ -19,7 +19,7 @@ const Container = styled.div`
     }
   }
   .content-block__item {
-    font-size: 18px;
+    font-size: clamp(1rem, 6vw, 1.2rem);
     margin-bottom: 20px;
     a {
       font-weight: 300;

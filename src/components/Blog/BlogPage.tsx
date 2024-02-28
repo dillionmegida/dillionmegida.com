@@ -12,7 +12,7 @@ type Props = {
   pageContext: {
     index: number
     last: boolean
-    group: { node: GqlPostFull }[]
+    group: GqlPostFull[]
     featuredArticles: { node: GqlPostFull }[]
   }
 }
@@ -24,18 +24,26 @@ const Main = styled.main`
   max-width: 700px;
 
   .section-heading {
-    color: white;
+    margin-top: 20px;
+    color: #dedcdc;
     position: relative;
-    padding: 20px 0 0;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 50px;
-      height: 1px;
-      background-color: var(--mainColor2);
-      left: 0;
-      bottom: -10px;
+    h1 {
+      width: 100%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 1px;
+        background-color: var(--mainColor2);
+        left: 0;
+        bottom: 0;
+      }
     }
   }
 
@@ -59,13 +67,12 @@ const SearchSection = styled.div`
   width: 100%;
   height: 50px;
   position: relative;
-  top: 20px;
   display: flex;
   justify-content: flex-end;
 
   a {
-    color: white;
-    border: 1px solid white;
+    color: #dedcdc;
+    border: 1px solid #dedcdc;
     padding: 15px;
 
     &:hover {
@@ -76,12 +83,8 @@ const SearchSection = styled.div`
 
 const Pagination = styled.div`
   margin: 20px 0;
-  font-size: 20px;
+  font-size: clamp(0.9rem, 6vw, 1.2rem);
   height: 20px;
-
-  @media (max-width: 400px) {
-    font-size: 15px;
-  }
 
   a {
     color: var(--mainColor2);
@@ -102,7 +105,7 @@ const Pagination = styled.div`
 
 const { meta } = constants
 
-export default ({ pageContext }: Props) => {
+export default function BlogPage({ pageContext }: Props) {
   const { index: pageIndex, featuredArticles } = pageContext
   const isFirst = pageContext.index === 1
   const isLast = pageContext.last
@@ -114,42 +117,17 @@ export default ({ pageContext }: Props) => {
     <Layout>
       <Helmet pageTitle={meta.TITLE} pageLink="/blog" pageDesc={meta.DESC} />
       <Main>
-        <SearchSection>
-          <Link to="/search" title="Search articles">
-            <i className="fa fa-search"></i> Search articles
-          </Link>
-        </SearchSection>
-
-        {/* {isFirst && (
-          <section className="featured-section">
-            <h2 className="section-heading">Featured articles</h2>
-            <Link className="go-to-all" to="#all-articles">
-              Go to all articles
-            </Link>
-            {featuredArticles.map(({ node }) => (
-              <Post
-                key={node.id}
-                href={node.fields.slug}
-                title={node.frontmatter.title}
-                readTime={node.timeToRead}
-                date={node.frontmatter.date}
-                tags={node.frontmatter.tags}
-                content={
-                  node.frontmatter.pageDescription.length > 150
-                    ? `${node.frontmatter.pageDescription.substring(0, 150)}...`
-                    : node.frontmatter.pageDescription
-                }
-              />
-            ))}
-          </section>
-        )} */}
         <section>
-          {isFirst && (
-            <h2 id="all-articles" className="section-heading">
-              All articles
-            </h2>
-          )}
-          {pageContext.group.map((node) => (
+          <div className="section-heading">
+            <h1 id="all-articles">All articles</h1>
+
+            <SearchSection>
+              <Link to="/search" title="Search articles">
+                <i className="fa fa-search"></i> Search articles
+              </Link>
+            </SearchSection>
+          </div>
+          {pageContext.group.map(node => (
             <Post
               key={node.id}
               href={node.fields.slug}

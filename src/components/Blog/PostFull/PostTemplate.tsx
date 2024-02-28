@@ -1,22 +1,16 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import AnchorLink from "../../AnchorLink"
-import Layout from "../BlogLayout"
-import Disqus from "../disqus"
-import { formatBlogDate } from "../../../utils/dates"
-import ShareArticle from "../ShareArticle"
-// import QuestionForm from "question-form"
-// import "question-form/dist/index.css"
-
-import { GqlPostFull } from "../../../interfaces/Post"
-import Helmet from "../../Helmet"
+import React, { ReactNode } from "react"
 import styled from "styled-components"
-
-type Props = {
-  data: {
-    markdownRemark: GqlPostFull
-  }
-}
+import Layout from "../../Layout"
+import Helmet from "../../Helmet"
+import ShareArticle from "../ShareArticle"
+import Disqus from "../disqus"
+import AnchorLink from "../../AnchorLink"
+import { formatBlogDate } from "../../../utils/dates"
+import CodeBlock from "../../mdx/CodeBlock"
+import CodePreview from "../../mdx/CodePreview"
+import Info from "../../mdx/Info"
+import { MDXProvider } from "@mdx-js/react"
+import { GqlPostFull } from "../../../interfaces/Post"
 
 const Main = styled.main`
   // for heading links
@@ -28,15 +22,13 @@ const Main = styled.main`
     }
   }
 
+  font-size: clamp(1rem, 5vw, 1.5rem);
+
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
   padding: 50px 20px;
   color: white;
-
-  h1 {
-    margin: 0 0 20px;
-  }
 
   h1,
   h2,
@@ -54,15 +46,22 @@ const Main = styled.main`
   }
 
   .blog-title {
-    font-size: 40px;
+    margin: 0 0 20px;
+    font-size: clamp(1.5rem, 7vw, 4rem);
+    color: #dedcdc;
+    line-height: 1.2;
+  }
 
-    @media (max-width: 400px) {
-      font-size: 30px;
-    }
+
+  .blog-date {
+    font-weight: 400;
+    opacity: 0.8;
+    margin: 0 0 5px;
+    font-size: 18px;
   }
 
   .blog-tags {
-    font-size: 20px;
+    font-size: 0.7em;
     margin: 0 0 20px;
 
     a {
@@ -70,11 +69,6 @@ const Main = styled.main`
     }
   }
 
-  .blog-date {
-    font-weight: 400;
-    opacity: 0.8;
-    font-size: 18px;
-  }
 
   .blog-info {
     border-bottom: 1px solid var(--mainColor1);
@@ -85,22 +79,21 @@ const Main = styled.main`
   }
 
   .blog-cover {
-    border: 1px solid var(--mainColor2);
+    border: 2px solid #3a3e4d;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
   }
 
   .blog-content {
-    font-size: 22px;
+    color: var(--text-color);
 
     /* Markdown custom styles */
 
     a {
-      word-break: break-all;
+      /* word-break: break-all; */
       color: var(--secondary-color);
       text-decoration: underline;
-    }
-
-    img {
-      width: 100%;
     }
 
     hr {
@@ -113,14 +106,35 @@ const Main = styled.main`
       font-weight: 500;
     }
 
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0.8em 0 0.3em;
+    }
+
     p {
-      line-height: 1.6;
-      margin: 30px 0 0;
+      line-height: 1.5;
+      margin: 0.8em 0 0.3em;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 7vw, 3rem);
+      color: #dedcdc;
+    }
+
+    h3 {
+      font-size: clamp(1.2rem, 7vw, 2.3rem);
+      color: #dedcdc;
+    }
+
+    .language-text {
+      font-size: calc(100% - 3px);
     }
 
     & div[class="gatsby-highlight"] {
-      // margin: 0.5em 0;
-      margin: 20px -20px;
+      margin: 20px 0;
       border: 1px solid #909090;
       overflow: auto;
       &::-webkit-scrollbar {
@@ -194,11 +208,34 @@ const Main = styled.main`
   }
 `
 
-export default ({ data }: Props) => {
-  const post = data.markdownRemark
+const components = {
+  code: CodeBlock,
+  CodePreview,
+  Info,
+}
 
-  const { cover: postCover, canonicalLink } = post.frontmatter
-  const postCoverUrl = postCover
+type Props = {
+  post: GqlPostFull
+  children?: ReactNode
+}
+
+export default function PostTemplate({ post, children }: Props) {
+  const {
+    id,
+    frontmatter: {
+      cover: postCover,
+      video,
+      title,
+      date,
+      pageDescription: description,
+      pageKeywords: keywords,
+      questions,
+      tags,
+    },
+    fields: { slug },
+  } = post
+
+  const cover = postCover
     ? postCover.startsWith("https")
       ? postCover
       : `/post-covers/${postCover}`
@@ -207,25 +244,25 @@ export default ({ data }: Props) => {
   return (
     <Layout>
       <Helmet
-        pageTitle={`${post.frontmatter.title} - Dillion's Blog`}
-        pageLink={canonicalLink ?? post.fields.slug}
-        pageDesc={post.frontmatter.pageDescription}
-        pageKeywords={post.frontmatter.pageKeywords}
-        imageCard={postCoverUrl}
-        largeTwitterCard={!!postCoverUrl}
+        pageTitle={`${title} - Dillion's Blog`}
+        pageLink={slug}
+        pageDesc={description}
+        pageKeywords={keywords}
+        imageCard={cover}
+        largeTwitterCard={!!cover}
       />
-
       <Main>
         <article>
           <div className="blog-info">
-            <h1 className="blog-title">{post.frontmatter.title}</h1>
+            <h1 className="blog-title">{title}</h1>
             <p className="blog-date">
-              {formatBlogDate(post.frontmatter.date)} |{" "}
-              {`${post.timeToRead} min${post.timeToRead > 1 ? "s" : ""} read`}
+              {formatBlogDate(date)}
+              {/* |{" "} */}
+              {/* {`${post.timeToRead} min${post.timeToRead > 1 ? "s" : ""} read`} */}
             </p>
-            {post.frontmatter.tags ? (
+            {tags ? (
               <p className="blog-tags">
-                {post.frontmatter.tags.map((tag, index) => (
+                {tags?.map((tag, index) => (
                   <AnchorLink key={`${tag}_${index}`} link={`/tags/${tag}`}>
                     #{tag}
                   </AnchorLink>
@@ -233,26 +270,31 @@ export default ({ data }: Props) => {
               </p>
             ) : null}
           </div>
-          {postCoverUrl ? (
+          {cover ? (
             <img
               className="blog-cover"
-              src={postCoverUrl}
+              src={cover}
               alt="Blog Cover"
               width="100%"
             />
           ) : null}
           <div className="blog-content">
-            {post.frontmatter.video && (
+            {video && (
               <p className="video-text">
-                Here's a video if you'd prefer that:{" "}
-                <a href={post.frontmatter.video}>{post.frontmatter.video}</a>
+                Here's a video if you'd prefer that: <a href={video}>{video}</a>
               </p>
             )}
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            {post.html && (
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            )}
+            {children && (
+              // expected from mdx
+              <MDXProvider components={components}>{children}</MDXProvider>
+            )}
           </div>
         </article>
 
-        {post.frontmatter.questions && (
+        {questions && (
           <>
             <h2>Exercise questions</h2>
             {/* <QuestionForm
@@ -273,43 +315,11 @@ export default ({ data }: Props) => {
         >
           Share this article
         </p>
-        <ShareArticle url={post.fields.slug} title={post.frontmatter.title} />
+        <ShareArticle url={slug} title={title} />
         <hr />
 
-        <Disqus
-          url={post.fields.slug}
-          postId={post.id}
-          postTitle={post.frontmatter.title}
-        />
+        <Disqus url={slug} postId={id} postTitle={title} />
       </Main>
     </Layout>
   )
 }
-
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      fields {
-        slug
-      }
-      html
-      timeToRead
-      frontmatter {
-        title
-        date
-        readTime
-        pageDescription
-        pageKeywords
-        cover
-        tags
-        video
-        canonicalLink
-        questions {
-          name
-          options
-          answer
-        }
-      }
-    }
-  }
-`
