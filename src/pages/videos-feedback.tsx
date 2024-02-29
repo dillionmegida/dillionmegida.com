@@ -5,6 +5,8 @@ import Layout from "../components/Layout"
 import Masonry from "react-masonry-css"
 import { NewTabLink } from "../components/AnchorLink"
 import { useMedia } from "use-media"
+import { VIDEOS_FEEDBACK } from "../constants"
+import Link from "../components/Icon/Link"
 
 const Wrapper = styled.div`
   &.container {
@@ -14,15 +16,14 @@ const Wrapper = styled.div`
   h1 {
     color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: clamp(1.3rem, 6vw, 1.7rem);
   }
 
-  p {
-    color: white;
+  .tagline {
+    color: var(--text-color);
     text-align: center;
     margin: 0 auto 20px;
     max-width: 500px;
-    font-size: 20px;
   }
 
   .a-link {
@@ -44,21 +45,44 @@ const Wrapper = styled.div`
   }
 `
 
-const Images = styled.div`
-  a {
-    border: 1px solid white;
+const Feedback = styled.div`
+  margin-top: 40px;
+
+  .fb-item {
+    border: 2px solid var(--midMainColor1);
     transition: border-color 300ms;
     border-radius: 5px;
     display: block;
     margin-bottom: 30px;
     overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    font-size: clamp(1rem, 6vw, 1.2rem);
 
     &:hover {
-      border-color: yellow;
+      border-color: var(--tertiary-color);
     }
 
-    img {
-      width: 100%;
+    .fb-text {
+      line-height: 1.4em;
+      color: var(--text-color);
+      margin-bottom: 15px;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .fb-name {
+      color: var(--tertiary-color);
+      font-size: 0.8em;
+
+      &::before {
+        content: "- ";
+      }
     }
   }
 `
@@ -84,86 +108,25 @@ export default function VideosFeedback() {
             Tutorial videos
           </NewTabLink>
         </h1>
-        <p>It seems people love my teaching 😉</p>
-        <Images>
+        <p className="tagline">It seems people love my teaching 😉</p>
+        <Feedback>
           <Masonry
             breakpointCols={isWiderThan800 ? 2 : 1}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {[
-              {
-                src: "feedback-1.png",
-                link:
-                  "https://www.youtube.com/watch?v=X6wfxggHO5A&lc=UgwBpbdBE-f-1hvYqoR4AaABAg",
-              },
-              {
-                src: "feedback-2.png",
-                link:
-                  "https://www.youtube.com/watch?v=ksatclkx84s&lc=Ugx1B6q8VvohIynsLax4AaABAg",
-              },
-              {
-                src: "feedback-3.png",
-                link:
-                  "https://www.youtube.com/watch?v=l7GIFU6VKB8&lc=Ugz1d7QArOl_1yCze294AaABAg",
-              },
-              {
-                src: "feedback-4.png",
-                link:
-                  "https://www.youtube.com/watch?v=X_wF47qWF-I&lc=UgwhsCYm3a8C4HqtASx4AaABAg",
-              },
-              {
-                src: "feedback-5.png",
-                link:
-                  "https://www.youtube.com/watch?v=X6wfxggHO5A&lc=UgzKfgHP1kS0h92n3U94AaABAg",
-              },
-              {
-                src: "feedback-6.png",
-                link:
-                  "https://www.youtube.com/watch?v=HyeNfWZBut8&lc=UgwFYtTQyX5UKtAnwOJ4AaABAg",
-              },
-              {
-                src: "feedback-7.png",
-                link:
-                  "https://www.youtube.com/watch?v=SqF-rD2AIiw&lc=UgzR3ft6bmT8GI63zYJ4AaABAg",
-              },
-              {
-                src: "feedback-8.png",
-                link:
-                  "https://www.youtube.com/watch?v=KVTyPpUNWz4&lc=UgyVe4Dgok9xvTojTmB4AaABAg",
-              },
-              {
-                src: "feedback-9.png",
-                link:
-                  "https://www.youtube.com/watch?v=c0t5prvd92Q&lc=UgzcmnVE6_G9jbDXrb94AaABAg",
-              },
-              {
-                src: "feedback-10.png",
-                link:
-                  "https://www.youtube.com/watch?v=nlKJmAvZoxo&lc=UgxmMn-JmV8_uaSFlFl4AaABAg",
-              },
-              {
-                src: "feedback-11.png",
-                link:
-                  "https://www.youtube.com/watch?v=xX4xtlgC1Vw&lc=Ugwtr6DyIll8VWFksWx4AaABAg",
-              },
-              {
-                src: "feedback-12.png",
-                link:
-                  "https://www.youtube.com/watch?v=qlu2kAI81pk&lc=UgyGMSxgobUmu9-lRSp4AaABAg",
-              },
-              {
-                src: "feedback-13.png",
-                link:
-                  "https://www.youtube.com/watch?v=dD6O4IW9pu0&lc=Ugwlm585hvjnSDJmZxB4AaABAg.9zOtXXpZR4v9zQTxTvg9oY",
-              },
-            ].map(img => (
-              <NewTabLink link={img.link} key={img.src}>
-                <img src={`/img/feedback/${img.src}`} alt="" />
+            {VIDEOS_FEEDBACK.map(fb => (
+              <NewTabLink className="fb-item" link={fb.link} key={fb.name}>
+                <p className="fb-text" dangerouslySetInnerHTML={{__html: fb.text.replace(/\n/g, '<br/>')}} />
+                <div className="footer">
+
+                <span className="fb-name">@{fb.name}</span>{" "}
+                <Link color="white" />
+                </div>
               </NewTabLink>
             ))}
           </Masonry>
-        </Images>
+        </Feedback>
       </Wrapper>
     </Layout>
   )
