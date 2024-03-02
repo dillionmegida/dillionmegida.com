@@ -114,8 +114,8 @@ const Header = () => {
           <div className="picture">
             <img src={constants.MY_PICTURE} alt="Profile picture" />
           </div>
-          <span className="short-text">DM</span>
-          <span className="long-text">DILLION MEGIDA</span>
+          {/* <span className="short-text">DM</span> */}
+          {/* <span className="long-text">DILLION MEGIDA</span> */}
         </Link>
         <nav className="nav">
           <Links />

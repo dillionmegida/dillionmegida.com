@@ -61,6 +61,7 @@ const Feedback = styled.div`
 
     &:hover {
       border-color: var(--tertiary-color);
+      background-color: var(--midMainColor1);
     }
 
     .fb-text {
@@ -121,7 +122,7 @@ export default function VideosFeedback() {
                 <div className="footer">
 
                 <span className="fb-name">@{fb.name}</span>{" "}
-                <Link color="white" />
+                <Link color="var(--tertiary-color)" />
                 </div>
               </NewTabLink>
             ))}

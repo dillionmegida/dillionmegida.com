@@ -2,6 +2,43 @@ import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import Helmet from "../components/Helmet"
+import styled from "styled-components"
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2em;
+  font-size: clamp(1.3rem, 6vw, 3rem);
+
+  h1 {
+    font-size: 1.5em;
+    color: var(--text-color);
+  }
+
+  a {
+    font-size: 1.1em;
+    transition: background 300ms;
+    color: yellow;
+    padding: 0 6px;
+    margin: 20px 3px;
+    height: 1.3em;
+    background: var(--midMainColor1);
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+
+    &:hover {
+      background: linear-gradient(
+        var(--secondary-color),
+        var(--tertiary-color)
+      );
+      color: black;
+    }
+  }
+`
 
 let ErrorPage = () => (
   <Layout>
@@ -10,41 +47,12 @@ let ErrorPage = () => (
       pageLink="404"
       pageDesc="Page Not Found."
     />
-    <section
-      style={{
-        width: "100%",
-        height: "500px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "40px",
-          textAlign: "center",
-          color: "var(--mainColor2)",
-        }}
-      >
-        Page Not Found 🤧
-      </h1>
+    <Container>
+      <h1>Page Not Found 🤧</h1>
       <Link to="/" title="Dillion Megida's Blog">
-        <section
-          style={{
-            display: "block",
-            backgroundColor: "var(--mainColor1)",
-            color: "white",
-            padding: "10px",
-            borderRadius: "10px",
-            fontSize: "20px",
-            borderBottom: "5px solid var(--mainColor2)",
-          }}
-        >
-          Go To Homepage
-        </section>
+        Go To Homepage
       </Link>
-    </section>
+    </Container>
   </Layout>
 )
 

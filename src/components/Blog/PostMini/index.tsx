@@ -36,7 +36,7 @@ const PostTemplate = styled.article`
   }
 
   .excerpt {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.4;
     margin-bottom: 15px;
   }

@@ -24,7 +24,7 @@ export default {
   SITE_URL,
 
   meta: {
-    TITLE: "Dillion Megida - Developer Educator ✨",
+    TITLE: "Dillion Megida - Software Engineer & Developer Educator ✨",
     DESC:
       "Dillion is a Developer Educator passionate about learning, building, and simplifying topics around tech via articles and videos",
   },
@@ -72,6 +72,7 @@ export default {
     TALKS: "/talks",
     JAVASCRIPT: "/javascript",
     REGEX: "/regex",
+    VIDEOS_FEEDBACK: '/videos-feedback'
   },
 
   SIMPLE_REGEX: {

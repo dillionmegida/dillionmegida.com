@@ -124,6 +124,16 @@ const Main = styled.main`
     }
   }
 
+  .link {
+    color: yellow;
+    padding: 0 1px;
+
+    &:hover {
+      background: var(--secondary-color);
+      color: black;
+    }
+  }
+
   .link-highlight {
     transition: background 300ms;
     color: yellow;
@@ -136,7 +146,6 @@ const Main = styled.main`
     align-items: center;
     gap: 5px;
     position: relative;
-    top: 3px;
 
     &:hover {
       background: linear-gradient(
@@ -277,12 +286,14 @@ export default function HomePage({ content }: Props) {
                   deeecode
                 </NewTabLink>{" "}
                 which is my{" "}
-                <NewTabLink
-                  className="link-highlight"
-                  link={constants.deeecode.web}
-                >
+                <NewTabLink className="link" link={constants.deeecode.web}>
                   other persona
                 </NewTabLink>
+                . And apparently,{" "}
+                <Link className="link" to={constants.pageLinks.VIDEOS_FEEDBACK}>
+                  people love my teaching
+                </Link>{" "}
+                🙃
               </p>
               <p>
                 I share lessons from my Career and Life in the Netherlands on{" "}
