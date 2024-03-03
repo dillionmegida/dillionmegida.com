@@ -7,6 +7,8 @@ pageKeywords: "case, uppercase, lowercase, case-sensitive, case-sensitivity, cas
 tags: ["programming"]
 ---
 
+test
+
 Amongst many terms in programming languages or tech in general, there are two that you'd hear and see a lot: **case-sensitive** and **case-insensitive**. What do these terms mean?
 
 Let's start by looking at the first word: "case"
