@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Layout from "../../Layout"
 import Helmet from "../../Helmet"
 import ShareArticle from "../ShareArticle"
-import Disqus from "../disqus"
 import AnchorLink from "../../AnchorLink"
 import { formatBlogDate } from "../../../utils/dates"
 import CodeBlock from "../../mdx/CodeBlock"
@@ -22,7 +21,7 @@ const Main = styled.main`
     }
   }
 
-  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-size: clamp(1rem, 5vw, 1.3rem);
 
   max-width: 800px;
   width: 100%;
@@ -52,7 +51,6 @@ const Main = styled.main`
     line-height: 1.2;
   }
 
-
   .blog-date {
     font-weight: 400;
     opacity: 0.8;
@@ -68,7 +66,6 @@ const Main = styled.main`
       margin-right: 10px;
     }
   }
-
 
   .blog-info {
     border-bottom: 1px solid var(--mainColor1);
@@ -90,10 +87,38 @@ const Main = styled.main`
 
     /* Markdown custom styles */
 
-    a {
-      /* word-break: break-all; */
+    a:not(.anchor) {
       color: var(--secondary-color);
-      text-decoration: underline;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        background-color: var(--midMainColor2);
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        border-radius: 10px;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        background-color: var(--secondary-color);
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        border-radius: 10px;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 300ms;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
     }
 
     hr {
@@ -305,7 +330,7 @@ export default function PostTemplate({ post, children }: Props) {
         )}
 
         {/* Sharing the article with media APIs */}
-        <p
+        {/* <p
           style={{
             fontSize: "25px",
             fontWeight: "bold",
@@ -314,11 +339,11 @@ export default function PostTemplate({ post, children }: Props) {
           }}
         >
           Share this article
-        </p>
+        </p> */}
         <ShareArticle url={slug} title={title} />
-        <hr />
+        {/* <hr /> */}
 
-        <Disqus url={slug} postId={id} postTitle={title} />
+        {/* <Disqus url={slug} postId={id} postTitle={title} /> */}
       </Main>
     </Layout>
   )

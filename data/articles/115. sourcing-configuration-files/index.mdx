@@ -1,0 +1,83 @@
+---
+title: "Why should you source .bashrc?"
+date: "2024-05-05"
+cover: "115-source-bashrc.png"
+pageDescription: "Why do you need to source configuration files like .bashrc and .zshrc when you make changes?"
+pageKeywords: "bash, zsh, source"
+tags: ["bash"]
+---
+
+In [my previous article article](/p/sourcing-vs-executing-script-directly), I explained the difference between `source`ing and executing a script directly. That article led to this question I'm answering in this article.
+
+If you've used shell configuration files like `.bashrc` or `.zshrc` before, you'd notice that often times you're instructed to do `source .bashrc` or `source .zshrc` when you make changes to these files. Why do you have to do this?
+
+## Configuration files run at the beginning of a terminal session
+
+Say you're using `bash` for your terminal; the first time you open a terminal, `.bashrc` is read:
+
+- the code in that file even those that you added will be run
+- variables and functions from that file are exposed and accessible in your terminal
+- then you can begin using the terminal
+
+The same principle applies if you're using `zsh`. In that case, it reads from `.zshrc`.
+
+You can actually try this by adding an `echo "hello world"` in such file:
+
+```bash
+filename=.bashrc / .zshrc
+# some stuff here
+
+echo "hello world"
+```
+
+Then create a new terminal shell, and you would see:
+
+```bash
+hello world
+```
+
+You can create any variable here. Often times, people add `PATH` here so they can use it in their terminal with other commands.
+
+## What happens when you make changes to this file?
+
+When you make changes to that configuration file, those changes would not reflect in your current terminal session. Remember **that file only ran at the beginning**.
+
+The new changes (for example, declared variables) would only reflect in a "new" terminal session. So you would have to close the current session, then create a new one which would include the updated changes from the configuration file.
+
+What if you make another change to the configuration file? Uhmmmm...you need to create a new session to access those changes.
+
+Closing and opening a new session all the time might not be the most convenient
+
+And this is where you `source`.
+
+## Sourcing configuration files
+
+By doing the following in your current terminal session:
+
+```bash
+source .bashrc
+```
+
+You are "reading" (executing) the configuration file **again**. Note that the configuration file is actually a script. And by using `source`, that execution takes place **in the current shell** (the current process). This way, any variables and functions you have there, becomes available in the current session.
+
+No need to open another terminal session. You can carry on in the same terminal session with access to the updated configuration file.
+
+## Wrap up
+
+So, you don't always need to `source ...` configuration files. The terminal already does that at the beginning of a session. If you want access to the updated configuration, you can create a new session.
+
+But, if you want access to the updated configuration in the same terminal session, then `source` is a friendly tool for that purpose.
+
+{/* One thing you also notice in configuration files is that some variables have the `export` keyword:
+
+```bash
+export VARIABLE="value"
+```
+
+and other variables do not:
+
+```bash
+VARIABLE="value"
+```
+
+Why is this the case? What does the `export` keyword do? Let's learn about that [in this article on bash `export`](). */}

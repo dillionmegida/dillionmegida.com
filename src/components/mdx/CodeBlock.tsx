@@ -19,7 +19,19 @@ const Multiline = styled.div`
   border: 2px solid #3a3e4d;
   padding: 0;
   border-radius: 5px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  position: relative;
+
+  .filename {
+    background-color: color-mix(in srgb, white 10%, #3a3e4d);
+    width: max-content;
+    padding: 5px 10px;
+    position: absolute;
+    font-size: 0.8em;
+    top: -13px;
+    border-radius: 5px;
+    left: 10px;
+  }
 
   .block {
     margin: 0;
@@ -43,6 +55,7 @@ export default function CodeBlock({
   children,
   className,
   category = "regular",
+
 }) {
   const language = className?.replace(/language-/, "") || ""
 
@@ -50,8 +63,20 @@ export default function CodeBlock({
 
   if (inline) return <Inline className="inline-code">{children}</Inline>
 
+  let filename
+
+  if (children.startsWith("filename")) {
+    try {
+      const filenameRegex = /filename\=([^\n]+)/
+      filename = children.match(filenameRegex)[1].trim()
+
+      children = children.replace(filenameRegex, "").trim()
+    } catch (err) {}
+  }
+
   return (
     <Multiline className="multiline-code">
+      {filename && <div className="filename">{filename}</div>}
       <Highlight theme={themes.dracula} code={children} language={language}>
         {({ style, tokens, getLineProps, getTokenProps }) => {
           if (tokens && tokens[tokens.length - 1][0].content === "\n") {

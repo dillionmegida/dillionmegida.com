@@ -1,0 +1,171 @@
+---
+title: Sourcing vs Executing Script Directly
+date: "2024-05-05"
+cover: "14-why-source-script.png"
+pageDescription: "When should you source and when should you execute a script directly? Learn the differences in this article"
+pageKeywords: "bash, sourcing, subprocess"
+tags: ["bash"]
+---
+
+You can execute a shell script (written in bash) in multiple ways; either by executing the script directly or executing the script with the `source` command. But what's the difference and when should you use which? 🤔
+
+Let's say you have this simple bash script:
+
+```zsh
+filename=myScript.sh
+#!/bin/bash
+
+NAME="deeecode"
+str="My name is $NAME"
+
+echo "$str"
+```
+
+First, let's make the file [executable](https://en.wikipedia.org/wiki/Executable):
+
+```bash
+chmod +x ./myScript.sh
+```
+
+Now, you can execute this script directly in the terminal like this:
+
+```bash
+./myScript.sh
+# My name is deeecode
+```
+
+Or you can use the `source` command:
+
+```bash
+source ./myScript.sh
+# My name is deeecode
+```
+
+Both methods work fine, but here's where the difference comes in.
+
+## Directly vs `source`
+
+In `myScript.sh`, we have a variable called `NAME`. When we execute the script directly in the terminal, let's say we try to access the `NAME` variable:
+
+```bash
+./myScript.sh
+# My name is deeecode
+
+echo $NAME
+#
+```
+
+Well, we get an empty string. That's because, the `NAME` variable is not available outside the executed script. I'll explain why in a second.
+
+Let's now try to execute the script with `source`, and access the `NAME` variable afterwards:
+
+```bash
+source ./myScript.sh
+# My name is deeecode
+
+echo $NAME
+# deeecode
+```
+
+Well here, the `NAME` variable is available even after the script is executed. Now, let's see why.
+
+## Main process and Subprocesses
+
+When you execute a script directly (like we did with `./myScript.sh`), you are creating a subprocess from the main process. After the script finishes execution, the subprocess is closed, which means every variable created, such as `NAME`, becomes unavailable:
+
+```bash
+# run command in main process
+./myScript.sh
+
+# --subprocess opens--
+# code runs, NAME variable created
+# NAME variable is accessible
+# command is done running
+# --subprocess closes--
+
+# NAME no longer available in main process
+```
+
+{/* <Info>
+  If you're wondering why I'm using the term "subprocess" and not "subshell", you
+  can learn more about the difference [in this article](/p/subprocess-vs-subshell)
+</Info> */}
+
+But when you use `source`, you are executing the `myScript.sh` script in the **main process**. So, every variable, like `NAME` is added to the main process. Even after the script finishes execution, **as long as the main process stays open**, `NAME` and any other variables declared stays available:
+
+```bash
+# run command in main process
+source ./myScript.sh
+
+# --still in main process--
+# code runs, NAME variable created
+# NAME variable is accessible
+# command is done running
+# --still in main process--
+
+# NAME is available in main process
+```
+
+But when you close your terminal (or that process), then those variables become unavailable.
+
+## Variables and Functions
+
+We have seen so far how variables stay available in the main process when you use `source`. The same concept applies to functions. Let's see an example:
+
+```bash
+filename=myScript.sh
+#!/bin/bash
+
+print_info () {
+  name=$1
+  country=$2
+
+  echo "$name lives in $country"
+}
+
+print_info Deeecode Brazil
+```
+
+Now, let's execute directly on the terminal:
+
+```bash
+./myScript.sh
+# Deeecode lives in Brazil
+```
+
+Remember, a new subprocess was created for this, and closed after execution. So if we try to acess `print_info` now, watch what happens:
+
+```bash
+print_info John China
+# command not found: print_info
+```
+
+Now we get an error. `print_info` was only available in the subprocess, and the subprocess is no longer available.
+
+Now, let's use source:
+
+```bash
+source ./myScript.sh
+# Deeecode lives in Brazil
+```
+
+Works fine when we execute the script. Now, let's try to access `print_info` in the terminal:
+
+```bash
+print_info John China
+# John lives in China
+```
+
+As you see here, `print_info` is available in the main process...why? Because by using `source`, a new subprocess is not created for `./myScript.sh`. The script is run directly in the main process, thereby exposing variables and functions like `print_info` to the main process.
+
+But also remember, when the main process is closed, everything exposed with `source` becomes unavailable.
+
+## Wrap up
+
+I hope the difference is clearer now. Executing a script directly creates a subprocess which closes after the script is done. But with `source`, you're able to expose variables and functions from those configuration files, so that you can use them in the main process.
+
+Depending on your use case, you might prefer one approach better than the other.
+
+If you've used process configuration files like `.bashrc` or `.zshrc` before, you'd notice that often times you're instructed to do `source .bashrc` when you make changes. Maybe now you understand why?
+
+If you don't, I explain it [in this article](/p/sourcing-configuration-files).
