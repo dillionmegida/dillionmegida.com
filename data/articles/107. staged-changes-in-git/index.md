@@ -5,10 +5,12 @@ cover: "107-staged-changes-git.png"
 pageDescription: "Staged changes is a concept you would hear a lot in Git. In this article, I explain what this term means and how it works with Git"
 pageKeywords: "git, git commit, git status, git add, staging area, staged changes, not changed, changes, git project"
 tags: ["git"]
-video : https://youtu.be/HyeNfWZBut8
+video : https://youtu.be/1j9in7LAZE4
 ---
 
 One of the most common concepts you'll hear in Git is "staged changes". Or you may have heard it as "staging area". What does this mean?
+
+I have a simplified course on git which you can check out if you want to learn more about git: [simplegit.dev](https://simplegit.dev/).
 
 When you make a change in some files in your project, the next thing you want to do is "commit" that change. Committing the change means creating a new "version" of your project which contains the changes that were made. This way, you can revise the changes later on.
 
@@ -37,7 +39,7 @@ These new files (with changes) you have added will be saved in the **staging are
 
 Here's a screenshot showing the staging area of my git project after doing some `git add`s:
 
-![Staged changes result in git](./staged-changes-git.png)
+![Staged changes result in git](/img/posts/staged-changes-git.png)
 
 I got this by executing `git status` which shows the current state of my git project.
 

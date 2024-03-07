@@ -122,8 +122,15 @@ const Main = styled.main`
     }
 
     hr {
-      border-color: #909090;
-      margin: 20px 0;
+      border-color: #ffffff2a;
+      width: 50%;
+      border-width: 0.5px;
+      margin: 50px 0;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: unset;
     }
 
     b,
@@ -340,6 +347,7 @@ export default function PostTemplate({ post, children }: Props) {
         >
           Share this article
         </p> */}
+        <br/>
         <ShareArticle url={slug} title={title} />
         {/* <hr /> */}
 

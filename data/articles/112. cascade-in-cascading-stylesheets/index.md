@@ -2,7 +2,7 @@
 title: What does "cascading" mean in Cascading Stylesheets (CSS)?
 date: "2024-02-19"
 cover: "112-cascade.png"
-pageDescription: ""
+pageDescription: "Is 'cascading' in CSS just a fancy name? Or is it named after someone? Or it is actually related to CSS? Let's find out"
 pageKeywords: "css, cascade, cascading, waterfall"
 tags: ["css"]
 # video: https://youtu.be/AhNUQ6Hn3qM

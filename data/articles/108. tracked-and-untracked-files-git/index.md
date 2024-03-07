@@ -5,15 +5,18 @@ cover: "108-tracked-untracked-files.png"
 pageDescription: "For Git to record the history of a file, the file needs to be in Git's list of tracked files. In this article, I explain the concept of tracked and untracked files in Git"
 pageKeywords: "git, git commit, git status, git add, staging area, staged changes, not changed, changes, git project, tracked files, untracked files"
 tags: ["git"]
+video: https://youtu.be/N6q-wwkhRRk
 ---
 
 When using Git in your projects, you need to understand what tracked and untracked files are.
+
+I have a simplified course on git which you can check out if you want to learn more about git: [simplegit.dev](https://simplegit.dev/).
 
 Git does not keep a record of the history of all your files until you tell it to. Let's say you have an existing Git project, and you create a new file with some changes. At this point, Git does not have any information about this file. So if you make changes, rename it, or delete it, Git would not be able to show the previous history of the file. The reason for this is that this new file is **untracked**.
 
 While writing this article, I had to create a new file in my project. When I run `git status` in my project with this new file, here's what I get in the console:
 
-![Git status showing tracked and untracked files](./tracked-untracked.png)
+![Git status showing tracked and untracked files](/img/posts/tracked-untracked.png)
 
 From this screenshot, you see we have two sections: "Changes not staged for commit" and "Untracked files"
 
@@ -40,7 +43,7 @@ git commit -m "add new article"
 
 By committing this change, Git becomes "aware" of the existence of this file. Now if I make a change to this file and I run `git status`, here's the result I get:
 
-![Git status showing only tracked files](./only-tracked.png)
+![Git status showing only tracked files](/img/posts/only-tracked.png)
 
 As you see in the result, Git does not see any untracked files anymore. All files in this project are being tracked. If you look at the tracked section now, we see `data/articles/107. staged-changes-in-git/index.md` and `data/articles/108. tracked-and-untracked-files-git/index.md` (the new file I created earlier), and Git sees that these files have been modified (the contents have been updated).
 

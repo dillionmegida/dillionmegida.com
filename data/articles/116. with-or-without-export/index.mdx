@@ -1,0 +1,141 @@
+---
+title: "With or without export for variables in bash?"
+date: "2024-03-06"
+cover: "116-with-or-without-export.png"
+pageDescription: "Do you have to use export for variables in bash? What difference does this keyword have?"
+pageKeywords: "bash, zsh, source, export"
+tags: ["bash"]
+---
+
+In bash scripts, you can create variables with:
+
+```sh
+export VARIABLE="value"
+```
+
+or without:
+
+```sh
+VARIABLE="value"
+```
+
+...the `export` keyword. But, what difference does this keyword bring, and when should you use it?
+
+## Parent process and subprocesses
+
+Say you have a script like this:
+
+```sh
+filename=myScript.sh
+#!/bin/bash
+
+echo "hello world"
+```
+
+Then you open a new terminal session, and you run:
+
+```bash
+./myScript.sh
+```
+
+In the process of executing this, you have created and closed a subprocess.
+
+The parent process (or the **main** process) is the terminal session you opened. When you run `./myScript.sh`, a new session, subprocess, is opened and the script is run in that context--that environment. Now you have the parent process and the subprocess (created from the parent process).
+
+After the execution of this script, the subprocess is closed, and all you have left is the parent process.
+
+The same thing happens when you run `bash` in your terminal:
+
+```bash
+bash
+```
+
+This command starts a new bash process (session). And what you have is this subprocess, run from the parent process where you executed this command.
+
+How does all these matter and what does have to do with `export`? Well let's talk about local variables and environment variables.
+
+## Local Variables
+
+When you create a variable, it stays local to that session. In your terminal, you have a process; now let's say you create a variable there:
+
+```bash
+myName="dillion"
+echo "my name is $myName"
+my name is dillion
+```
+
+Here, we created a variable called `myName`. However, it is local to this process.
+
+```bash
+myName="dillion"
+echo "my name is $myName"
+my name is dillion
+
+bash # create subprocess
+$$ echo "his name is not $myName"
+$$ his name is not
+```
+
+So here we create a variable in the "current" process called `myName`. Then we use the variable in the same process.
+
+Then we run `bash` which creates another process from the current process. This created process is a **subprocess**. In this subprocess, we try to access `myName` but as you notice, we get an empty string. That's because the variable does not exist in the subprocess environment.
+
+## Environment Variables
+
+When you define a variable as an "environment variable" in a process, that variable will be available in the process, and also from other processes (subprocesses) that are created from it. This is where you use the `export` keyword:
+
+```bash
+export myName="dillion"
+echo "my name is $myName"
+my name is dillion
+
+bash # create subprocess
+$$ echo "his name is not $myName"
+$$ his name is not dillion
+```
+
+As you see here, `myName` is now available in the subprocess. `myName` is no longer local to just the main process, but it is exported to the main process' environment such that all subprocesses have access to it.
+
+## Should you use `export` or not?
+
+It depends on what you want to achieve. If it's just a variable you want to use in one place (process), for example in a loop, then you can create local variables. If it's a variable that you want to be "always accessible" for example, for subprocesses, then you want to use `export`.
+
+This is why configuration files like `.bashrc` or `.zshrc` sometimes have variables with `export`. Here's a small section of my `.zshrc`:
+
+```bash
+# some stuff
+export ZSH="$HOME/.oh-my-zsh"
+
+# ...
+ZSH_THEME="robbyrussell"
+
+# ...
+```
+
+When I open my terminal for the first time, this configuration file is read/run in the current process. Now let's say I access `ZSH_THEME` in the current process and in subprocesses:
+
+```bash
+echo "$ZSH_THEME"
+robbyrussell
+
+bash
+$$ echo "$ZSH_THEME"
+$$ 
+```
+
+You see here that `ZSH_THEME` is unavailable in the subprocess. What aobut `ZSH`?
+
+```bash
+echo "$ZSH"
+/Users/dillionmegida/.oh-my-zsh
+
+bash
+$$ echo "$ZSH"
+$$ /Users/dillionmegida/.oh-my-zsh
+```
+
+As you see here, `ZSH` is also available in the subprocess and that's because........it is `export`ed. That makes it an environment variable available in the environment of the process and accessible by the subprocesses.
+
+---
+
+By the way, if you want to learn why you have to `source .bashrc` or `.zshrc`, [I have an article on that](/p/sourcing-configuration-files) 😉
