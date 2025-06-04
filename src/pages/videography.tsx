@@ -164,7 +164,7 @@ export default function Videography() {
               I beat my friends at Kart Racing
             </NewTabLink>
             ,{" "}
-            <NewTabLink link="https://youtu.be/5W6gW6gW6g">
+            <NewTabLink link="https://youtu.be/FVzIrg8hVoA">
               I improved my social media usage
             </NewTabLink>
             . These are examples where I'm usually telling a story, throwing in
