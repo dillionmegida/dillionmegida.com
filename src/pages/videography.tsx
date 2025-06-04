@@ -23,7 +23,6 @@ const Container = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #e5e5f7;
     opacity: 0.8;
     background: radial-gradient(
         circle,
@@ -50,11 +49,24 @@ const Container = styled.div`
   main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 20px 200px;
     color: white;
+    font-size: clamp(1rem, 5vw, 1.3rem);
+
+    hr {
+      margin: 40px 0;
+      border: none;
+      height: 1px;
+      background-color: #585353;
+    }
 
     h1 {
       font-size: clamp(1.5rem, 7vw, 3rem);
+    }
+
+    .highlight {
+      color: #00ff08;
+      font-weight: bold;
     }
 
     a {
@@ -76,7 +88,7 @@ const Container = styled.div`
   }
 
   .cover-image {
-    margin: 10px 0;
+    margin: 10px 0 20px;
   }
 
   p {
@@ -112,7 +124,7 @@ export default function Videography() {
           </p>
           <p>
             While I still love doing that, I want to take my videography passion
-            to the next level. I want to tell stories for people. That could be
+            to the next level. <span className="highlight">I want to tell stories for people</span>. That could be
             a music video, company video, product video, event highlights, baby
             showers, birthdays, mini documentary, e.t.c. In the future, maybe
             weddings too.
@@ -124,18 +136,21 @@ export default function Videography() {
             your help. I'm offering my videography skills for free. It's a
             win-win. You get a professionally crafted video to share with your
             audience, and I get to add your project to my portfolio.{" "}
-            <b>
-              The only thing you pay for is my transportation if it's outside
-              Amsterdam.
-            </b>
           </p>
+          <hr />
           <p>
-            Just to be clear on this, I am not offering marketing or promotional
-            services. I am not making a video for you, and putting on my channel
-            to get you views or customers. My goal is to create a great video
-            for you, which you can use however you like. I'll also include it in
-            my portfolio (and who knows, maybe that brings you extra views!).
+            Just to be clear on this,{" "}
+            <span className="highlight">
+              I am not offering marketing or promotional services
+            </span>
+            . I am not making a video for you, and putting on my channel to get
+            you views or customers. My goal is to create a great video for you,
+            which you can use however you like. I'll also include it in my
+            portfolio (and who knows, maybe that brings you extra views!).
           </p>
+          <div className="cover-image">
+            <img src="/videography/me-with-camera-2.png" alt="" />
+          </div>
           <p>
             While I'm not a full-time professional (yet!), I'm committed to
             quality and creativity. I've learnt a lot about making videos, and
@@ -164,11 +179,23 @@ export default function Videography() {
             So yes, you're still assured of good work as I keep growing, and
             building my portfolio.
           </p>
+          <hr />
+          <p>
+            <span className="highlight">But how free is this?</span> The
+            services I'm offering are totally free. But when it comes to
+            transportation, especially if it's outside Amsterdam, you would pay
+            for it. Also for props; things I would have to buy specifically for
+            your video, would be at your own expense. You won't be paying for
+            things like camera, microphones, or lighting equipment. But for
+            example, if I need to buy a decorative item for your video, or food
+            props, that would be at your own expense.
+          </p>
           <p>
             I'm not sure for how long this free offer would be open. But I hope
             that I can build a client base, such that I can start charging for
             my videography services.
           </p>
+          <hr />
           <p>
             If you're interested in this collaboration, please fill the form
             below. I definitely cannot handle everybody's projects, so I'm going
