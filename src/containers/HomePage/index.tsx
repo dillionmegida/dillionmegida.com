@@ -206,6 +206,7 @@ const Main = styled.main`
     .more-links {
       position: relative;
       margin-top: 70px;
+      padding-top: 20px;
       max-width: 600px;
 
       &::before {
@@ -261,23 +262,17 @@ export default function HomePage({ content }: Props) {
             </div>
             <h1 className="name">Dillion Megida</h1>
             <p className="title">
-              Software Engineer,{" "}
-              <span className="highlight ">Developer Educator</span>,
-              <br />
-              <span>Developer Advocate</span>
+              Frontend Engineer,{" "}
+              <span className="highlight ">Developer Educator</span>
             </p>
             <div className="bio">
               <p>
-                I love to <span className="highlight">TEACH</span> and{" "}
+                I love to <span className="highlight">BUILD</span> stuff. And I
+                love to <span className="highlight">TEACH</span> and{" "}
                 <span className="highlight">SIMPLIFY</span> technical concepts.
-                I get a lot of fulfillment when people understand something
-                through me. I love to{" "}
-                <span className="highlight">create videos & articles</span>. I
-                also love to <span className="highlight">SHARE</span> my
-                knowledge and experiences on different topics 😇
               </p>
               <p>
-                I simplify Web Development on{" "}
+                I simplify web dev and engineering generally on{" "}
                 <NewTabLink
                   className="link-highlight"
                   link={constants.deeecode.yt}
@@ -289,28 +284,20 @@ export default function HomePage({ content }: Props) {
                 <NewTabLink className="link" link={constants.deeecode.web}>
                   other persona
                 </NewTabLink>
-                . And apparently,{" "}
+                . And{" "}
                 <Link className="link" to={constants.pageLinks.VIDEOS_FEEDBACK}>
                   people love my teaching
                 </Link>{" "}
                 🙃
               </p>
               <p>
-                I share lessons from my Career and Life in the Netherlands on{" "}
+                I share stuff about my career, life in the Netherlands and
+                other diverse topics on{" "}
                 <NewTabLink
                   className="link-highlight"
                   link={constants.social.YouTube.link}
                 >
                   <YouTube color="#FF0000" /> dillionmegida
-                </NewTabLink>
-              </p>
-              <p>
-                And you can find my coding courses on
-                <NewTabLink
-                  className="link-highlight"
-                  link={constants.deeecode.courses}
-                >
-                  <LinkIcon color="#FF0000" /> deeecode.com/courses
                 </NewTabLink>
               </p>
               <div className="more-links">
@@ -322,12 +309,12 @@ export default function HomePage({ content }: Props) {
                   >
                     <Twitter /> iamdillion
                   </NewTabLink>
-                  <NewTabLink
+                  {/* <NewTabLink
                     className="link-highlight"
                     link={constants.social.TikTok.link}
                   >
                     <TikTok /> iamdillion
-                  </NewTabLink>
+                  </NewTabLink> */}
                   <NewTabLink
                     className="link-highlight"
                     link={constants.social.LinkedIn.link}
