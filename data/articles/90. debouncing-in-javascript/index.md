@@ -83,4 +83,8 @@ Debouncing helps to improve application performance by calling functions only af
 
 However, you do not have to implement this by yourself. Lodash, for example, has a [debounce function](https://lodash.com/docs/4.17.15#debounce). The contributors have optimized Libraries like Lodash to make the debounce function more effective.
 
+For search requests, debouncing controls when a request starts; it does not cancel a request that has already started. An older response can still arrive after a newer one and overwrite the results. Cancel obsolete requests where supported and check that a response still belongs to the latest input before updating the UI, including while the next debounced call is waiting.
+
+For a comparison of debounce and throttle for search inputs, including stale-response handling, see [Debounce vs Throttle in JavaScript](https://frontendatlas.com/javascript/trivia/debounce-vs-throttle-search-input).
+
 In this article, I've explained what debouncing is, why it is valid and how to implement it in JavaScript.
